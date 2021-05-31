@@ -192,8 +192,7 @@ Here’s what I get when I try these functions in the interactive shell:
 \>>> **os.path.getsize('C:\\\\Windows\\\\System32\\\\calc.exe')**
 776192
 
-> > > **os.listdir('C:\\\\Windows\\\\System32')**
-> > > \['0409', '12520437.cpx', '12520850.cpx', '5U877.ax', 'aaclient.dll',
+> > > **os.listdir('C:\\\\Windows\\\\System32')** > > > \['0409', '12520437.cpx', '12520850.cpx', '5U877.ax', 'aaclient.dll',
 > > > --_snip_\--
 > > > 'xwtpdui.dll', 'xwtpw32.dll', 'zh-CN', 'zh-HK', 'zh-TW', 'zipfldr.dll'\]
 
@@ -295,8 +294,7 @@ Make sure to separate the four lines with line breaks. Then enter the following 
 
 \>>> **sonnetFile = open('sonnet29.txt')**
 
-> > > **sonnetFile.readlines()**
-> > > \[When, in disgrace with fortune and men's eyes,\\n', ' I all alone beweep my
+> > > **sonnetFile.readlines()** > > > \[When, in disgrace with fortune and men's eyes,\\n', ' I all alone beweep my
 > > > outcast state,\\n', And trouble deaf heaven with my bootless cries,\\n', And
 > > > look upon myself and curse my fate,'\]
 
@@ -346,8 +344,7 @@ Your programs can use the `shelve` module to later reopen and retrieve the data 
 
 > > > **type(shelfFile)**
 > > > <class 'shelve.DbfilenameShelf'>
-> > > **shelfFile\['cats'\]**
-> > > \['Zophie', 'Pooka', 'Simon'\] >>> **shelfFile.close()**
+> > > **shelfFile\['cats'\]** > > > \['Zophie', 'Pooka', 'Simon'\] >>> **shelfFile.close()**
 
 Here, we open the shelf files to check that our data was stored correctly. Entering `shelfFile['cats']` returns the same list that we stored earlier, so we know that the list is correctly stored, and we call `close()`.
 
@@ -355,9 +352,7 @@ Just like dictionaries, shelf values have `keys()` and `values()` methods that w
 
 \>>> **shelfFile = shelve.open('mydata')**
 
-> > > **list(shelfFile.keys())**
-> > > \['cats'\] >>> **list(shelfFile.values())**
-> > > \[\['Zophie', 'Pooka', 'Simon'\]\] >>> **shelfFile.close()**
+> > > **list(shelfFile.keys())** > > > \['cats'\] >>> **list(shelfFile.values())** > > > \[\['Zophie', 'Pooka', 'Simon'\]\] >>> **shelfFile.close()**
 
 Plaintext is useful for creating files that you’ll read in a text editor such as Notepad or TextEdit, but if you want to save data from your Python programs, use the `shelve` module.
 
@@ -381,8 +376,7 @@ And since Python scripts are themselves just text files with the _.py_ file exte
 
 \>>> **import myCats**
 
-> > > **myCats.cats**
-> > > \[{'name': 'Zophie', 'desc': 'chubby'}, {'name': 'Pooka', 'desc': 'fluffy'}\] >>> **myCats.cats\[0\]**
+> > > **myCats.cats** > > > \[{'name': 'Zophie', 'desc': 'chubby'}, {'name': 'Pooka', 'desc': 'fluffy'}\] >>> **myCats.cats\[0\]**
 > > > {'name': 'Zophie', 'desc': 'chubby'}
 > > > **myCats.cats\[0\]\['name'\]**
 > > > 'Zophie'
