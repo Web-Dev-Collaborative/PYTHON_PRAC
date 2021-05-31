@@ -241,8 +241,8 @@ Various Attributes and Methods on the list object
 7.  **insert() —** It is used to insert an item at the defined index.
 8.  **pop() —** It is used to remove and return an element at the given index.
 9.  **remove() —** It is used to remove an item from the list.
-10.  **reverse() —** It is used to reverse the order of items in the list.
-11.  **sort() —** It is used to sort items in a list in ascending order.
+10. **reverse() —** It is used to reverse the order of items in the list.
+11. **sort() —** It is used to sort items in a list in ascending order.
 
 #### When to use List Data Structure?
 
@@ -255,6 +255,5 @@ I covered pretty much everything that is required to perform any kind of operati
 **If you liked this article, please click on the clap and leave me feedback. Please share with your friends.**
 
 Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. [Get started](https://www.freecodecamp.org/learn)
-
 
 [Source](https://www.freecodecamp.org/news/a-quick-yet-complete-tour-of-lists-in-python3-in-just-seven-minutes-437e615110d0/)

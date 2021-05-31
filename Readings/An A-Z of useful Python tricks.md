@@ -4,9 +4,9 @@
 
 Python is one of the world’s most popular, in-demand programming languages. This is for many reasons:
 
-*   it’s easy to learn
-*   it’s super versatile
-*   it has a huge range of modules and libraries
+- it’s easy to learn
+- it’s super versatile
+- it has a huge range of modules and libraries
 
 I use Python daily as an integral part of my job as a data scientist. Along the way, I’ve picked up a few useful tricks and tips.
 
@@ -27,7 +27,7 @@ It is often joked that Python is ‘[executable pseudocode](https://www.artima.c
         print("At least one True")
     if all(x):
         print("Not one False")
-    if any(x) and not all(x):    
+    if any(x) and not all(x):
         print("At least one True and one False")
 
 #### bashplotlib
@@ -45,14 +45,12 @@ Python has some great default datatypes, but sometimes they just won’t behave 
 Luckily, the Python Standard Library offers [the collections module](https://docs.python.org/3/library/collections.html). This handy add-on provides you with further datatypes.
 
     from collections import OrderedDict, Counter
-    
-    
+
+
     x = OrderedDict(a=1, b=2, c=3)
-    
-    
+
+
     y = Counter("Hello World!")
-    
-    
 
 #### dir
 
@@ -103,7 +101,7 @@ It works by abstracting the APIs of a range of different geocoding services. It 
 There’s also a useful distance class. It calculates the distance between two locations in your favorite unit of measurement.
 
     from geopy import GoogleV3
-    
+
     place = "221b Baker Street, London"
     location = GoogleV3().geocode(place)
     print(location.address)
@@ -136,7 +134,7 @@ The code sample below uses `inspect.getsource()` to print its own source code. I
 The last line of code prints out its own line number.
 
     import inspect
-    
+
     print(inspect.getsource(inspect.getsource))
     print(inspect.getmodule(inspect.getmodule))
     print(inspect.currentframe().f_lineno)
@@ -160,12 +158,12 @@ The double-asterisk in front of a dictionary object lets you pass the contents o
 The dictionary’s keys are the argument names, and the values are the values passed to the function. You don’t even need to call it `kwargs`!
 
     dictionary = {"a": 1, "b": 2}
-    
+
     def someFunction(a, b):
         print(a + b)
         return
-        
-    
+
+
     someFunction(**dictionary)
     someFunction(a=1, b=2)
 
@@ -182,9 +180,9 @@ You can read more about how to use them [here](https://www.learnpython.org/en/Li
     numbers = [1,2,3,4,5,6,7]
     evens = [x for x in numbers if x % 2 is 0]
     odds = [y for y in numbers if y not in evens]
-    
+
     cities = ['London', 'Dublin', 'Oslo']
-    
+
     def visit(city):
         print("Welcome to "+city)
     for city in cities:
@@ -196,7 +194,6 @@ Python supports functional programming through a number of inbuilt features. One
 
     x = [1, 2, 3]
     y = map(lambda x : x + 1 , x)
-    
 
 In the example above, `map()` applies a simple lambda function to each element in `x`. It returns a map object, which can be converted to some iterable object such as a list or tuple.
 
@@ -225,17 +222,17 @@ You can define objects which use Python’s standard operator symbols in their o
             return self.__value > other.__value
         def __lt__(self, other):
             return self.__value < other.__value
-    
+
     something = Thing(100)
     nothing = Thing(0)
-    
-    
+
+
     something > nothing
-    
-    
+
+
     something < nothing
-    
-    
+
+
     something + nothing
 
 #### pprint
@@ -248,7 +245,7 @@ A must-have for any Python developer who works with non-trivial data structures.
 
     import requests
     import pprint
-    
+
     url = 'https://randomuser.me/api/?results=1'
     users = requests.get(url).json()
     pprint.pprint(users)
@@ -278,10 +275,10 @@ This makes debugging code a lot easier. Add it to your class definitions as belo
     class someClass:
         def __repr__(self):
             return "<some description here>"
-            
+
     someInstance = someClass()
-    
-    
+
+
     print(someInstance)
 
 #### sh
@@ -323,7 +320,7 @@ You can also define type aliases:
                 result_row += [a[i][j] + b[i][j]]
             result += [result_row]
         return result
-    
+
     x = [[1.0, 0.0], [0.0, 1.0]]
     y = [[2.0, 1.0], [0.0, -2.0]]
     z = addMatrix(x, y)
@@ -337,7 +334,7 @@ They also allow you to use type checking tools to catch those stray TypeErrors b
 A quick and easy way to generate Universally Unique IDs (or ‘UUIDs’) is through the [Python Standard Library’s uuid module](https://docs.python.org/3/library/uuid.html).
 
     import uuid
-    
+
     user_id = uuid.uuid4()
     print(user_id)
 
@@ -359,7 +356,7 @@ Luckily, Python’s [support for virtual environments](https://docs.python.org/3
 
     python -m venv my-project
     source my-project/bin/activate
-    pip install all-the-modules 
+    pip install all-the-modules
 
 Now you can have standalone versions and installations of Python running on the same machine. Sorted!
 
@@ -370,10 +367,10 @@ Wikipedia has a great API that allows users programmatic access to an unrivalled
 The [wikipedia module](https://wikipedia.readthedocs.io/en/latest/quickstart.html) makes accessing this API almost embarrassingly convenient.
 
     import wikipedia
-    
+
     result = wikipedia.page('freeCodeCamp')
     print(result.summary)
-    
+
     for link in result.links:
         print(link)
 
@@ -426,6 +423,5 @@ Python’s a very diverse and well-developed language, so there’s bound to be 
 Please share any of your own favorite Python tricks by leaving a response below!
 
 Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. [Get started](https://www.freecodecamp.org/learn)
-
 
 [Source](https://www.freecodecamp.org/news/an-a-z-of-useful-python-tricks-b467524ee747/)

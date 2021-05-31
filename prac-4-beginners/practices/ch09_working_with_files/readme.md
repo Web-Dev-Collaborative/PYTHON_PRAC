@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below. 
+In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below.
 
 Remember, these are for your own benefit. Feel free to skip them if you don't find a particular exercise valuable or you get stuck for too long.
 
@@ -18,14 +18,14 @@ filename = os.path.join(directory, 'the_file.txt')
 # Now filename is a full path
 ```
 
-###  Opening a file for reading
+### Opening a file for reading
 
 To open a file we use, well, the `open()` function. But as we saw, we should do this within a `with` block to ensure it's closed and flushed in a timely manner. Note the **r** passed to open for read.
 
 ```python
 with open(filename, 'r', encoding='utf-8') as fin:
     # work with fin here
-    
+
 # fin is closed and useless at this point.
 ```
 
@@ -56,6 +56,6 @@ json.dump(leaders, fout)
 
 Now it's your turn. In this practice, go back to the tic tac toe game we created back in the chapter on problem solving. Alternatively, if you made it through Connect 4, you can work with that one instead. Your job will be to:
 
-* Add a leader board (feel free to use JSON like we did).
-* Add a running log file (test with `tail -n 20 -f FILENAME` on macOS and Linux, just open in PyCharm on Windows and it'll change).
-* For extra credit, you can try to use [LogBook](https://logbook.readthedocs.io/en/stable/) to improve the logging (but it will require a few concepts we haven't covered yet).
+- Add a leader board (feel free to use JSON like we did).
+- Add a running log file (test with `tail -n 20 -f FILENAME` on macOS and Linux, just open in PyCharm on Windows and it'll change).
+- For extra credit, you can try to use [LogBook](https://logbook.readthedocs.io/en/stable/) to improve the logging (but it will require a few concepts we haven't covered yet).

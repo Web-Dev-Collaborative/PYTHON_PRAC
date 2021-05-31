@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below. 
+In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below.
 
 Remember, these are for your own benefit. Feel free to skip them if you don't find a particular exercise valuable or you get stuck for too long.
 
@@ -21,13 +21,13 @@ Examples:
 ```python
 x = 7
 y = 11
-z = x + 2*y 
+z = x + 2*y
 name = 'Sarah'
 ```
 
 ### Using built-in libraries
 
-Python comes with many included libraries ([hundreds!](https://docs.python.org/3/library/)). To use one of these libraries, such as `sys`, you must tell Python you want to load it. This is done with the `import` keyword. 
+Python comes with many included libraries ([hundreds!](https://docs.python.org/3/library/)). To use one of these libraries, such as `sys`, you must tell Python you want to load it. This is done with the `import` keyword.
 
 Example:
 
@@ -61,7 +61,7 @@ number       = float(text) # value = 7.2
 
 ## Exercises
 
-Now it's your turn. Here are some ideas to practice. 
+Now it's your turn. Here are some ideas to practice.
 
 1. Run the Python REPL and verify you have Python 3.6 or higher.
 2. Create a variable which is a whole number, compute the square and cube of it (i.e. x^2 and x^3, although that is not the Python code needed).

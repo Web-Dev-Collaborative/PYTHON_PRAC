@@ -497,6 +497,7 @@ while True:
   - One tab indentation for the code to run.
 
 ```py
+
 ```
 
 - You can use default parameters just like in JS
@@ -536,6 +537,7 @@ greeting("Monica", saying="Hi")
 `toUpper = lambda s: s.upper()`
 
 ---
+
 Notes
 Formatted Strings
 Remember that in Python join() is called on a string with an array/list passed in as the argument.
@@ -543,29 +545,34 @@ shopping_list = ['bread','milk','eggs']
 print(','.join(shopping_list))
 Python has a very powerful formatting engine.
 format() is also applied directly to strings.
+
 # Comma Thousands Separator
- print('{:,}'.format(1234567890))
-  '1,234,567,890'
+
+print('{:,}'.format(1234567890))
+'1,234,567,890'
 
 # Date and Time
+
 d = datetime.datetime(2020, 7, 4, 12, 15, 58)
 print('{:%Y-%m-%d %H:%M:%S}'.format(d))
 '2020-07-04 12:15:58'
 
 # Percentage
+
 points = 190
 total = 220
 print('Correct answers: {:.2%}'.format(points/total))
 Correct answers: 86.36%
 
 # Data Tables
+
 width=8
-print(' decimal      hex   binary')
-print('-'*27)
+print(' decimal hex binary')
+print('-'\*27)
 for num in range(1,16):
-    for base in 'dXb':
-        print('{0:{width}{base}}'.format(num, base=base, width=width), end=' ')
-    print()
+for base in 'dXb':
+print('{0:{width}{base}}'.format(num, base=base, width=width), end=' ')
+print()
 Getting Input from the Command Line
 Python runs synchronously, all programs and processes will stop when listening for a user input.
 The input function shows a prompt to a user and waits for them to type 'ENTER'.
@@ -594,22 +601,28 @@ empty_list = []
 departments = ['HR','Development','Sales','Finance','IT','Customer Support']
 
 # You can instantiate
+
 specials = list()
 
 # Test if a value is in a list.
+
 print(1 in [1, 2, 3]) #> True
 print(4 in [1, 2, 3]) #> False
 Tuples : Very similar to lists, but they are immutable
+
 # Instantiated with parentheses
+
 time_blocks = ('AM','PM')
 
 # Sometimes instantiated without
+
 colors = 'red','blue','green'
 numbers = 1, 2, 3
 
 # Tuple() built in can be used to convert other data into a tuple
-tuple('abc')        # returns ('a', 'b', 'c')
-tuple([1,2,3])      # returns (1, 2, 3)
+
+tuple('abc') # returns ('a', 'b', 'c')
+tuple([1,2,3]) # returns (1, 2, 3)
 Think of tuples as constant variables.
 
 Ranges : A list of numbers which can't be changed; often used with for loops.
@@ -617,10 +630,10 @@ Declared using one to three parameters.
 Start : opt. default 0, first # in sequence.
 Stop : required next number past the last number in the sequence.
 Step : opt. default 1, difference between each number in the sequence.
-range(5)            # [0, 1, 2, 3, 4]
-range(1,5)          # [1, 2, 3, 4]
-range(0, 25, 5)     # [0, 5, 10, 15, 20]
-range(0)            # [ ]
+range(5) # [0, 1, 2, 3, 4]
+range(1,5) # [1, 2, 3, 4]
+range(0, 25, 5) # [0, 5, 10, 15, 20]
+range(0) # [ ]
 for let (i = 0; i < 5; i++)
 for let (i = 1; i < 5; i++)
 for let (i = 0; i < 25; i+=5)
@@ -654,6 +667,7 @@ school_bag = {'book','paper','pencil','pencil','book','book','book','eraser'}
 print(school_bag)
 
 # Also can use set constructor to automatically put it into a set.
+
 letters = set('abracadabra')
 print(letters)
 Built-In Functions
@@ -675,13 +689,15 @@ print(enumerate(quarters))
 print(enumerate(quarters, start=1))
 
 # (0, 'First'), (1, 'Second'), (2, 'Third'), (3, 'Fourth')
+
 # (1, 'First'), (2, 'Second'), (3, 'Third'), (4, 'Fourth')
-zip(*iterables) : creates a zip object filled with tuples that combine 1 to 1 the items in each provided iterable.
+
+zip(\*iterables) : creates a zip object filled with tuples that combine 1 to 1 the items in each provided iterable.
 Functions that analyze iterables
 
 len(iterable) : returns the count of the number of items.
 
-max(*args, key=None) : returns the largest of two or more arguments.
+max(\*args, key=None) : returns the largest of two or more arguments.
 
 max(iterable, key=None) : returns the largest item in the iterable.
 
@@ -700,23 +716,23 @@ Working with dictionaries
 dir(dictionary) : returns the list of keys in the dictionary.
 Working with sets
 
-Union : The pipe | operator or union(*sets) function can be used to produce a new set which is a combination of all elements in the provided set.
+Union : The pipe | operator or union(\*sets) function can be used to produce a new set which is a combination of all elements in the provided set.
 a = {1, 2, 3}
 b = {2, 4, 6}
-print(a | b)        # => {1, 2, 3, 4, 6}
+print(a | b) # => {1, 2, 3, 4, 6}
 Intersection : The & operator ca be used to produce a new set of only the elements that appear in all sets.
 a = {1, 2, 3}
 b = {2, 4, 6}
-print(a & b)        # => {2}
+print(a & b) # => {2}
 Difference : The - operator can be used to produce a new set of only the elements that appear in the first set and NOT the others.
 
 Symmetric Difference : The ^ operator can be used to produce a new set of only the elements that appear in exactly one set and not in both.
 
 a = {1, 2, 3}
 b = {2, 4, 6}
-print(a - b)        # => {1, 3}
-print(b - a)        # => {4, 6}
-print(a ^ b)        # => {1, 3, 4, 6}
+print(a - b) # => {1, 3}
+print(b - a) # => {4, 6}
+print(a ^ b) # => {1, 3, 4, 6}
 For Statements
 In python, there is only one for loop.
 
@@ -733,96 +749,112 @@ You can use the range function as the iterable for the for loop.
 
 print('My name is')
 for i in range(5):
-   print('Carlita Cinco (' + str(i) + ')')
+print('Carlita Cinco (' + str(i) + ')')
 
 total = 0
 for num in range(101):
-    total += num
+total += num
 print(total)
 Looping over a list in Python
 for c in ['a', 'b', 'c']:
-    print(c)
+print(c)
 
 lst = [0, 1, 2, 3]
 for i in lst:
-    print(i)
+print(i)
 Common technique is to use the len() on a pre-defined list with a for loop to iterate over the indices of the list.
 supplies = ['pens', 'staplers', 'flame-throwers', 'binders']
 for i in range(len(supplies)):
-    print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
+print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
 You can loop and destructure at the same time.
 l = [[1, 2], [3, 4], [5, 6]]
 for a, b in l:
-    print(a, ', ', b)
+print(a, ', ', b)
 
 # Prints 1, 2
+
 # Prints 3, 4
+
 # Prints 5, 6
+
 You can use values() and keys() to loop over dictionaries.
 spam = {'color': 'red', 'age': 42}
 for v in spam.values():
-    print(v)
+print(v)
 
 # Prints red
+
 # Prints 42
 
 for k in spam.keys():
-    print(k)
+print(k)
 
 # Prints color
+
 # Prints age
+
 For loops can also iterate over both keys and values.
+
 # Getting tuples
+
 for i in spam.items():
-    print(i)
+print(i)
 
 # Prints ('color', 'red')
+
 # Prints ('age', 42)
 
-
 # Destructuring to values
+
 for k, v in spam.items():
-    print('Key: ' + k + ' Value: ' + str(v))
+print('Key: ' + k + ' Value: ' + str(v))
 
 # Prints Key: age Value: 42
+
 # Prints Key: color Value: red
+
 Looping over string
 for c in "abcdefg":
-    print(c)
+print(c)
 More On Functions
 Variable-length positional arguments : (*args)
 def add(a, b, *args):
-    total = a + b;
-    for n in args:
-        total += n
-    return total
+total = a + b;
+for n in args:
+total += n
+return total
 
-add(1, 2)  # Returns 3
+add(1, 2) # Returns 3
 
 add(2, 3, 4, 5) # Returns 14
-keyword arguments : (*kwargs)
-def print_names_and_countries(greeting, **kwargs):
-    for k, v in kwargs.items():
-        print(greeting, k, "from", v)
+keyword arguments : (\*kwargs)
+def print_names_and_countries(greeting, \*\*kwargs):
+for k, v in kwargs.items():
+print(greeting, k, "from", v)
 
 print_names_and_countries("Hi",
-                          Monica="Sweden",
-                          Charles="British Virgin Islands",
-                          Carlo="Portugal")
+Monica="Sweden",
+Charles="British Virgin Islands",
+Carlo="Portugal")
+
 # Prints
+
 # Hi Monica from Sweden
+
 # Hi Charles from British Virgin Islands
+
 # Hi Carlo from Portugal
+
 When you order arguments within a function or function call, the args need to occur in a particular order:
 formal positional args.
 *args
 keyword args with default values
-**kwargs
-def example(arg_1, arg_2, *args, **kwargs):
-  pass
+\*\*kwargs
+def example(arg_1, arg_2, *args, \*\*kwargs):
+pass
 
-def example2(arg_1, arg_2, *args, kw_1="shark", kw_2="blowfish", **kwargs):
-  pass
+def example2(arg_1, arg_2, \*args, kw_1="shark", kw_2="blowfish", \*\*kwargs):
+pass
 Importing in Python
 Modules are similar to packages in Node.js
 Come in different types: Built-In, Third-Party, Custom.
@@ -835,19 +867,19 @@ package : Path to a directory that contains modules.
 submodule : Another file in a module's folder.
 function : Function in a module.
 
-A module can be any file but it is usually created by placing a special file __init__.py into a folder. pic
+A module can be any file but it is usually created by placing a special file **init**.py into a folder. pic
 
 Try to avoid importing with wildcards in Python.
 
 Use multiple lines for clarity when importing.
 
 from urllib.request import (
-  HTTPDefaultErrorHandler as ErrorHandler,
-  HTTPRedirectHandler as RedirectHandler,
-  Request,
-  pathname2url,
-  url2pathname,
-  urlopen,
+HTTPDefaultErrorHandler as ErrorHandler,
+HTTPRedirectHandler as RedirectHandler,
+Request,
+pathname2url,
+url2pathname,
+urlopen,
 )
 Watching Out for Python 2
 Python 3 removed <> and only uses !=

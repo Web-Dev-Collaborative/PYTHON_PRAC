@@ -80,5 +80,4 @@ This is a really quick way for swapping two variables without having to use an a
 
 This snippet shows how you can get a default value in case a key you are looking for is not included in the dictionary.
 
-
 [Source](https://towardsdatascience.com/30-helpful-python-snippets-that-you-can-learn-in-30-seconds-or-less-69bb49204172)

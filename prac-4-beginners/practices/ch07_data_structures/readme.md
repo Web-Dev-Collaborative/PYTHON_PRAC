@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below. 
+In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below.
 
 Remember, these are for your own benefit. Feel free to skip them if you don't find a particular exercise valuable or you get stuck for too long.
 
@@ -19,10 +19,10 @@ You can create a dictionary a number of ways. How you do this depends on how muc
 names = {}
 
 # A dictionary with players start at zero score
-two_names = {'player1': 0, 'player2': 0} 
+two_names = {'player1': 0, 'player2': 0}
 
 # This is the same as before
-two_names = dict(player1=0, player2=0) 
+two_names = dict(player1=0, player2=0)
 ```
 
 ### Creating a dynamic dictionary
@@ -34,11 +34,11 @@ names = get_list_of_names()
 scores = {}
 for n in names:
      scores[n] = 0
-     
-# We can condense this using a dictionary comprehension. 
+
+# We can condense this using a dictionary comprehension.
 # Same as above:
 names = get_list_of_names()
-scores = {n: 0 for n in names} 
+scores = {n: 0 for n in names}
 ```
 
 ### Reading values from a dictionary

@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below. 
+In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below.
 
 Remember, these are for your own benefit. Feel free to skip them if you don't find a particular exercise valuable or you get stuck for too long.
 
@@ -15,12 +15,12 @@ If you have a Python **file**, it can be executed inside PyCharm by simply right
 ```bash
 $ python3 program.py
 
-# or 
+# or
 
-C:\> python program.py 
+C:\> python program.py
 ```
 
-Remember to use either `python` or `python3` based on your system setup. 
+Remember to use either `python` or `python3` based on your system setup.
 
 ### if / else statements
 
@@ -73,10 +73,9 @@ Then we can test whether a number is even if it is evenly divisible by 2 or has 
 remainder = num % 2  # Is this 0 or 1?
 ```
 
-
 ## Exercises
 
-Now it's your turn. Here are some ideas to practice. 
+Now it's your turn. Here are some ideas to practice.
 
 1. Create a **hello_world.py** file and execute it with Python. This can be in PyCharm or in another editor and using the technique above. Seems trivial but will help you verify everything is working right there. Just have the program output "Hello world"
 2. Write a program that requests a number from the user. Have the program print "Even" or "Odd" depending on whether they entered an even or odd number.

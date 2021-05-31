@@ -92,7 +92,7 @@ As I said before, this is the package I currently use as my standard static type
 
 ![](https://cdn-media-1.freecodecamp.org/images/dQoUny7l5N6sWs2GCECZKHALf59t9398hNNp)
 
-I have tried many Python formatters, and `black` is clearly my favourite. The syntax looks neat, and the command line runs quick and can either check the files or actually edit them - very useful for CI/CD. You can even try it [here!](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/%5Bhttps://black.now.sh%5D(https://black.now.sh/))
+I have tried many Python formatters, and `black` is clearly my favourite. The syntax looks neat, and the command line runs quick and can either check the files or actually edit them - very useful for CI/CD. You can even try it [here!](<chrome-extension://cjedbglnccaioiolemnfhjncicchinao/%5Bhttps://black.now.sh%5D(https://black.now.sh/)>)
 
 #### [flask](https://github.com/pallets/flask)
 
@@ -106,9 +106,8 @@ If you enjoyed this article, please hold down the clap button ? to help others f
 
 And do not hesitate to share your thoughts in the comments below.
 
-* * *
+---
 
 Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. [Get started](https://www.freecodecamp.org/learn)
-
 
 [Source](https://www.freecodecamp.org/news/these-python-packages-will-help-accelerate-your-development-process-d4b3f170b1ea/)

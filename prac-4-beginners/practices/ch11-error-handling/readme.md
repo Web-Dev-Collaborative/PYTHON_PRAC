@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below. 
+In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below.
 
 Remember, these are for your own benefit. Feel free to skip them if you don't find a particular exercise valuable or you get stuck for too long.
 
@@ -23,9 +23,9 @@ except Exception as x:
     # Deal with error, use x for help on what happened.
 ```
 
-###  Multiple error types
+### Multiple error types
 
-The example above is good to catch errors. But it catches them all (well, almost all of them), and it treats them all the same. 
+The example above is good to catch errors. But it catches them all (well, almost all of them), and it treats them all the same.
 
 Below is code needed to handle different errors as well as unforeseen errors.
 
@@ -50,5 +50,5 @@ except Exception as x:
 
 Now it's your turn. In this practice, go back to the tic tac toe game we created back in the chapter on problem solving. Alternatively, if you made it through Connect 4, you can work with that one instead. Your job will be to:
 
-* Add error handling around the input processing in your program using try / except. Be as specific on the errors as possible. If you can determine the cause or type of error, give a specific message.
-* Think of all other ways your app could crash or run into trouble. Get it to crash, check the error type in the traceback, and add the appropriate error handling for this as well.
+- Add error handling around the input processing in your program using try / except. Be as specific on the errors as possible. If you can determine the cause or type of error, give a specific message.
+- Think of all other ways your app could crash or run into trouble. Get it to crash, check the error type in the traceback, and add the appropriate error handling for this as well.
