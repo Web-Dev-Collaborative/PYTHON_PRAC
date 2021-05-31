@@ -4,7 +4,297 @@
 Python is a very popular coding language. Little people use it for serious projects, but it is still useful to learn. It was created in 1991 by `Guido van Rossum`.  
 Look at a few uses of python:
 
+```
+.
+├── DOCS
+│   ├── _static
+│   └── tutorial
+├── Readings
+├── exploring-python
+├── learn-python3-samples
+│   ├── advance
+│   ├── async
+│   ├── basic
+│   ├── commonlib
+│   ├── context
+│   ├── db
+│   ├── debug
+│   ├── function
+│   ├── functional
+│   ├── gui
+│   │   └── turtle
+│   ├── io
+│   ├── mail
+│   ├── micropython
+│   │   ├── hellorobot
+│   │   ├── rccar
+│   │   ├── smallcar
+│   │   └── tank
+│   ├── module
+│   ├── multitask
+│   ├── oop_advance
+│   ├── oop_basic
+│   ├── regex
+│   ├── socket
+│   ├── test
+│   └── web
+│       └── mvc
+│           └── templates
+├── prac-4-beginners
+│   ├── code
+│   │   ├── 05-interactive-code
+│   │   │   └── m-n-m
+│   │   ├── 06-organizing-code-with-functions
+│   │   │   └── rocks-game
+│   │   ├── 07-data-structures
+│   │   │   ├── rocks-game
+│   │   │   └── simple_dict
+│   │   ├── 08-problem-solving
+│   │   │   └── tictactoe
+│   │   ├── 09-working-with-files
+│   │   │   └── rocks-game
+│   │   ├── 10-external-libraries
+│   │   │   └── rocks-game
+│   │   └── 11-error-handling
+│   │       └── rocks-game
+│   ├── practices
+│   │   ├── ch04_first_lines
+│   │   ├── ch05_interactive_code
+│   │   ├── ch06-organizing-code-with-functions
+│   │   ├── ch07_data_structures
+│   │   ├── ch08_problem_solving
+│   │   │   └── readme_files
+│   │   ├── ch09_working_with_files
+│   │   ├── ch10_external_libraries
+│   │   └── ch11-error-handling
+│   ├── readme_resources
+│   └── solutions
+│       ├── ch-04-writing-your-first-lines-of-code
+│       ├── ch-05-interactive-code
+│       ├── ch-06-organizing-code-with-functions
+│       ├── ch-07-data-structures
+│       ├── ch-08-problem-solving
+│       ├── ch-09-working-with-files
+│       ├── ch-10-external-libraries
+│       └── ch-11-error-handling
+├── projecteuler-solutions
+├── projects-DS
+│   ├── Data-Structures-Notes-master
+│   │   ├── BST_and_Heaps
+│   │   ├── Doubly_Linked_List
+│   │   ├── Interview_Problems
+│   │   └── Linked_Lists
+│   ├── Data-Structures-and-Algorithms-master
+│   │   ├── assets
+│   │   └── src
+│   │       ├── algorithms
+│   │       │   ├── strings
+│   │       │   │   └── knuth-morris-pratt
+│   │       │   └── tree
+│   │       │       ├── breadth-first-search
+│   │       │       └── depth-first-search
+│   │       ├── analysis-of-algorithms
+│   │       │   └── asymptotic-notation
+│   │       └── data-structures
+│   │           ├── graph
+│   │           ├── linked lists
+│   │           └── tree
+│   │               ├── binary-search-tree
+│   │               └── binary-tree
+│   ├── Data-Structures-master
+│   │   ├── avl_tree
+│   │   ├── binary_search_tree
+│   │   ├── doubly_linked_list
+│   │   ├── heap
+│   │   ├── javascript
+│   │   │   └── tests
+│   │   ├── lru_cache
+│   │   ├── python
+│   │   │   ├── binary_search_tree
+│   │   │   ├── doubly_linked_list
+│   │   │   ├── heap
+│   │   │   ├── linked_list
+│   │   │   └── queue
+│   │   └── queue
+│   └── data_struct_and_algo-master
+└── python-mega-algo
+    ├── arithmetic_analysis
+    │   └── image_data
+    ├── backtracking
+    ├── bit_manipulation
+    ├── blockchain
+    ├── boolean_algebra
+    ├── cellular_automata
+    ├── ciphers
+    ├── compression
+    │   └── image_data
+    ├── computer_vision
+    ├── conversions
+    ├── data_structures
+    │   ├── binary_tree
+    │   ├── disjoint_set
+    │   ├── hashing
+    │   │   └── number_theory
+    │   ├── heap
+    │   ├── linked_list
+    │   ├── queue
+    │   ├── stacks
+    │   └── trie
+    ├── digital_image_processing
+    │   ├── dithering
+    │   ├── edge_detection
+    │   ├── filters
+    │   ├── histogram_equalization
+    │   │   ├── image_data
+    │   │   └── output_data
+    │   ├── image_data
+    │   ├── resize
+    │   └── rotation
+    ├── divide_and_conquer
+    ├── dynamic_programming
+    ├── electronics
+    ├── file_transfer
+    │   └── tests
+    ├── fractals
+    ├── fuzzy_logic
+    ├── genetic_algorithm
+    ├── geodesy
+    ├── graphics
+    ├── graphs
+    │   └── tests
+    ├── hashes
+    ├── knapsack
+    │   └── tests
+    ├── linear_algebra
+    │   └── src
+    ├── machine_learning
+    │   ├── forecasting
+    │   └── lstm
+    ├── maths
+    │   ├── images
+    │   └── series
+    ├── matrix
+    │   └── tests
+    ├── networking_flow
+    ├── neural_network
+    ├── other
+    ├── physics
+    ├── project_euler
+    │   ├── problem_001
+    │   ├── problem_002
+    │   ├── problem_003
+    │   ├── problem_004
+    │   ├── problem_005
+    │   ├── problem_006
+    │   ├── problem_007
+    │   ├── problem_008
+    │   ├── problem_009
+    │   ├── problem_010
+    │   ├── problem_011
+    │   ├── problem_012
+    │   ├── problem_013
+    │   ├── problem_014
+    │   ├── problem_015
+    │   ├── problem_016
+    │   ├── problem_017
+    │   ├── problem_018
+    │   ├── problem_019
+    │   ├── problem_020
+    │   ├── problem_021
+    │   ├── problem_022
+    │   ├── problem_023
+    │   ├── problem_024
+    │   ├── problem_025
+    │   ├── problem_026
+    │   ├── problem_027
+    │   ├── problem_028
+    │   ├── problem_029
+    │   ├── problem_030
+    │   ├── problem_031
+    │   ├── problem_032
+    │   ├── problem_033
+    │   ├── problem_034
+    │   ├── problem_035
+    │   ├── problem_036
+    │   ├── problem_037
+    │   ├── problem_038
+    │   ├── problem_039
+    │   ├── problem_040
+    │   ├── problem_041
+    │   ├── problem_042
+    │   ├── problem_043
+    │   ├── problem_044
+    │   ├── problem_045
+    │   ├── problem_046
+    │   ├── problem_047
+    │   ├── problem_048
+    │   ├── problem_049
+    │   ├── problem_050
+    │   ├── problem_051
+    │   ├── problem_052
+    │   ├── problem_053
+    │   ├── problem_054
+    │   ├── problem_055
+    │   ├── problem_056
+    │   ├── problem_057
+    │   ├── problem_058
+    │   ├── problem_059
+    │   ├── problem_062
+    │   ├── problem_063
+    │   ├── problem_064
+    │   ├── problem_065
+    │   ├── problem_067
+    │   ├── problem_069
+    │   ├── problem_070
+    │   ├── problem_071
+    │   ├── problem_072
+    │   ├── problem_074
+    │   ├── problem_075
+    │   ├── problem_076
+    │   ├── problem_077
+    │   ├── problem_080
+    │   ├── problem_081
+    │   ├── problem_085
+    │   ├── problem_086
+    │   ├── problem_087
+    │   ├── problem_089
+    │   ├── problem_091
+    │   ├── problem_097
+    │   ├── problem_099
+    │   ├── problem_101
+    │   ├── problem_102
+    │   ├── problem_107
+    │   ├── problem_109
+    │   ├── problem_112
+    │   ├── problem_113
+    │   ├── problem_119
+    │   ├── problem_120
+    │   ├── problem_121
+    │   ├── problem_123
+    │   ├── problem_125
+    │   ├── problem_129
+    │   ├── problem_135
+    │   ├── problem_173
+    │   ├── problem_174
+    │   ├── problem_180
+    │   ├── problem_188
+    │   ├── problem_191
+    │   ├── problem_203
+    │   ├── problem_206
+    │   ├── problem_207
+    │   ├── problem_234
+    │   ├── problem_301
+    │   └── problem_551
+    ├── quantum
+    ├── scheduling
+    ├── scripts
+    ├── searches
+    ├── sorts
+    ├── strings
+    └── web_programming
 
+286 directories
+```
 
 Python syntax was made for readability, and easy editing. For example, the python language uses a `:` and indented code, while javascript and others generally use `{}` and indented code.
 
