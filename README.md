@@ -1,33 +1,10 @@
 # Python Programming For Beginners
 
-**Python 3**, with **VSCode** as the IDE.
-
-[![](https://storage.googleapis.com/replit/images/1539906614890_d3ab3e7d0acf7cc1d56b6c218bd6d344.pn)](https://storage.googleapis.com/replit/images/1539906614890_d3ab3e7d0acf7cc1d56b6c218bd6d344.pn)  
-[![](https://storage.googleapis.com/replit/images/1539906646554_941ec29791cd36653b2612f8368ab99e.pn)](https://storage.googleapis.com/replit/images/1539906646554_941ec29791cd36653b2612f8368ab99e.pn)
 
 Python is a very popular coding language. Little people use it for serious projects, but it is still useful to learn. It was created in 1991 by `Guido van Rossum`.  
 Look at a few uses of python:
 
-- Desktop Applications
-- Web Applications
-- Complex Scientific Equations
 
-Let's look at a few reasons why it is useful:
-
-- Readable/Understandable Code
-- Compatible with other systems/platforms
-- Millions of useful modules
-
-These are just a few, you can find a bunch more by researching it.
-
-What we will be teaching you is specifically `python 3`. This is the most updated version, but the version 2 is still widely used.  
-Here we will be using replit, but there are multiple text editors you can find.
-
-- Emacs
-- Komodo Edit
-- Vim
-- Sublime Text
-- More at [Python Text Editors](https://realpython.com/python-ides-code-editors-guide/)
 
 Python syntax was made for readability, and easy editing. For example, the python language uses a `:` and indented code, while javascript and others generally use `{}` and indented code.
 
