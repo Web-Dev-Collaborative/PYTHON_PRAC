@@ -93,16 +93,3 @@ Here is all my code:
 
 And that should be it. You have just created a simple tool to crawl a website and map all URLs found!
 
-### In Conclusion
-
-Feel free to build upon and improve this code. For example, you could modify the program to search web pages for email addresses or phone numbers as you crawl them. You could even extend functionality by adding command line arguments to provide the option to define output files, limit searches to depth, and much more. Learn about how to create command-line interfaces to accept arguments [here](https://medium.com/@ahadsheriff/the-best-way-to-make-command-line-interfaces-in-python-e00e8b9d10c9).
-
-If you have additional recommendations, tips, or resources, please share in the comments!
-
-Thanks for reading! If you liked this tutorial and want more content like this, be sure to smash that follow button. ❤️
-
-Also be sure to check out my [website](https://ahadsheriff.com/), [Twitter](https://twitter.com/ahadsheriff), [LinkedIn](https://linkedin.com/in/ahadsheriff), and [Github](https://github.com/ahadsheriff).
-
-Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. [Get started](https://www.freecodecamp.org/learn)
-
-[Source](https://www.freecodecamp.org/news/how-to-build-a-url-crawler-to-map-a-website-using-python-6a287be1da11/)

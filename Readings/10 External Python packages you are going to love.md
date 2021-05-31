@@ -95,19 +95,3 @@ As I said before, this is the package I currently use as my standard static type
 I have tried many Python formatters, and `black` is clearly my favourite. The syntax looks neat, and the command line runs quick and can either check the files or actually edit them - very useful for CI/CD. You can even try it [here!](<chrome-extension://cjedbglnccaioiolemnfhjncicchinao/%5Bhttps://black.now.sh%5D(https://black.now.sh/)>)
 
 #### [flask](https://github.com/pallets/flask)
-
-Not sure if I have anything to write here that hasn’t been written before. You are probably familiar with this astonishing micro framework, and if you’re not.. you definitely should check it out.
-
-### Before you go…
-
-Thanks for reading! You can follow my [GitHub](https://github.com/AdamGold) account for more cool repos. I tend to star every cool thing that I see :)
-
-If you enjoyed this article, please hold down the clap button ? to help others find it. The longer you hold it, the more claps you give!
-
-And do not hesitate to share your thoughts in the comments below.
-
----
-
-Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. [Get started](https://www.freecodecamp.org/learn)
-
-[Source](https://www.freecodecamp.org/news/these-python-packages-will-help-accelerate-your-development-process-d4b3f170b1ea/)

@@ -413,15 +413,3 @@ One last trick for ya, and it really is a cool one. Ever needed to form a dictio
 The `zip()` inbuilt function takes a number of iterable objects and returns a list of tuples. Each tuple groups the elements of the input objects by their positional index.
 
 You can also ‘unzip’ objects by calling `*zip()` on them.
-
-#### Thanks for reading!
-
-So there you have it, an A-Z of Python tricks — hopefully you’ve found something useful for your next project.
-
-Python’s a very diverse and well-developed language, so there’s bound to be many features I haven’t got round to including.
-
-Please share any of your own favorite Python tricks by leaving a response below!
-
-Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. [Get started](https://www.freecodecamp.org/learn)
-
-[Source](https://www.freecodecamp.org/news/an-a-z-of-useful-python-tricks-b467524ee747/)
