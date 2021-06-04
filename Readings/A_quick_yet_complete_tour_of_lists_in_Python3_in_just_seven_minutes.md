@@ -1,5 +1,4 @@
-A quick yet complete tour of lists in Python3 in just seven minutes
-===================================================================
+# A quick yet complete tour of lists in Python3 in just seven minutes
 
 > by PALAKOLLU SRI MANIKANTA A quick yet complete tour of lists in Python3 in just seven minutesPhoto by Emma Matthews on UnsplashPython lists are not like arrays. They are bit different. When it comes to dealing with array’s we talk about a collection of homogeneous data elements. This is
 

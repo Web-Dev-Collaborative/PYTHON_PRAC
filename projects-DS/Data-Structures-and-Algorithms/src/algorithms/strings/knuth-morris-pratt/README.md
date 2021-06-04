@@ -1,10 +1,8 @@
-Knuth-Morris-Pratt
-==================
+# Knuth-Morris-Pratt
 
 The **Knuth-Morris-Pratt** algorithm is a string matching algorithm that searches for occurrences of a **pattern string** `P` within another string `S`. It does so by employing the observation that when a mismatch occurs, the word itself embodies sufficient information to determine where the next match could begin.
 
-Prefix Table
-------------
+## Prefix Table
 
 KMP uses a pre-generated table called a **prefix table**. The prefix table allows us to skip certain comparisons.
 
@@ -23,8 +21,7 @@ The values in the prefix table are the **length** of the longest proper **prefix
     ACA
     CACA
 
-Terminology
------------
+## Terminology
 
 #### Proper prefix:
 
@@ -40,8 +37,8 @@ Characters in a string excluding one or more characters at the beginning.
     string   = 'LMAOO'
     suffixes = ['MAOO', 'AOO', 'OO', 'O']
 
-#### *References*
+#### _References_
 
-*[Wikipedia — Knuth–Morris–Pratt algorithm](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)*
+_[Wikipedia — Knuth–Morris–Pratt algorithm](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)_
 
 [↑](#Knuth-Morris-Pratt)

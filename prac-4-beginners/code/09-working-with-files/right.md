@@ -2,8 +2,6 @@
 
 [&lt;Go Back&gt;](../right.html)
 
- [rocks-game](rocks-game/right.html)
+[rocks-game](rocks-game/right.html)
 
-  
-
-Folders: 2  
+Folders: 2

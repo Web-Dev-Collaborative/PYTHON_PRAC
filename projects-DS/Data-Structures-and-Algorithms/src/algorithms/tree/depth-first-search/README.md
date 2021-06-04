@@ -1,15 +1,14 @@
-Depth-first search (DFS)
-========================
+# Depth-first search (DFS)
 
 **Depth-first search** is named as such because the search traverses the entire height of a node before going to the next sibling node.
 
 The general recursive pattern for traversing a binary tree is this: At node `N` do the following:
 
--   **(L)** Recursively traverse its left subtree. This step is finished at the node `N` again.
--   **(R)** Recursively traverse its right subtree. This step is finished at the node `N` again.
--   **(N)** Process `N` itself.
+- **(L)** Recursively traverse its left subtree. This step is finished at the node `N` again.
+- **(R)** Recursively traverse its right subtree. This step is finished at the node `N` again.
+- **(N)** Process `N` itself.
 
-*These steps can be done in any order. If **(L)** is done before **(R)**, the process is called left-to-right traversal, otherwise it is called right-to-left traversal.*
+_These steps can be done in any order. If **(L)** is done before **(R)**, the process is called left-to-right traversal, otherwise it is called right-to-left traversal._
 
 The following methods show left-to-right traversal: **pre-order**, **in-order** and **post-order**.
 
@@ -50,4 +49,4 @@ In a [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree), in-
 
 Post-order: 3, 6, 5, 8, 10, 9, 7, 12, 14, 13, 18,25, 20, 15, 11
 
-------------------------------------------------------------------------
+---

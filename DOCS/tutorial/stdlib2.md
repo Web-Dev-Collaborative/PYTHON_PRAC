@@ -1,28 +1,24 @@
 ### Navigation
 
--   [index](https://docs.python.org/3/genindex.html "General Index")
--   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
--   [next](venv.html "12. Virtual Environments and Packages") |
--   [previous](stdlib.html "10. Brief Tour of the Standard Library") |
--   ![](../_static/py.png)
--   [Python](https://www.python.org/) »
--   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
--   [The Python Tutorial](index.html) »
--   
-
-    |
+- [index](https://docs.python.org/3/genindex.html "General Index")
+- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+- [next](venv.html "12. Virtual Environments and Packages") |
+- [previous](stdlib.html "10. Brief Tour of the Standard Library") |
+- ![](../_static/py.png)
+- [Python](https://www.python.org/) »
+- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+- [The Python Tutorial](index.html) »
+- |
 
 <span id="tut-brieftourtwo"></span>
 
-<span class="section-number">11. </span>Brief Tour of the Standard Library — Part II<a href="#brief-tour-of-the-standard-library-part-ii" class="headerlink" title="Permalink to this headline">¶</a>
-=====================================================================================================================================================================================================
+# <span class="section-number">11. </span>Brief Tour of the Standard Library — Part II<a href="#brief-tour-of-the-standard-library-part-ii" class="headerlink" title="Permalink to this headline">¶</a>
 
 This second tour covers more advanced modules that support professional programming needs. These modules rarely occur in small scripts.
 
 <span id="tut-output-formatting"></span>
 
-<span class="section-number">11.1. </span>Output Formatting<a href="#output-formatting" class="headerlink" title="Permalink to this headline">¶</a>
----------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">11.1. </span>Output Formatting<a href="#output-formatting" class="headerlink" title="Permalink to this headline">¶</a>
 
 The <a href="https://docs.python.org/3/library/reprlib.html#module-reprlib" class="reference internal" title="reprlib: Alternate repr() implementation with size limits."><code class="sourceCode python">reprlib</code></a> module provides a version of <a href="https://docs.python.org/3/library/functions.html#repr" class="reference internal" title="repr"><code class="sourceCode python"><span class="bu">repr</span>()</code></a> customized for abbreviated displays of large or deeply nested containers:
 
@@ -71,8 +67,7 @@ The <a href="https://docs.python.org/3/library/locale.html#module-locale" class=
 
 <span id="tut-templating"></span>
 
-<span class="section-number">11.2. </span>Templating<a href="#templating" class="headerlink" title="Permalink to this headline">¶</a>
--------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">11.2. </span>Templating<a href="#templating" class="headerlink" title="Permalink to this headline">¶</a>
 
 The <a href="https://docs.python.org/3/library/string.html#module-string" class="reference internal" title="string: Common string operations."><code class="sourceCode python">string</code></a> module includes a versatile <a href="https://docs.python.org/3/library/string.html#string.Template" class="reference internal" title="string.Template"><code class="sourceCode python">Template</code></a> class with a simplified syntax suitable for editing by end-users. This allows users to customize their applications without having to alter the application.
 
@@ -118,8 +113,7 @@ Another application for templating is separating program logic from the details 
 
 <span id="tut-binary-formats"></span>
 
-<span class="section-number">11.3. </span>Working with Binary Data Record Layouts<a href="#working-with-binary-data-record-layouts" class="headerlink" title="Permalink to this headline">¶</a>
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">11.3. </span>Working with Binary Data Record Layouts<a href="#working-with-binary-data-record-layouts" class="headerlink" title="Permalink to this headline">¶</a>
 
 The <a href="https://docs.python.org/3/library/struct.html#module-struct" class="reference internal" title="struct: Interpret bytes as packed binary data."><code class="sourceCode python">struct</code></a> module provides <a href="https://docs.python.org/3/library/struct.html#struct.pack" class="reference internal" title="struct.pack"><code class="sourceCode python">pack()</code></a> and <a href="https://docs.python.org/3/library/struct.html#struct.unpack" class="reference internal" title="struct.unpack"><code class="sourceCode python">unpack()</code></a> functions for working with variable length binary record formats. The following example shows how to loop through header information in a ZIP file without using the <a href="https://docs.python.org/3/library/zipfile.html#module-zipfile" class="reference internal" title="zipfile: Read and write ZIP-format archive files."><code class="sourceCode python">zipfile</code></a> module. Pack codes `"H"` and `"I"` represent two and four byte unsigned numbers respectively. The `"<"` indicates that they are standard size and in little-endian byte order:
 
@@ -144,8 +138,7 @@ The <a href="https://docs.python.org/3/library/struct.html#module-struct" class=
 
 <span id="tut-multi-threading"></span>
 
-<span class="section-number">11.4. </span>Multi-threading<a href="#multi-threading" class="headerlink" title="Permalink to this headline">¶</a>
------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">11.4. </span>Multi-threading<a href="#multi-threading" class="headerlink" title="Permalink to this headline">¶</a>
 
 Threading is a technique for decoupling tasks which are not sequentially dependent. Threads can be used to improve the responsiveness of applications that accept user input while other tasks run in the background. A related use case is running I/O in parallel with computations in another thread.
 
@@ -178,8 +171,7 @@ While those tools are powerful, minor design errors can result in problems that 
 
 <span id="tut-logging"></span>
 
-<span class="section-number">11.5. </span>Logging<a href="#logging" class="headerlink" title="Permalink to this headline">¶</a>
--------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">11.5. </span>Logging<a href="#logging" class="headerlink" title="Permalink to this headline">¶</a>
 
 The <a href="https://docs.python.org/3/library/logging.html#module-logging" class="reference internal" title="logging: Flexible event logging system for applications."><code class="sourceCode python">logging</code></a> module offers a full featured and flexible logging system. At its simplest, log messages are sent to a file or to `sys.stderr`:
 
@@ -202,8 +194,7 @@ The logging system can be configured directly from Python or can be loaded from 
 
 <span id="tut-weak-references"></span>
 
-<span class="section-number">11.6. </span>Weak References<a href="#weak-references" class="headerlink" title="Permalink to this headline">¶</a>
------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">11.6. </span>Weak References<a href="#weak-references" class="headerlink" title="Permalink to this headline">¶</a>
 
 Python does automatic memory management (reference counting for most objects and <a href="https://docs.python.org/3/glossary.html#term-garbage-collection" class="reference internal"><span class="xref std std-term">garbage collection</span></a> to eliminate cycles). The memory is freed shortly after the last reference to it has been eliminated.
 
@@ -234,8 +225,7 @@ This approach works fine for most applications but occasionally there is a need 
 
 <span id="tut-list-tools"></span>
 
-<span class="section-number">11.7. </span>Tools for Working with Lists<a href="#tools-for-working-with-lists" class="headerlink" title="Permalink to this headline">¶</a>
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">11.7. </span>Tools for Working with Lists<a href="#tools-for-working-with-lists" class="headerlink" title="Permalink to this headline">¶</a>
 
 Many data structure needs can be met with the built-in list type. However, sometimes there is a need for alternative implementations with different performance trade-offs.
 
@@ -283,20 +273,19 @@ The <a href="https://docs.python.org/3/library/heapq.html#module-heapq" class="r
 
 <span id="tut-decimal-fp"></span>
 
-<span class="section-number">11.8. </span>Decimal Floating Point Arithmetic<a href="#decimal-floating-point-arithmetic" class="headerlink" title="Permalink to this headline">¶</a>
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">11.8. </span>Decimal Floating Point Arithmetic<a href="#decimal-floating-point-arithmetic" class="headerlink" title="Permalink to this headline">¶</a>
 
 The <a href="https://docs.python.org/3/library/decimal.html#module-decimal" class="reference internal" title="decimal: Implementation of the General Decimal Arithmetic  Specification."><code class="sourceCode python">decimal</code></a> module offers a <a href="https://docs.python.org/3/library/decimal.html#decimal.Decimal" class="reference internal" title="decimal.Decimal"><code class="sourceCode python">Decimal</code></a> datatype for decimal floating point arithmetic. Compared to the built-in <a href="https://docs.python.org/3/library/functions.html#float" class="reference internal" title="float"><code class="sourceCode python"><span class="bu">float</span></code></a> implementation of binary floating point, the class is especially helpful for
 
--   financial applications and other uses which require exact decimal representation,
+- financial applications and other uses which require exact decimal representation,
 
--   control over precision,
+- control over precision,
 
--   control over rounding to meet legal or regulatory requirements,
+- control over rounding to meet legal or regulatory requirements,
 
--   tracking of significant decimal places, or
+- tracking of significant decimal places, or
 
--   applications where the user expects the results to match calculations done by hand.
+- applications where the user expects the results to match calculations done by hand.
 
 For example, calculating a 5% tax on a 70 cent phone charge gives different results in decimal floating point and binary floating point. The difference becomes significant if the results are rounded to the nearest cent:
 
@@ -328,15 +317,15 @@ The <a href="https://docs.python.org/3/library/decimal.html#module-decimal" clas
 
 ### [Table of Contents](https://docs.python.org/3/contents.html)
 
--   <a href="#" class="reference internal">11. Brief Tour of the Standard Library — Part II</a>
-    -   <a href="#output-formatting" class="reference internal">11.1. Output Formatting</a>
-    -   <a href="#templating" class="reference internal">11.2. Templating</a>
-    -   <a href="#working-with-binary-data-record-layouts" class="reference internal">11.3. Working with Binary Data Record Layouts</a>
-    -   <a href="#multi-threading" class="reference internal">11.4. Multi-threading</a>
-    -   <a href="#logging" class="reference internal">11.5. Logging</a>
-    -   <a href="#weak-references" class="reference internal">11.6. Weak References</a>
-    -   <a href="#tools-for-working-with-lists" class="reference internal">11.7. Tools for Working with Lists</a>
-    -   <a href="#decimal-floating-point-arithmetic" class="reference internal">11.8. Decimal Floating Point Arithmetic</a>
+- <a href="#" class="reference internal">11. Brief Tour of the Standard Library — Part II</a>
+  - <a href="#output-formatting" class="reference internal">11.1. Output Formatting</a>
+  - <a href="#templating" class="reference internal">11.2. Templating</a>
+  - <a href="#working-with-binary-data-record-layouts" class="reference internal">11.3. Working with Binary Data Record Layouts</a>
+  - <a href="#multi-threading" class="reference internal">11.4. Multi-threading</a>
+  - <a href="#logging" class="reference internal">11.5. Logging</a>
+  - <a href="#weak-references" class="reference internal">11.6. Weak References</a>
+  - <a href="#tools-for-working-with-lists" class="reference internal">11.7. Tools for Working with Lists</a>
+  - <a href="#decimal-floating-point-arithmetic" class="reference internal">11.8. Decimal Floating Point Arithmetic</a>
 
 #### Previous topic
 
@@ -348,25 +337,23 @@ The <a href="https://docs.python.org/3/library/decimal.html#module-decimal" clas
 
 ### This Page
 
--   [Report a Bug](https://docs.python.org/3/bugs.html)
--   [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/stdlib2.rst)
+- [Report a Bug](https://docs.python.org/3/bugs.html)
+- [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/stdlib2.rst)
 
 ### Navigation
 
--   [index](https://docs.python.org/3/genindex.html "General Index")
--   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
--   [next](venv.html "12. Virtual Environments and Packages") |
--   [previous](stdlib.html "10. Brief Tour of the Standard Library") |
--   ![](../_static/py.png)
--   [Python](https://www.python.org/) »
--   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
--   [The Python Tutorial](index.html) »
--   
-
-    |
+- [index](https://docs.python.org/3/genindex.html "General Index")
+- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+- [next](venv.html "12. Virtual Environments and Packages") |
+- [previous](stdlib.html "10. Brief Tour of the Standard Library") |
+- ![](../_static/py.png)
+- [Python](https://www.python.org/) »
+- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+- [The Python Tutorial](index.html) »
+- |
 
 © [Copyright](https://docs.python.org/3/copyright.html) 2001-2021, Python Software Foundation.  
-The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)  
-  
+The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)
+
 Last updated on May 30, 2021. [Found a bug](https://docs.python.org/3/bugs.html)?  
 Created using [Sphinx](https://www.sphinx-doc.org/) 2.4.4.

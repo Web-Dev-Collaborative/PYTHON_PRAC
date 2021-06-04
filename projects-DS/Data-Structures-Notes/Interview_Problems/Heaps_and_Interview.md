@@ -1,25 +1,16 @@
-Lecture IV: Heaps and Interview Questions
-=========================================
+# Lecture IV: Heaps and Interview Questions
 
-1.  [Binary Search Tree Solution](#Binary-Search-Tree)  
-2.  [Review Heaps](#Review-Heaps)  
+1.  [Binary Search Tree Solution](#Binary-Search-Tree)
+2.  [Review Heaps](#Review-Heaps)
 3.  [Practice Interview Questions](#Practice-Interview-Questions)
-
-  
 
 [CS19 Lecture with Brian Doyle](https://youtu.be/qtB7wpLG84c)
 
 [Add on that gives VSCode windows unique color themes](https://marketplace.visualstudio.com/items?itemName=stuart.unique-window-colors)
 
-  
-  
-
-Binary Search Tree
-------------------
+## Binary Search Tree
 
 Going through our BST project, [we currently have the following code](https://github.com/LambdaSchool/Data-Structures/blob/master/binary_search_tree/binary_search_tree.py) and need to work on `contains`:
-
-  
 
     class BinarySearchTree:
       def __init__(self, value):
@@ -43,15 +34,11 @@ Going through our BST project, [we currently have the following code](https://gi
       def contains(self, target):
         pass
 
-  
-
 We need to check where we are in the tree. If the target is the current value, then we know that we’re already done. Otherwise, we need to traverse the tree.
 
 We need to decide if we want to go left or right, so how can we decide that? We’ll compare our value to our target, choosing a path based on if it’s less or greater than.
 
 Depending on the direction chosen, if there are no futher nodes to search for it, and it’s not a match, then we know it doesn’t exist in this tree. If there are more nodes, we need to call the same function recursively, but on the node on the right or left.
-
-  
 
     def contains(self, target):
     if self.value == target:
@@ -73,13 +60,9 @@ Depending on the direction chosen, if there are no futher nodes to search for it
         else:
             return self.contains(target)
 
-  
-
 Next, let’s work through `get_max`.
 
 We want to search the tree, holding onto a max value and updating it if a greater one is found. Our base case is an empty tree. We also know that the max value will be found down the right hand side, not the left, based on the greater than conventional architecture.
-
-  
 
     def get_max(self):
     if not self:
@@ -89,17 +72,13 @@ We want to search the tree, holding onto a max value and updating it if a greate
     else:
         return self.right.get_max()
 
-  
-
 We are checking if there is a node to the right. If there isn’t, then we know that’s the max.
 
-Otherwise, we keep searching down the right by calling get\_max on the next right node.
+Otherwise, we keep searching down the right by calling get_max on the next right node.
 
 Our last function to write is the `for_each` method which should visit each node in the tree and run a callback function on it.
 
 We can continue writing this with recursion.
-
-  
 
     def for_each(self, cb):
     cb(self.value)
@@ -109,17 +88,11 @@ We can continue writing this with recursion.
     if self.right:
         self.right.for_each(cb)
 
-  
-
 Why are we not including a return?
 
-We’re trying to *run* a function on each value – that may or may not already include a return statement – not receive back a value, because if we used a return, then it will only go down the left side and exit out of the function before ever calling down the right side of the tree.
+We’re trying to _run_ a function on each value – that may or may not already include a return statement – not receive back a value, because if we used a return, then it will only go down the left side and exit out of the function before ever calling down the right side of the tree.
 
-  
-  
-
-Review Heaps
-------------
+## Review Heaps
 
 Let’s talk about Heaps conceptually. A heap is stored inside of an array because we need to be able to access things at a specific spot – but it looks like a tree because when we access items, we use specific functions that traverses the array like a binary tree in parent-child relatonships.
 
@@ -127,21 +100,15 @@ This is unlike the usual array method of accessing things just in a sequential m
 
 This is more efficient because it has an O(1) run time for some operations and the space complexity is simply O(n). There is no extra space or pointer storage. It’s solely storing the data.
 
-Visually, it makes more sense to “view” this as a tree (because of the parent-child relationships), but it *is* stored in an array.
-
-  
+Visually, it makes more sense to “view” this as a tree (because of the parent-child relationships), but it _is_ stored in an array.
 
 [Here](https://www.cs.usfca.edu/~galles/visualization/Heap.html) and [here](http://btv.melezinek.cz/binary-heap.html) are heap visualiation websites.
-
-  
 
 Inserting in a min heap means adding a node, then bubbling up through the array to compare to each parent, and swapping them if they should be reversed based on value.
 
 In the array, the new node is being added to the end of the array, then it’s finding the parent using [these equations](http://geeksquiz.com/binary-heap/).
 
-*Brian goes into depth about this around 40 minutes into the CS19 lecture.*
-
-  
+_Brian goes into depth about this around 40 minutes into the CS19 lecture._
 
 Q: Why it is advantageous to replace the lowest leaf when popping off the root and then sift that child down. Why not swap the next largest child of that root after removing the root?
 
@@ -149,20 +116,16 @@ A: Less comparisons to make by sifting the lowest down. If we just move the 2nd 
 
 Heap Insert:
 
--   Add Item to end of tree
--   Bubble it up to the right spot
+- Add Item to end of tree
+- Bubble it up to the right spot
 
 Heap delete:
 
--   Swap priority element with least priorty
--   Remove the last element (previously the root)
--   Sift down new top to the correct spot
+- Swap priority element with least priorty
+- Remove the last element (previously the root)
+- Sift down new top to the correct spot
 
-  
-  
-
-Practice Interview Questions
-----------------------------
+## Practice Interview Questions
 
 Given this sample interview question, how would you approach solving it?
 
@@ -178,13 +141,9 @@ Examples
 >
 > Input: A = \[0, 1, 2, 3, 4, 5, 6\] Output: The smallest missing element is 7
 
-  
-
 One option would be starting at 0 and iterating up to find the first number that is missing itself +1. If we reach the end of the array and none is missing, then we know it’s the final number in the array +1.
 
 A way to possibly optimize would be to find sequences within the array and search before and after each sequence to jump numbers more quickly (akin to TimSort).
-
-  
 
     if arr[0] != 0:
         return 0
@@ -192,8 +151,6 @@ A way to possibly optimize would be to find sequences within the array and searc
     for i in range(0, len(arr)):
         if arr[i]+1 != arr[i+1]:
             return arr[i]+1
-
-  
 
 Another method would be to use a version of binary search to find the earliest number where the index of the array does not match arr\[i\]. For example, if arr\[0\] is not 0, we know 0 is the earliest missing integer.
 
@@ -204,8 +161,6 @@ In an array like this:
 > \[0, 1, 2, 3, 5, 6, 9\]
 
 We know that the earliest missing is at arr\[4\] because arr\[4\] == 5 not 4.
-
-  
 
 Our next problem is…
 
@@ -219,11 +174,7 @@ Examples
 >
 > Output: 10, 15, 20, 25, 27, 29, 30, 32, 33, 35, 37, 40, 48, 93
 
-  
-
 A way to handle this might be to use merge sort to iterate through the given arguments, and merge the arrays together, then print a final merged array.
-
-  
 
     def merge(arrA, arrB):
         elements = len( arrA ) + len( arrB )
@@ -260,17 +211,10 @@ A way to handle this might be to use merge sort to iterate through the given arg
 
         print(*new_array, sep = ", ")
 
-  
-
-Another interesting solution might be to iterate through the arrays while there is more than one, finding the smallest number of any array, popping it into a new\_array, and removing any array that becomes empty.
+Another interesting solution might be to iterate through the arrays while there is more than one, finding the smallest number of any array, popping it into a new_array, and removing any array that becomes empty.
 
 Like so:
 
 ![Solution](Interview2.png "Solution")
 
-  
-
 But a truly optimal solution to this problem is solved [using min heaps](https://medium.com/outco/how-to-merge-k-sorted-arrays-c35d87aa298e).
-
-  
-  

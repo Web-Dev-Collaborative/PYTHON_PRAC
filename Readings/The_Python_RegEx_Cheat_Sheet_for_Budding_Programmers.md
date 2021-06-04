@@ -1,5 +1,4 @@
-The Python RegEx Cheat Sheet for Budding Programmers
-====================================================
+# The Python RegEx Cheat Sheet for Budding Programmers
 
 > Use this list of Python regular expressions so that you can get better at using this versatile programming language.
 
@@ -31,10 +30,10 @@ output:
 This is a line  
 This is a second line
 
-def function\_name(parameter):  
+def function_name(parameter):  
 commandsInitiate a function with an optional parameterdef yourName(x):  
-print(x+1)lambdaCall an anonymous functionadd\_3\_to = lambda y: y+3  
-print(add\_3\_to(4))
+print(x+1)lambdaCall an anonymous functionadd_3_to = lambda y: y+3  
+print(add_3_to(4))
 
 output: 7
 
@@ -417,17 +416,17 @@ output: {1: 4, 5: 6, 8: 7, 4: 4}
 keys()Show all the keys in a dictionarya={1:2, 4:8}  
 a.keys()
 
-output: dict\_keys(\[1, 4\])
+output: dict_keys(\[1, 4\])
 
 values()Show all the values in a dictionarya={1:2, 4:8}  
 a.values()
 
-output: dict\_values(\[2, 8\])
+output: dict_values(\[2, 8\])
 
 items()Display the keys and the values in a dictionarya={1:2, 4:8}  
 a.items()
 
-output: dict\_items(\[(1, 2), (4, 8)\])
+output: dict_items(\[(1, 2), (4, 8)\])
 
 get(key)Get the value of an item in a dictionary by its keya={1:2, 4:8, 3:5}  
 a.get(1)
@@ -448,7 +447,7 @@ print(a)
 output: \[1, 3, 2, 4, 1, 6, 6, 4\]
 
 memoryview(x)Access the internal buffers of an objecta=memoryview(object)bytes()Convert a memory buffer protocol into bytesbytes(a\[0:2\])bytearray()Return an array of bytesbytearray(object)\#Write a single line of comment or prevent a line of code from being executed\# Python regex cheat sheet""" ""“Write a multi-line comment”"“The Python regex cheat sheet is good for beginners  
-It’s equally a great refresher for experts”"“**Command Line**pip install packageInstall an online librarypip install pandasvirtualenv nameUse virtaulenv to create a virtual environmentvirtualenv myprojectmkvirtualenv nameUse virtual environment wrapper to create virtual environmentmkvirtualenv myprojectpython file.pyRun the commands in a Python file”python my\_file.pypip freezeList out all the installed packages in a virtual environmentpip freezepip freeze &gt; somefilesCopy all installed libraries in a single filepip freeze &gt; requirements.txtwhereFind the installation path of Pythonwhere python–versionCheck the version of a packagepython –version.exeRun a Python shellpython.exewith open(file, ‘w’)Write to an existing file and overwrite its existing contentwith open(‘regex.txt’, ‘w’) as wf:  
+It’s equally a great refresher for experts”"“**Command Line**pip install packageInstall an online librarypip install pandasvirtualenv nameUse virtaulenv to create a virtual environmentvirtualenv myprojectmkvirtualenv nameUse virtual environment wrapper to create virtual environmentmkvirtualenv myprojectpython file.pyRun the commands in a Python file”python my_file.pypip freezeList out all the installed packages in a virtual environmentpip freezepip freeze &gt; somefilesCopy all installed libraries in a single filepip freeze &gt; requirements.txtwhereFind the installation path of Pythonwhere python–versionCheck the version of a packagepython –version.exeRun a Python shellpython.exewith open(file, ‘w’)Write to an existing file and overwrite its existing contentwith open(‘regex.txt’, ‘w’) as wf:  
 wf.write(“Hello World!”)with open(file, ‘r’)Open a file as read-onlywith open(‘regex.txt’, ‘r’) as rf:  
 print(rf.read()with open(file, ‘a’)Write to a file without overwriting its existing contentwith open(‘regex.txt’, ‘a’) as af:  
 af.write(“\\nHello Yes!”)file.closeClose a file if it’s not in useaf=open(‘regex.txt’)  

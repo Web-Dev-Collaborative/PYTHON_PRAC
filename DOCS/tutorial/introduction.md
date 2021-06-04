@@ -1,21 +1,18 @@
 ### Navigation
 
--   [index](https://docs.python.org/3/genindex.html "General Index")
--   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
--   [next](controlflow.html "4. More Control Flow Tools") |
--   [previous](interpreter.html "2. Using the Python Interpreter") |
--   ![](../_static/py.png)
--   [Python](https://www.python.org/) »
--   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
--   [The Python Tutorial](index.html) »
--   
-
-    |
+- [index](https://docs.python.org/3/genindex.html "General Index")
+- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+- [next](controlflow.html "4. More Control Flow Tools") |
+- [previous](interpreter.html "2. Using the Python Interpreter") |
+- ![](../_static/py.png)
+- [Python](https://www.python.org/) »
+- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+- [The Python Tutorial](index.html) »
+- |
 
 <span id="tut-informal"></span>
 
-<span class="section-number">3. </span>An Informal Introduction to Python<a href="#an-informal-introduction-to-python" class="headerlink" title="Permalink to this headline">¶</a>
-==================================================================================================================================================================================
+# <span class="section-number">3. </span>An Informal Introduction to Python<a href="#an-informal-introduction-to-python" class="headerlink" title="Permalink to this headline">¶</a>
 
 In the following examples, input and output are distinguished by the presence or absence of prompts (<a href="https://docs.python.org/3/glossary.html#term-0" class="reference internal"><span class="xref std std-term">&gt;&gt;&gt;</span></a> and <a href="https://docs.python.org/3/glossary.html#term-1" class="reference internal"><span class="xref std std-term">…</span></a>): to repeat the example, you must type everything after the prompt, when the prompt appears; lines that do not begin with a prompt are output from the interpreter. Note that a secondary prompt on a line by itself in an example means you must type a blank line; this is used to end a multi-line command.
 
@@ -30,8 +27,7 @@ Some examples:
 
 <span id="tut-calculator"></span>
 
-<span class="section-number">3.1. </span>Using Python as a Calculator<a href="#using-python-as-a-calculator" class="headerlink" title="Permalink to this headline">¶</a>
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">3.1. </span>Using Python as a Calculator<a href="#using-python-as-a-calculator" class="headerlink" title="Permalink to this headline">¶</a>
 
 Let’s try some simple Python commands. Start the interpreter and wait for the primary prompt, `>>>`. (It shouldn’t take long.)
 
@@ -137,7 +133,7 @@ In the interactive interpreter, the output string is enclosed in quotes and spec
     First line.
     Second line.
 
-If you don’t want characters prefaced by `\` to be interpreted as special characters, you can use *raw strings* by adding an `r` before the first quote:
+If you don’t want characters prefaced by `\` to be interpreted as special characters, you can use _raw strings_ by adding an `r` before the first quote:
 
     >>> print('C:\some\name')  # here \n means newline!
     C:\some
@@ -165,7 +161,7 @@ Strings can be concatenated (glued together) with the `+` operator, and repeated
     >>> 3 * 'un' + 'ium'
     'unununium'
 
-Two or more *string literals* (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.
+Two or more _string literals_ (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.
 
     >>> 'Py' 'thon'
     'Python'
@@ -196,7 +192,7 @@ If you want to concatenate variables or a variable and a literal, use `+`:
     >>> prefix + 'thon'
     'Python'
 
-Strings can be *indexed* (subscripted), with the first character having index 0. There is no separate character type; a character is simply a string of size one:
+Strings can be _indexed_ (subscripted), with the first character having index 0. There is no separate character type; a character is simply a string of size one:
 
     >>> word = 'Python'
     >>> word[0]  # character in position 0
@@ -215,14 +211,14 @@ Indices may also be negative numbers, to start counting from the right:
 
 Note that since -0 is the same as 0, negative indices start from -1.
 
-In addition to indexing, *slicing* is also supported. While indexing is used to obtain individual characters, *slicing* allows you to obtain substring:
+In addition to indexing, _slicing_ is also supported. While indexing is used to obtain individual characters, _slicing_ allows you to obtain substring:
 
     >>> word[0:2]  # characters from position 0 (included) to 2 (excluded)
     'Py'
     >>> word[2:5]  # characters from position 2 (included) to 5 (excluded)
     'tho'
 
-Note how the start is always included, and the end always excluded. This makes sure that `s[:i]                       +                       s[i:]` is always equal to `s`:
+Note how the start is always included, and the end always excluded. This makes sure that `s[:i] + s[i:]` is always equal to `s`:
 
     >>> word[:2] + word[2:]
     'Python'
@@ -238,7 +234,7 @@ Slice indices have useful defaults; an omitted first index defaults to zero, an 
     >>> word[-2:]  # characters from the second-last (included) to the end
     'on'
 
-One way to remember how slices work is to think of the indices as pointing *between* characters, with the left edge of the first character numbered 0. Then the right edge of the last character of a string of *n* characters has index *n*, for example:
+One way to remember how slices work is to think of the indices as pointing _between_ characters, with the left edge of the first character numbered 0. Then the right edge of the last character of a string of _n_ characters has index _n_, for example:
 
      +---+---+---+---+---+---+
      | P | y | t | h | o | n |
@@ -246,7 +242,7 @@ One way to remember how slices work is to think of the indices as pointing *betw
      0   1   2   3   4   5   6
     -6  -5  -4  -3  -2  -1
 
-The first row of numbers gives the position of the indices 0…6 in the string; the second row gives the corresponding negative indices. The slice from *i* to *j* consists of all characters between the edges labeled *i* and *j*, respectively.
+The first row of numbers gives the position of the indices 0…6 in the string; the second row gives the corresponding negative indices. The slice from _i_ to _j_ consists of all characters between the edges labeled _i_ and _j_, respectively.
 
 For non-negative indices, the length of a slice is the difference of the indices, if both are within bounds. For example, the length of `word[1:3]` is 2.
 
@@ -290,26 +286,26 @@ The built-in function <a href="https://docs.python.org/3/library/functions.html#
 
 See also
 
- <a href="https://docs.python.org/3/library/stdtypes.html#textseq" class="reference internal"><span class="std std-ref">Text Sequence Type — str</span></a>   
-Strings are examples of *sequence types*, and support the common operations supported by such types.
+<a href="https://docs.python.org/3/library/stdtypes.html#textseq" class="reference internal"><span class="std std-ref">Text Sequence Type — str</span></a>  
+Strings are examples of _sequence types_, and support the common operations supported by such types.
 
- <a href="https://docs.python.org/3/library/stdtypes.html#string-methods" class="reference internal"><span class="std std-ref">String Methods</span></a>   
+<a href="https://docs.python.org/3/library/stdtypes.html#string-methods" class="reference internal"><span class="std std-ref">String Methods</span></a>  
 Strings support a large number of methods for basic transformations and searching.
 
- <a href="https://docs.python.org/3/reference/lexical_analysis.html#f-strings" class="reference internal"><span class="std std-ref">Formatted string literals</span></a>   
+<a href="https://docs.python.org/3/reference/lexical_analysis.html#f-strings" class="reference internal"><span class="std std-ref">Formatted string literals</span></a>  
 String literals that have embedded expressions.
 
- <a href="https://docs.python.org/3/library/string.html#formatstrings" class="reference internal"><span class="std std-ref">Format String Syntax</span></a>   
+<a href="https://docs.python.org/3/library/string.html#formatstrings" class="reference internal"><span class="std std-ref">Format String Syntax</span></a>  
 Information about string formatting with <a href="https://docs.python.org/3/library/stdtypes.html#str.format" class="reference internal" title="str.format"><code class="sourceCode python"><span class="bu">str</span>.<span class="bu">format</span>()</code></a>.
 
- <a href="https://docs.python.org/3/library/stdtypes.html#old-string-formatting" class="reference internal"><span class="std std-ref">printf-style String Formatting</span></a>   
+<a href="https://docs.python.org/3/library/stdtypes.html#old-string-formatting" class="reference internal"><span class="std std-ref">printf-style String Formatting</span></a>  
 The old formatting operations invoked when strings are the left operand of the `%` operator are described in more detail here.
 
 <span id="tut-lists"></span>
 
 ### <span class="section-number">3.1.3. </span>Lists<a href="#lists" class="headerlink" title="Permalink to this headline">¶</a>
 
-Python knows a number of *compound* data types, used to group together other values. The most versatile is the *list*, which can be written as a list of comma-separated values (items) between square brackets. Lists might contain items of different types, but usually the items all have the same type.
+Python knows a number of _compound_ data types, used to group together other values. The most versatile is the _list_, which can be written as a list of comma-separated values (items) between square brackets. Lists might contain items of different types, but usually the items all have the same type.
 
     >>> squares = [1, 4, 9, 16, 25]
     >>> squares
@@ -343,7 +339,7 @@ Unlike strings, which are <a href="https://docs.python.org/3/glossary.html#term-
     >>> cubes
     [1, 8, 27, 64, 125]
 
-You can also add new items at the end of the list, by using the `append()` *method* (we will see more about methods later):
+You can also add new items at the end of the list, by using the `append()` _method_ (we will see more about methods later):
 
     >>> cubes.append(216)  # add the cube of 6
     >>> cubes.append(7 ** 3)  # and the cube of 7
@@ -388,8 +384,7 @@ It is possible to nest lists (create lists containing other lists), for example:
 
 <span id="tut-firststeps"></span>
 
-<span class="section-number">3.2. </span>First Steps Towards Programming<a href="#first-steps-towards-programming" class="headerlink" title="Permalink to this headline">¶</a>
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">3.2. </span>First Steps Towards Programming<a href="#first-steps-towards-programming" class="headerlink" title="Permalink to this headline">¶</a>
 
 Of course, we can use Python for more complicated tasks than adding two and two together. For instance, we can write an initial sub-sequence of the <a href="https://en.wikipedia.org/wiki/Fibonacci_number" class="reference external">Fibonacci series</a> as follows:
 
@@ -410,43 +405,43 @@ Of course, we can use Python for more complicated tasks than adding two and two 
 
 This example introduces several new features.
 
--   The first line contains a *multiple assignment*: the variables `a` and `b` simultaneously get the new values 0 and 1. On the last line this is used again, demonstrating that the expressions on the right-hand side are all evaluated first before any of the assignments take place. The right-hand side expressions are evaluated from the left to the right.
+- The first line contains a _multiple assignment_: the variables `a` and `b` simultaneously get the new values 0 and 1. On the last line this is used again, demonstrating that the expressions on the right-hand side are all evaluated first before any of the assignments take place. The right-hand side expressions are evaluated from the left to the right.
 
--   The <a href="https://docs.python.org/3/reference/compound_stmts.html#while" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">while</code></a> loop executes as long as the condition (here: `a                         <                         10`) remains true. In Python, like in C, any non-zero integer value is true; zero is false. The condition may also be a string or list value, in fact any sequence; anything with a non-zero length is true, empty sequences are false. The test used in the example is a simple comparison. The standard comparison operators are written the same as in C: `<` (less than), `>` (greater than), `==` (equal to), `<=` (less than or equal to), `>=` (greater than or equal to) and `!=` (not equal to).
+- The <a href="https://docs.python.org/3/reference/compound_stmts.html#while" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">while</code></a> loop executes as long as the condition (here: `a < 10`) remains true. In Python, like in C, any non-zero integer value is true; zero is false. The condition may also be a string or list value, in fact any sequence; anything with a non-zero length is true, empty sequences are false. The test used in the example is a simple comparison. The standard comparison operators are written the same as in C: `<` (less than), `>` (greater than), `==` (equal to), `<=` (less than or equal to), `>=` (greater than or equal to) and `!=` (not equal to).
 
--   The *body* of the loop is *indented*: indentation is Python’s way of grouping statements. At the interactive prompt, you have to type a tab or space(s) for each indented line. In practice you will prepare more complicated input for Python with a text editor; all decent text editors have an auto-indent facility. When a compound statement is entered interactively, it must be followed by a blank line to indicate completion (since the parser cannot guess when you have typed the last line). Note that each line within a basic block must be indented by the same amount.
+- The _body_ of the loop is _indented_: indentation is Python’s way of grouping statements. At the interactive prompt, you have to type a tab or space(s) for each indented line. In practice you will prepare more complicated input for Python with a text editor; all decent text editors have an auto-indent facility. When a compound statement is entered interactively, it must be followed by a blank line to indicate completion (since the parser cannot guess when you have typed the last line). Note that each line within a basic block must be indented by the same amount.
 
--   The <a href="https://docs.python.org/3/library/functions.html#print" class="reference internal" title="print"><code class="sourceCode python"><span class="bu">print</span>()</code></a> function writes the value of the argument(s) it is given. It differs from just writing the expression you want to write (as we did earlier in the calculator examples) in the way it handles multiple arguments, floating point quantities, and strings. Strings are printed without quotes, and a space is inserted between items, so you can format things nicely, like this:
+- The <a href="https://docs.python.org/3/library/functions.html#print" class="reference internal" title="print"><code class="sourceCode python"><span class="bu">print</span>()</code></a> function writes the value of the argument(s) it is given. It differs from just writing the expression you want to write (as we did earlier in the calculator examples) in the way it handles multiple arguments, floating point quantities, and strings. Strings are printed without quotes, and a space is inserted between items, so you can format things nicely, like this:
 
-        >>> i = 256*256
-        >>> print('The value of i is', i)
-        The value of i is 65536
+      >>> i = 256*256
+      >>> print('The value of i is', i)
+      The value of i is 65536
 
-    The keyword argument *end* can be used to avoid the newline after the output, or end the output with a different string:
+  The keyword argument _end_ can be used to avoid the newline after the output, or end the output with a different string:
 
-        >>> a, b = 0, 1
-        >>> while a < 1000:
-        ...     print(a, end=',')
-        ...     a, b = b, a+b
-        ...
-        0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,
+      >>> a, b = 0, 1
+      >>> while a < 1000:
+      ...     print(a, end=',')
+      ...     a, b = b, a+b
+      ...
+      0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,
 
 Footnotes
 
- <span class="brackets"><a href="#id1" class="fn-backref">1</a></span>   
+<span class="brackets"><a href="#id1" class="fn-backref">1</a></span>  
 Since `**` has higher precedence than `-`, `-3**2` will be interpreted as `-(3**2)` and thus result in `-9`. To avoid this and get `9`, you can use `(-3)**2`.
 
- <span class="brackets"><a href="#id2" class="fn-backref">2</a></span>   
+<span class="brackets"><a href="#id2" class="fn-backref">2</a></span>  
 Unlike other languages, special characters such as `\n` have the same meaning with both single (`'...'`) and double (`"..."`) quotes. The only difference between the two is that within single quotes you don’t need to escape `"` (but you have to escape `\'`) and vice versa.
 
 ### [Table of Contents](https://docs.python.org/3/contents.html)
 
--   <a href="#" class="reference internal">3. An Informal Introduction to Python</a>
-    -   <a href="#using-python-as-a-calculator" class="reference internal">3.1. Using Python as a Calculator</a>
-        -   <a href="#numbers" class="reference internal">3.1.1. Numbers</a>
-        -   <a href="#strings" class="reference internal">3.1.2. Strings</a>
-        -   <a href="#lists" class="reference internal">3.1.3. Lists</a>
-    -   <a href="#first-steps-towards-programming" class="reference internal">3.2. First Steps Towards Programming</a>
+- <a href="#" class="reference internal">3. An Informal Introduction to Python</a>
+  - <a href="#using-python-as-a-calculator" class="reference internal">3.1. Using Python as a Calculator</a>
+    - <a href="#numbers" class="reference internal">3.1.1. Numbers</a>
+    - <a href="#strings" class="reference internal">3.1.2. Strings</a>
+    - <a href="#lists" class="reference internal">3.1.3. Lists</a>
+  - <a href="#first-steps-towards-programming" class="reference internal">3.2. First Steps Towards Programming</a>
 
 #### Previous topic
 
@@ -458,25 +453,23 @@ Unlike other languages, special characters such as `\n` have the same meaning wi
 
 ### This Page
 
--   [Report a Bug](https://docs.python.org/3/bugs.html)
--   [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/introduction.rst)
+- [Report a Bug](https://docs.python.org/3/bugs.html)
+- [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/introduction.rst)
 
 ### Navigation
 
--   [index](https://docs.python.org/3/genindex.html "General Index")
--   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
--   [next](controlflow.html "4. More Control Flow Tools") |
--   [previous](interpreter.html "2. Using the Python Interpreter") |
--   ![](../_static/py.png)
--   [Python](https://www.python.org/) »
--   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
--   [The Python Tutorial](index.html) »
--   
-
-    |
+- [index](https://docs.python.org/3/genindex.html "General Index")
+- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+- [next](controlflow.html "4. More Control Flow Tools") |
+- [previous](interpreter.html "2. Using the Python Interpreter") |
+- ![](../_static/py.png)
+- [Python](https://www.python.org/) »
+- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+- [The Python Tutorial](index.html) »
+- |
 
 © [Copyright](https://docs.python.org/3/copyright.html) 2001-2021, Python Software Foundation.  
-The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)  
-  
+The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)
+
 Last updated on May 30, 2021. [Found a bug](https://docs.python.org/3/bugs.html)?  
 Created using [Sphinx](https://www.sphinx-doc.org/) 2.4.4.

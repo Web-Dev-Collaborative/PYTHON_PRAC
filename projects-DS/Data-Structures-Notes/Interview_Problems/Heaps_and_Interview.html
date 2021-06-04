@@ -1,97 +1,245 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Heaps_and_Interview</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-  <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-</head>
-<body>
-<h1 id="lecture-iv-heaps-and-interview-questions">Lecture IV: Heaps and Interview Questions</h1>
-<ol type="a">
-<li><a href="#Binary-Search-Tree">Binary Search Tree Solution</a><br />
-</li>
-<li><a href="#Review-Heaps">Review Heaps</a><br />
-</li>
-<li><a href="#Practice-Interview-Questions">Practice Interview Questions</a></li>
-</ol>
-<p><br></p>
-<p><a href="https://youtu.be/qtB7wpLG84c">CS19 Lecture with Brian Doyle</a></p>
-<p><a href="https://marketplace.visualstudio.com/items?itemName=stuart.unique-window-colors">Add on that gives VSCode windows unique color themes</a></p>
-<p><br> <br></p>
-<h2 id="binary-search-tree">Binary Search Tree</h2>
-<p>Going through our BST project, <a href="https://github.com/LambdaSchool/Data-Structures/blob/master/binary_search_tree/binary_search_tree.py">we currently have the following code</a> and need to work on <code>contains</code>:</p>
-<p><br></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode py"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">class</span> BinarySearchTree:</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Heaps_and_Interview</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+    <style type="text/css">
+      a.sourceLine {
+        display: inline-block;
+        line-height: 1.25;
+      }
+      a.sourceLine {
+        pointer-events: none;
+        color: inherit;
+        text-decoration: inherit;
+      }
+      a.sourceLine:empty {
+        height: 1.2em;
+      }
+      .sourceCode {
+        overflow: visible;
+      }
+      code.sourceCode {
+        white-space: pre;
+        position: relative;
+      }
+      div.sourceCode {
+        margin: 1em 0;
+      }
+      pre.sourceCode {
+        margin: 0;
+      }
+      @media screen {
+        div.sourceCode {
+          overflow: auto;
+        }
+      }
+      @media print {
+        code.sourceCode {
+          white-space: pre-wrap;
+        }
+        a.sourceLine {
+          text-indent: -1em;
+          padding-left: 1em;
+        }
+      }
+      pre.numberSource a.sourceLine {
+        position: relative;
+        left: -4em;
+      }
+      pre.numberSource a.sourceLine::before {
+        content: attr(title);
+        position: relative;
+        left: -1em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        pointer-events: all;
+        display: inline-block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+        color: #aaaaaa;
+      }
+      pre.numberSource {
+        margin-left: 3em;
+        border-left: 1px solid #aaaaaa;
+        padding-left: 4px;
+      }
+      div.sourceCode {
+      }
+      @media screen {
+        a.sourceLine::before {
+          text-decoration: underline;
+        }
+      }
+      code span.al {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Alert */
+      code span.an {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Annotation */
+      code span.at {
+        color: #7d9029;
+      } /* Attribute */
+      code span.bn {
+        color: #40a070;
+      } /* BaseN */
+      code span.bu {
+      } /* BuiltIn */
+      code span.cf {
+        color: #007020;
+        font-weight: bold;
+      } /* ControlFlow */
+      code span.ch {
+        color: #4070a0;
+      } /* Char */
+      code span.cn {
+        color: #880000;
+      } /* Constant */
+      code span.co {
+        color: #60a0b0;
+        font-style: italic;
+      } /* Comment */
+      code span.cv {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* CommentVar */
+      code span.do {
+        color: #ba2121;
+        font-style: italic;
+      } /* Documentation */
+      code span.dt {
+        color: #902000;
+      } /* DataType */
+      code span.dv {
+        color: #40a070;
+      } /* DecVal */
+      code span.er {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Error */
+      code span.ex {
+      } /* Extension */
+      code span.fl {
+        color: #40a070;
+      } /* Float */
+      code span.fu {
+        color: #06287e;
+      } /* Function */
+      code span.im {
+      } /* Import */
+      code span.in {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Information */
+      code span.kw {
+        color: #007020;
+        font-weight: bold;
+      } /* Keyword */
+      code span.op {
+        color: #666666;
+      } /* Operator */
+      code span.ot {
+        color: #007020;
+      } /* Other */
+      code span.pp {
+        color: #bc7a00;
+      } /* Preprocessor */
+      code span.sc {
+        color: #4070a0;
+      } /* SpecialChar */
+      code span.ss {
+        color: #bb6688;
+      } /* SpecialString */
+      code span.st {
+        color: #4070a0;
+      } /* String */
+      code span.va {
+        color: #19177c;
+      } /* Variable */
+      code span.vs {
+        color: #4070a0;
+      } /* VerbatimString */
+      code span.wa {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Warning */
+    </style>
+  </head>
+  <body>
+    <h1 id="lecture-iv-heaps-and-interview-questions">
+      Lecture IV: Heaps and Interview Questions
+    </h1>
+    <ol type="a">
+      <li>
+        <a href="#Binary-Search-Tree">Binary Search Tree Solution</a><br />
+      </li>
+      <li><a href="#Review-Heaps">Review Heaps</a><br /></li>
+      <li>
+        <a href="#Practice-Interview-Questions">Practice Interview Questions</a>
+      </li>
+    </ol>
+    <p><br /></p>
+    <p>
+      <a href="https://youtu.be/qtB7wpLG84c">CS19 Lecture with Brian Doyle</a>
+    </p>
+    <p>
+      <a
+        href="https://marketplace.visualstudio.com/items?itemName=stuart.unique-window-colors"
+        >Add on that gives VSCode windows unique color themes</a
+      >
+    </p>
+    <p>
+      <br />
+      <br />
+    </p>
+    <h2 id="binary-search-tree">Binary Search Tree</h2>
+    <p>
+      Going through our BST project,
+      <a
+        href="https://github.com/LambdaSchool/Data-Structures/blob/master/binary_search_tree/binary_search_tree.py"
+        >we currently have the following code</a
+      >
+      and need to work on <code>contains</code>:
+    </p>
+    <p><br /></p>
+    <div class="sourceCode" id="cb1">
+      <pre
+        class="sourceCode py"
+      ><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">class</span> BinarySearchTree:</a>
 <a class="sourceLine" id="cb1-2" title="2">  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, value):</a>
 <a class="sourceLine" id="cb1-3" title="3">    <span class="va">self</span>.value <span class="op">=</span> value</a>
 <a class="sourceLine" id="cb1-4" title="4">    <span class="va">self</span>.left <span class="op">=</span> <span class="va">None</span></a>
@@ -111,13 +259,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb1-18" title="18">            <span class="va">self</span>.right.insert(value)</a>
 <a class="sourceLine" id="cb1-19" title="19"></a>
 <a class="sourceLine" id="cb1-20" title="20">  <span class="kw">def</span> contains(<span class="va">self</span>, target):</a>
-<a class="sourceLine" id="cb1-21" title="21">    <span class="cf">pass</span></a></code></pre></div>
-<p><br></p>
-<p>We need to check where we are in the tree. If the target is the current value, then we know that we’re already done. Otherwise, we need to traverse the tree.</p>
-<p>We need to decide if we want to go left or right, so how can we decide that? We’ll compare our value to our target, choosing a path based on if it’s less or greater than.</p>
-<p>Depending on the direction chosen, if there are no futher nodes to search for it, and it’s not a match, then we know it doesn’t exist in this tree. If there are more nodes, we need to call the same function recursively, but on the node on the right or left.</p>
-<p><br></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode py"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">def</span> contains(<span class="va">self</span>, target):</a>
+<a class="sourceLine" id="cb1-21" title="21">    <span class="cf">pass</span></a></code></pre>
+    </div>
+    <p><br /></p>
+    <p>
+      We need to check where we are in the tree. If the target is the current
+      value, then we know that we’re already done. Otherwise, we need to
+      traverse the tree.
+    </p>
+    <p>
+      We need to decide if we want to go left or right, so how can we decide
+      that? We’ll compare our value to our target, choosing a path based on if
+      it’s less or greater than.
+    </p>
+    <p>
+      Depending on the direction chosen, if there are no futher nodes to search
+      for it, and it’s not a match, then we know it doesn’t exist in this tree.
+      If there are more nodes, we need to call the same function recursively,
+      but on the node on the right or left.
+    </p>
+    <p><br /></p>
+    <div class="sourceCode" id="cb2">
+      <pre
+        class="sourceCode py"
+      ><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">def</span> contains(<span class="va">self</span>, target):</a>
 <a class="sourceLine" id="cb2-2" title="2"><span class="cf">if</span> <span class="va">self</span>.value <span class="op">==</span> target:</a>
 <a class="sourceLine" id="cb2-3" title="3">    <span class="cf">return</span> <span class="va">True</span></a>
 <a class="sourceLine" id="cb2-4" title="4"></a>
@@ -135,102 +300,228 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb2-16" title="16">    <span class="cf">if</span> <span class="kw">not</span> <span class="va">self</span>.right:</a>
 <a class="sourceLine" id="cb2-17" title="17">        <span class="cf">return</span> <span class="va">False</span></a>
 <a class="sourceLine" id="cb2-18" title="18">    <span class="cf">else</span>:</a>
-<a class="sourceLine" id="cb2-19" title="19">        <span class="cf">return</span> <span class="va">self</span>.contains(target)</a></code></pre></div>
-<p><br></p>
-<p>Next, let’s work through <code>get_max</code>.</p>
-<p>We want to search the tree, holding onto a max value and updating it if a greater one is found. Our base case is an empty tree. We also know that the max value will be found down the right hand side, not the left, based on the greater than conventional architecture.</p>
-<p><br></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode py"><code class="sourceCode python"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">def</span> get_max(<span class="va">self</span>):</a>
+<a class="sourceLine" id="cb2-19" title="19">        <span class="cf">return</span> <span class="va">self</span>.contains(target)</a></code></pre>
+    </div>
+    <p><br /></p>
+    <p>Next, let’s work through <code>get_max</code>.</p>
+    <p>
+      We want to search the tree, holding onto a max value and updating it if a
+      greater one is found. Our base case is an empty tree. We also know that
+      the max value will be found down the right hand side, not the left, based
+      on the greater than conventional architecture.
+    </p>
+    <p><br /></p>
+    <div class="sourceCode" id="cb3">
+      <pre
+        class="sourceCode py"
+      ><code class="sourceCode python"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">def</span> get_max(<span class="va">self</span>):</a>
 <a class="sourceLine" id="cb3-2" title="2"><span class="cf">if</span> <span class="kw">not</span> <span class="va">self</span>:</a>
 <a class="sourceLine" id="cb3-3" title="3">    <span class="cf">return</span> <span class="va">None</span></a>
 <a class="sourceLine" id="cb3-4" title="4"><span class="cf">if</span> <span class="kw">not</span> <span class="va">self</span>.right:</a>
 <a class="sourceLine" id="cb3-5" title="5">    <span class="cf">return</span> <span class="va">self</span>.value</a>
 <a class="sourceLine" id="cb3-6" title="6"><span class="cf">else</span>:</a>
-<a class="sourceLine" id="cb3-7" title="7">    <span class="cf">return</span> <span class="va">self</span>.right.get_max()</a></code></pre></div>
-<p><br></p>
-<p>We are checking if there is a node to the right. If there isn’t, then we know that’s the max.</p>
-<p>Otherwise, we keep searching down the right by calling get_max on the next right node.</p>
-<p>Our last function to write is the <code>for_each</code> method which should visit each node in the tree and run a callback function on it.</p>
-<p>We can continue writing this with recursion.</p>
-<p><br></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode py"><code class="sourceCode python"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">def</span> for_each(<span class="va">self</span>, cb):</a>
+<a class="sourceLine" id="cb3-7" title="7">    <span class="cf">return</span> <span class="va">self</span>.right.get_max()</a></code></pre>
+    </div>
+    <p><br /></p>
+    <p>
+      We are checking if there is a node to the right. If there isn’t, then we
+      know that’s the max.
+    </p>
+    <p>
+      Otherwise, we keep searching down the right by calling get_max on the next
+      right node.
+    </p>
+    <p>
+      Our last function to write is the <code>for_each</code> method which
+      should visit each node in the tree and run a callback function on it.
+    </p>
+    <p>We can continue writing this with recursion.</p>
+    <p><br /></p>
+    <div class="sourceCode" id="cb4">
+      <pre
+        class="sourceCode py"
+      ><code class="sourceCode python"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">def</span> for_each(<span class="va">self</span>, cb):</a>
 <a class="sourceLine" id="cb4-2" title="2">cb(<span class="va">self</span>.value)</a>
 <a class="sourceLine" id="cb4-3" title="3"></a>
 <a class="sourceLine" id="cb4-4" title="4"><span class="cf">if</span> <span class="va">self</span>.left:</a>
 <a class="sourceLine" id="cb4-5" title="5">    <span class="va">self</span>.left.for_each(cb)</a>
 <a class="sourceLine" id="cb4-6" title="6"><span class="cf">if</span> <span class="va">self</span>.right:</a>
-<a class="sourceLine" id="cb4-7" title="7">    <span class="va">self</span>.right.for_each(cb)</a></code></pre></div>
-<p><br></p>
-<p>Why are we not including a return?</p>
-<p>We’re trying to <em>run</em> a function on each value – that may or may not already include a return statement – not receive back a value, because if we used a return, then it will only go down the left side and exit out of the function before ever calling down the right side of the tree.</p>
-<p><br> <br></p>
-<h2 id="review-heaps">Review Heaps</h2>
-<p>Let’s talk about Heaps conceptually. A heap is stored inside of an array because we need to be able to access things at a specific spot – but it looks like a tree because when we access items, we use specific functions that traverses the array like a binary tree in parent-child relatonships.</p>
-<p>This is unlike the usual array method of accessing things just in a sequential method.</p>
-<p>This is more efficient because it has an O(1) run time for some operations and the space complexity is simply O(n). There is no extra space or pointer storage. It’s solely storing the data.</p>
-<p>Visually, it makes more sense to “view” this as a tree (because of the parent-child relationships), but it <em>is</em> stored in an array.</p>
-<p><br></p>
-<p><a href="https://www.cs.usfca.edu/~galles/visualization/Heap.html">Here</a> and <a href="http://btv.melezinek.cz/binary-heap.html">here</a> are heap visualiation websites.</p>
-<p><br></p>
-<p>Inserting in a min heap means adding a node, then bubbling up through the array to compare to each parent, and swapping them if they should be reversed based on value.</p>
-<p>In the array, the new node is being added to the end of the array, then it’s finding the parent using <a href="http://geeksquiz.com/binary-heap/">these equations</a>.</p>
-<p><em>Brian goes into depth about this around 40 minutes into the CS19 lecture.</em></p>
-<p><br></p>
-<p>Q: Why it is advantageous to replace the lowest leaf when popping off the root and then sift that child down. Why not swap the next largest child of that root after removing the root?</p>
-<p>A: Less comparisons to make by sifting the lowest down. If we just move the 2nd largest up, then we have to check all of the children of each child to make sure the heap property is maintained.</p>
-<p>Heap Insert:</p>
-<ul>
-<li>Add Item to end of tree</li>
-<li>Bubble it up to the right spot</li>
-</ul>
-<p>Heap delete:</p>
-<ul>
-<li>Swap priority element with least priorty</li>
-<li>Remove the last element (previously the root)</li>
-<li>Sift down new top to the correct spot</li>
-</ul>
-<p><br> <br></p>
-<h2 id="practice-interview-questions">Practice Interview Questions</h2>
-<p>Given this sample interview question, how would you approach solving it?</p>
-<h4 id="find-the-smallest-missing-element-from-a-sorted-array">Find the Smallest Missing Element from a Sorted Array</h4>
-<p>Given a sorted array of distinct, non-negative integers, find the smallest missing element in it.</p>
-<p>Examples</p>
-<blockquote>
-<p>Input: A = [0, 1, 2, 6, 9, 11, 15] Output: The smallest missing element is 3</p>
-<p>Input: A = [1, 2, 3, 4, 6, 9, 11, 15] Output: The smallest missing element is 0</p>
-<p>Input: A = [0, 1, 2, 3, 4, 5, 6] Output: The smallest missing element is 7</p>
-</blockquote>
-<p><br></p>
-<p>One option would be starting at 0 and iterating up to find the first number that is missing itself +1. If we reach the end of the array and none is missing, then we know it’s the final number in the array +1.</p>
-<p>A way to possibly optimize would be to find sequences within the array and search before and after each sequence to jump numbers more quickly (akin to TimSort).</p>
-<p><br></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode py"><code class="sourceCode python"><a class="sourceLine" id="cb5-1" title="1"><span class="cf">if</span> arr[<span class="dv">0</span>] <span class="op">!=</span> <span class="dv">0</span>:</a>
+<a class="sourceLine" id="cb4-7" title="7">    <span class="va">self</span>.right.for_each(cb)</a></code></pre>
+    </div>
+    <p><br /></p>
+    <p>Why are we not including a return?</p>
+    <p>
+      We’re trying to <em>run</em> a function on each value – that may or may
+      not already include a return statement – not receive back a value, because
+      if we used a return, then it will only go down the left side and exit out
+      of the function before ever calling down the right side of the tree.
+    </p>
+    <p>
+      <br />
+      <br />
+    </p>
+    <h2 id="review-heaps">Review Heaps</h2>
+    <p>
+      Let’s talk about Heaps conceptually. A heap is stored inside of an array
+      because we need to be able to access things at a specific spot – but it
+      looks like a tree because when we access items, we use specific functions
+      that traverses the array like a binary tree in parent-child relatonships.
+    </p>
+    <p>
+      This is unlike the usual array method of accessing things just in a
+      sequential method.
+    </p>
+    <p>
+      This is more efficient because it has an O(1) run time for some operations
+      and the space complexity is simply O(n). There is no extra space or
+      pointer storage. It’s solely storing the data.
+    </p>
+    <p>
+      Visually, it makes more sense to “view” this as a tree (because of the
+      parent-child relationships), but it <em>is</em> stored in an array.
+    </p>
+    <p><br /></p>
+    <p>
+      <a href="https://www.cs.usfca.edu/~galles/visualization/Heap.html"
+        >Here</a
+      >
+      and <a href="http://btv.melezinek.cz/binary-heap.html">here</a> are heap
+      visualiation websites.
+    </p>
+    <p><br /></p>
+    <p>
+      Inserting in a min heap means adding a node, then bubbling up through the
+      array to compare to each parent, and swapping them if they should be
+      reversed based on value.
+    </p>
+    <p>
+      In the array, the new node is being added to the end of the array, then
+      it’s finding the parent using
+      <a href="http://geeksquiz.com/binary-heap/">these equations</a>.
+    </p>
+    <p>
+      <em
+        >Brian goes into depth about this around 40 minutes into the CS19
+        lecture.</em
+      >
+    </p>
+    <p><br /></p>
+    <p>
+      Q: Why it is advantageous to replace the lowest leaf when popping off the
+      root and then sift that child down. Why not swap the next largest child of
+      that root after removing the root?
+    </p>
+    <p>
+      A: Less comparisons to make by sifting the lowest down. If we just move
+      the 2nd largest up, then we have to check all of the children of each
+      child to make sure the heap property is maintained.
+    </p>
+    <p>Heap Insert:</p>
+    <ul>
+      <li>Add Item to end of tree</li>
+      <li>Bubble it up to the right spot</li>
+    </ul>
+    <p>Heap delete:</p>
+    <ul>
+      <li>Swap priority element with least priorty</li>
+      <li>Remove the last element (previously the root)</li>
+      <li>Sift down new top to the correct spot</li>
+    </ul>
+    <p>
+      <br />
+      <br />
+    </p>
+    <h2 id="practice-interview-questions">Practice Interview Questions</h2>
+    <p>
+      Given this sample interview question, how would you approach solving it?
+    </p>
+    <h4 id="find-the-smallest-missing-element-from-a-sorted-array">
+      Find the Smallest Missing Element from a Sorted Array
+    </h4>
+    <p>
+      Given a sorted array of distinct, non-negative integers, find the smallest
+      missing element in it.
+    </p>
+    <p>Examples</p>
+    <blockquote>
+      <p>
+        Input: A = [0, 1, 2, 6, 9, 11, 15] Output: The smallest missing element
+        is 3
+      </p>
+      <p>
+        Input: A = [1, 2, 3, 4, 6, 9, 11, 15] Output: The smallest missing
+        element is 0
+      </p>
+      <p>
+        Input: A = [0, 1, 2, 3, 4, 5, 6] Output: The smallest missing element is
+        7
+      </p>
+    </blockquote>
+    <p><br /></p>
+    <p>
+      One option would be starting at 0 and iterating up to find the first
+      number that is missing itself +1. If we reach the end of the array and
+      none is missing, then we know it’s the final number in the array +1.
+    </p>
+    <p>
+      A way to possibly optimize would be to find sequences within the array and
+      search before and after each sequence to jump numbers more quickly (akin
+      to TimSort).
+    </p>
+    <p><br /></p>
+    <div class="sourceCode" id="cb5">
+      <pre
+        class="sourceCode py"
+      ><code class="sourceCode python"><a class="sourceLine" id="cb5-1" title="1"><span class="cf">if</span> arr[<span class="dv">0</span>] <span class="op">!=</span> <span class="dv">0</span>:</a>
 <a class="sourceLine" id="cb5-2" title="2">    <span class="cf">return</span> <span class="dv">0</span></a>
 <a class="sourceLine" id="cb5-3" title="3"></a>
 <a class="sourceLine" id="cb5-4" title="4"><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(arr)):</a>
 <a class="sourceLine" id="cb5-5" title="5">    <span class="cf">if</span> arr[i]<span class="op">+</span><span class="dv">1</span> <span class="op">!=</span> arr[i<span class="op">+</span><span class="dv">1</span>]:</a>
-<a class="sourceLine" id="cb5-6" title="6">        <span class="cf">return</span> arr[i]<span class="op">+</span><span class="dv">1</span></a></code></pre></div>
-<p><br></p>
-<p>Another method would be to use a version of binary search to find the earliest number where the index of the array does not match arr[i]. For example, if arr[0] is not 0, we know 0 is the earliest missing integer.</p>
-<p>This is optimized because it allows us to search through the array more quickly. If all of the checks pass, then we know that the earliest missing number is at the end of the array.</p>
-<p>In an array like this:</p>
-<blockquote>
-<p>[0, 1, 2, 3, 5, 6, 9]</p>
-</blockquote>
-<p>We know that the earliest missing is at arr[4] because arr[4] == 5 not 4.</p>
-<p><br></p>
-<p>Our next problem is…</p>
-<h4 id="given-m-sorted-lists-of-variable-length-print-them-out-in-sorted-order-efficiently.">Given M sorted lists of variable length, print them out in sorted order efficiently.</h4>
-<p>Examples</p>
-<blockquote>
-<p>Input: Four sorted lists of variable length</p>
-<p>[10, 20, 30, 40], [15, 25, 35], [27, 29, 37, 48, 93], [32, 33]</p>
-<p>Output: 10, 15, 20, 25, 27, 29, 30, 32, 33, 35, 37, 40, 48, 93</p>
-</blockquote>
-<p><br></p>
-<p>A way to handle this might be to use merge sort to iterate through the given arguments, and merge the arrays together, then print a final merged array.</p>
-<p><br></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode py"><code class="sourceCode python"><a class="sourceLine" id="cb6-1" title="1"></a>
+<a class="sourceLine" id="cb5-6" title="6">        <span class="cf">return</span> arr[i]<span class="op">+</span><span class="dv">1</span></a></code></pre>
+    </div>
+    <p><br /></p>
+    <p>
+      Another method would be to use a version of binary search to find the
+      earliest number where the index of the array does not match arr[i]. For
+      example, if arr[0] is not 0, we know 0 is the earliest missing integer.
+    </p>
+    <p>
+      This is optimized because it allows us to search through the array more
+      quickly. If all of the checks pass, then we know that the earliest missing
+      number is at the end of the array.
+    </p>
+    <p>In an array like this:</p>
+    <blockquote>
+      <p>[0, 1, 2, 3, 5, 6, 9]</p>
+    </blockquote>
+    <p>
+      We know that the earliest missing is at arr[4] because arr[4] == 5 not 4.
+    </p>
+    <p><br /></p>
+    <p>Our next problem is…</p>
+    <h4
+      id="given-m-sorted-lists-of-variable-length-print-them-out-in-sorted-order-efficiently."
+    >
+      Given M sorted lists of variable length, print them out in sorted order
+      efficiently.
+    </h4>
+    <p>Examples</p>
+    <blockquote>
+      <p>Input: Four sorted lists of variable length</p>
+      <p>[10, 20, 30, 40], [15, 25, 35], [27, 29, 37, 48, 93], [32, 33]</p>
+      <p>Output: 10, 15, 20, 25, 27, 29, 30, 32, 33, 35, 37, 40, 48, 93</p>
+    </blockquote>
+    <p><br /></p>
+    <p>
+      A way to handle this might be to use merge sort to iterate through the
+      given arguments, and merge the arrays together, then print a final merged
+      array.
+    </p>
+    <p><br /></p>
+    <div class="sourceCode" id="cb6">
+      <pre
+        class="sourceCode py"
+      ><code class="sourceCode python"><a class="sourceLine" id="cb6-1" title="1"></a>
 <a class="sourceLine" id="cb6-2" title="2"><span class="kw">def</span> merge(arrA, arrB):</a>
 <a class="sourceLine" id="cb6-3" title="3">    elements <span class="op">=</span> <span class="bu">len</span>( arrA ) <span class="op">+</span> <span class="bu">len</span>( arrB )</a>
 <a class="sourceLine" id="cb6-4" title="4">    merged_arr <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> elements</a>
@@ -264,15 +555,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb6-32" title="32">    <span class="cf">for</span> arg <span class="kw">in</span> args:</a>
 <a class="sourceLine" id="cb6-33" title="33">        new_array <span class="op">=</span> merge(new_array, arg)</a>
 <a class="sourceLine" id="cb6-34" title="34"></a>
-<a class="sourceLine" id="cb6-35" title="35">    <span class="bu">print</span>(<span class="op">*</span>new_array, sep <span class="op">=</span> <span class="st">&quot;, &quot;</span>)</a></code></pre></div>
-<p><br></p>
-<p>Another interesting solution might be to iterate through the arrays while there is more than one, finding the smallest number of any array, popping it into a new_array, and removing any array that becomes empty.</p>
-<p>Like so:</p>
-<figure>
-<img src="Interview2.png" title="Solution" alt="Solution" /><figcaption>Solution</figcaption>
-</figure>
-<p><br></p>
-<p>But a truly optimal solution to this problem is solved <a href="https://medium.com/outco/how-to-merge-k-sorted-arrays-c35d87aa298e">using min heaps</a>.</p>
-<p><br> <br></p>
-</body>
+<a class="sourceLine" id="cb6-35" title="35">    <span class="bu">print</span>(<span class="op">*</span>new_array, sep <span class="op">=</span> <span class="st">&quot;, &quot;</span>)</a></code></pre>
+    </div>
+    <p><br /></p>
+    <p>
+      Another interesting solution might be to iterate through the arrays while
+      there is more than one, finding the smallest number of any array, popping
+      it into a new_array, and removing any array that becomes empty.
+    </p>
+    <p>Like so:</p>
+    <figure>
+      <img src="Interview2.png" title="Solution" alt="Solution" />
+      <figcaption>Solution</figcaption>
+    </figure>
+    <p><br /></p>
+    <p>
+      But a truly optimal solution to this problem is solved
+      <a
+        href="https://medium.com/outco/how-to-merge-k-sorted-arrays-c35d87aa298e"
+        >using min heaps</a
+      >.
+    </p>
+    <p>
+      <br />
+      <br />
+    </p>
+  </body>
 </html>

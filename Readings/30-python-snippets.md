@@ -1,5 +1,4 @@
-30 Helpful Python Snippets That You Can Learn in 30 Seconds or Less
-===================================================================
+# 30 Helpful Python Snippets That You Can Learn in 30 Seconds or Less
 
 > Short Python snippets that you can quickly learn and use in your work or personal needs
 
@@ -19,7 +18,7 @@ If you are reading this, then it is highly likely that you already use Python or
 
 In this article, we will briefly see 30 short code snippets that you can understand and learn in 30 seconds or less.
 
-The following method checks whether the given list has duplicate elements. It uses the property of *set()* which removes duplicate elements from the list.
+The following method checks whether the given list has duplicate elements. It uses the property of _set()_ which removes duplicate elements from the list.
 
 This method can be used to check if two strings are anagrams. An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
 
@@ -27,13 +26,13 @@ This snippet can be used to check the memory usage of an object.
 
 This method returns the length of a string in bytes.
 
-This snippet can be used to print a string *n* times without having to use loops to do it.
+This snippet can be used to print a string _n_ times without having to use loops to do it.
 
-This snippet simply uses the method *title()* to capitalize first letters of every word in a string.
+This snippet simply uses the method _title()_ to capitalize first letters of every word in a string.
 
 This method chunks a list into smaller lists of a specified size.
 
-This method removes falsy values (False, None, 0 and “") from a list by using *filter()*.
+This method removes falsy values (False, None, 0 and “") from a list by using _filter()_.
 
 This snippet can be used to transpose a 2D array.
 
@@ -53,7 +52,7 @@ The following method returns the difference between two lists after applying a g
 
 You can call multiple functions inside a single line.
 
-The following method checks whether a list has duplicate values by using the fact that *set()* contains only unique elements.
+The following method checks whether a list has duplicate values by using the fact that _set()_ contains only unique elements.
 
 The following method can be used to merge two dictionaries.
 
@@ -61,11 +60,11 @@ In Python 3.5 and above, you can also do it like the following:
 
 The following method can be used to convert two lists into a dictionary.
 
-This snippet shows that you can use *enumerate* to get both the values and the indexes of lists.
+This snippet shows that you can use _enumerate_ to get both the values and the indexes of lists.
 
 This snippet can be used to calculate the time it takes to execute a particular code.
 
-You can have an *else* clause as part of a *try/except* block, which is executed if no exception is thrown.
+You can have an _else_ clause as part of a _try/except_ block, which is executed if no exception is thrown.
 
 This method returns the most frequent element that appears in a list.
 
@@ -73,7 +72,7 @@ This method checks whether a given string is a palindrome.
 
 The following snippet shows how you can write a simple calculator without the need to use if-else conditions.
 
-This snippet can be used to randomize the order of the elements in a list. Note that shuffle works in place, and returns *None*.
+This snippet can be used to randomize the order of the elements in a list. Note that shuffle works in place, and returns _None_.
 
 This method flattens a list similarly like \[\].concat(…arr) in JavaScript.
 

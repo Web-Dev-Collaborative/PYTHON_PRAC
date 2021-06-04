@@ -1,5 +1,4 @@
-Controlling the Web with Python
-===============================
+# Controlling the Web with Python
 
 > An adventure in simple web automation
 
@@ -19,11 +18,11 @@ The first part of the program is a loop to go through the folders to find the as
 
 \# os for file management  
 import os\# Build tuple of (class, file) to turn in  
-submission\_dir = ’completed\_assignments’dir\_list = list(os.listdir(submission\_dir))for directory in dir\_list:  
-file\_list = list(os.listdir(os.path.join(submission\_dir,  
+submission_dir = ’completed_assignments’dir_list = list(os.listdir(submission_dir))for directory in dir_list:  
+file_list = list(os.listdir(os.path.join(submission_dir,  
 directory)))  
-if len(file\_list) != 0:  
-file\_tup = (directory, file\_list\[0\])
+if len(file_list) != 0:  
+file_tup = (directory, file_list\[0\])
 
     print(file\_tup)
 
@@ -31,8 +30,7 @@ file\_tup = (directory, file\_list\[0\])
 
 This takes care of file management and the program now knows the program and the assignment to turn in. The next step is to use selenium to navigate to the correct webpage and upload the assignment.
 
-Web Control with Selenium
--------------------------
+## Web Control with Selenium
 
 To get started with selenium, we import the library and create a web driver, which is a browser that is controlled by our program. In this case, I’ll use Chrome as my browser and send the driver to the Canvas website where I submit assignments.
 
@@ -57,21 +55,21 @@ This HTML might look overwhelming, but we can ignore the majority of the informa
 To select the id box with our web driver, we can use either the `id` or `name` attribute we found in the developer tools. Web drivers in selenium have many different methods for selecting elements on a webpage and there are often multiple ways to select the exact same item:
 
 \# Select the id box  
-id\_box = driver.find\_element\_by\_name(‘username’)\# Equivalent Outcome!  
-id\_box = driver.find\_element\_by\_id(‘username’)
+id_box = driver.find_element_by_name(‘username’)\# Equivalent Outcome!  
+id_box = driver.find_element_by_id(‘username’)
 
 Our program now has access to the `id_box` and we can interact with it in various ways, such as typing in keys, or clicking (if we have selected a button).
 
 \# Send id information  
-id\_box.send\_keys(‘my\_username’)
+id_box.send_keys(‘my_username’)
 
 We carry out the same process for the password box and login button, selecting each based on what we see in the Chrome developer tools. Then, we send information to the elements or click on them as needed.
 
 \# Find password box  
-pass\_box = driver.find\_element\_by\_name(‘password’)\# Send password  
-pass\_box.send\_keys(‘my\_password’)\# Find login button  
-login\_button = driver.find\_element\_by\_name(‘submit’)\# Click login  
-login\_button.click()
+pass_box = driver.find_element_by_name(‘password’)\# Send password  
+pass_box.send_keys(‘my_password’)\# Find login button  
+login_button = driver.find_element_by_name(‘submit’)\# Click login  
+login_button.click()
 
 Once we are logged in, we are greeted by this slightly intimidating dashboard:
 
@@ -80,17 +78,17 @@ Once we are logged in, we are greeted by this slightly intimidating dashboard:
 We again need to guide the program through the webpage by specifying exactly the elements to click on and the information to enter. In this case, I tell the program to select courses from the menu on the left, and then the class corresponding to the assignment I need to turn in:
 
 \# Find and click on list of courses  
-courses\_button = driver.find\_element\_by\_id(‘global\_nav\_courses\_link’)courses\_button.click()\# Get the name of the folder  
-folder = file\_tup\[0\]
+courses_button = driver.find_element_by_id(‘global_nav_courses_link’)courses_button.click()\# Get the name of the folder  
+folder = file_tup\[0\]
 
     # Class to select depends on folder
 
 if folder == ‘EECS491’:  
-class\_select = driver.find\_element\_by\_link\_text(‘Artificial Intelligence: Probabilistic Graphical Models (100/10039)’)
+class_select = driver.find_element_by_link_text(‘Artificial Intelligence: Probabilistic Graphical Models (100/10039)’)
 
 elif folder == ‘EECS531’:  
-class\_select = driver.find\_element\_by\_link\_text(‘Computer Vision (100/10040)’)\# Click on the specific class  
-class\_select.click()
+class_select = driver.find_element_by_link_text(‘Computer Vision (100/10040)’)\# Click on the specific class  
+class_select.click()
 
 The program finds the correct class using the name of the folder we stored in the first step. In this case, I use the selection method `find_element_by_link_text` to find the specific class. The “link text” for an element is just another selector we can find by inspecting the page. :
 
@@ -103,9 +101,9 @@ We use the same ‘inspect page — select element — interact with element’ 
 At this point, I could see the finish line, but initially this screen perplexed me. I could click on the “Choose File” box pretty easily, but how was I supposed to select the actual file I need to upload? The answer turns out to be incredibly simple! We locate the `Choose File` box using a selector, and use the `send_keys` method to pass the exact path of the file (called `file_location` in the code below) to the box:
 
 \# Choose File button  
-choose\_file = driver.find\_element\_by\_name(‘attachments\[0\]\[uploaded\_data\]’)\# Complete path of the file  
-file\_location = os.path.join(submission\_dir, folder, file\_name)\# Send the file location to the button  
-choose\_file.send\_keys(file\_location)
+choose_file = driver.find_element_by_name(‘attachments\[0\]\[uploaded_data\]’)\# Complete path of the file  
+file_location = os.path.join(submission_dir, folder, file_name)\# Send the file location to the button  
+choose_file.send_keys(file_location)
 
 That’s it! By sending the exact path of the file to the button, we can skip the whole process of navigating through folders to find the right file. After sending the location, we are rewarded with the following screen showing that our file is uploaded and ready for submission.
 
@@ -114,19 +112,18 @@ That’s it! By sending the exact path of the file to the button, we can skip th
 Now, we select the “Submit Assignment” button, click, and our assignment is turned in!
 
 \# Locate submit button and click  
-submit\_assignment = driver.find\_element\_by\_id(‘submit\_file\_button’)  
-submit\_assignent.click()
+submit_assignment = driver.find_element_by_id(‘submit_file_button’)  
+submit_assignent.click()
 
 ![](https://miro.medium.com/max/416/1*dfC4W3awW86kw-KpQH-rOQ.png)
 
-Cleaning Up
------------
+## Cleaning Up
 
 File management is always a critical step and I want to make sure I don’t re-submit or lose old assignments. I decided the best solution was to store a single file to be submitted in the `completed_assignments` folder at any one time and move files to a`submitted_assignments` folder once they had been turned in. The final bit of code uses the os module to move the completed assignment by renaming it with the desired location:
 
 \# Location of files after submission  
-submitted\_file\_location = os.path.join(submitted\_dir, submitted\_file\_name)\# Rename essentially copies and pastes files  
-os.rename(file\_location, submitted\_file\_location)
+submitted_file_location = os.path.join(submitted_dir, submitted_file_name)\# Rename essentially copies and pastes files  
+os.rename(file_location, submitted_file_location)
 
 All of the proceeding code gets wrapped up in a single script, which I can run from the command line. To limit opportunities for mistakes, I only submit one assignment at a time, which isn’t a big deal given that it only takes about 5 seconds to run the program!
 
@@ -146,6 +143,6 @@ I should mention you do want to be careful before you automate critical tasks. T
 
 In terms of paying off, this program saves me about 30 seconds for every assignment and took 2 hours to write. So, if I use it to turn in 240 assignments, then I come out ahead on time! However, the payoff of this program is in designing a cool solution to a problem and learning a lot in the process. While my time might have been more effectively spent working on assignments rather than figuring out how to automatically turn them in, I thoroughly enjoyed this challenge. There are few things as satisfying as solving problems, and Python turns out to be a pretty good tool for doing exactly that.
 
-As always, I welcome feedback and constructive criticism. I can be reached on Twitter <span class="citation" data-cites="koehrsen_will">\[@koehrsen\_will\]</span>(http://twitter.com/<span class="citation" data-cites="koehrsen_will">@koehrsen\_will</span>).
+As always, I welcome feedback and constructive criticism. I can be reached on Twitter <span class="citation" data-cites="koehrsen_will">\[@koehrsen_will\]</span>(http://twitter.com/<span class="citation" data-cites="koehrsen_will">@koehrsen_will</span>).
 
 [Source](https://towardsdatascience.com/controlling-the-web-with-python-6fceb22c5f08)

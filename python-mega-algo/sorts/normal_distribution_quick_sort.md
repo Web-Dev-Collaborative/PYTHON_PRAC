@@ -1,10 +1,8 @@
-Normal Distribution QuickSort
-=============================
+# Normal Distribution QuickSort
 
 Algorithm implementing QuickSort Algorithm where the pivot element is chosen randomly between first and last elements of the array and the array elements are taken from a Standard Normal Distribution. This is different from the ordinary quicksort in the sense, that it applies more to real life problems , where elements usually follow a normal distribution. Also the pivot is randomized to make it a more generic one.
 
-Array Elements
---------------
+## Array Elements
 
 The array elements are taken from a Standard Normal Distribution , having mean = 0 and standard deviation 1.
 
@@ -20,7 +18,7 @@ The array elements are taken from a Standard Normal Distribution , having mean =
     >>> print('The array is')
     >>> print(X)
 
-------------------------------------------------------------------------
+---
 
 #### The Distribution of the Array elements.
 
@@ -30,18 +28,17 @@ The array elements are taken from a Standard Normal Distribution , having mean =
     >>> plt.plot(bins , 1/(sigma * np.sqrt(2 * np.pi)) *np.exp( - (bins - mu)**2 / (2 * sigma**2) ),linewidth=2, color='r')
     >>> plt.show()
 
-------------------------------------------------------------------------
+---
 
 ![](https://www.mathsisfun.com/data/images/normal-distrubution-large.gif)
 
-------------------------------------------------------------------------
+---
 
-------------------------------------------------------------------------
+---
 
 –
 
-Plotting the function for Checking ‘The Number of Comparisons’ taking place between Normal Distribution QuickSort and Ordinary QuickSort
-----------------------------------------------------------------------------------------------------------------------------------------
+## Plotting the function for Checking ‘The Number of Comparisons’ taking place between Normal Distribution QuickSort and Ordinary QuickSort
 
     >>>import matplotlib.pyplot as plt
 
@@ -54,6 +51,6 @@ Plotting the function for Checking ‘The Number of Comparisons’ taking place 
 
     >>> plt.show()
 
-------------------------------------------------------------------------
+---
 
-------------------------------------------------------------------------
+---

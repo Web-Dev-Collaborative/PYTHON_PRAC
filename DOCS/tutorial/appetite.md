@@ -1,21 +1,18 @@
 ### Navigation
 
--   [index](https://docs.python.org/3/genindex.html "General Index")
--   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
--   [next](interpreter.html "2. Using the Python Interpreter") |
--   [previous](index.html "The Python Tutorial") |
--   ![](../_static/py.png)
--   [Python](https://www.python.org/) »
--   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
--   [The Python Tutorial](index.html) »
--   
-
-    |
+- [index](https://docs.python.org/3/genindex.html "General Index")
+- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+- [next](interpreter.html "2. Using the Python Interpreter") |
+- [previous](index.html "The Python Tutorial") |
+- ![](../_static/py.png)
+- [Python](https://www.python.org/) »
+- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+- [The Python Tutorial](index.html) »
+- |
 
 <span id="tut-intro"></span>
 
-<span class="section-number">1. </span>Whetting Your Appetite<a href="#whetting-your-appetite" class="headerlink" title="Permalink to this headline">¶</a>
-==========================================================================================================================================================
+# <span class="section-number">1. </span>Whetting Your Appetite<a href="#whetting-your-appetite" class="headerlink" title="Permalink to this headline">¶</a>
 
 If you do much work on computers, eventually you find that there’s some task you’d like to automate. For example, you may wish to perform a search-and-replace over a large number of text files, or rename and rearrange a bunch of photo files in a complicated way. Perhaps you’d like to write a small custom database, or a specialized GUI application, or a simple game.
 
@@ -25,7 +22,7 @@ Python is just the language for you.
 
 You could write a Unix shell script or Windows batch files for some of these tasks, but shell scripts are best at moving around files and changing text data, not well-suited for GUI applications or games. You could write a C/C++/Java program, but it can take a lot of development time to get even a first-draft program. Python is simpler to use, available on Windows, Mac OS X, and Unix operating systems, and will help you get the job done more quickly.
 
-Python is simple to use, but it is a real programming language, offering much more structure and support for large programs than shell scripts or batch files can offer. On the other hand, Python also offers much more error checking than C, and, being a *very-high-level language*, it has high-level data types built in, such as flexible arrays and dictionaries. Because of its more general data types Python is applicable to a much larger problem domain than Awk or even Perl, yet many things are at least as easy in Python as in those languages.
+Python is simple to use, but it is a real programming language, offering much more structure and support for large programs than shell scripts or batch files can offer. On the other hand, Python also offers much more error checking than C, and, being a _very-high-level language_, it has high-level data types built in, such as flexible arrays and dictionaries. Because of its more general data types Python is applicable to a much larger problem domain than Awk or even Perl, yet many things are at least as easy in Python as in those languages.
 
 Python allows you to split your program into modules that can be reused in other Python programs. It comes with a large collection of standard modules that you can use as the basis of your programs — or as examples to start learning to program in Python. Some of these modules provide things like file I/O, system calls, sockets, and even interfaces to graphical user interface toolkits like Tk.
 
@@ -33,13 +30,13 @@ Python is an interpreted language, which can save you considerable time during p
 
 Python enables programs to be written compactly and readably. Programs written in Python are typically much shorter than equivalent C, C++, or Java programs, for several reasons:
 
--   the high-level data types allow you to express complex operations in a single statement;
+- the high-level data types allow you to express complex operations in a single statement;
 
--   statement grouping is done by indentation instead of beginning and ending brackets;
+- statement grouping is done by indentation instead of beginning and ending brackets;
 
--   no variable or argument declarations are necessary.
+- no variable or argument declarations are necessary.
 
-Python is *extensible*: if you know how to program in C it is easy to add a new built-in function or module to the interpreter, either to perform critical operations at maximum speed, or to link Python programs to libraries that may only be available in binary form (such as a vendor-specific graphics library). Once you are really hooked, you can link the Python interpreter into an application written in C and use it as an extension or command language for that application.
+Python is _extensible_: if you know how to program in C it is easy to add a new built-in function or module to the interpreter, either to perform critical operations at maximum speed, or to link Python programs to libraries that may only be available in binary form (such as a vendor-specific graphics library). Once you are really hooked, you can link the Python interpreter into an application written in C and use it as an extension or command language for that application.
 
 By the way, the language is named after the BBC show “Monty Python’s Flying Circus” and has nothing to do with reptiles. Making references to Monty Python skits in documentation is not only allowed, it is encouraged!
 
@@ -59,25 +56,23 @@ The rest of the tutorial introduces various features of the Python language and 
 
 ### This Page
 
--   [Report a Bug](https://docs.python.org/3/bugs.html)
--   [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/appetite.rst)
+- [Report a Bug](https://docs.python.org/3/bugs.html)
+- [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/appetite.rst)
 
 ### Navigation
 
--   [index](https://docs.python.org/3/genindex.html "General Index")
--   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
--   [next](interpreter.html "2. Using the Python Interpreter") |
--   [previous](index.html "The Python Tutorial") |
--   ![](../_static/py.png)
--   [Python](https://www.python.org/) »
--   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
--   [The Python Tutorial](index.html) »
--   
-
-    |
+- [index](https://docs.python.org/3/genindex.html "General Index")
+- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+- [next](interpreter.html "2. Using the Python Interpreter") |
+- [previous](index.html "The Python Tutorial") |
+- ![](../_static/py.png)
+- [Python](https://www.python.org/) »
+- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+- [The Python Tutorial](index.html) »
+- |
 
 © [Copyright](https://docs.python.org/3/copyright.html) 2001-2021, Python Software Foundation.  
-The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)  
-  
+The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)
+
 Last updated on May 30, 2021. [Found a bug](https://docs.python.org/3/bugs.html)?  
 Created using [Sphinx](https://www.sphinx-doc.org/) 2.4.4.

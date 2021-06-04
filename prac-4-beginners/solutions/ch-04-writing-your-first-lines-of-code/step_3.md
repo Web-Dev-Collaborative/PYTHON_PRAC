@@ -1,5 +1,4 @@
-Step 3: Ask a user for their name and age.
-------------------------------------------
+## Step 3: Ask a user for their name and age.
 
 Write code to tell them how many years you are older than them (negative numbers for younger is fine at this point instead of older / younger with only positive numbers).
 

@@ -1,84 +1,80 @@
 ### Navigation
 
--   [index](https://docs.python.org/3/genindex.html "General Index")
--   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
--   [next](modules.html "6. Modules") |
--   [previous](controlflow.html "4. More Control Flow Tools") |
--   ![](../_static/py.png)
--   [Python](https://www.python.org/) »
--   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
--   [The Python Tutorial](index.html) »
--   
-
-    |
+- [index](https://docs.python.org/3/genindex.html "General Index")
+- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+- [next](modules.html "6. Modules") |
+- [previous](controlflow.html "4. More Control Flow Tools") |
+- ![](../_static/py.png)
+- [Python](https://www.python.org/) »
+- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+- [The Python Tutorial](index.html) »
+- |
 
 <span id="tut-structures"></span>
 
-<span class="section-number">5. </span>Data Structures<a href="#data-structures" class="headerlink" title="Permalink to this headline">¶</a>
-============================================================================================================================================
+# <span class="section-number">5. </span>Data Structures<a href="#data-structures" class="headerlink" title="Permalink to this headline">¶</a>
 
 This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.
 
 <span id="tut-morelists"></span>
 
-<span class="section-number">5.1. </span>More on Lists<a href="#more-on-lists" class="headerlink" title="Permalink to this headline">¶</a>
-------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">5.1. </span>More on Lists<a href="#more-on-lists" class="headerlink" title="Permalink to this headline">¶</a>
 
 The list data type has some more methods. Here are all of the methods of list objects:
 
- `list.``append`<span class="sig-paren">(</span>*x*<span class="sig-paren">)</span>   
-Add an item to the end of the list. Equivalent to `a[len(a):]                         =                         [x]`.
+` list.``append `<span class="sig-paren">(</span>_x_<span class="sig-paren">)</span>  
+Add an item to the end of the list. Equivalent to `a[len(a):] = [x]`.
 
 <!-- -->
 
- `list.``extend`<span class="sig-paren">(</span>*iterable*<span class="sig-paren">)</span>   
-Extend the list by appending all the items from the iterable. Equivalent to `a[len(a):]                         =                         iterable`.
+` list.``extend `<span class="sig-paren">(</span>_iterable_<span class="sig-paren">)</span>  
+Extend the list by appending all the items from the iterable. Equivalent to `a[len(a):] = iterable`.
 
 <!-- -->
 
- `list.``insert`<span class="sig-paren">(</span>*i*, *x*<span class="sig-paren">)</span>   
-Insert an item at a given position. The first argument is the index of the element before which to insert, so `a.insert(0,                         x)` inserts at the front of the list, and `a.insert(len(a),                         x)` is equivalent to `a.append(x)`.
+` list.``insert `<span class="sig-paren">(</span>_i_, _x_<span class="sig-paren">)</span>  
+Insert an item at a given position. The first argument is the index of the element before which to insert, so `a.insert(0, x)` inserts at the front of the list, and `a.insert(len(a), x)` is equivalent to `a.append(x)`.
 
 <!-- -->
 
- `list.``remove`<span class="sig-paren">(</span>*x*<span class="sig-paren">)</span>   
-Remove the first item from the list whose value is equal to *x*. It raises a <a href="https://docs.python.org/3/library/exceptions.html#ValueError" class="reference internal" title="ValueError"><code class="sourceCode python"><span class="pp">ValueError</span></code></a> if there is no such item.
+` list.``remove `<span class="sig-paren">(</span>_x_<span class="sig-paren">)</span>  
+Remove the first item from the list whose value is equal to _x_. It raises a <a href="https://docs.python.org/3/library/exceptions.html#ValueError" class="reference internal" title="ValueError"><code class="sourceCode python"><span class="pp">ValueError</span></code></a> if there is no such item.
 
 <!-- -->
 
- `list.``pop`<span class="sig-paren">(</span><span class="optional">\[</span>*i*<span class="optional">\]</span><span class="sig-paren">)</span>   
-Remove the item at the given position in the list, and return it. If no index is specified, `a.pop()` removes and returns the last item in the list. (The square brackets around the *i* in the method signature denote that the parameter is optional, not that you should type square brackets at that position. You will see this notation frequently in the Python Library Reference.)
+` list.``pop `<span class="sig-paren">(</span><span class="optional">\[</span>_i_<span class="optional">\]</span><span class="sig-paren">)</span>  
+Remove the item at the given position in the list, and return it. If no index is specified, `a.pop()` removes and returns the last item in the list. (The square brackets around the _i_ in the method signature denote that the parameter is optional, not that you should type square brackets at that position. You will see this notation frequently in the Python Library Reference.)
 
 <!-- -->
 
- `list.``clear`<span class="sig-paren">(</span><span class="sig-paren">)</span>   
-Remove all items from the list. Equivalent to `del                         a[:]`.
+` list.``clear `<span class="sig-paren">(</span><span class="sig-paren">)</span>  
+Remove all items from the list. Equivalent to `del a[:]`.
 
 <!-- -->
 
- `list.``index`<span class="sig-paren">(</span>*x*<span class="optional">\[</span>, *start*<span class="optional">\[</span>, *end*<span class="optional">\]</span><span class="optional">\]</span><span class="sig-paren">)</span>   
-Return zero-based index in the list of the first item whose value is equal to *x*. Raises a <a href="https://docs.python.org/3/library/exceptions.html#ValueError" class="reference internal" title="ValueError"><code class="sourceCode python"><span class="pp">ValueError</span></code></a> if there is no such item.
+` list.``index `<span class="sig-paren">(</span>_x_<span class="optional">\[</span>, _start_<span class="optional">\[</span>, _end_<span class="optional">\]</span><span class="optional">\]</span><span class="sig-paren">)</span>  
+Return zero-based index in the list of the first item whose value is equal to _x_. Raises a <a href="https://docs.python.org/3/library/exceptions.html#ValueError" class="reference internal" title="ValueError"><code class="sourceCode python"><span class="pp">ValueError</span></code></a> if there is no such item.
 
-The optional arguments *start* and *end* are interpreted as in the slice notation and are used to limit the search to a particular subsequence of the list. The returned index is computed relative to the beginning of the full sequence rather than the *start* argument.
-
-<!-- -->
-
- `list.``count`<span class="sig-paren">(</span>*x*<span class="sig-paren">)</span>   
-Return the number of times *x* appears in the list.
+The optional arguments _start_ and _end_ are interpreted as in the slice notation and are used to limit the search to a particular subsequence of the list. The returned index is computed relative to the beginning of the full sequence rather than the _start_ argument.
 
 <!-- -->
 
- `list.``sort`<span class="sig-paren">(</span>*\**, *key=None*, *reverse=False*<span class="sig-paren">)</span>   
+` list.``count `<span class="sig-paren">(</span>_x_<span class="sig-paren">)</span>  
+Return the number of times _x_ appears in the list.
+
+<!-- -->
+
+` list.``sort `<span class="sig-paren">(</span>\*\**, *key=None*, *reverse=False\*<span class="sig-paren">)</span>  
 Sort the items of the list in place (the arguments can be used for sort customization, see <a href="https://docs.python.org/3/library/functions.html#sorted" class="reference internal" title="sorted"><code class="sourceCode python"><span class="bu">sorted</span>()</code></a> for their explanation).
 
 <!-- -->
 
- `list.``reverse`<span class="sig-paren">(</span><span class="sig-paren">)</span>   
+` list.``reverse `<span class="sig-paren">(</span><span class="sig-paren">)</span>  
 Reverse the elements of the list in place.
 
 <!-- -->
 
- `list.``copy`<span class="sig-paren">(</span><span class="sig-paren">)</span>   
+` list.``copy `<span class="sig-paren">(</span><span class="sig-paren">)</span>  
 Return a shallow copy of the list. Equivalent to `a[:]`.
 
 An example that uses most of the list methods:
@@ -106,7 +102,7 @@ An example that uses most of the list methods:
 
 You might have noticed that methods like `insert`, `remove` or `sort` that only modify the list have no return value printed – they return the default `None`. <a href="#id2" id="id1" class="footnote-reference brackets">1</a> This is a design principle for all mutable data structures in Python.
 
-Another thing you might notice is that not all data can be sorted or compared. For instance, `[None,                     'hello',                     10]` doesn’t sort because integers can’t be compared to strings and *None* can’t be compared to other types. Also, there are some types that don’t have a defined ordering relation. For example, `3+4j                     <                     5+7j` isn’t a valid comparison.
+Another thing you might notice is that not all data can be sorted or compared. For instance, `[None, 'hello', 10]` doesn’t sort because integers can’t be compared to strings and _None_ can’t be compared to other types. Also, there are some types that don’t have a defined ordering relation. For example, `3+4j < 5+7j` isn’t a valid comparison.
 
 <span id="tut-lists-as-stacks"></span>
 
@@ -192,7 +188,7 @@ and it’s equivalent to:
 
 Note how the order of the <a href="https://docs.python.org/3/reference/compound_stmts.html#for" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">for</code></a> and <a href="https://docs.python.org/3/reference/compound_stmts.html#if" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">if</code></a> statements is the same in both these snippets.
 
-If the expression is a tuple (e.g. the `(x,                       y)` in the previous example), it must be parenthesized.
+If the expression is a tuple (e.g. the `(x, y)` in the previous example), it must be parenthesized.
 
     >>> vec = [-4, -2, 0, 2, 4]
     >>> # create a new list with the values doubled
@@ -276,8 +272,7 @@ See <a href="controlflow.html#tut-unpacking-arguments" class="reference internal
 
 <span id="tut-del"></span>
 
-<span class="section-number">5.2. </span>The `del` statement<a href="#the-del-statement" class="headerlink" title="Permalink to this headline">¶</a>
-----------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">5.2. </span>The `del` statement<a href="#the-del-statement" class="headerlink" title="Permalink to this headline">¶</a>
 
 There is a way to remove an item from a list given its index instead of its value: the <a href="https://docs.python.org/3/reference/simple_stmts.html#del" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">del</code></a> statement. This differs from the `pop()` method which returns a value. The `del` statement can also be used to remove slices from a list or clear the entire list (which we did earlier by assignment of an empty list to the slice). For example:
 
@@ -300,10 +295,9 @@ Referencing the name `a` hereafter is an error (at least until another value is 
 
 <span id="tut-tuples"></span>
 
-<span class="section-number">5.3. </span>Tuples and Sequences<a href="#tuples-and-sequences" class="headerlink" title="Permalink to this headline">¶</a>
---------------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">5.3. </span>Tuples and Sequences<a href="#tuples-and-sequences" class="headerlink" title="Permalink to this headline">¶</a>
 
-We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two examples of *sequence* data types (see <a href="https://docs.python.org/3/library/stdtypes.html#typesseq" class="reference internal"><span class="std std-ref">Sequence Types — list, tuple, range</span></a>). Since Python is an evolving language, other sequence data types may be added. There is also another standard sequence data type: the *tuple*.
+We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two examples of _sequence_ data types (see <a href="https://docs.python.org/3/library/stdtypes.html#typesseq" class="reference internal"><span class="std std-ref">Sequence Types — list, tuple, range</span></a>). Since Python is an evolving language, other sequence data types may be added. There is also another standard sequence data type: the _tuple_.
 
 A tuple consists of a number of values separated by commas, for instance:
 
@@ -341,18 +335,17 @@ A special problem is the construction of tuples containing 0 or 1 items: the syn
     >>> singleton
     ('hello',)
 
-The statement `t =                     12345,                     54321,                     'hello!'` is an example of *tuple packing*: the values `12345`, `54321` and `'hello!'` are packed together in a tuple. The reverse operation is also possible:
+The statement `t = 12345, 54321, 'hello!'` is an example of _tuple packing_: the values `12345`, `54321` and `'hello!'` are packed together in a tuple. The reverse operation is also possible:
 
     >>> x, y, z = t
 
-This is called, appropriately enough, *sequence unpacking* and works for any sequence on the right-hand side. Sequence unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.
+This is called, appropriately enough, _sequence unpacking_ and works for any sequence on the right-hand side. Sequence unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.
 
 <span id="tut-sets"></span>
 
-<span class="section-number">5.4. </span>Sets<a href="#sets" class="headerlink" title="Permalink to this headline">¶</a>
-------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">5.4. </span>Sets<a href="#sets" class="headerlink" title="Permalink to this headline">¶</a>
 
-Python also includes a data type for *sets*. A set is an unordered collection with no duplicate elements. Basic uses include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like union, intersection, difference, and symmetric difference.
+Python also includes a data type for _sets_. A set is an unordered collection with no duplicate elements. Basic uses include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like union, intersection, difference, and symmetric difference.
 
 Curly braces or the <a href="https://docs.python.org/3/library/stdtypes.html#set" class="reference internal" title="set"><code class="sourceCode python"><span class="bu">set</span>()</code></a> function can be used to create sets. Note: to create an empty set you have to use `set()`, not `{}`; the latter creates an empty dictionary, a data structure that we discuss in the next section.
 
@@ -389,12 +382,11 @@ Similarly to <a href="#tut-listcomps" class="reference internal"><span class="st
 
 <span id="tut-dictionaries"></span>
 
-<span class="section-number">5.5. </span>Dictionaries<a href="#dictionaries" class="headerlink" title="Permalink to this headline">¶</a>
-----------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">5.5. </span>Dictionaries<a href="#dictionaries" class="headerlink" title="Permalink to this headline">¶</a>
 
-Another useful data type built into Python is the *dictionary* (see <a href="https://docs.python.org/3/library/stdtypes.html#typesmapping" class="reference internal"><span class="std std-ref">Mapping Types — dict</span></a>). Dictionaries are sometimes found in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by *keys*, which can be any immutable type; strings and numbers can always be keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified in place using index assignments, slice assignments, or methods like `append()` and `extend()`.
+Another useful data type built into Python is the _dictionary_ (see <a href="https://docs.python.org/3/library/stdtypes.html#typesmapping" class="reference internal"><span class="std std-ref">Mapping Types — dict</span></a>). Dictionaries are sometimes found in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by _keys_, which can be any immutable type; strings and numbers can always be keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified in place using index assignments, slice assignments, or methods like `append()` and `extend()`.
 
-It is best to think of a dictionary as a set of *key: value* pairs, with the requirement that the keys are unique (within one dictionary). A pair of braces creates an empty dictionary: `{}`. Placing a comma-separated list of key:value pairs within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.
+It is best to think of a dictionary as a set of _key: value_ pairs, with the requirement that the keys are unique (within one dictionary). A pair of braces creates an empty dictionary: `{}`. Placing a comma-separated list of key:value pairs within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.
 
 The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also possible to delete a key:value pair with `del`. If you store using a key that is already in use, the old value associated with that key is forgotten. It is an error to extract a value using a non-existent key.
 
@@ -438,8 +430,7 @@ When the keys are simple strings, it is sometimes easier to specify pairs using 
 
 <span id="tut-loopidioms"></span>
 
-<span class="section-number">5.6. </span>Looping Techniques<a href="#looping-techniques" class="headerlink" title="Permalink to this headline">¶</a>
-----------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">5.6. </span>Looping Techniques<a href="#looping-techniques" class="headerlink" title="Permalink to this headline">¶</a>
 
 When looping through dictionaries, the key and corresponding value can be retrieved at the same time using the `items()` method.
 
@@ -519,18 +510,17 @@ It is sometimes tempting to change a list while you are looping over it; however
 
 <span id="tut-conditions"></span>
 
-<span class="section-number">5.7. </span>More on Conditions<a href="#more-on-conditions" class="headerlink" title="Permalink to this headline">¶</a>
-----------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">5.7. </span>More on Conditions<a href="#more-on-conditions" class="headerlink" title="Permalink to this headline">¶</a>
 
 The conditions used in `while` and `if` statements can contain any operators, not just comparisons.
 
-The comparison operators `in` and `not                     in` check whether a value occurs (does not occur) in a sequence. The operators `is` and `is                     not` compare whether two objects are really the same object. All comparison operators have the same priority, which is lower than that of all numerical operators.
+The comparison operators `in` and `not in` check whether a value occurs (does not occur) in a sequence. The operators `is` and `is not` compare whether two objects are really the same object. All comparison operators have the same priority, which is lower than that of all numerical operators.
 
-Comparisons can be chained. For example, `a <                     b ==                     c` tests whether `a` is less than `b` and moreover `b` equals `c`.
+Comparisons can be chained. For example, `a < b == c` tests whether `a` is less than `b` and moreover `b` equals `c`.
 
-Comparisons may be combined using the Boolean operators `and` and `or`, and the outcome of a comparison (or of any other Boolean expression) may be negated with `not`. These have lower priorities than comparison operators; between them, `not` has the highest priority and `or` the lowest, so that `A and                     not B                     or C` is equivalent to `(A and                     (not B))                     or C`. As always, parentheses can be used to express the desired composition.
+Comparisons may be combined using the Boolean operators `and` and `or`, and the outcome of a comparison (or of any other Boolean expression) may be negated with `not`. These have lower priorities than comparison operators; between them, `not` has the highest priority and `or` the lowest, so that `A and not B or C` is equivalent to `(A and (not B)) or C`. As always, parentheses can be used to express the desired composition.
 
-The Boolean operators `and` and `or` are so-called *short-circuit* operators: their arguments are evaluated from left to right, and evaluation stops as soon as the outcome is determined. For example, if `A` and `C` are true but `B` is false, `A and                     B and                     C` does not evaluate the expression `C`. When used as a general value and not as a Boolean, the return value of a short-circuit operator is the last evaluated argument.
+The Boolean operators `and` and `or` are so-called _short-circuit_ operators: their arguments are evaluated from left to right, and evaluation stops as soon as the outcome is determined. For example, if `A` and `C` are true but `B` is false, `A and B and C` does not evaluate the expression `C`. When used as a general value and not as a Boolean, the return value of a short-circuit operator is the last evaluated argument.
 
 It is possible to assign the result of a comparison or other Boolean expression to a variable. For example,
 
@@ -543,10 +533,9 @@ Note that in Python, unlike C, assignment inside expressions must be done explic
 
 <span id="tut-comparing"></span>
 
-<span class="section-number">5.8. </span>Comparing Sequences and Other Types<a href="#comparing-sequences-and-other-types" class="headerlink" title="Permalink to this headline">¶</a>
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">5.8. </span>Comparing Sequences and Other Types<a href="#comparing-sequences-and-other-types" class="headerlink" title="Permalink to this headline">¶</a>
 
-Sequence objects typically may be compared to other objects with the same sequence type. The comparison uses *lexicographical* ordering: first the first two items are compared, and if they differ this determines the outcome of the comparison; if they are equal, the next two items are compared, and so on, until either sequence is exhausted. If two items to be compared are themselves sequences of the same type, the lexicographical comparison is carried out recursively. If all items of two sequences compare equal, the sequences are considered equal. If one sequence is an initial sub-sequence of the other, the shorter sequence is the smaller (lesser) one. Lexicographical ordering for strings uses the Unicode code point number to order individual characters. Some examples of comparisons between sequences of the same type:
+Sequence objects typically may be compared to other objects with the same sequence type. The comparison uses _lexicographical_ ordering: first the first two items are compared, and if they differ this determines the outcome of the comparison; if they are equal, the next two items are compared, and so on, until either sequence is exhausted. If two items to be compared are themselves sequences of the same type, the lexicographical comparison is carried out recursively. If all items of two sequences compare equal, the sequences are considered equal. If one sequence is an initial sub-sequence of the other, the shorter sequence is the smaller (lesser) one. Lexicographical ordering for strings uses the Unicode code point number to order individual characters. Some examples of comparisons between sequences of the same type:
 
     (1, 2, 3)              < (1, 2, 4)
     [1, 2, 3]              < [1, 2, 4]
@@ -560,24 +549,24 @@ Note that comparing objects of different types with `<` or `>` is legal provided
 
 Footnotes
 
- <span class="brackets"><a href="#id1" class="fn-backref">1</a></span>   
+<span class="brackets"><a href="#id1" class="fn-backref">1</a></span>  
 Other languages may return the mutated object, which allows method chaining, such as `d->insert("a")->remove("b")->sort();`.
 
 ### [Table of Contents](https://docs.python.org/3/contents.html)
 
--   <a href="#" class="reference internal">5. Data Structures</a>
-    -   <a href="#more-on-lists" class="reference internal">5.1. More on Lists</a>
-        -   <a href="#using-lists-as-stacks" class="reference internal">5.1.1. Using Lists as Stacks</a>
-        -   <a href="#using-lists-as-queues" class="reference internal">5.1.2. Using Lists as Queues</a>
-        -   <a href="#list-comprehensions" class="reference internal">5.1.3. List Comprehensions</a>
-        -   <a href="#nested-list-comprehensions" class="reference internal">5.1.4. Nested List Comprehensions</a>
-    -   <a href="#the-del-statement" class="reference internal">5.2. The <code class="xref std std-keyword docutils literal notranslate">del</code> statement</a>
-    -   <a href="#tuples-and-sequences" class="reference internal">5.3. Tuples and Sequences</a>
-    -   <a href="#sets" class="reference internal">5.4. Sets</a>
-    -   <a href="#dictionaries" class="reference internal">5.5. Dictionaries</a>
-    -   <a href="#looping-techniques" class="reference internal">5.6. Looping Techniques</a>
-    -   <a href="#more-on-conditions" class="reference internal">5.7. More on Conditions</a>
-    -   <a href="#comparing-sequences-and-other-types" class="reference internal">5.8. Comparing Sequences and Other Types</a>
+- <a href="#" class="reference internal">5. Data Structures</a>
+  - <a href="#more-on-lists" class="reference internal">5.1. More on Lists</a>
+    - <a href="#using-lists-as-stacks" class="reference internal">5.1.1. Using Lists as Stacks</a>
+    - <a href="#using-lists-as-queues" class="reference internal">5.1.2. Using Lists as Queues</a>
+    - <a href="#list-comprehensions" class="reference internal">5.1.3. List Comprehensions</a>
+    - <a href="#nested-list-comprehensions" class="reference internal">5.1.4. Nested List Comprehensions</a>
+  - <a href="#the-del-statement" class="reference internal">5.2. The <code class="xref std std-keyword docutils literal notranslate">del</code> statement</a>
+  - <a href="#tuples-and-sequences" class="reference internal">5.3. Tuples and Sequences</a>
+  - <a href="#sets" class="reference internal">5.4. Sets</a>
+  - <a href="#dictionaries" class="reference internal">5.5. Dictionaries</a>
+  - <a href="#looping-techniques" class="reference internal">5.6. Looping Techniques</a>
+  - <a href="#more-on-conditions" class="reference internal">5.7. More on Conditions</a>
+  - <a href="#comparing-sequences-and-other-types" class="reference internal">5.8. Comparing Sequences and Other Types</a>
 
 #### Previous topic
 
@@ -589,25 +578,23 @@ Other languages may return the mutated object, which allows method chaining, suc
 
 ### This Page
 
--   [Report a Bug](https://docs.python.org/3/bugs.html)
--   [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/datastructures.rst)
+- [Report a Bug](https://docs.python.org/3/bugs.html)
+- [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/datastructures.rst)
 
 ### Navigation
 
--   [index](https://docs.python.org/3/genindex.html "General Index")
--   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
--   [next](modules.html "6. Modules") |
--   [previous](controlflow.html "4. More Control Flow Tools") |
--   ![](../_static/py.png)
--   [Python](https://www.python.org/) »
--   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
--   [The Python Tutorial](index.html) »
--   
-
-    |
+- [index](https://docs.python.org/3/genindex.html "General Index")
+- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+- [next](modules.html "6. Modules") |
+- [previous](controlflow.html "4. More Control Flow Tools") |
+- ![](../_static/py.png)
+- [Python](https://www.python.org/) »
+- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+- [The Python Tutorial](index.html) »
+- |
 
 © [Copyright](https://docs.python.org/3/copyright.html) 2001-2021, Python Software Foundation.  
-The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)  
-  
+The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)
+
 Last updated on May 30, 2021. [Found a bug](https://docs.python.org/3/bugs.html)?  
 Created using [Sphinx](https://www.sphinx-doc.org/) 2.4.4.
