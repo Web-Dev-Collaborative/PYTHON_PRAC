@@ -11,10 +11,7 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-
-   </head>
+</head>
 <body>
 <h1 id="automate-the-boring-stuff-with-python">Automate the Boring Stuff with Python</h1>
 <blockquote>
@@ -31,23 +28,46 @@
 <h2 id="backslash-on-windows-and-forward-slash-on-os-x-and-linux">Backslash on Windows and Forward Slash on OS X and Linux</h2>
 <p>On Windows, paths are written using backslashes (<em>\</em>) as the separator between folder names. OS X and Linux, however, use the forward slash (<em>/</em>) as their path separator. If you want your programs to work on all operating systems, you will have to write your Python scripts to handle both cases.</p>
 <p>Fortunately, this is simple to do with the <code>os.path.join()</code> function. If you pass it the string values of individual file and folder names in your path, <code>os.path.join()</code> will return a string with a file path using the correct path separators. Enter the following into the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>import os</strong> &gt;&gt;&gt; <strong>os.path.join(‘usr’, ‘bin’, ‘spam’)</strong> ‘usr\\bin\\spam’</p>
+<p>&gt;&gt;&gt; <strong>import os</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>os.path.join(‘usr’, ‘bin’, ‘spam’)</strong> ‘usr\\bin\\spam’</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>I’m running these interactive shell examples on Windows, so <code>os.path.join('usr', 'bin', 'spam')</code> returned <code>'usr\\bin\\spam'</code>. (Notice that the backslashes are doubled because each backslash needs to be escaped by another backslash character.) If I had called this function on OS X or Linux, the string would have been <code>'usr/bin/spam'</code>.</p>
 <p>The os.path.join() function is helpful if you need to create strings for filenames. These strings will be passed to several of the file-related functions introduced in this chapter. For example, the following example joins names from a list of filenames to the end of a folder’s name:</p>
-<p>&gt;&gt;&gt; <strong>myFiles = [‘accounts.txt’, ‘details.csv’, ‘invite.docx’]</strong> &gt;&gt;&gt; <strong>for filename in myFiles:</strong> print(os.path.join(‘C:\\Users\\asweigart’, filename)) C:\Users\asweigart\accounts.txt C:\Users\asweigart\details.csv C:\Users\asweigart\invite.docx</p>
+<p>&gt;&gt;&gt; <strong>myFiles = [‘accounts.txt’, ‘details.csv’, ‘invite.docx’]</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>for filename in myFiles:</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre><code>    print(os.path.join(&#39;C:\\\\Users\\\\asweigart&#39;, filename))</code></pre>
+<p>C:\Users\asweigart\accounts.txt C:\Users\asweigart\details.csv C:\Users\asweigart\invite.docx</p>
 <h2 id="the-current-working-directory">The Current Working Directory</h2>
 <p>Every program that runs on your computer has a <em>current working directory</em>, or <em>cwd</em>. Any filenames or paths that do not begin with the root folder are assumed to be under the current working directory. You can get the current working directory as a string value with the <code>os.getcwd()</code> function and change it with <code>os.chdir()</code>. Enter the following into the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>import os</strong> &gt;&gt;&gt; <strong>os.getcwd()</strong> ‘C:\\Python34’ &gt;&gt;&gt; <strong>os.chdir(‘C:\\Windows\\System32’)</strong> &gt;&gt;&gt; <strong>os.getcwd()</strong> ‘C:\\Windows\\System32’</p>
+<p>&gt;&gt;&gt; <strong>import os</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>os.getcwd()</strong> ‘C:\\Python34’ <strong>os.chdir(‘C:\\Windows\\System32’)</strong> &gt;&gt;&gt; <strong>os.getcwd()</strong> ‘C:\\Windows\\System32’</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>Here, the current working directory is set to <em>C:\Python34</em>, so the filename <em>project.docx</em> refers to <em>C:\Python34\project.docx</em>. When we change the current working directory to <em>C:\Windows</em>, <em>project.docx</em> is interpreted as <em>C:\ Windows\project.docx</em>.</p>
 <p>Python will display an error if you try to change to a directory that does not exist.</p>
 <p>&gt;&gt;&gt; <strong>os.chdir(‘C:\\ThisFolderDoesNotExist’)</strong> Traceback (most recent call last): File “&lt;pyshell#18&gt;”, line 1, in <module> os.chdir(‘C:\\ThisFolderDoesNotExist’) FileNotFoundError: [WinError 2] The system cannot find the file specified: ‘C:\\ThisFolderDoesNotExist’</p>
 <h3 id="note">Note</h3>
-<p><em>While folder is the more modern name for directory, note that</em> current working directory <em>(or just</em> working directory_) is the standard term, not current working folder._</p>
+<p><em>While folder is the more modern name for directory, note that</em> current working directory <em>(or just</em> working directory<em>) is the standard term, not current working folder.</em></p>
 <h2 id="absolute-vs.-relative-paths">Absolute vs. Relative Paths</h2>
 <p>There are two ways to specify a file path.</p>
 <ul>
-<li><p>An <em>absolute path</em>, which always begins with the root folder</p></li>
-<li><p>A <em>relative path</em>, which is relative to the program’s current working directory</p></li>
+<li>An <em>absolute path</em>, which always begins with the root folder</li>
+<li>A <em>relative path</em>, which is relative to the program’s current working directory</li>
 </ul>
 <p>There are also the <em>dot</em> (<code>.</code>) and <em>dot-dot</em> (<code>..</code>) folders. These are not real folders but special names that can be used in a path. A single period (“dot”) for a folder name is shorthand for “this directory.” Two periods (“dot-dot”) means “the parent folder.”</p>
 <p><a href="#calibre_link-83" title="Figure 8-2. The relative paths for folders and files in the working directory C:\bacon">Figure 8-2</a> is an example of some folders and files. When the current working directory is set to <em>C:\bacon</em>, the relative paths for the other folders and files are set as they are in the figure.</p>
@@ -58,10 +78,17 @@
 <p>The <em>.\</em> at the start of a relative path is optional. For example, <em>.\spam.txt</em> and <em>spam.txt</em> refer to the same file.</p>
 <h2 id="creating-new-folders-with-os.makedirs">Creating New Folders with os.makedirs()</h2>
 <p>Your programs can create new folders (directories) with the <code>os.makedirs()</code> function. Enter the following into the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>import os</strong> &gt;&gt;&gt; <strong>os.makedirs(‘C:\\delicious\\walnut\\waffles’)</strong></p>
+<p>&gt;&gt;&gt; <strong>import os</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>os.makedirs(‘C:\\delicious\\walnut\\waffles’)</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>This will create not just the <em>C:\delicious</em> folder but also a <em>walnut</em> folder inside <em>C:\delicious</em> and a <em>waffles</em> folder inside <em>C:\delicious\walnut</em>. That is, <code>os.makedirs()</code> will create any necessary intermediate folders in order to ensure that the full path exists. <a href="#calibre_link-84" title="Figure 8-3. The result of os.makedirs(&#39;C:\delicious \walnut\waffles&#39;)">Figure 8-3</a> shows this hierarchy of folders.</p>
 <figure>
-<img src="chrome-extension://cjedbglnccaioiolemnfhjncicchinao/images/000036.jpg" alt="The result of os.makedirs(‘C:\delicious \walnut\waffles’)" /><figcaption>The result of os.makedirs(‘C:\delicious \walnut\waffles’)</figcaption>
+<img src="chrome-extension://cjedbglnccaioiolemnfhjncicchinao/images/000036.jpg" alt="The result of os.makedirs(‘C:’)" /><figcaption>The result of os.makedirs(‘C:’)</figcaption>
 </figure>
 <p>Figure 8-3. The result of <code>os.makedirs('C:\\delicious \\walnut\\waffles')</code></p>
 <p>The <code>os.path</code> module contains many helpful functions related to filenames and file paths. For instance, you’ve already used <code>os.path.join()</code> to build paths in a way that will work on any operating system. Since <code>os.path</code> is a module inside the <code>os</code> module, you can import it by simply running <code>import os</code>. Whenever your programs need to work with files, folders, or file paths, you can refer to the short examples in this section. The full documentation for the <code>os.path</code> module is on the Python website at <em><a href="http://docs.python.org/3/library/os.path.html">http://docs.python.org/3/library/os.path.html</a></em>.</p>
@@ -70,26 +97,54 @@
 <h2 id="handling-absolute-and-relative-paths">Handling Absolute and Relative Paths</h2>
 <p>The <code>os.path</code> module provides functions for returning the absolute path of a relative path and for checking whether a given path is an absolute path.</p>
 <ul>
-<li><p>Calling <code>os.path.abspath(</code><em><code>path</code></em><code>)</code> will return a string of the absolute path of the argument. This is an easy way to convert a relative path into an absolute one.</p></li>
-<li><p>Calling <code>os.path.isabs(</code><em><code>path</code></em><code>)</code> will return <code>True</code> if the argument is an absolute path and <code>False</code> if it is a relative path.</p></li>
-<li><p>Calling <code>os.path.relpath(</code><em><code>path, start</code></em><code>)</code> will return a string of a relative path from the <em><code>start</code></em> path to <em><code>path</code></em>. If <em><code>start</code></em> is not provided, the current working directory is used as the start path.</p></li>
+<li>Calling <code>os.path.abspath(</code><em><code>path</code></em><code>)</code> will return a string of the absolute path of the argument. This is an easy way to convert a relative path into an absolute one.</li>
+<li>Calling <code>os.path.isabs(</code><em><code>path</code></em><code>)</code> will return <code>True</code> if the argument is an absolute path and <code>False</code> if it is a relative path.</li>
+<li>Calling <code>os.path.relpath(</code><em><code>path, start</code></em><code>)</code> will return a string of a relative path from the <em><code>start</code></em> path to <em><code>path</code></em>. If <em><code>start</code></em> is not provided, the current working directory is used as the start path.</li>
 </ul>
 <p>Try these functions in the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>os.path.abspath(‘.’)</strong> ‘C:\\Python34’ &gt;&gt;&gt; <strong>os.path.abspath(‘.\\Scripts’)</strong> ‘C:\\Python34\\Scripts’ &gt;&gt;&gt; <strong>os.path.isabs(‘.’)</strong> False &gt;&gt;&gt; <strong>os.path.isabs(os.path.abspath(‘.’))</strong> True</p>
+<p>&gt;&gt;&gt; <strong>os.path.abspath(‘.’)</strong> ‘C:\\Python34’</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>os.path.abspath(‘.\\Scripts’)</strong> ‘C:\\Python34\\Scripts’ <strong>os.path.isabs(‘.’)</strong> False <strong>os.path.isabs(os.path.abspath(‘.’))</strong> True</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>Since <em>C:\Python34</em> was the working directory when <code>os.path.abspath()</code> was called, the “single-dot” folder represents the absolute path <code>'C:\\Python34'</code>.</p>
 <h3 id="note-2">Note</h3>
 <p><em>Since your system probably has different files and folders on it than mine, you won’t be able to follow every example in this chapter exactly. Still, try to follow along using folders that exist on your computer.</em></p>
 <p>Enter the following calls to <code>os.path.relpath()</code> into the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>os.path.relpath(‘C:\\Windows’, ‘C:\\’)</strong> ‘Windows’ &gt;&gt;&gt; <strong>os.path.relpath(‘C:\\Windows’, ‘C:\\spam\\eggs’)</strong> ‘..\\..\\Windows’ &gt;&gt;&gt; <strong>os.getcwd()</strong> ‘C:\\Python34’</p>
+<p>&gt;&gt;&gt; <strong>os.path.relpath(‘C:\\Windows’, ‘C:\\’)</strong> ‘Windows’</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>os.path.relpath(‘C:\\Windows’, ‘C:\\spam\\eggs’)</strong> ‘..\\..\\Windows’ <strong>os.getcwd()</strong> ‘C:\\Python34’</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>Calling <code>os.path.dirname(</code><em><code>path</code></em><code>)</code> will return a string of everything that comes before the last slash in the <code>path</code> argument. Calling <code>os.path.basename(</code><em><code>path</code></em><code>)</code> will return a string of everything that comes after the last slash in the <code>path</code> argument. The dir name and base name of a path are outlined in <a href="#calibre_link-85" title="Figure 8-4. The base name follows the last slash in a path and is the same as the filename. The dir name is everything before the last slash.">Figure 8-4</a>.</p>
 <figure>
 <img src="chrome-extension://cjedbglnccaioiolemnfhjncicchinao/images/000041.png" alt="The base name follows the last slash in a path and is the same as the filename. The dir name is everything before the last slash." /><figcaption>The base name follows the last slash in a path and is the same as the filename. The dir name is everything before the last slash.</figcaption>
 </figure>
 <p>Figure 8-4. The base name follows the last slash in a path and is the same as the filename. The dir name is everything before the last slash.</p>
 <p>For example, enter the following into the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>path = ‘C:\\Windows\\System32\\calc.exe’</strong> &gt;&gt;&gt; <strong>os.path.basename(path)</strong> ‘calc.exe’ &gt;&gt;&gt; <strong>os.path.dirname(path)</strong> ‘C:\\Windows\\System32’</p>
+<p>&gt;&gt;&gt; <strong>path = ‘C:\\Windows\\System32\\calc.exe’</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>os.path.basename(path)</strong> ‘calc.exe’ <strong>os.path.dirname(path)</strong> ‘C:\\Windows\\System32’</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>If you need a path’s dir name and base name together, you can just call <code>os.path.split()</code> to get a tuple value with these two strings, like so:</p>
-<p>&gt;&gt;&gt; <strong>calcFilePath = ‘C:\\Windows\\System32\\calc.exe’</strong> &gt;&gt;&gt; <strong>os.path.split(calcFilePath)</strong> (‘C:\\Windows\\System32’, ‘calc.exe’)</p>
+<p>&gt;&gt;&gt; <strong>calcFilePath = ‘C:\\Windows\\System32\\calc.exe’</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>os.path.split(calcFilePath)</strong> (‘C:\\Windows\\System32’, ‘calc.exe’)</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>Notice that you could create the same tuple by calling <code>os.path.dirname()</code> and <code>os.path.basename()</code> and placing their return values in a tuple.</p>
 <p>&gt;&gt;&gt; <strong>(os.path.dirname(calcFilePath), os.path.basename(calcFilePath))</strong> (‘C:\\Windows\\System32’, ‘calc.exe’)</p>
 <p>But <code>os.path.split()</code> is a nice shortcut if you need both values.</p>
@@ -102,13 +157,28 @@
 <h2 id="finding-file-sizes-and-folder-contents">Finding File Sizes and Folder Contents</h2>
 <p>Once you have ways of handling file paths, you can then start gathering information about specific files and folders. The <code>os.path</code> module provides functions for finding the size of a file in bytes and the files and folders inside a given folder.</p>
 <ul>
-<li><p>Calling <code>os.path.getsize(</code><em><code>path</code></em><code>)</code> will return the size in bytes of the file in the <em><code>path</code></em> argument.</p></li>
-<li><p>Calling <code>os.listdir(</code><em><code>path</code></em><code>)</code> will return a list of filename strings for each file in the <em><code>path</code></em> argument. (Note that this function is in the <code>os</code> module, not <code>os.path</code>.)</p></li>
+<li>Calling <code>os.path.getsize(</code><em><code>path</code></em><code>)</code> will return the size in bytes of the file in the <em><code>path</code></em> argument.</li>
+<li>Calling <code>os.listdir(</code><em><code>path</code></em><code>)</code> will return a list of filename strings for each file in the <em><code>path</code></em> argument. (Note that this function is in the <code>os</code> module, not <code>os.path</code>.)</li>
 </ul>
 <p>Here’s what I get when I try these functions in the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>os.path.getsize(‘C:\\Windows\\System32\\calc.exe’)</strong> 776192 &gt;&gt;&gt; <strong>os.listdir(‘C:\\Windows\\System32’)</strong> [‘0409’, ‘12520437.cpx’, ‘12520850.cpx’, ‘5U877.ax’, ‘aaclient.dll’, –<em>snip</em>-- ‘xwtpdui.dll’, ‘xwtpw32.dll’, ‘zh-CN’, ‘zh-HK’, ‘zh-TW’, ‘zipfldr.dll’]</p>
+<p>&gt;&gt;&gt; <strong>os.path.getsize(‘C:\\Windows\\System32\\calc.exe’)</strong> 776192</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>os.listdir(‘C:\\Windows\\System32’)</strong> &gt; &gt; &gt; [‘0409’, ‘12520437.cpx’, ‘12520850.cpx’, ‘5U877.ax’, ‘aaclient.dll’, –<em>snip</em>-- ‘xwtpdui.dll’, ‘xwtpw32.dll’, ‘zh-CN’, ‘zh-HK’, ‘zh-TW’, ‘zipfldr.dll’]</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>As you can see, the <em>calc.exe</em> program on my computer is 776,192 bytes in size, and I have a lot of files in <em>C:\Windows\system32</em>. If I want to find the total size of all the files in this directory, I can use <code>os.path.getsize()</code> and <code>os.listdir()</code> together.</p>
-<p>&gt;&gt;&gt; <strong>totalSize = 0</strong> &gt;&gt;&gt; <strong>for filename in os.listdir(‘C:\\Windows\\System32’):</strong> <strong>totalSize = totalSize + os.path.getsize(os.path.join(‘C:\\Windows\\System32’, filename))</strong></p>
+<p>&gt;&gt;&gt; <strong>totalSize = 0</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>for filename in os.listdir(‘C:\\Windows\\System32’):</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre><code>  **totalSize = totalSize + os.path.getsize(os.path.join(&#39;C:\\\\Windows\\\\System32&#39;, filename))**</code></pre>
 <blockquote>
 <blockquote>
 <blockquote>
@@ -119,12 +189,19 @@
 <p>As I loop over each filename in the <em>C:\Windows\System32</em> folder, the <code>totalSize</code> variable is incremented by the size of each file. Notice how when I call <code>os.path.getsize()</code>, I use <code>os.path.join()</code> to join the folder name with the current filename. The integer that <code>os.path.getsize()</code> returns is added to the value of <code>totalSize</code>. After looping through all the files, I print <code>totalSize</code> to see the total size of the <em>C:\Windows\System32</em> folder.</p>
 <p>Many Python functions will crash with an error if you supply them with a path that does not exist. The <code>os.path</code> module provides functions to check whether a given path exists and whether it is a file or folder.</p>
 <ul>
-<li><p>Calling <code>os.path.exists(</code><em><code>path</code></em><code>)</code> will return <code>True</code> if the file or folder referred to in the argument exists and will return <code>False</code> if it does not exist.</p></li>
-<li><p>Calling <code>os.path.isfile(</code><em><code>path</code></em><code>)</code> will return <code>True</code> if the path argument exists and is a file and will return <code>False</code> otherwise.</p></li>
-<li><p>Calling <code>os.path.isdir(</code><em><code>path</code></em><code>)</code> will return <code>True</code> if the path argument exists and is a folder and will return <code>False</code> otherwise.</p></li>
+<li>Calling <code>os.path.exists(</code><em><code>path</code></em><code>)</code> will return <code>True</code> if the file or folder referred to in the argument exists and will return <code>False</code> if it does not exist.</li>
+<li>Calling <code>os.path.isfile(</code><em><code>path</code></em><code>)</code> will return <code>True</code> if the path argument exists and is a file and will return <code>False</code> otherwise.</li>
+<li>Calling <code>os.path.isdir(</code><em><code>path</code></em><code>)</code> will return <code>True</code> if the path argument exists and is a folder and will return <code>False</code> otherwise.</li>
 </ul>
 <p>Here’s what I get when I try these functions in the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>os.path.exists(‘C:\\Windows’)</strong> True &gt;&gt;&gt; <strong>os.path.exists(‘C:\\some_made_up_folder’)</strong> False &gt;&gt;&gt; <strong>os.path.isdir(‘C:\\Windows\\System32’)</strong> True &gt;&gt;&gt; <strong>os.path.isfile(‘C:\\Windows\\System32’)</strong> False &gt;&gt;&gt; <strong>os.path.isdir(‘C:\\Windows\\System32\\calc.exe’)</strong> False &gt;&gt;&gt; <strong>os.path.isfile(‘C:\\Windows\\System32\\calc.exe’)</strong> True</p>
+<p>&gt;&gt;&gt; <strong>os.path.exists(‘C:\\Windows’)</strong> True</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>os.path.exists(‘C:\\some_made_up_folder’)</strong> False <strong>os.path.isdir(‘C:\\Windows\\System32’)</strong> True <strong>os.path.isfile(‘C:\\Windows\\System32’)</strong> False <strong>os.path.isdir(‘C:\\Windows\\System32\\calc.exe’)</strong> False <strong>os.path.isfile(‘C:\\Windows\\System32\\calc.exe’)</strong> True</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>You can determine whether there is a DVD or flash drive currently attached to the computer by checking for it with the <code>os.path.exists()</code> function. For instance, if I wanted to check for a flash drive with the volume named <em>D:\</em> on my Windows computer, I could do that with the following:</p>
 <p>&gt;&gt;&gt; <strong>os.path.exists(‘D:\\’)</strong> False</p>
 <p>Oops! It looks like I forgot to plug in my flash drive.</p>
@@ -137,9 +214,9 @@
 <p>Since every different type of binary file must be handled in its own way, this book will not go into reading and writing raw binary files directly. Fortunately, many modules make working with binary files easier—you will explore one of them, the <code>shelve</code> module, later in this chapter.</p>
 <p>There are three steps to reading or writing files in Python.</p>
 <ol type="1">
-<li><p>Call the <code>open()</code> function to return a <code>File</code> object.</p></li>
-<li><p>Call the <code>read()</code> or <code>write()</code> method on the <code>File</code> object.</p></li>
-<li><p>Close the file by calling the <code>close()</code> method on the <code>File</code> object.</p></li>
+<li>Call the <code>open()</code> function to return a <code>File</code> object.</li>
+<li>Call the <code>read()</code> or <code>write()</code> method on the <code>File</code> object.</li>
+<li>Close the file by calling the <code>close()</code> method on the <code>File</code> object.</li>
 </ol>
 <h2 id="opening-files-with-the-open-function">Opening Files with the open() Function</h2>
 <p>To open a file with the <code>open()</code> function, you pass it a string path indicating the file you want to open; it can be either an absolute or relative path. The <code>open()</code> function returns a <code>File</code> object.</p>
@@ -152,62 +229,122 @@
 <p>The call to <code>open()</code> returns a <code>File</code> object. A <code>File</code> object represents a file on your computer; it is simply another type of value in Python, much like the lists and dictionaries you’re already familiar with. In the previous example, you stored the <code>File</code> object in the variable <code>helloFile</code>. Now, whenever you want to read from or write to the file, you can do so by calling methods on the <code>File</code> object in <code>helloFile</code>.</p>
 <h2 id="reading-the-contents-of-files">Reading the Contents of Files</h2>
 <p>Now that you have a <code>File</code> object, you can start reading from it. If you want to read the entire contents of a file as a string value, use the <code>File</code> object’s <code>read()</code> method. Let’s continue with the <em>hello.txt</em> <code>File</code> object you stored in <code>helloFile</code>. Enter the following into the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>helloContent = helloFile.read()</strong> &gt;&gt;&gt; <strong>helloContent</strong> ‘Hello world!’</p>
+<p>&gt;&gt;&gt; <strong>helloContent = helloFile.read()</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>helloContent</strong> ‘Hello world!’</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>If you think of the contents of a file as a single large string value, the <code>read()</code> method returns the string that is stored in the file.</p>
 <p>Alternatively, you can use the <code>readlines()</code> method to get a <em>list</em> of string values from the file, one string for each line of text. For example, create a file named <em>sonnet29.txt</em> in the same directory as <em>hello.txt</em> and write the following text in it:</p>
 <p>When, in disgrace with fortune and men’s eyes, I all alone beweep my outcast state, And trouble deaf heaven with my bootless cries, And look upon myself and curse my fate,</p>
 <p>Make sure to separate the four lines with line breaks. Then enter the following into the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>sonnetFile = open(‘sonnet29.txt’)</strong> &gt;&gt;&gt; <strong>sonnetFile.readlines()</strong> [When, in disgrace with fortune and men’s eyes,\n’, ’ I all alone beweep my outcast state,\n’, And trouble deaf heaven with my bootless cries,\n’, And look upon myself and curse my fate,’]</p>
+<p>&gt;&gt;&gt; <strong>sonnetFile = open(‘sonnet29.txt’)</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sonnetFile.readlines()</strong> &gt; &gt; &gt; [When, in disgrace with fortune and men’s eyes,\n’, ’ I all alone beweep my outcast state,\n’, And trouble deaf heaven with my bootless cries,\n’, And look upon myself and curse my fate,’]</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>Note that each of the string values ends with a newline character, <code>\n</code>, except for the last line of the file. A list of strings is often easier to work with than a single large string value.</p>
 <p>Python allows you to write content to a file in a way similar to how the <code>print()</code> function “writes” strings to the screen. You can’t write to a file you’ve opened in read mode, though. Instead, you need to open it in “write plaintext” mode or “append plaintext” mode, or <em>write mode</em> and <em>append mode</em> for short.</p>
 <p>Write mode will overwrite the existing file and start from scratch, just like when you overwrite a variable’s value with a new value. Pass <code>'w'</code> as the second argument to <code>open()</code> to open the file in write mode. Append mode, on the other hand, will append text to the end of the existing file. You can think of this as appending to a list in a variable, rather than overwriting the variable altogether. Pass <code>'a'</code> as the second argument to <code>open()</code> to open the file in append mode.</p>
 <p>If the filename passed to <code>open()</code> does not exist, both write and append mode will create a new, blank file. After reading or writing a file, call the <code>close()</code> method before opening the file again.</p>
 <p>Let’s put these concepts together. Enter the following into the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>baconFile = open(‘bacon.txt’, ‘w’)</strong> &gt;&gt;&gt; <strong>baconFile.write(‘Hello world!\n’)</strong> 13 &gt;&gt;&gt; <strong>baconFile.close()</strong> &gt;&gt;&gt; <strong>baconFile = open(‘bacon.txt’, ‘a’)</strong> &gt;&gt;&gt; <strong>baconFile.write(‘Bacon is not a vegetable.’)</strong> 25 &gt;&gt;&gt; <strong>baconFile.close()</strong> &gt;&gt;&gt; <strong>baconFile = open(‘bacon.txt’)</strong> &gt;&gt;&gt; <strong>content = baconFile.read()</strong> &gt;&gt;&gt; <strong>baconFile.close()</strong> &gt;&gt;&gt; <strong>print(content)</strong> Hello world! Bacon is not a vegetable.</p>
+<p>&gt;&gt;&gt; <strong>baconFile = open(‘bacon.txt’, ‘w’)</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>baconFile.write(‘Hello world!\n’)</strong> 13 <strong>baconFile.close()</strong> &gt;&gt;&gt; <strong>baconFile = open(‘bacon.txt’, ‘a’)</strong> &gt;&gt;&gt; <strong>baconFile.write(‘Bacon is not a vegetable.’)</strong> 25 <strong>baconFile.close()</strong> &gt;&gt;&gt; <strong>baconFile = open(‘bacon.txt’)</strong> &gt;&gt;&gt; <strong>content = baconFile.read()</strong> &gt;&gt;&gt; <strong>baconFile.close()</strong> &gt;&gt;&gt; <strong>print(content)</strong> Hello world! Bacon is not a vegetable.</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>First, we open <em>bacon.txt</em> in write mode. Since there isn’t a <em>bacon.txt</em> yet, Python creates one. Calling <code>write()</code> on the opened file and passing <code>write()</code> the string argument <code>'Hello world! /n'</code> writes the string to the file and returns the number of characters written, including the newline. Then we close the file.</p>
 <p>To add text to the existing contents of the file instead of replacing the string we just wrote, we open the file in append mode. We write <code>'Bacon is not a vegetable.'</code> to the file and close it. Finally, to print the file contents to the screen, we open the file in its default read mode, call <code>read()</code>, store the resulting <code>File</code> object in <code>content</code>, close the file, and print <code>content</code>.</p>
 <p>Note that the <code>write()</code> method does not automatically add a newline character to the end of the string like the <code>print()</code> function does. You will have to add this character yourself.</p>
 <p>You can save variables in your Python programs to binary shelf files using the <code>shelve</code> module. This way, your program can restore data to variables from the hard drive. The <code>shelve</code> module will let you add Save and Open features to your program. For example, if you ran a program and entered some configuration settings, you could save those settings to a shelf file and then have the program load them the next time it is run.</p>
 <p>Enter the following into the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>import shelve</strong> &gt;&gt;&gt; <strong>shelfFile = shelve.open(‘mydata’)</strong> &gt;&gt;&gt; <strong>cats = [‘Zophie’, ‘Pooka’, ‘Simon’]</strong> &gt;&gt;&gt; <strong>shelfFile[‘cats’] = cats</strong> &gt;&gt;&gt; <strong>shelfFile.close()</strong></p>
+<p>&gt;&gt;&gt; <strong>import shelve</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>shelfFile = shelve.open(‘mydata’)</strong> &gt;&gt;&gt; <strong>cats = [‘Zophie’, ‘Pooka’, ‘Simon’]</strong> &gt;&gt;&gt; <strong>shelfFile[‘cats’] = cats</strong> &gt;&gt;&gt; <strong>shelfFile.close()</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>To read and write data using the <code>shelve</code> module, you first import <code>shelve</code>. Call <code>shelve.open()</code> and pass it a filename, and then store the returned shelf value in a variable. You can make changes to the shelf value as if it were a dictionary. When you’re done, call <code>close()</code> on the shelf value. Here, our shelf value is stored in <code>shelfFile</code>. We create a list <code>cats</code> and write <code>shelfFile['cats'] = cats</code> to store the list in <code>shelfFile</code> as a value associated with the key <code>'cats'</code> (like in a dictionary). Then we call <code>close()</code> on <code>shelfFile</code>.</p>
 <p>After running the previous code on Windows, you will see three new files in the current working directory: <em>mydata.bak</em>, <em>mydata.dat</em>, and <em>mydata.dir</em>. On OS X, only a single <em>mydata.db</em> file will be created.</p>
 <p>These binary files contain the data you stored in your shelf. The format of these binary files is not important; you only need to know what the <code>shelve</code> module does, not how it does it. The module frees you from worrying about how to store your program’s data to a file.</p>
 <p>Your programs can use the <code>shelve</code> module to later reopen and retrieve the data from these shelf files. Shelf values don’t have to be opened in read or write mode—they can do both once opened. Enter the following into the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>shelfFile = shelve.open(‘mydata’)</strong> &gt;&gt;&gt; <strong>type(shelfFile)</strong> &lt;class ‘shelve.DbfilenameShelf’&gt; &gt;&gt;&gt; <strong>shelfFile[‘cats’]</strong> [‘Zophie’, ‘Pooka’, ‘Simon’] &gt;&gt;&gt; <strong>shelfFile.close()</strong></p>
+<p>&gt;&gt;&gt; <strong>shelfFile = shelve.open(‘mydata’)</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>type(shelfFile)</strong> &lt;class ‘shelve.DbfilenameShelf’&gt; <strong>shelfFile[‘cats’]</strong> &gt; &gt; &gt; [‘Zophie’, ‘Pooka’, ‘Simon’] &gt;&gt;&gt; <strong>shelfFile.close()</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>Here, we open the shelf files to check that our data was stored correctly. Entering <code>shelfFile['cats']</code> returns the same list that we stored earlier, so we know that the list is correctly stored, and we call <code>close()</code>.</p>
 <p>Just like dictionaries, shelf values have <code>keys()</code> and <code>values()</code> methods that will return list-like values of the keys and values in the shelf. Since these methods return list-like values instead of true lists, you should pass them to the <code>list()</code> function to get them in list form. Enter the following into the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>shelfFile = shelve.open(‘mydata’)</strong> &gt;&gt;&gt; <strong>list(shelfFile.keys())</strong> [‘cats’] &gt;&gt;&gt; <strong>list(shelfFile.values())</strong> [[‘Zophie’, ‘Pooka’, ‘Simon’]] &gt;&gt;&gt; <strong>shelfFile.close()</strong></p>
+<p>&gt;&gt;&gt; <strong>shelfFile = shelve.open(‘mydata’)</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>list(shelfFile.keys())</strong> &gt; &gt; &gt; [‘cats’] &gt;&gt;&gt; <strong>list(shelfFile.values())</strong> &gt; &gt; &gt; [[‘Zophie’, ‘Pooka’, ‘Simon’]] &gt;&gt;&gt; <strong>shelfFile.close()</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>Plaintext is useful for creating files that you’ll read in a text editor such as Notepad or TextEdit, but if you want to save data from your Python programs, use the <code>shelve</code> module.</p>
 <p>Recall from <a href="#calibre_link-87" title="Pretty Printing">Pretty Printing</a> that the <code>pprint.pprint()</code> function will “pretty print” the contents of a list or dictionary to the screen, while the <code>pprint.pformat()</code> function will return this same text as a string instead of printing it. Not only is this string formatted to be easy to read, but it is also syntactically correct Python code. Say you have a dictionary stored in a variable and you want to save this variable and its contents for future use. Using <code>pprint.pformat()</code> will give you a string that you can write to <em>.py</em> file. This file will be your very own module that you can import whenever you want to use the variable stored in it.</p>
 <p>For example, enter the following into the interactive shell:</p>
-<p>&gt;&gt;&gt; <strong>import pprint</strong> &gt;&gt;&gt; <strong>cats = [{‘name’: ‘Zophie’, ‘desc’: ‘chubby’}, {‘name’: ‘Pooka’, ‘desc’: ‘fluffy’}]</strong> &gt;&gt;&gt; <strong>pprint.pformat(cats)</strong> “[{‘desc’: ‘chubby’, ‘name’: ‘Zophie’}, {‘desc’: ‘fluffy’, ‘name’: ‘Pooka’}]” &gt;&gt;&gt; <strong>fileObj = open(‘myCats.py’, ‘w’)</strong> &gt;&gt;&gt; <strong>fileObj.write(‘cats =’ + pprint.pformat(cats) + ‘\n’)</strong> 83 &gt;&gt;&gt; <strong>fileObj.close()</strong></p>
+<p>&gt;&gt;&gt; <strong>import pprint</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>cats = [{‘name’: ‘Zophie’, ‘desc’: ‘chubby’}, {‘name’: ‘Pooka’, ‘desc’: ‘fluffy’}]</strong> &gt;&gt;&gt; <strong>pprint.pformat(cats)</strong> “[{‘desc’: ‘chubby’, ‘name’: ‘Zophie’}, {‘desc’: ‘fluffy’, ‘name’: ‘Pooka’}]” <strong>fileObj = open(‘myCats.py’, ‘w’)</strong> &gt;&gt;&gt; <strong>fileObj.write(‘cats =’ + pprint.pformat(cats) + ‘\n’)</strong> 83 <strong>fileObj.close()</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>Here, we import <code>pprint</code> to let us use <code>pprint.pformat()</code>. We have a list of dictionaries, stored in a variable <code>cats</code>. To keep the list in <code>cats</code> available even after we close the shell, we use <code>pprint.pformat()</code> to return it as a string. Once we have the data in <code>cats</code> as a string, it’s easy to write the string to a file, which we’ll call <em>myCats.py</em>.</p>
 <p>The modules that an <code>import</code> statement imports are themselves just Python scripts. When the string from <code>pprint.pformat()</code> is saved to a <em>.py</em> file, the file is a module that can be imported just like any other.</p>
 <p>And since Python scripts are themselves just text files with the <em>.py</em> file extension, your Python programs can even generate other Python programs. You can then import these files into scripts.</p>
-<p>&gt;&gt;&gt; <strong>import myCats</strong> &gt;&gt;&gt; <strong>myCats.cats</strong> [{‘name’: ‘Zophie’, ‘desc’: ‘chubby’}, {‘name’: ‘Pooka’, ‘desc’: ‘fluffy’}] &gt;&gt;&gt; <strong>myCats.cats[0]</strong> {‘name’: ‘Zophie’, ‘desc’: ‘chubby’} &gt;&gt;&gt; <strong>myCats.cats[0][‘name’]</strong> ‘Zophie’</p>
+<p>&gt;&gt;&gt; <strong>import myCats</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>myCats.cats</strong> &gt; &gt; &gt; [{‘name’: ‘Zophie’, ‘desc’: ‘chubby’}, {‘name’: ‘Pooka’, ‘desc’: ‘fluffy’}] &gt;&gt;&gt; <strong>myCats.cats[0]</strong> {‘name’: ‘Zophie’, ‘desc’: ‘chubby’} <strong>myCats.cats[0][‘name’]</strong> ‘Zophie’</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>The benefit of creating a <em>.py</em> file (as opposed to saving variables with the <code>shelve</code> module) is that because it is a text file, the contents of the file can be read and modified by anyone with a simple text editor. For most applications, however, saving data using the <code>shelve</code> module is the preferred way to save variables to a file. Only basic data types such as integers, floats, strings, lists, and dictionaries can be written to a file as simple text. <code>File</code> objects, for example, cannot be encoded as text.</p>
 <p>Say you’re a geography teacher with 35 students in your class and you want to give a pop quiz on US state capitals. Alas, your class has a few bad eggs in it, and you can’t trust the students not to cheat. You’d like to randomize the order of questions so that each quiz is unique, making it impossible for anyone to crib answers from anyone else. Of course, doing this by hand would be a lengthy and boring affair. Fortunately, you know some Python.</p>
 <p>Here is what the program does:</p>
 <ul>
-<li><p>Creates 35 different quizzes.</p></li>
-<li><p>Creates 50 multiple-choice questions for each quiz, in random order.</p></li>
-<li><p>Provides the correct answer and three random wrong answers for each question, in random order.</p></li>
-<li><p>Writes the quizzes to 35 text files.</p></li>
-<li><p>Writes the answer keys to 35 text files.</p></li>
+<li>Creates 35 different quizzes.</li>
+<li>Creates 50 multiple-choice questions for each quiz, in random order.</li>
+<li>Provides the correct answer and three random wrong answers for each question, in random order.</li>
+<li>Writes the quizzes to 35 text files.</li>
+<li>Writes the answer keys to 35 text files.</li>
 </ul>
 <p>This means the code will need to do the following:</p>
 <ul>
-<li><p>Store the states and their capitals in a dictionary.</p></li>
-<li><p>Call <code>open()</code>, <code>write()</code>, and <code>close()</code> for the quiz and answer key text files.</p></li>
-<li><p>Use <code>random.shuffle()</code> to randomize the order of the questions and multiple-choice options.</p></li>
+<li>Store the states and their capitals in a dictionary.</li>
+<li>Call <code>open()</code>, <code>write()</code>, and <code>close()</code> for the quiz and answer key text files.</li>
+<li>Use <code>random.shuffle()</code> to randomize the order of the questions and multiple-choice options.</li>
 </ul>
 <h2 id="step-1-store-the-quiz-data-in-a-dictionary">Step 1: Store the Quiz Data in a Dictionary</h2>
 <p>The first step is to create a skeleton script and fill it with your quiz data. Create a file named <em>randomQuizGenerator.py</em>, and make it look like the following:</p>
-<p>#! python3 # randomQuizGenerator.py - Creates quizzes with questions and answers in # random order, along with the answer key.</p>
+<p>#! python3</p>
+<h1 id="randomquizgenerator.py---creates-quizzes-with-questions-and-answers-in">randomQuizGenerator.py - Creates quizzes with questions and answers in</h1>
+<h1 id="random-order-along-with-the-answer-key.">random order, along with the answer key.</h1>
 <p>❶ import random</p>
-<p># The quiz data. Keys are states and values are their capitals. ❷ capitals = {‘Alabama’: ‘Montgomery’, ‘Alaska’: ‘Juneau’, ‘Arizona’: ‘Phoenix’, ‘Arkansas’: ‘Little Rock’, ‘California’: ‘Sacramento’, ‘Colorado’: ‘Denver’, ‘Connecticut’: ‘Hartford’, ‘Delaware’: ‘Dover’, ‘Florida’: ‘Tallahassee’, ‘Georgia’: ‘Atlanta’, ‘Hawaii’: ‘Honolulu’, ‘Idaho’: ‘Boise’, ‘Illinois’: ‘Springfield’, ‘Indiana’: ‘Indianapolis’, ‘Iowa’: ‘Des Moines’, ‘Kansas’: ‘Topeka’, ‘Kentucky’: ‘Frankfort’, ‘Louisiana’: ‘Baton Rouge’, ‘Maine’: ‘Augusta’, ‘Maryland’: ‘Annapolis’, ‘Massachusetts’: ‘Boston’, ‘Michigan’: ‘Lansing’, ‘Minnesota’: ‘Saint Paul’, ‘Mississippi’: ‘Jackson’, ‘Missouri’: ‘Jefferson City’, ‘Montana’: ‘Helena’, ‘Nebraska’: ‘Lincoln’, ‘Nevada’: ‘Carson City’, ‘New Hampshire’: ‘Concord’, ‘New Jersey’: ‘Trenton’, ‘New Mexico’: ‘Santa Fe’, ‘New York’: ‘Albany’, ‘North Carolina’: ‘Raleigh’, ‘North Dakota’: ‘Bismarck’, ‘Ohio’: ‘Columbus’, ‘Oklahoma’: ‘Oklahoma City’, ‘Oregon’: ‘Salem’, ‘Pennsylvania’: ‘Harrisburg’, ‘Rhode Island’: ‘Providence’, ‘South Carolina’: ‘Columbia’, ‘South Dakota’: ‘Pierre’, ‘Tennessee’: ‘Nashville’, ‘Texas’: ‘Austin’, ‘Utah’: ‘Salt Lake City’, ‘Vermont’: ‘Montpelier’, ‘Virginia’: ‘Richmond’, ‘Washington’: ‘Olympia’, ‘West Virginia’: ‘Charleston’, ‘Wisconsin’: ‘Madison’, ‘Wyoming’: ‘Cheyenne’}</p>
-<p># Generate 35 quiz files. ❸ for quizNum in range(35): # TODO: Create the quiz and answer key files.</p>
+<h1 id="the-quiz-data.-keys-are-states-and-values-are-their-capitals.">The quiz data. Keys are states and values are their capitals.</h1>
+<p>❷ capitals = {‘Alabama’: ‘Montgomery’, ‘Alaska’: ‘Juneau’, ‘Arizona’: ‘Phoenix’, ‘Arkansas’: ‘Little Rock’, ‘California’: ‘Sacramento’, ‘Colorado’: ‘Denver’, ‘Connecticut’: ‘Hartford’, ‘Delaware’: ‘Dover’, ‘Florida’: ‘Tallahassee’, ‘Georgia’: ‘Atlanta’, ‘Hawaii’: ‘Honolulu’, ‘Idaho’: ‘Boise’, ‘Illinois’: ‘Springfield’, ‘Indiana’: ‘Indianapolis’, ‘Iowa’: ‘Des Moines’, ‘Kansas’: ‘Topeka’, ‘Kentucky’: ‘Frankfort’, ‘Louisiana’: ‘Baton Rouge’, ‘Maine’: ‘Augusta’, ‘Maryland’: ‘Annapolis’, ‘Massachusetts’: ‘Boston’, ‘Michigan’: ‘Lansing’, ‘Minnesota’: ‘Saint Paul’, ‘Mississippi’: ‘Jackson’, ‘Missouri’: ‘Jefferson City’, ‘Montana’: ‘Helena’, ‘Nebraska’: ‘Lincoln’, ‘Nevada’: ‘Carson City’, ‘New Hampshire’: ‘Concord’, ‘New Jersey’: ‘Trenton’, ‘New Mexico’: ‘Santa Fe’, ‘New York’: ‘Albany’, ‘North Carolina’: ‘Raleigh’, ‘North Dakota’: ‘Bismarck’, ‘Ohio’: ‘Columbus’, ‘Oklahoma’: ‘Oklahoma City’, ‘Oregon’: ‘Salem’, ‘Pennsylvania’: ‘Harrisburg’, ‘Rhode Island’: ‘Providence’, ‘South Carolina’: ‘Columbia’, ‘South Dakota’: ‘Pierre’, ‘Tennessee’: ‘Nashville’, ‘Texas’: ‘Austin’, ‘Utah’: ‘Salt Lake City’, ‘Vermont’: ‘Montpelier’, ‘Virginia’: ‘Richmond’, ‘Washington’: ‘Olympia’, ‘West Virginia’: ‘Charleston’, ‘Wisconsin’: ‘Madison’, ‘Wyoming’: ‘Cheyenne’}</p>
+<h1 id="generate-35-quiz-files.">Generate 35 quiz files.</h1>
+<p>❸ for quizNum in range(35): # TODO: Create the quiz and answer key files.</p>
 <pre><code>   # TODO: Write out the header for the quiz.
 
    # TODO: Shuffle the order of the states.
@@ -218,9 +355,12 @@
 <p>Now it’s time to start filling in those <code>TODO</code>s.</p>
 <p>The code in the loop will be repeated 35 times—once for each quiz—so you have to worry about only one quiz at a time within the loop. First you’ll create the actual quiz file. It needs to have a unique filename and should also have some kind of standard header in it, with places for the student to fill in a name, date, and class period. Then you’ll need to get a list of states in randomized order, which can be used later to create the questions and answers for the quiz.</p>
 <p>Add the following lines of code to <em>randomQuizGenerator.py</em>:</p>
-<p>#! python3 # randomQuizGenerator.py - Creates quizzes with questions and answers in # random order, along with the answer key.</p>
+<p>#! python3</p>
+<h1 id="randomquizgenerator.py---creates-quizzes-with-questions-and-answers-in-1">randomQuizGenerator.py - Creates quizzes with questions and answers in</h1>
+<h1 id="random-order-along-with-the-answer-key.-1">random order, along with the answer key.</h1>
 <p>–<em>snip</em>--</p>
-<p># Generate 35 quiz files. for quizNum in range(35): <strong># Create the quiz and answer key files.</strong> ❶ <strong>quizFile = open(‘capitalsquiz%s.txt’ % (quizNum + 1), ‘w’)</strong> ❷ <strong>answerKeyFile = open(‘capitalsquiz_answers%s.txt’ % (quizNum + 1), ‘w’)</strong></p>
+<h1 id="generate-35-quiz-files.-1">Generate 35 quiz files.</h1>
+<p>for quizNum in range(35): <strong># Create the quiz and answer key files.</strong> ❶ <strong>quizFile = open(‘capitalsquiz%s.txt’ % (quizNum + 1), ‘w’)</strong> ❷ <strong>answerKeyFile = open(‘capitalsquiz_answers%s.txt’ % (quizNum + 1), ‘w’)</strong></p>
 <pre><code>   **\# Write out the header for the quiz.**</code></pre>
 <p>❸ <strong>quizFile.write(‘Name:\n\nDate:\n\nPeriod:\n\n’)</strong> <strong>quizFile.write((’ ’ * 20) + ‘State Capitals Quiz (Form %s)’ % (quizNum + 1))</strong> <strong>quizFile.write(‘\n\n’)</strong></p>
 <pre><code>   **\# Shuffle the order of the states.**
@@ -231,7 +371,9 @@
 <p>The <code>write()</code> statements at ❸ create a quiz header for the student to fill out. Finally, a randomized list of US states is created with the help of the <code>random.shuffle()</code> function ❹, which randomly reorders the values in any list that is passed to it.</p>
 <h2 id="step-3-create-the-answer-options">Step 3: Create the Answer Options</h2>
 <p>Now you need to generate the answer options for each question, which will be multiple choice from A to D. You’ll need to create another <code>for</code> loop—this one to generate the content for each of the 50 questions on the quiz. Then there will be a third <code>for</code> loop nested inside to generate the multiple-choice options for each question. Make your code look like the following:</p>
-<p>#! python3 # randomQuizGenerator.py - Creates quizzes with questions and answers in # random order, along with the answer key.</p>
+<p>#! python3</p>
+<h1 id="randomquizgenerator.py---creates-quizzes-with-questions-and-answers-in-2">randomQuizGenerator.py - Creates quizzes with questions and answers in</h1>
+<h1 id="random-order-along-with-the-answer-key.-2">random order, along with the answer key.</h1>
 <p>–<em>snip</em>--</p>
 <pre><code>   **\# Loop through all 50 states, making a question for each.**
    **for questionNum in range(50):**
@@ -245,7 +387,9 @@
 <p>The list of possible wrong answers is trickier. You can get it by duplicating <em>all</em> the values in the <code>capitals</code> dictionary ❷, deleting the correct answer ❸, and selecting three random values from this list ❹. The <code>random.sample()</code> function makes it easy to do this selection. Its first argument is the list you want to select from; the second argument is the number of values you want to select. The full list of answer options is the combination of these three wrong answers with the correct answers ❺. Finally, the answers need to be randomized ❻ so that the correct response isn’t always choice D.</p>
 <h2 id="step-4-write-content-to-the-quiz-and-answer-key-files">Step 4: Write Content to the Quiz and Answer Key Files</h2>
 <p>All that is left is to write the question to the quiz file and the answer to the answer key file. Make your code look like the following:</p>
-<p>#! python3 # randomQuizGenerator.py - Creates quizzes with questions and answers in # random order, along with the answer key.</p>
+<p>#! python3</p>
+<h1 id="randomquizgenerator.py---creates-quizzes-with-questions-and-answers-in-3">randomQuizGenerator.py - Creates quizzes with questions and answers in</h1>
+<h1 id="random-order-along-with-the-answer-key.-3">random order, along with the answer key.</h1>
 <p>–<em>snip</em>-- # Loop through all 50 states, making a question for each. for questionNum in range(50): –<em>snip</em>--</p>
 <pre><code>       **\# Write the question and the answer options to the quiz file.**
        **quizFile.write(&#39;%s. What is the capital of %s?\\n&#39; % (questionNum + 1,**
@@ -272,39 +416,48 @@
 <p>The program will save each piece of clipboard text under a keyword. For example, when you run <code>py mcb.pyw save spam</code>, the current contents of the clipboard will be saved with the keyword <em>spam</em>. This text can later be loaded to the clipboard again by running <code>py mcb.pyw spam</code>. And if the user forgets what keywords they have, they can run <code>py mcb.pyw list</code> to copy a list of all keywords to the clipboard.</p>
 <p>Here’s what the program does:</p>
 <ul>
-<li><p>The command line argument for the keyword is checked.</p></li>
-<li><p>If the argument is <code>save</code>, then the clipboard contents are saved to the keyword.</p></li>
-<li><p>If the argument is <code>list</code>, then all the keywords are copied to the clipboard.</p></li>
-<li><p>Otherwise, the text for the keyword is copied to the clipboard.</p></li>
+<li>The command line argument for the keyword is checked.</li>
+<li>If the argument is <code>save</code>, then the clipboard contents are saved to the keyword.</li>
+<li>If the argument is <code>list</code>, then all the keywords are copied to the clipboard.</li>
+<li>Otherwise, the text for the keyword is copied to the clipboard.</li>
 </ul>
 <p>This means the code will need to do the following:</p>
 <ul>
-<li><p>Read the command line arguments from <code>sys.argv</code>.</p></li>
-<li><p>Read and write to the clipboard.</p></li>
-<li><p>Save and load to a shelf file.</p></li>
+<li>Read the command line arguments from <code>sys.argv</code>.</li>
+<li>Read and write to the clipboard.</li>
+<li>Save and load to a shelf file.</li>
 </ul>
 <p>If you use Windows, you can easily run this script from the Run… window by creating a batch file named <em>mcb.bat</em> with the following content:</p>
 <p><span class="citation" data-cites="pyw.exe">@pyw.exe</span> C:\Python34\mcb.pyw %*</p>
 <h2 id="step-1-comments-and-shelf-setup">Step 1: Comments and Shelf Setup</h2>
 <p>Let’s start by making a skeleton script with some comments and basic setup. Make your code look like the following:</p>
-<p>#! python3 # mcb.pyw - Saves and loads pieces of text to the clipboard. ❶ # Usage: py.exe mcb.pyw save <keyword> - Saves clipboard to keyword. # py.exe mcb.pyw <keyword> - Loads keyword to clipboard. # py.exe mcb.pyw list - Loads all keywords to clipboard.</p>
+<p>#! python3</p>
+<h1 id="mcb.pyw---saves-and-loads-pieces-of-text-to-the-clipboard.">mcb.pyw - Saves and loads pieces of text to the clipboard.</h1>
+<p>❶ # Usage: py.exe mcb.pyw save <keyword> - Saves clipboard to keyword.</p>
+<h1 id="py.exe-mcb.pyw---loads-keyword-to-clipboard.">py.exe mcb.pyw <keyword> - Loads keyword to clipboard.</h1>
+<h1 id="py.exe-mcb.pyw-list---loads-all-keywords-to-clipboard.">py.exe mcb.pyw list - Loads all keywords to clipboard.</h1>
 <p>❷ import shelve, pyperclip, sys</p>
 <p>❸ mcbShelf = shelve.open(‘mcb’)</p>
-<p># TODO: Save clipboard content.</p>
-<p># TODO: List keywords and load content.</p>
+<h1 id="todo-save-clipboard-content.">TODO: Save clipboard content.</h1>
+<h1 id="todo-list-keywords-and-load-content.">TODO: List keywords and load content.</h1>
 <p>mcbShelf.close()</p>
 <p>It’s common practice to put general usage information in comments at the top of the file ❶. If you ever forget how to run your script, you can always look at these comments for a reminder. Then you import your modules ❷. Copying and pasting will require the <code>pyperclip</code> module, and reading the command line arguments will require the <code>sys</code> module. The <code>shelve</code> module will also come in handy: Whenever the user wants to save a new piece of clipboard text, you’ll save it to a shelf file. Then, when the user wants to paste the text back to their clipboard, you’ll open the shelf file and load it back into your program. The shelf file will be named with the prefix <em>mcb</em> ❸.</p>
 <h2 id="step-2-save-clipboard-content-with-a-keyword">Step 2: Save Clipboard Content with a Keyword</h2>
 <p>The program does different things depending on whether the user wants to save text to a keyword, load text into the clipboard, or list all the existing keywords. Let’s deal with that first case. Make your code look like the following:</p>
-<p>#! python3 # mcb.pyw - Saves and loads pieces of text to the clipboard. –<em>snip</em>--</p>
+<p>#! python3</p>
+<h1 id="mcb.pyw---saves-and-loads-pieces-of-text-to-the-clipboard.-1">mcb.pyw - Saves and loads pieces of text to the clipboard.</h1>
+<p>–<em>snip</em>--</p>
 <p><strong># Save clipboard content.</strong> ❶ <strong>if len(sys.argv) == 3 and sys.argv[1].lower() == ‘save’:</strong> ❷ <strong>mcbShelf[sys.argv[2]] = pyperclip.paste()</strong> <strong>elif len(sys.argv) == 2:</strong> ❸ # TODO: List keywords and load content.</p>
 <p>mcbShelf.close()</p>
 <p>If the first command line argument (which will always be at index <code>1</code> of the <code>sys.argv</code> list) is <code>'save'</code> ❶, the second command line argument is the keyword for the current content of the clipboard. The keyword will be used as the key for <code>mcbShelf</code>, and the value will be the text currently on the clipboard ❷.</p>
 <p>If there is only one command line argument, you will assume it is either <code>'list'</code> or a keyword to load content onto the clipboard. You will implement that code later. For now, just put a <code>TODO</code> comment there ❸.</p>
 <h2 id="step-3-list-keywords-and-load-a-keywords-content">Step 3: List Keywords and Load a Keyword’s Content</h2>
 <p>Finally, let’s implement the two remaining cases: The user wants to load clipboard text in from a keyword, or they want a list of all available keywords. Make your code look like the following:</p>
-<p>#! python3 # mcb.pyw - Saves and loads pieces of text to the clipboard. –<em>snip</em>--</p>
-<p># Save clipboard content. if len(sys.argv) == 3 and sys.argv[1].lower() == ‘save’: mcbShelf[sys.argv[2]] = pyperclip.paste() elif len(sys.argv) == 2: <strong># List keywords and load content.</strong> ❶ <strong>if sys.argv[1].lower() == ‘list’:</strong> ❷ <strong>pyperclip.copy(str(list(mcbShelf.keys())))</strong> <strong>elif sys.argv[1] in mcbShelf:</strong> ❸ <strong>pyperclip.copy(mcbShelf[sys.argv[1]])</strong></p>
+<p>#! python3</p>
+<h1 id="mcb.pyw---saves-and-loads-pieces-of-text-to-the-clipboard.-2">mcb.pyw - Saves and loads pieces of text to the clipboard.</h1>
+<p>–<em>snip</em>--</p>
+<h1 id="save-clipboard-content.">Save clipboard content.</h1>
+<p>if len(sys.argv) == 3 and sys.argv[1].lower() == ‘save’: mcbShelf[sys.argv[2]] = pyperclip.paste() elif len(sys.argv) == 2: <strong># List keywords and load content.</strong> ❶ <strong>if sys.argv[1].lower() == ‘list’:</strong> ❷ <strong>pyperclip.copy(str(list(mcbShelf.keys())))</strong> <strong>elif sys.argv[1] in mcbShelf:</strong> ❸ <strong>pyperclip.copy(mcbShelf[sys.argv[1]])</strong></p>
 <p>mcbShelf.close()</p>
 <p>If there is only one command line argument, first let’s check whether it’s <code>'list'</code> ❶. If so, a string representation of the list of shelf keys will be copied to the clipboard ❷. The user can paste this list into an open text editor to read it.</p>
 <p>Otherwise, you can assume the command line argument is a keyword. If this keyword exists in the <code>mcbShelf</code> shelf as a key, you can load the value onto the clipboard ❸.</p>

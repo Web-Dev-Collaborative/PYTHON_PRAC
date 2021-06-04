@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<h1 id="playground-and-cheatsheet-for-learning-python">Playground and Cheatsheet for Learning Python</h1>
+<p><a href="https://travis-ci.org/trekhleb/learn-python"><img src="https://travis-ci.org/trekhleb/learn-python.svg?branch=master" alt="Build Status" /></a></p>
+<blockquote>
+<p>This is a collection of Python scripts that are split by <a href="#table-of-contents">topics</a> and contain code examples with explanations, different use cases and links to further readings.</p>
+</blockquote>
+<p><em>Read this in</em> <a href="README.pt-BR.md"><em>Português</em></a>.</p>
+<p>It is a <strong>playground</strong> because you may change or add the code to see how it works and <a href="#testing-the-code">test it out</a> using assertions. It also allows you to <a href="#linting-the-code">lint the code</a> you’ve wrote and check if it fits to Python code style guide. Altogether it might make your learning process to be more interactive and it might help you to keep code quality pretty high from very beginning.</p>
+<p>It is a <strong>cheatsheet</strong> because you may get back to these code examples once you want to recap the syntax of <a href="#table-of-contents">standard Python statements and constructions</a>. Also because the code is full of assertions you’ll be able to see expected functions/statements output right away without launching them.</p>
+<blockquote>
+<p><em>You might also be interested in 🤖 <a href="https://github.com/trekhleb/machine-learning-experiments">Interactive Machine Learning Experiments</a></em></p>
+</blockquote>
+<h2 id="how-to-use-this-repository">How to Use This Repository</h2>
+<p>Each Python script in this repository has the following structure:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="co">&quot;&quot;&quot;Lists  &lt;--- Name of the topic here</span></a>
+<a class="sourceLine" id="cb1-2" title="2"></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="co"># @see: https://www.learnpython.org/en/Lists  &lt;-- Link to further readings goes here</span></a>
+<a class="sourceLine" id="cb1-4" title="4"></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="co">Here might go more detailed explanation of the current topic (i.e. general info about Lists).</span></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="co">&quot;&quot;&quot;</span></a>
+<a class="sourceLine" id="cb1-7" title="7"></a>
+<a class="sourceLine" id="cb1-8" title="8"></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="kw">def</span> test_list_type():</a>
+<a class="sourceLine" id="cb1-10" title="10">    <span class="co">&quot;&quot;&quot;Explanation of sub-topic goes here.</span></a>
+<a class="sourceLine" id="cb1-11" title="11"></a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="co">    Each file contains test functions that illustrate sub-topics (i.e. lists type, lists methods).</span></a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="co">    &quot;&quot;&quot;</span></a>
+<a class="sourceLine" id="cb1-14" title="14"></a>
+<a class="sourceLine" id="cb1-15" title="15">    <span class="co"># Here is an example of how to build a list.  &lt;-- Comments here explain the action</span></a>
+<a class="sourceLine" id="cb1-16" title="16">    squares <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</a>
+<a class="sourceLine" id="cb1-17" title="17"></a>
+<a class="sourceLine" id="cb1-18" title="18">    <span class="co"># Lists can be indexed and sliced.</span></a>
+<a class="sourceLine" id="cb1-19" title="19">    <span class="co"># Indexing returns the item.</span></a>
+<a class="sourceLine" id="cb1-20" title="20">    <span class="cf">assert</span> squares[<span class="dv">0</span>] <span class="op">==</span> <span class="dv">1</span>  <span class="co"># &lt;-- Assertions here illustrate the result.</span></a>
+<a class="sourceLine" id="cb1-21" title="21">    <span class="co"># Slicing returns a new list.</span></a>
+<a class="sourceLine" id="cb1-22" title="22">    <span class="cf">assert</span> squares[<span class="op">-</span><span class="dv">3</span>:] <span class="op">==</span> [<span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]  <span class="co"># &lt;-- Assertions here illustrate the result.</span></a></code></pre></div>
+<p>So normally you might want to do the following:</p>
+<ul>
+<li><a href="#table-of-contents">Find the topic</a> you want to learn or recap.</li>
+<li>Read comments and/or documentation that is linked in each script’s docstring (as in example above).</li>
+<li>Look at code examples and assertions to see usage examples and expected output.</li>
+<li>Change code or add new assertions to see how things work.</li>
+<li><a href="#testing-the-code">Run tests</a> and <a href="#linting-the-code">lint the code</a> to see if it work and is written correctly.</li>
+</ul>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol type="1">
+<li><strong>Getting Started</strong>
+<ul>
+<li><a href="src/getting_started/what_is_python.md">What is Python</a></li>
+<li><a href="src/getting_started/python_syntax.md">Python Syntax</a></li>
+<li><a href="src/getting_started/test_variables.py">Variables</a></li>
+</ul></li>
+<li><strong>Operators</strong>
+<ul>
+<li><a href="src/operators/test_arithmetic.py">Arithmetic Operators</a> (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, <code>**</code>)</li>
+<li><a href="src/operators/test_bitwise.py">Bitwise Operators</a> (<code>&amp;</code>, <code>|</code>, <code>^</code>, <code>&gt;&gt;</code>, <code>&lt;&lt;</code>, <code>~</code>)</li>
+<li><a href="src/operators/test_assigment.py">Assignment Operators</a> (<code>=</code>, <code>+=</code>, <code>-=</code>, <code>/=</code>, <code>//=</code> etc.)</li>
+<li><a href="src/operators/test_comparison.py">Comparison Operator</a> (<code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>)</li>
+<li><a href="src/operators/test_logical.py">Logical Operators</a> (<code>and</code>, <code>or</code>, <code>not</code>)</li>
+<li><a href="src/operators/test_identity.py">Identity Operators</a> (<code>is</code>, <code>is not</code>)</li>
+<li><a href="src/operators/test_membership.py">Membership Operators</a> (<code>in</code>, <code>not in</code>)</li>
+</ul></li>
+<li><strong>Data Types</strong>
+<ul>
+<li><a href="src/data_types/test_numbers.py">Numbers</a> (including booleans)</li>
+<li><a href="src/data_types/test_strings.py">Strings</a> and their methods</li>
+<li><a href="src/data_types/test_lists.py">Lists</a> and their methods (including list comprehensions)</li>
+<li><a href="src/data_types/test_tuples.py">Tuples</a></li>
+<li><a href="src/data_types/test_sets.py">Sets</a> and their methods</li>
+<li><a href="src/data_types/test_dictionaries.py">Dictionaries</a></li>
+<li><a href="src/data_types/test_type_casting.py">Type Casting</a></li>
+</ul></li>
+<li><strong>Control Flow</strong>
+<ul>
+<li><a href="src/control_flow/test_if.py">The <code>if</code> statement</a></li>
+<li><a href="src/control_flow/test_for.py">The <code>for</code> statement</a> (and <code>range()</code> function)</li>
+<li><a href="src/control_flow/test_while.py">The <code>while</code> statement</a></li>
+<li><a href="src/control_flow/test_try.py">The <code>try</code> statements</a></li>
+<li><a href="src/control_flow/test_break.py">The <code>break</code> statement</a></li>
+<li><a href="src/control_flow/test_continue.py">The <code>continue</code> statement</a></li>
+</ul></li>
+<li><strong>Functions</strong>
+<ul>
+<li><a href="src/functions/test_function_definition.py">Function Definition</a> (<code>def</code> and <code>return</code> statements)</li>
+<li><a href="src/functions/test_function_scopes.py">Scopes of Variables Inside Functions</a> (<code>global</code> and <code>nonlocal</code> statements)</li>
+<li><a href="src/functions/test_function_default_arguments.py">Default Argument Values</a></li>
+<li><a href="src/functions/test_function_keyword_arguments.py">Keyword Arguments</a></li>
+<li><a href="src/functions/test_function_arbitrary_arguments.py">Arbitrary Argument Lists</a></li>
+<li><a href="src/functions/test_function_unpacking_arguments.py">Unpacking Argument Lists</a> (<code>*</code> and <code>**</code> statements)</li>
+<li><a href="src/functions/test_lambda_expressions.py">Lambda Expressions</a> (<code>lambda</code> statement)</li>
+<li><a href="src/functions/test_function_documentation_string.py">Documentation Strings</a></li>
+<li><a href="src/functions/test_function_annotations.py">Function Annotations</a></li>
+<li><a href="src/functions/test_function_decorators.py">Function Decorators</a></li>
+</ul></li>
+<li><strong>Classes</strong>
+<ul>
+<li><a href="src/classes/test_class_definition.py">Class Definition</a> (<code>class</code> statement)</li>
+<li><a href="src/classes/test_class_objects.py">Class Objects</a></li>
+<li><a href="src/classes/test_instance_objects.py">Instance Objects</a></li>
+<li><a href="src/classes/test_method_objects.py">Method Objects</a></li>
+<li><a href="src/classes/test_class_and_instance_variables.py">Class and Instance Variables</a></li>
+<li><a href="src/classes/test_inheritance.py">Inheritance</a></li>
+<li><a href="src/classes/test_multiple_inheritance.py">Multiple Inheritance</a></li>
+</ul></li>
+<li><strong>Modules</strong>
+<ul>
+<li><a href="src/modules/test_modules.py">Modules</a> (<code>import</code> statement)</li>
+<li><a href="src/modules/test_packages.py">Packages</a></li>
+</ul></li>
+<li><strong>Errors and Exceptions</strong>
+<ul>
+<li><a href="src/exceptions/test_handle_exceptions.py">Handling Exceptions</a> (<code>try</code> statement)</li>
+<li><a href="src/exceptions/test_raise_exceptions.py">Raising Exceptions</a> (<code>raise</code> statement)</li>
+</ul></li>
+<li><strong>Files</strong>
+<ul>
+<li><a href="src/files/test_file_reading.py">Reading and Writing</a> (<code>with</code> statement)</li>
+<li><a href="src/files/test_file_methods.py">Methods of File Objects</a></li>
+</ul></li>
+<li><strong>Additions</strong>
+<ul>
+<li><a href="src/additions/test_pass.py">The <code>pass</code> statement</a></li>
+<li><a href="src/additions/test_generators.py">Generators</a> (<code>yield</code> statement)</li>
+</ul></li>
+<li><strong>Brief Tour of the Standard Libraries</strong>
+<ul>
+<li><a href="src/standard_libraries/test_json.py">Serialization</a> (<code>json</code> library)</li>
+<li><a href="src/standard_libraries/test_glob.py">File Wildcards</a> (<code>glob</code> library)</li>
+<li><a href="src/standard_libraries/test_re.py">String Pattern Matching</a> (<code>re</code> library)</li>
+<li><a href="src/standard_libraries/test_math.py">Mathematics</a> (<code>math</code>, <code>random</code>, <code>statistics</code> libraries)</li>
+<li><a href="src/standard_libraries/test_datetime.py">Dates and Times</a> (<code>datetime</code> library)</li>
+<li><a href="src/standard_libraries/test_zlib.py">Data Compression</a> (<code>zlib</code> library)</li>
+</ul></li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p><strong>Installing Python</strong></p>
+<p>Make sure that you have <a href="https://realpython.com/installing-python/">Python3 installed</a> on your machine.</p>
+<p>You might want to use <a href="https://docs.python.org/3/library/venv.html">venv</a> standard Python library to create virtual environments and have Python, pip and all dependent packages to be installed and served from the local project directory to avoid messing with system wide packages and their versions.</p>
+<p>Depending on your installation you might have access to Python3 interpreter either by running <code>python</code> or <code>python3</code>. The same goes for pip package manager - it may be accessible either by running <code>pip</code> or <code>pip3</code>.</p>
+<p>You may check your Python version by running:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">python</span> --version</a></code></pre></div>
+<p>Note that in this repository whenever you see <code>python</code> it will be assumed that it is Python <strong>3</strong>.</p>
+<p><strong>Installing dependencies</strong></p>
+<p>Install all dependencies that are required for the project by running:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">pip</span> install -r requirements.txt</a></code></pre></div>
+<h2 id="testing-the-code">Testing the Code</h2>
+<p>Tests are made using <a href="https://docs.pytest.org/en/latest/">pytest</a> framework.</p>
+<p>You may add new tests for yourself by adding files and functions with <code>test_</code> prefix (i.e. <code>test_topic.py</code> with <code>def test_sub_topic()</code> function inside).</p>
+<p>To run all the tests please execute the following command from the project root folder:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">pytest</span></a></code></pre></div>
+<p>To run specific tests please execute:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">pytest</span> ./path/to/the/test_file.py</a></code></pre></div>
+<h2 id="linting-the-code">Linting the Code</h2>
+<p>Linting is done using <a href="http://pylint.pycqa.org/">pylint</a> and <a href="http://flake8.pycqa.org/en/latest/">flake8</a> libraries.</p>
+<h3 id="pylint">PyLint</h3>
+<p>To check if the code is written with respect to <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> style guide please run:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">pylint</span> ./src/</a></code></pre></div>
+<p>In case if linter will detect error (i.e. <code>missing-docstring</code>) you may want to read more about specific error by running:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">pylint</span> --help-msg=missing-docstring</a></code></pre></div>
+<p><a href="http://pylint.pycqa.org/">More about PyLint</a></p>
+<h3 id="flake8">Flake8</h3>
+<p>To check if the code is written with respect to <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> style guide please run:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">flake8</span> ./src</a></code></pre></div>
+<p>Or if you want to have more detailed output you may run:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">flake8</span> ./src --statistics --show-source --count</a></code></pre></div>
+<p><a href="http://flake8.pycqa.org/en/latest/">More about Flake8</a></p>
+<h2 id="supporting-the-project">Supporting the project</h2>
+<p>You may support this project via ❤️️ <a href="https://github.com/sponsors/trekhleb">GitHub</a> or ❤️️ <a href="https://www.patreon.com/trekhleb">Patreon</a>.</p>
+</body>
+</html>

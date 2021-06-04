@@ -198,10 +198,7 @@
         font-style: italic;
       } /* Warning */
     </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-
-   </head>
+  </head>
   <body>
     <h1 id="notes"><strong>Notes</strong></h1>
     <h2 id="basics"><strong>Basics</strong></h2>
@@ -985,9 +982,9 @@
       string with an array/list passed in as the argument. shopping_list =
       [‘bread’,‘milk’,‘eggs’] print(‘,’.join(shopping_list)) Python has a very
       powerful formatting engine. format() is also applied directly to strings.
-      # Comma Thousands Separator print(‘{:,}’.format(1234567890))
-      ‘1,234,567,890’
     </p>
+    <h1 id="comma-thousands-separator">Comma Thousands Separator</h1>
+    <p>print(‘{:,}’.format(1234567890)) ‘1,234,567,890’</p>
     <h1 id="date-and-time">Date and Time</h1>
     <p>
       d = datetime.datetime(2020, 7, 4, 12, 15, 58) print(‘{:%Y-%m-%d
@@ -1033,9 +1030,10 @@
     <h1 id="test-if-a-value-is-in-a-list.">Test if a value is in a list.</h1>
     <p>
       print(1 in [1, 2, 3]) #&gt; True print(4 in [1, 2, 3]) #&gt; False Tuples
-      : Very similar to lists, but they are immutable # Instantiated with
-      parentheses time_blocks = (‘AM’,‘PM’)
+      : Very similar to lists, but they are immutable
     </p>
+    <h1 id="instantiated-with-parentheses">Instantiated with parentheses</h1>
+    <p>time_blocks = (‘AM’,‘PM’)</p>
     <h1 id="sometimes-instantiated-without">Sometimes instantiated without</h1>
     <p>colors = ‘red’,‘blue’,‘green’ numbers = 1, 2, 3</p>
     <h1 id="tuple-built-in-can-be-used-to-convert-other-data-into-a-tuple">
@@ -1195,10 +1193,9 @@
     <p>for k in spam.keys(): print(k)</p>
     <h1 id="prints-color">Prints color</h1>
     <h1 id="prints-age">Prints age</h1>
-    <p>
-      For loops can also iterate over both keys and values. # Getting tuples for
-      i in spam.items(): print(i)
-    </p>
+    <p>For loops can also iterate over both keys and values.</p>
+    <h1 id="getting-tuples">Getting tuples</h1>
+    <p>for i in spam.items(): print(i)</p>
     <h1 id="prints-color-red">Prints (‘color’, ‘red’)</h1>
     <h1 id="prints-age-42">Prints (‘age’, 42)</h1>
     <h1 id="destructuring-to-values">Destructuring to values</h1>
@@ -1218,11 +1215,21 @@
     </p>
     <p>
       print_names_and_countries(“Hi”, Monica=“Sweden”, Charles=“British Virgin
-      Islands”, Carlo=“Portugal”) # Prints # Hi Monica from Sweden # Hi Charles
-      from British Virgin Islands # Hi Carlo from Portugal When you order
-      arguments within a function or function call, the args need to occur in a
-      particular order: formal positional args. *args keyword args with default
-      values **kwargs def example(arg_1, arg_2, *args, **kwargs): pass
+      Islands”, Carlo=“Portugal”)
+    </p>
+    <h1 id="prints">Prints</h1>
+    <h1 id="hi-monica-from-sweden">Hi Monica from Sweden</h1>
+    <h1 id="hi-charles-from-british-virgin-islands">
+      Hi Charles from British Virgin Islands
+    </h1>
+    <h1 id="hi-carlo-from-portugal">Hi Carlo from Portugal</h1>
+    <p>
+      When you order arguments within a function or function call, the args need
+      to occur in a particular order: formal positional args.
+      <em
+        >args keyword args with default values **kwargs def example(arg_1,
+        arg_2, </em
+      >args, **kwargs): pass
     </p>
     <p>
       def example2(arg_1, arg_2, *args, kw_1=“shark”, kw_2=“blowfish”,

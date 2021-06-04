@@ -1,4 +1,5 @@
-# 10 External Python packages you are going to love
+10 External Python packages you are going to love
+=================================================
 
 > by Adam Goldschmidt 10 External Python packages you are going to lovePhoto by Brina Blum on UnsplashPython is an experiment in how much freedom programmers need. Too much freedom and nobody can read another’s code; too little and expressiveness is endangered. - Guido van RossumThis freedom that Guido talks
 
@@ -24,7 +25,7 @@ I usually find myself project hunting on GitHub once a day. Throughout this arti
 
 ![](https://cdn-media-1.freecodecamp.org/images/DWrohhPZvoWbH4s8apMbg8nXZOtf3m0lAhvk)
 
-This is a really awesome package I regularly use in my projects. It describes itself as “a library which aims to bring enjoyable logging in Python". This package just lets you easily configure your logs out of the box.
+This is a really awesome package I regularly use in my projects. It describes itself as “a library which aims to bring enjoyable logging in Python”. This package just lets you easily configure your logs out of the box.
 
 All you have to do after installing is to import the module:
 
@@ -76,7 +77,7 @@ Those of you who have used cURL before, must know it’s not that fun. Having to
 
 #### [pipenv](https://github.com/pypa/pipenv) — Better packaging for Python
 
-When I start a new project, I always create a new `virtualenv` and install some basic packages with `pip`. I then need to save these packages names in a file, be it `setup.py` or `requirements.txt`. Those of you who have worked with `npm`, know it's much simpler there. All you need to do is write `npm —save` and the package name is saved in your `package.json`. That's why I first created [pypkgfreeze](https://github.com/AdamGold/pypkgfreeze), a simple package to "freeze" the versions of your currently used `pip` packages into `setup.py`.
+When I start a new project, I always create a new `virtualenv` and install some basic packages with `pip`. I then need to save these packages names in a file, be it `setup.py` or `requirements.txt`. Those of you who have worked with `npm`, know it’s much simpler there. All you need to do is write `npm —save` and the package name is saved in your `package.json`. That’s why I first created [pypkgfreeze](https://github.com/AdamGold/pypkgfreeze), a simple package to “freeze” the versions of your currently used `pip` packages into `setup.py`.
 
 Anyway, pipenv is an interesting solution that aims to merge the two worlds - They describe it best in their repo page:
 
@@ -92,6 +93,6 @@ As I said before, this is the package I currently use as my standard static type
 
 ![](https://cdn-media-1.freecodecamp.org/images/dQoUny7l5N6sWs2GCECZKHALf59t9398hNNp)
 
-I have tried many Python formatters, and `black` is clearly my favourite. The syntax looks neat, and the command line runs quick and can either check the files or actually edit them - very useful for CI/CD. You can even try it [here!](<chrome-extension://cjedbglnccaioiolemnfhjncicchinao/%5Bhttps://black.now.sh%5D(https://black.now.sh/)>)
+I have tried many Python formatters, and `black` is clearly my favourite. The syntax looks neat, and the command line runs quick and can either check the files or actually edit them - very useful for CI/CD. You can even try it [here!](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/%5Bhttps://black.now.sh%5D(https://black.now.sh/))
 
 #### [flask](https://github.com/pallets/flask)

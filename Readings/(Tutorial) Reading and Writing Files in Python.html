@@ -24,10 +24,7 @@
         width: 50%;
       }
     </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-
-   </head>
+  </head>
   <body>
     <h1 id="tutorial-reading-and-writing-files-in-python">
       (Tutorial) Reading and Writing Files in Python
@@ -156,20 +153,16 @@ PQR||CITY C||pqr@xyz.com</code></pre>
     </p>
     <ul>
       <li>
-        <p>
-          As you might have expected from reading the previous section, text
-          files have an End-Of-Line (EOL) character to indicate each line’s
-          termination. In Python, the new line character (<code>\n</code>) is
-          the default EOL terminator.
-        </p>
+        As you might have expected from reading the previous section, text files
+        have an End-Of-Line (EOL) character to indicate each line’s termination.
+        In Python, the new line character (<code>\n</code>) is the default EOL
+        terminator.
       </li>
       <li>
-        <p>
-          Since binary files store data after converting it into a binary
-          language (0s and 1s), there is no EOL character. This file type
-          returns bytes. This file is used when dealing with non-text files such
-          as images, <code>.exe</code>, or <code>.pyc</code>.
-        </p>
+        Since binary files store data after converting it into a binary language
+        (0s and 1s), there is no EOL character. This file type returns bytes.
+        This file is used when dealing with non-text files such as images,
+        <code>.exe</code>, or <code>.pyc</code>.
       </li>
     </ul>
     <p>
@@ -511,14 +504,12 @@ file.close()
     <p>You will do the following things:</p>
     <ul>
       <li>
-        <p>
-          Open the moby_dick.txt file in read-only mode and store it in the
-          variable file
-        </p>
+        Open the moby_dick.txt file in read-only mode and store it in the
+        variable file
       </li>
-      <li><p>Print the contents of the file</p></li>
-      <li><p>Check whether the file is closed</p></li>
-      <li><p>Close the file using the close() method</p></li>
+      <li>Print the contents of the file</li>
+      <li>Check whether the file is closed</li>
+      <li>Close the file using the close() method</li>
       <li>
         <p>Check again whether the file is closed</p>
         <p>file = open(‘moby_dick.txt’, ‘r’)</p>
@@ -811,23 +802,17 @@ file.close()
     </p>
     <ul>
       <li>
-        <p>
-          <strong>None</strong>:universal newlines mode is enabled. Lines in the
-          input can end in ‘\n’, ‘\r’, or ‘\r\n’, and these are translated into
-          default line separator
-        </p>
+        <strong>None</strong>:universal newlines mode is enabled. Lines in the
+        input can end in ‘\n’, ‘\r’, or ‘\r\n’, and these are translated into
+        default line separator
       </li>
       <li>
-        <p>
-          <strong>" "</strong>:universal newlines mode is enabled, but line
-          endings are returned not translated
-        </p>
+        <strong>" "</strong>:universal newlines mode is enabled, but line
+        endings are returned not translated
       </li>
       <li>
-        <p>
-          <strong>‘\n’,‘\r’, ‘\r\n’</strong>:Input lines are only terminated by
-          the given string, and the line ending is not translated.
-        </p>
+        <strong>‘\n’,‘\r’, ‘\r\n’</strong>:Input lines are only terminated by
+        the given string, and the line ending is not translated.
       </li>
     </ul>
     <p>

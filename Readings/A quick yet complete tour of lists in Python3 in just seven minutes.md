@@ -1,4 +1,5 @@
-# A quick yet complete tour of lists in Python3 in just seven minutes
+A quick yet complete tour of lists in Python3 in just seven minutes
+===================================================================
 
 > by PALAKOLLU SRI MANIKANTA A quick yet complete tour of lists in Python3 in just seven minutesPhoto by Emma Matthews on UnsplashPython lists are not like arrays. They are bit different. When it comes to dealing with array’s we talk about a collection of homogeneous data elements. This is
 
@@ -133,7 +134,7 @@ listName\[start: stop: step\]
 
 start — It indicates the index where the slice has to start. The default value is 0.
 
-stop — It indicates the index where the slice has to end. The default value is the maximum allowed index of list i.e. length of the list.
+stop — It indicates the index where the slice has to end. The default value is the maximum allowed index of list i.e. length of the list.
 
 step — Increment value. The default value is 1.
 
@@ -212,7 +213,7 @@ listName.pop()
 
 This is the way we can delete list elements using pop()
 
-> In the above program, we used the len() within the for loop. len() is used to give the length of the list i.e. number of elements present in the list.
+> In the above program, we used the len() within the for loop. len() is used to give the length of the list i.e. number of elements present in the list.
 
 #### Various Attributes and Functions on List Object
 
@@ -254,6 +255,6 @@ I covered pretty much everything that is required to perform any kind of operati
 
 **If you liked this article, please click on the clap and leave me feedback. Please share with your friends.**
 
-Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. [Get started](https://www.freecodecamp.org/learn)
+Learn to code for free. freeCodeCamp’s open source curriculum has helped more than 40,000 people get jobs as developers. [Get started](https://www.freecodecamp.org/learn)
 
 [Source](https://www.freecodecamp.org/news/a-quick-yet-complete-tour-of-lists-in-python3-in-just-seven-minutes-437e615110d0/)
