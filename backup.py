@@ -55,12 +55,15 @@ def move_folder(filename, name_dir, folder):
         makedirs(name_dir + ':\\' + folder)
     move(filename, name_dir + ":\\" + folder + '\\')
 
-create_directory("test")
-rename_directory("test","backup")
-create_directory("test")
-# delete_directory("backup")
+
 backup_files('D', 'backup_project')
-move_folder(pardir+'\\'+'test.txt', 'D', 'name')
+
+# create_directory("test")
+# rename_directory("test", "backup")
+# create_directory("test")
+# # delete_directory("backup")
+# backup_files('D', 'backup_project')
+# move_folder(pardir+'\\'+'test.txt', 'D', 'name')
 """
 For test purpose:
     1. create_directory("test")
