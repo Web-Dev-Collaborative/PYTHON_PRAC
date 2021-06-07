@@ -1,22 +1,24 @@
 ### Navigation
 
-- [index](https://docs.python.org/3/genindex.html "General Index")
-- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
-- [next](stdlib2.html "11. Brief Tour of the Standard Library — Part II") |
-- [previous](classes.html "9. Classes") |
-- ![](../_static/py.png)
-- [Python](https://www.python.org/) »
-- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
-- [The Python Tutorial](index.html) »
-- |
+-   [index](https://docs.python.org/3/genindex.html "General Index")
+-   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+-   [next](stdlib2.html "11. Brief Tour of the Standard Library — Part II") |
+-   [previous](classes.html "9. Classes") |
+-   ![](../_static/py.png)
+-   [Python](https://www.python.org/) »
+-   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+-   [The Python Tutorial](index.html) »
+-   
 
 <span id="tut-brieftour"></span>
 
-# <span class="section-number">10. </span>Brief Tour of the Standard Library<a href="#brief-tour-of-the-standard-library" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">10. </span>Brief Tour of the Standard Library<a href="#brief-tour-of-the-standard-library" class="headerlink" title="Permalink to this headline">¶</a>
+===================================================================================================================================================================================
 
 <span id="tut-os-interface"></span>
 
-## <span class="section-number">10.1. </span>Operating System Interface<a href="#operating-system-interface" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">10.1. </span>Operating System Interface<a href="#operating-system-interface" class="headerlink" title="Permalink to this headline">¶</a>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The <a href="https://docs.python.org/3/library/os.html#module-os" class="reference internal" title="os: Miscellaneous operating system interfaces."><code class="sourceCode python">os</code></a> module provides dozens of functions for interacting with the operating system:
 
@@ -47,7 +49,8 @@ For daily file and directory management tasks, the <a href="https://docs.python.
 
 <span id="tut-file-wildcards"></span>
 
-## <span class="section-number">10.2. </span>File Wildcards<a href="#file-wildcards" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">10.2. </span>File Wildcards<a href="#file-wildcards" class="headerlink" title="Permalink to this headline">¶</a>
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 The <a href="https://docs.python.org/3/library/glob.html#module-glob" class="reference internal" title="glob: Unix shell style pathname pattern expansion."><code class="sourceCode python">glob</code></a> module provides a function for making file lists from directory wildcard searches:
 
@@ -57,9 +60,10 @@ The <a href="https://docs.python.org/3/library/glob.html#module-glob" class="ref
 
 <span id="tut-command-line-arguments"></span>
 
-## <span class="section-number">10.3. </span>Command Line Arguments<a href="#command-line-arguments" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">10.3. </span>Command Line Arguments<a href="#command-line-arguments" class="headerlink" title="Permalink to this headline">¶</a>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Common utility scripts often need to process command line arguments. These arguments are stored in the <a href="https://docs.python.org/3/library/sys.html#module-sys" class="reference internal" title="sys: Access system-specific parameters and functions."><code class="sourceCode python">sys</code></a> module’s _argv_ attribute as a list. For instance the following output results from running `python demo.py one two three` at the command line:
+Common utility scripts often need to process command line arguments. These arguments are stored in the <a href="https://docs.python.org/3/library/sys.html#module-sys" class="reference internal" title="sys: Access system-specific parameters and functions."><code class="sourceCode python">sys</code></a> module’s *argv* attribute as a list. For instance the following output results from running `python demo.py one two three` at the command line:
 
     >>> import sys
     >>> print(sys.argv)
@@ -80,9 +84,10 @@ When run at the command line with `python top.py --lines=5 alpha.txt beta.txt`, 
 
 <span id="tut-stderr"></span>
 
-## <span class="section-number">10.4. </span>Error Output Redirection and Program Termination<a href="#error-output-redirection-and-program-termination" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">10.4. </span>Error Output Redirection and Program Termination<a href="#error-output-redirection-and-program-termination" class="headerlink" title="Permalink to this headline">¶</a>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-The <a href="https://docs.python.org/3/library/sys.html#module-sys" class="reference internal" title="sys: Access system-specific parameters and functions."><code class="sourceCode python">sys</code></a> module also has attributes for _stdin_, _stdout_, and _stderr_. The latter is useful for emitting warnings and error messages to make them visible even when _stdout_ has been redirected:
+The <a href="https://docs.python.org/3/library/sys.html#module-sys" class="reference internal" title="sys: Access system-specific parameters and functions."><code class="sourceCode python">sys</code></a> module also has attributes for *stdin*, *stdout*, and *stderr*. The latter is useful for emitting warnings and error messages to make them visible even when *stdout* has been redirected:
 
     >>> sys.stderr.write('Warning, log file not found starting a new one\n')
     Warning, log file not found starting a new one
@@ -91,7 +96,8 @@ The most direct way to terminate a script is to use `sys.exit()`.
 
 <span id="tut-string-pattern-matching"></span>
 
-## <span class="section-number">10.5. </span>String Pattern Matching<a href="#string-pattern-matching" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">10.5. </span>String Pattern Matching<a href="#string-pattern-matching" class="headerlink" title="Permalink to this headline">¶</a>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The <a href="https://docs.python.org/3/library/re.html#module-re" class="reference internal" title="re: Regular expression operations."><code class="sourceCode python">re</code></a> module provides regular expression tools for advanced string processing. For complex matching and manipulation, regular expressions offer succinct, optimized solutions:
 
@@ -108,7 +114,8 @@ When only simple capabilities are needed, string methods are preferred because t
 
 <span id="tut-mathematics"></span>
 
-## <span class="section-number">10.6. </span>Mathematics<a href="#mathematics" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">10.6. </span>Mathematics<a href="#mathematics" class="headerlink" title="Permalink to this headline">¶</a>
+---------------------------------------------------------------------------------------------------------------------------------------
 
 The <a href="https://docs.python.org/3/library/math.html#module-math" class="reference internal" title="math: Mathematical functions (sin() etc.)."><code class="sourceCode python">math</code></a> module gives access to the underlying C library functions for floating point math:
 
@@ -145,7 +152,8 @@ The SciPy project &lt;<a href="https://scipy.org/" class="reference external">ht
 
 <span id="tut-internet-access"></span>
 
-## <span class="section-number">10.7. </span>Internet Access<a href="#internet-access" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">10.7. </span>Internet Access<a href="#internet-access" class="headerlink" title="Permalink to this headline">¶</a>
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 There are a number of modules for accessing the internet and processing internet protocols. Two of the simplest are <a href="https://docs.python.org/3/library/urllib.request.html#module-urllib.request" class="reference internal" title="urllib.request: Extensible library for opening URLs."><code class="sourceCode python">urllib.request</code></a> for retrieving data from URLs and <a href="https://docs.python.org/3/library/smtplib.html#module-smtplib" class="reference internal" title="smtplib: SMTP protocol client (requires sockets)."><code class="sourceCode python">smtplib</code></a> for sending mail:
 
@@ -172,7 +180,8 @@ There are a number of modules for accessing the internet and processing internet
 
 <span id="tut-dates-and-times"></span>
 
-## <span class="section-number">10.8. </span>Dates and Times<a href="#dates-and-times" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">10.8. </span>Dates and Times<a href="#dates-and-times" class="headerlink" title="Permalink to this headline">¶</a>
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 The <a href="https://docs.python.org/3/library/datetime.html#module-datetime" class="reference internal" title="datetime: Basic date and time types."><code class="sourceCode python">datetime</code></a> module supplies classes for manipulating dates and times in both simple and complex ways. While date and time arithmetic is supported, the focus of the implementation is on efficient member extraction for output formatting and manipulation. The module also supports objects that are timezone aware.
 
@@ -192,7 +201,8 @@ The <a href="https://docs.python.org/3/library/datetime.html#module-datetime" cl
 
 <span id="tut-data-compression"></span>
 
-## <span class="section-number">10.9. </span>Data Compression<a href="#data-compression" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">10.9. </span>Data Compression<a href="#data-compression" class="headerlink" title="Permalink to this headline">¶</a>
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 Common data archiving and compression formats are directly supported by modules including: <a href="https://docs.python.org/3/library/zlib.html#module-zlib" class="reference internal" title="zlib: Low-level interface to compression and decompression routines compatible with gzip."><code class="sourceCode python">zlib</code></a>, <a href="https://docs.python.org/3/library/gzip.html#module-gzip" class="reference internal" title="gzip: Interfaces for gzip compression and decompression using file objects."><code class="sourceCode python">gzip</code></a>, <a href="https://docs.python.org/3/library/bz2.html#module-bz2" class="reference internal" title="bz2: Interfaces for bzip2 compression and decompression."><code class="sourceCode python">bz2</code></a>, <a href="https://docs.python.org/3/library/lzma.html#module-lzma" class="reference internal" title="lzma: A Python wrapper for the liblzma compression library."><code class="sourceCode python">lzma</code></a>, <a href="https://docs.python.org/3/library/zipfile.html#module-zipfile" class="reference internal" title="zipfile: Read and write ZIP-format archive files."><code class="sourceCode python">zipfile</code></a> and <a href="https://docs.python.org/3/library/tarfile.html#module-tarfile" class="reference internal" title="tarfile: Read and write tar-format archive files."><code class="sourceCode python">tarfile</code></a>.
 
@@ -210,7 +220,8 @@ Common data archiving and compression formats are directly supported by modules 
 
 <span id="tut-performance-measurement"></span>
 
-## <span class="section-number">10.10. </span>Performance Measurement<a href="#performance-measurement" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">10.10. </span>Performance Measurement<a href="#performance-measurement" class="headerlink" title="Permalink to this headline">¶</a>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Some Python users develop a deep interest in knowing the relative performance of different approaches to the same problem. Python provides a measurement tool that answers those questions immediately.
 
@@ -226,7 +237,8 @@ In contrast to <a href="https://docs.python.org/3/library/timeit.html#module-tim
 
 <span id="tut-quality-control"></span>
 
-## <span class="section-number">10.11. </span>Quality Control<a href="#quality-control" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">10.11. </span>Quality Control<a href="#quality-control" class="headerlink" title="Permalink to this headline">¶</a>
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 One approach for developing high quality software is to write tests for each function as it is developed and to run those tests frequently during the development process.
 
@@ -261,35 +273,36 @@ The <a href="https://docs.python.org/3/library/unittest.html#module-unittest" cl
 
 <span id="tut-batteries-included"></span>
 
-## <span class="section-number">10.12. </span>Batteries Included<a href="#batteries-included" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">10.12. </span>Batteries Included<a href="#batteries-included" class="headerlink" title="Permalink to this headline">¶</a>
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Python has a “batteries included” philosophy. This is best seen through the sophisticated and robust capabilities of its larger packages. For example:
 
-- The <a href="https://docs.python.org/3/library/xmlrpc.client.html#module-xmlrpc.client" class="reference internal" title="xmlrpc.client: XML-RPC client access."><code class="sourceCode python">xmlrpc.client</code></a> and <a href="https://docs.python.org/3/library/xmlrpc.server.html#module-xmlrpc.server" class="reference internal" title="xmlrpc.server: Basic XML-RPC server implementations."><code class="sourceCode python">xmlrpc.server</code></a> modules make implementing remote procedure calls into an almost trivial task. Despite the modules names, no direct knowledge or handling of XML is needed.
+-   The <a href="https://docs.python.org/3/library/xmlrpc.client.html#module-xmlrpc.client" class="reference internal" title="xmlrpc.client: XML-RPC client access."><code class="sourceCode python">xmlrpc.client</code></a> and <a href="https://docs.python.org/3/library/xmlrpc.server.html#module-xmlrpc.server" class="reference internal" title="xmlrpc.server: Basic XML-RPC server implementations."><code class="sourceCode python">xmlrpc.server</code></a> modules make implementing remote procedure calls into an almost trivial task. Despite the modules names, no direct knowledge or handling of XML is needed.
 
-- The <a href="https://docs.python.org/3/library/email.html#module-email" class="reference internal" title="email: Package supporting the parsing, manipulating, and generating email messages."><code class="sourceCode python">email</code></a> package is a library for managing email messages, including MIME and other <span id="index-1" class="target"></span><a href="https://tools.ietf.org/html/rfc2822.html" class="rfc reference external"><strong>RFC 2822</strong></a>-based message documents. Unlike <a href="https://docs.python.org/3/library/smtplib.html#module-smtplib" class="reference internal" title="smtplib: SMTP protocol client (requires sockets)."><code class="sourceCode python">smtplib</code></a> and <a href="https://docs.python.org/3/library/poplib.html#module-poplib" class="reference internal" title="poplib: POP3 protocol client (requires sockets)."><code class="sourceCode python">poplib</code></a> which actually send and receive messages, the email package has a complete toolset for building or decoding complex message structures (including attachments) and for implementing internet encoding and header protocols.
+-   The <a href="https://docs.python.org/3/library/email.html#module-email" class="reference internal" title="email: Package supporting the parsing, manipulating, and generating email messages."><code class="sourceCode python">email</code></a> package is a library for managing email messages, including MIME and other <span id="index-1" class="target"></span><a href="https://tools.ietf.org/html/rfc2822.html" class="rfc reference external"><strong>RFC 2822</strong></a>-based message documents. Unlike <a href="https://docs.python.org/3/library/smtplib.html#module-smtplib" class="reference internal" title="smtplib: SMTP protocol client (requires sockets)."><code class="sourceCode python">smtplib</code></a> and <a href="https://docs.python.org/3/library/poplib.html#module-poplib" class="reference internal" title="poplib: POP3 protocol client (requires sockets)."><code class="sourceCode python">poplib</code></a> which actually send and receive messages, the email package has a complete toolset for building or decoding complex message structures (including attachments) and for implementing internet encoding and header protocols.
 
-- The <a href="https://docs.python.org/3/library/json.html#module-json" class="reference internal" title="json: Encode and decode the JSON format."><code class="sourceCode python">json</code></a> package provides robust support for parsing this popular data interchange format. The <a href="https://docs.python.org/3/library/csv.html#module-csv" class="reference internal" title="csv: Write and read tabular data to and from delimited files."><code class="sourceCode python">csv</code></a> module supports direct reading and writing of files in Comma-Separated Value format, commonly supported by databases and spreadsheets. XML processing is supported by the <a href="https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree" class="reference internal" title="xml.etree.ElementTree: Implementation of the ElementTree API."><code class="sourceCode python">xml.etree.ElementTree</code></a>, <a href="https://docs.python.org/3/library/xml.dom.html#module-xml.dom" class="reference internal" title="xml.dom: Document Object Model API for Python."><code class="sourceCode python">xml.dom</code></a> and <a href="https://docs.python.org/3/library/xml.sax.html#module-xml.sax" class="reference internal" title="xml.sax: Package containing SAX2 base classes and convenience functions."><code class="sourceCode python">xml.sax</code></a> packages. Together, these modules and packages greatly simplify data interchange between Python applications and other tools.
+-   The <a href="https://docs.python.org/3/library/json.html#module-json" class="reference internal" title="json: Encode and decode the JSON format."><code class="sourceCode python">json</code></a> package provides robust support for parsing this popular data interchange format. The <a href="https://docs.python.org/3/library/csv.html#module-csv" class="reference internal" title="csv: Write and read tabular data to and from delimited files."><code class="sourceCode python">csv</code></a> module supports direct reading and writing of files in Comma-Separated Value format, commonly supported by databases and spreadsheets. XML processing is supported by the <a href="https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree" class="reference internal" title="xml.etree.ElementTree: Implementation of the ElementTree API."><code class="sourceCode python">xml.etree.ElementTree</code></a>, <a href="https://docs.python.org/3/library/xml.dom.html#module-xml.dom" class="reference internal" title="xml.dom: Document Object Model API for Python."><code class="sourceCode python">xml.dom</code></a> and <a href="https://docs.python.org/3/library/xml.sax.html#module-xml.sax" class="reference internal" title="xml.sax: Package containing SAX2 base classes and convenience functions."><code class="sourceCode python">xml.sax</code></a> packages. Together, these modules and packages greatly simplify data interchange between Python applications and other tools.
 
-- The <a href="https://docs.python.org/3/library/sqlite3.html#module-sqlite3" class="reference internal" title="sqlite3: A DB-API 2.0 implementation using SQLite 3.x."><code class="sourceCode python">sqlite3</code></a> module is a wrapper for the SQLite database library, providing a persistent database that can be updated and accessed using slightly nonstandard SQL syntax.
+-   The <a href="https://docs.python.org/3/library/sqlite3.html#module-sqlite3" class="reference internal" title="sqlite3: A DB-API 2.0 implementation using SQLite 3.x."><code class="sourceCode python">sqlite3</code></a> module is a wrapper for the SQLite database library, providing a persistent database that can be updated and accessed using slightly nonstandard SQL syntax.
 
-- Internationalization is supported by a number of modules including <a href="https://docs.python.org/3/library/gettext.html#module-gettext" class="reference internal" title="gettext: Multilingual internationalization services."><code class="sourceCode python">gettext</code></a>, <a href="https://docs.python.org/3/library/locale.html#module-locale" class="reference internal" title="locale: Internationalization services."><code class="sourceCode python">locale</code></a>, and the <a href="https://docs.python.org/3/library/codecs.html#module-codecs" class="reference internal" title="codecs: Encode and decode data and streams."><code class="sourceCode python">codecs</code></a> package.
+-   Internationalization is supported by a number of modules including <a href="https://docs.python.org/3/library/gettext.html#module-gettext" class="reference internal" title="gettext: Multilingual internationalization services."><code class="sourceCode python">gettext</code></a>, <a href="https://docs.python.org/3/library/locale.html#module-locale" class="reference internal" title="locale: Internationalization services."><code class="sourceCode python">locale</code></a>, and the <a href="https://docs.python.org/3/library/codecs.html#module-codecs" class="reference internal" title="codecs: Encode and decode data and streams."><code class="sourceCode python">codecs</code></a> package.
 
 ### [Table of Contents](https://docs.python.org/3/contents.html)
 
-- <a href="#" class="reference internal">10. Brief Tour of the Standard Library</a>
-  - <a href="#operating-system-interface" class="reference internal">10.1. Operating System Interface</a>
-  - <a href="#file-wildcards" class="reference internal">10.2. File Wildcards</a>
-  - <a href="#command-line-arguments" class="reference internal">10.3. Command Line Arguments</a>
-  - <a href="#error-output-redirection-and-program-termination" class="reference internal">10.4. Error Output Redirection and Program Termination</a>
-  - <a href="#string-pattern-matching" class="reference internal">10.5. String Pattern Matching</a>
-  - <a href="#mathematics" class="reference internal">10.6. Mathematics</a>
-  - <a href="#internet-access" class="reference internal">10.7. Internet Access</a>
-  - <a href="#dates-and-times" class="reference internal">10.8. Dates and Times</a>
-  - <a href="#data-compression" class="reference internal">10.9. Data Compression</a>
-  - <a href="#performance-measurement" class="reference internal">10.10. Performance Measurement</a>
-  - <a href="#quality-control" class="reference internal">10.11. Quality Control</a>
-  - <a href="#batteries-included" class="reference internal">10.12. Batteries Included</a>
+-   <a href="#" class="reference internal">10. Brief Tour of the Standard Library</a>
+    -   <a href="#operating-system-interface" class="reference internal">10.1. Operating System Interface</a>
+    -   <a href="#file-wildcards" class="reference internal">10.2. File Wildcards</a>
+    -   <a href="#command-line-arguments" class="reference internal">10.3. Command Line Arguments</a>
+    -   <a href="#error-output-redirection-and-program-termination" class="reference internal">10.4. Error Output Redirection and Program Termination</a>
+    -   <a href="#string-pattern-matching" class="reference internal">10.5. String Pattern Matching</a>
+    -   <a href="#mathematics" class="reference internal">10.6. Mathematics</a>
+    -   <a href="#internet-access" class="reference internal">10.7. Internet Access</a>
+    -   <a href="#dates-and-times" class="reference internal">10.8. Dates and Times</a>
+    -   <a href="#data-compression" class="reference internal">10.9. Data Compression</a>
+    -   <a href="#performance-measurement" class="reference internal">10.10. Performance Measurement</a>
+    -   <a href="#quality-control" class="reference internal">10.11. Quality Control</a>
+    -   <a href="#batteries-included" class="reference internal">10.12. Batteries Included</a>
 
 #### Previous topic
 
@@ -301,20 +314,20 @@ Python has a “batteries included” philosophy. This is best seen through the 
 
 ### This Page
 
-- [Report a Bug](https://docs.python.org/3/bugs.html)
-- [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/stdlib.rst)
+-   [Report a Bug](https://docs.python.org/3/bugs.html)
+-   [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/stdlib.rst)
 
 ### Navigation
 
-- [index](https://docs.python.org/3/genindex.html "General Index")
-- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
-- [next](stdlib2.html "11. Brief Tour of the Standard Library — Part II") |
-- [previous](classes.html "9. Classes") |
-- ![](../_static/py.png)
-- [Python](https://www.python.org/) »
-- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
-- [The Python Tutorial](index.html) »
-- |
+-   [index](https://docs.python.org/3/genindex.html "General Index")
+-   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+-   [next](stdlib2.html "11. Brief Tour of the Standard Library — Part II") |
+-   [previous](classes.html "9. Classes") |
+-   ![](../_static/py.png)
+-   [Python](https://www.python.org/) »
+-   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+-   [The Python Tutorial](index.html) »
+-   
 
 © [Copyright](https://docs.python.org/3/copyright.html) 2001-2021, Python Software Foundation.  
 The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)
