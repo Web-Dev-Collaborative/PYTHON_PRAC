@@ -56,16 +56,16 @@ def move_folder(filename, name_dir, folder):
     move(filename, name_dir + ":\\" + folder + '\\')
 
 create_directory("test")
-rename_directory("test","demo")
+rename_directory("test","backup")
 create_directory("test")
-# delete_directory("demo")
+# delete_directory("backup")
 backup_files('D', 'backup_project')
 move_folder(pardir+'\\'+'test.txt', 'D', 'name')
 """
 For test purpose:
     1. create_directory("test")
-    2. rename_directory("test","demo")
-    3. delete_directory("demo")
+    2. rename_directory("test","backup")
+    3. delete_directory("backup")
     4. backup_files('D', 'backup_project')
     5. move_folder(pardir+'\\'+'test.txt', 'D', 'name')
 """
