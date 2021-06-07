@@ -1,19 +1,18 @@
 ### Navigation
 
--   [index](https://docs.python.org/3/genindex.html "General Index")
--   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
--   [next](appendix.html "16. Appendix") |
--   [previous](interactive.html "14. Interactive Input Editing and History Substitution") |
--   ![](../_static/py.png)
--   [Python](https://www.python.org/) »
--   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
--   [The Python Tutorial](index.html) »
--   
+- [index](https://docs.python.org/3/genindex.html "General Index")
+- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+- [next](appendix.html "16. Appendix") |
+- [previous](interactive.html "14. Interactive Input Editing and History Substitution") |
+- ![](../_static/py.png)
+- [Python](https://www.python.org/) »
+- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+- [The Python Tutorial](index.html) »
+-
 
 <span id="tut-fp-issues"></span>
 
-<span class="section-number">15. </span>Floating Point Arithmetic: Issues and Limitations<a href="#floating-point-arithmetic-issues-and-limitations" class="headerlink" title="Permalink to this headline">¶</a>
-================================================================================================================================================================================================================
+# <span class="section-number">15. </span>Floating Point Arithmetic: Issues and Limitations<a href="#floating-point-arithmetic-issues-and-limitations" class="headerlink" title="Permalink to this headline">¶</a>
 
 Floating-point numbers are represented in computer hardware as base 2 (binary) fractions. For example, the decimal fraction
 
@@ -63,7 +62,7 @@ Interestingly, there are many different decimal numbers that share the same near
 
 Historically, the Python prompt and built-in <a href="https://docs.python.org/3/library/functions.html#repr" class="reference internal" title="repr"><code class="sourceCode python"><span class="bu">repr</span>()</code></a> function would choose the one with 17 significant digits, `0.10000000000000001`. Starting with Python 3.1, Python (on most systems) is now able to choose the shortest of these and simply display `0.1`.
 
-Note that this is in the very nature of binary floating-point: this is not a bug in Python, and it is not a bug in your code either. You’ll see the same kind of thing in all languages that support your hardware’s floating-point arithmetic (although some languages may not *display* the difference by default, or in all output modes).
+Note that this is in the very nature of binary floating-point: this is not a bug in Python, and it is not a bug in your code either. You’ll see the same kind of thing in all languages that support your hardware’s floating-point arithmetic (although some languages may not _display_ the difference by default, or in all output modes).
 
 For more pleasant output, you may wish to use string formatting to produce a limited number of significant digits:
 
@@ -76,7 +75,7 @@ For more pleasant output, you may wish to use string formatting to produce a lim
     >>> repr(math.pi)
     '3.141592653589793'
 
-It’s important to realize that this is, in a real sense, an illusion: you’re simply rounding the *display* of the true machine value.
+It’s important to realize that this is, in a real sense, an illusion: you’re simply rounding the _display_ of the true machine value.
 
 One illusion may beget another. For example, since 0.1 is not exactly 1/10, summing three values of 0.1 may not yield exactly 0.3, either:
 
@@ -105,7 +104,7 @@ Another form of exact arithmetic is supported by the <a href="https://docs.pytho
 
 If you are a heavy user of floating point operations you should take a look at the Numerical Python package and many other packages for mathematical and statistical operations supplied by the SciPy project. See &lt;<a href="https://scipy.org/" class="reference external">https://scipy.org</a>&gt;.
 
-Python provides tools that may help on those rare occasions when you really *do* want to know the exact value of a float. The <a href="https://docs.python.org/3/library/stdtypes.html#float.as_integer_ratio" class="reference internal" title="float.as_integer_ratio"><code class="sourceCode python"><span class="bu">float</span>.as_integer_ratio()</code></a> method expresses the value of a float as a fraction:
+Python provides tools that may help on those rare occasions when you really _do_ want to know the exact value of a float. The <a href="https://docs.python.org/3/library/stdtypes.html#float.as_integer_ratio" class="reference internal" title="float.as_integer_ratio"><code class="sourceCode python"><span class="bu">float</span>.as_integer_ratio()</code></a> method expresses the value of a float as a fraction:
 
     >>> x = 3.14159
     >>> x.as_integer_ratio()
@@ -137,14 +136,13 @@ Another helpful tool is the <a href="https://docs.python.org/3/library/math.html
 
 <span id="tut-fp-error"></span>
 
-<span class="section-number">15.1. </span>Representation Error<a href="#representation-error" class="headerlink" title="Permalink to this headline">¶</a>
----------------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">15.1. </span>Representation Error<a href="#representation-error" class="headerlink" title="Permalink to this headline">¶</a>
 
 This section explains the “0.1” example in detail, and shows how you can perform an exact analysis of cases like this yourself. Basic familiarity with binary floating-point representation is assumed.
 
-*Representation error* refers to the fact that some (most, actually) decimal fractions cannot be represented exactly as binary (base 2) fractions. This is the chief reason why Python (or Perl, C, C++, Java, Fortran, and many others) often won’t display the exact decimal number you expect.
+_Representation error_ refers to the fact that some (most, actually) decimal fractions cannot be represented exactly as binary (base 2) fractions. This is the chief reason why Python (or Perl, C, C++, Java, Fortran, and many others) often won’t display the exact decimal number you expect.
 
-Why is that? 1/10 is not exactly representable as a binary fraction. Almost all machines today (November 2000) use IEEE-754 floating point arithmetic, and almost all platforms map Python floats to IEEE-754 “double precision”. 754 doubles contain 53 bits of precision, so on input the computer strives to convert 0.1 to the closest fraction it can of the form *J*/2\*\**N* where *J* is an integer containing exactly 53 bits. Rewriting
+Why is that? 1/10 is not exactly representable as a binary fraction. Almost all machines today (November 2000) use IEEE-754 floating point arithmetic, and almost all platforms map Python floats to IEEE-754 “double precision”. 754 doubles contain 53 bits of precision, so on input the computer strives to convert 0.1 to the closest fraction it can of the form _J_/2\*\*_N_ where _J_ is an integer containing exactly 53 bits. Rewriting
 
     1 / 10 ~= J / (2**N)
 
@@ -152,12 +150,12 @@ as
 
     J ~= 2**N / 10
 
-and recalling that *J* has exactly 53 bits (is `>= 2**52` but `< 2**53`), the best value for *N* is 56:
+and recalling that _J_ has exactly 53 bits (is `>= 2**52` but `< 2**53`), the best value for _N_ is 56:
 
     >>> 2**52 <=  2**56 // 10  < 2**53
     True
 
-That is, 56 is the only value for *N* that leaves *J* with exactly 53 bits. The best possible value for *J* is then that quotient rounded:
+That is, 56 is the only value for _N_ that leaves _J_ with exactly 53 bits. The best possible value for _J_ is then that quotient rounded:
 
     >>> q, r = divmod(2**56, 10)
     >>> r
@@ -176,7 +174,7 @@ Dividing both the numerator and denominator by two reduces the fraction to:
 
     3602879701896397 / 2 ** 55
 
-Note that since we rounded up, this is actually a little bit larger than 1/10; if we had not rounded up, the quotient would have been a little bit smaller than 1/10. But in no case can it be *exactly* 1/10!
+Note that since we rounded up, this is actually a little bit larger than 1/10; if we had not rounded up, the quotient would have been a little bit smaller than 1/10. But in no case can it be _exactly_ 1/10!
 
 So the computer never “sees” 1/10: what it sees is the exact fraction given above, the best 754 double approximation it can get:
 
@@ -212,8 +210,8 @@ The <a href="https://docs.python.org/3/library/fractions.html#module-fractions" 
 
 ### [Table of Contents](https://docs.python.org/3/contents.html)
 
--   <a href="#" class="reference internal">15. Floating Point Arithmetic: Issues and Limitations</a>
-    -   <a href="#representation-error" class="reference internal">15.1. Representation Error</a>
+- <a href="#" class="reference internal">15. Floating Point Arithmetic: Issues and Limitations</a>
+  - <a href="#representation-error" class="reference internal">15.1. Representation Error</a>
 
 #### Previous topic
 
@@ -225,20 +223,20 @@ The <a href="https://docs.python.org/3/library/fractions.html#module-fractions" 
 
 ### This Page
 
--   [Report a Bug](https://docs.python.org/3/bugs.html)
--   [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/floatingpoint.rst)
+- [Report a Bug](https://docs.python.org/3/bugs.html)
+- [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/floatingpoint.rst)
 
 ### Navigation
 
--   [index](https://docs.python.org/3/genindex.html "General Index")
--   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
--   [next](appendix.html "16. Appendix") |
--   [previous](interactive.html "14. Interactive Input Editing and History Substitution") |
--   ![](../_static/py.png)
--   [Python](https://www.python.org/) »
--   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
--   [The Python Tutorial](index.html) »
--   
+- [index](https://docs.python.org/3/genindex.html "General Index")
+- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+- [next](appendix.html "16. Appendix") |
+- [previous](interactive.html "14. Interactive Input Editing and History Substitution") |
+- ![](../_static/py.png)
+- [Python](https://www.python.org/) »
+- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+- [The Python Tutorial](index.html) »
+-
 
 © [Copyright](https://docs.python.org/3/copyright.html) 2001-2021, Python Software Foundation.  
 The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)

@@ -1,5 +1,4 @@
-Lecture II: Linked Lists
-========================
+# Lecture II: Linked Lists
 
 1.  [Nodes](#Nodes)
 2.  [Doubly Linked List](#Doubly-Linked-List)
@@ -13,8 +12,7 @@ Lecture II: Linked Lists
 
 [CS19 Brian Doyle Lecture](https://youtu.be/YV8H5vevKGU)
 
-Nodes
------
+## Nodes
 
 A node is a bucket structure with two components (or three in a doubly linked list). The data being stored, a pointer to the next node, and possibly a pointer to the previous node.
 
@@ -26,8 +24,7 @@ We could imagine it like this:
 
 The benefit of nodes is that it allows us to dynamically utilize memory.
 
-Doubly Linked List
-------------------
+## Doubly Linked List
 
 A doubly linked list has pointers to both the next and previous node (hence, doubly linked).
 
@@ -67,7 +64,7 @@ In our [project repo](https://github.com/LambdaSchool/data-structures) there is 
         if self.next:
           self.next.prev = self.prev
 
-It sets up nodes that keep track of the next *and* previous nodes, and also provides an `insert_after`, `insert_before`, and `delete` function.
+It sets up nodes that keep track of the next _and_ previous nodes, and also provides an `insert_after`, `insert_before`, and `delete` function.
 
 To make it a little easier to see what’s happening under the hood when we call a listNode, we can add this `__repr__` method to show the value, previous and next references.
 
@@ -84,8 +81,7 @@ We’ll receive in the terminal:
 
 This shows that an initialized ListNode without a specified previous or next reference will point to `None`.
 
-Build a Doubly Linked List
---------------------------
+## Build a Doubly Linked List
 
 Let’s start building methods on our base code:
 
@@ -145,7 +141,7 @@ Let’s work on the `remove` function next. This should return the removed node:
         # reduce the length
         self.length -= 1
 
-Now we could check the length of the list but maintaining consistency is ideal. Since we compared the head and tail previously, we should continue using that method. If we went with the length comparison method, we would decrement *after* and continue to use that comparison instead.
+Now we could check the length of the list but maintaining consistency is ideal. Since we compared the head and tail previously, we should continue using that method. If we went with the length comparison method, we would decrement _after_ and continue to use that comparison instead.
 
 So, if the head and tail match, we know that there is only one node:
 
@@ -167,8 +163,7 @@ We need to finish by handling the last case, which is if there are other nodes i
             self.head.prev = None
             return current_head.value
 
-Add and Remove Tail
--------------------
+## Add and Remove Tail
 
 To add to the tail, we’ll write a method almost identical to the add to head method:
 
@@ -228,8 +223,7 @@ Now let’s write our `remove_from_tail`. Again, it’s very similar to the `rem
             self.tail.next = None
             return current_tail.value
 
-Move to Head or Tail
---------------------
+## Move to Head or Tail
 
 Let’s write this next set of methods.
 
@@ -258,11 +252,11 @@ Since we’re passed in a node, we don’t need to create a node because it alre
         # we should add it but only the value of the passed node
         self.add_to_head(node.value)
 
-We want to make sure that we use `is` instead of `==` when comparing the node to the head or tail because we are not just comparing the values but checking if they are truly the *same* values (with the same reference to space in memory).
+We want to make sure that we use `is` instead of `==` when comparing the node to the head or tail because we are not just comparing the values but checking if they are truly the _same_ values (with the same reference to space in memory).
 
 Why are we reducing the length when we’re only moving around a node, not removing it?
 
-The add methods we’re calling will automatically adjust the length to add the value, so we need to decrement it first. We are *technically* deleting the node and then adding it again.
+The add methods we’re calling will automatically adjust the length to add the value, so we need to decrement it first. We are _technically_ deleting the node and then adding it again.
 
 We could alternately just change the pointer references, rather than deleting and adding the node. It would be more memory efficient – but we evaluate this based on the situation. By reusing already written code, we’re also being efficient, and unless we need the improved space complexity at scale, it’s not necessary to write longer functions to do this process.
 
@@ -282,8 +276,7 @@ Let’s do the same with `move_to_tail`:
 
         self.add_to_tail(node.value)
 
-Delete a Node
--------------
+## Delete a Node
 
 Why do we need to write another delete function when we already have one?
 
@@ -311,8 +304,7 @@ But we also already wrote that edge case into our `remove_from_head` function so
 
 We don’t need to manually decrement the length because all of our previously written functions handle that for us.
 
-Get Max
--------
+## Get Max
 
 We know off the bat that when we try to get the maximum value from a linked list, but the list has no items, then that edge case is simple to handle – we’ll return None.
 

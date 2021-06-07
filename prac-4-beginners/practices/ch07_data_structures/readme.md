@@ -1,15 +1,12 @@
-Practice exercises for data structures
-======================================
+# Practice exercises for data structures
 
-Overview
---------
+## Overview
 
 In this section, you’ll have a chance to practice the concepts you’ve learned in the videos. First, review the core concepts covered that you’ll need to keep in mind. Then go through the exercises below.
 
 Remember, these are for your own benefit. Feel free to skip them if you don’t find a particular exercise valuable or you get stuck for too long.
 
-Core concepts
--------------
+## Core concepts
 
 ### Creating a static dictionary
 
@@ -48,8 +45,7 @@ If you have dynamic data, this requires something else to build them:
     # Access a score, unsure whether player1 is a key, if it isn't there, return 0.
     p1_score = scores.get('player1', 0)
 
-Exercises
----------
+## Exercises
 
 Now it’s your turn. Try this practice below.
 

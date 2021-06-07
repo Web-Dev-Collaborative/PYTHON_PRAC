@@ -1,5 +1,4 @@
-Step 4: Use the built-in library datetime
------------------------------------------
+## Step 4: Use the built-in library datetime
 
 Use the built-in library datetime and the function `datetime.datetime.now()` to determine the current year and print that to REPL using an f-string.
 

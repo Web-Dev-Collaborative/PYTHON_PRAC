@@ -1,225 +1,209 @@
-**Notes**
-=========
+# **Notes**
 
-**Basics**
-----------
+## **Basics**
 
--   **PEP8** : Python Enhancement Proposals, style-guide for Python.
+- **PEP8** : Python Enhancement Proposals, style-guide for Python.
 
--   `print` is the equivalent of `console.log`.
+- `print` is the equivalent of `console.log`.
 
--   `#` is used to make comments in your code.
+- `#` is used to make comments in your code.
 
-    def foo(): """ The foo function does many amazing things that you should not question. Just accept that it exists and use it with caution. """ secretThing()
+  def foo(): """ The foo function does many amazing things that you should not question. Just accept that it exists and use it with caution. """ secretThing()
 
--   Python has a built in help function that let’s you see a description of the source code without having to navigate to it.
+- Python has a built in help function that let’s you see a description of the source code without having to navigate to it.
 
-------------------------------------------------------------------------
+---
 
-**Numbers**
------------
+## **Numbers**
 
--   Python has three types of numbers:
+- Python has three types of numbers:
 
-    -   **Integer**
+  - **Integer**
 
-        -   Positive and Negative Counting Numbers.
-        -   No Decimal Point
-        -   Created by a literal non-decimal pt number or with the `int()` constructor.
+    - Positive and Negative Counting Numbers.
+    - No Decimal Point
+    - Created by a literal non-decimal pt number or with the `int()` constructor.
 
-            print(3) \# =&gt; 3 print(int(19)) \# =&gt; 19 print(int()) \# =&gt; 0
+      print(3) \# =&gt; 3 print(int(19)) \# =&gt; 19 print(int()) \# =&gt; 0
 
-        > Boolean is a subtype of integer in Python.
+    > Boolean is a subtype of integer in Python.
 
-    -   **Floating Point Number**
+  - **Floating Point Number**
 
-        -   Decimal Numbers.
+    - Decimal Numbers.
 
-            print(2.24) \# =&gt; 2.24 print(2.) \# =&gt; 2.0 print(float()) \# =&gt; 0.0 print(27e-5) \# =&gt; 0.00027
+      print(2.24) \# =&gt; 2.24 print(2.) \# =&gt; 2.0 print(float()) \# =&gt; 0.0 print(27e-5) \# =&gt; 0.00027
 
-    -   **Complex Numbers**
+  - **Complex Numbers**
 
-        -   Consist of a real part and imaginary part.
-        -   The `i` is switched to a `j` in programming.
+    - Consist of a real part and imaginary part.
+    - The `i` is switched to a `j` in programming.
 
-            print(7j) \# =&gt; 7j print(5.1+7.7j)) \# =&gt; 5.1+7.7j print(complex(3, 5)) \# =&gt; 3+5j print(complex(17)) \# =&gt; 17+0j print(complex()) \# =&gt; 0j
+      print(7j) \# =&gt; 7j print(5.1+7.7j)) \# =&gt; 5.1+7.7j print(complex(3, 5)) \# =&gt; 3+5j print(complex(17)) \# =&gt; 17+0j print(complex()) \# =&gt; 0j
 
--   **Type Casting** : The process of converting one number to another.
+- **Type Casting** : The process of converting one number to another.
 
-    Using Float
-    ===========
+  # Using Float
 
-    print(17) \# =&gt; 17 print(float(17)) \# =&gt; 17.0
+  print(17) \# =&gt; 17 print(float(17)) \# =&gt; 17.0
 
-    Using Int
-    =========
+  # Using Int
 
-    print(17.0) \# =&gt; 17.0 print(int(17.0)) \# =&gt; 17
+  print(17.0) \# =&gt; 17.0 print(int(17.0)) \# =&gt; 17
 
-    Using Str
-    =========
+  # Using Str
 
-    print(str(17.0) + ’ and ’ + str(17)) \# =&gt; 17.0 and 17
+  print(str(17.0) + ’ and ’ + str(17)) \# =&gt; 17.0 and 17
 
--   The arithmetic operators are the same between JS and Python, with two additions:
+- The arithmetic operators are the same between JS and Python, with two additions:
 
-    -   “\*\*” : Double asterisk for exponent.
-    -   “//” : Integer Division.
+  - “\*\*” : Double asterisk for exponent.
+  - “//” : Integer Division.
 
--   There are no spaces between math operations in Python.
+- There are no spaces between math operations in Python.
 
--   Integer Division gives the other part of the number from Module; it is a way to do round down numbers replacing `Math.floor()` in JS.
+- Integer Division gives the other part of the number from Module; it is a way to do round down numbers replacing `Math.floor()` in JS.
 
--   There are no `++` and `--` in Python, the only shorthand operators are:
--   ![pic](https://i.gyazo.com/745b12d4b84304462e53a69d8492c58d.png)
+- There are no `++` and `--` in Python, the only shorthand operators are:
+- ![pic](https://i.gyazo.com/745b12d4b84304462e53a69d8492c58d.png)
 
-------------------------------------------------------------------------
+---
 
-**Strings**
------------
+## **Strings**
 
--   Python uses both single and double quotes.
+- Python uses both single and double quotes.
 
--   You can escape strings like so `'Jodi asked, "What\'s up, Sam?"'`
+- You can escape strings like so `'Jodi asked, "What\'s up, Sam?"'`
 
--   Multiline strings use triple quotes.
+- Multiline strings use triple quotes.
 
-    print(’‘’My instructions are very long so to make them more readable in the code I am putting them on more than one line. I can even include “quotes” of any kind because they won’t get confused with the end of the string!’’’)
+  print(’‘’My instructions are very long so to make them more readable in the code I am putting them on more than one line. I can even include “quotes” of any kind because they won’t get confused with the end of the string!’’’)
 
--   Use the `len()` function to get the length of a string.
+- Use the `len()` function to get the length of a string.
 
-        print(len("Spaghetti"))    # => 9
+      print(len("Spaghetti"))    # => 9
 
--   Python uses `zero-based indexing`
--   Python allows negative indexing (thank god!)
+- Python uses `zero-based indexing`
+- Python allows negative indexing (thank god!)
 
-        print("Spaghetti"[-1])    # => i
-        print("Spaghetti"[-4])    # => e
+      print("Spaghetti"[-1])    # => i
+      print("Spaghetti"[-4])    # => e
 
--   Python let’s you use ranges
+- Python let’s you use ranges
 
-        print("Spaghetti"[1:4])  # => pag
-        print("Spaghetti"[4:-1])    # => hett
-        print("Spaghetti"[4:4])  # => (empty string)
+      print("Spaghetti"[1:4])  # => pag
+      print("Spaghetti"[4:-1])    # => hett
+      print("Spaghetti"[4:4])  # => (empty string)
 
-    -   The end range is exclusive just like `slice` in JS.
+  - The end range is exclusive just like `slice` in JS.
 
-    Shortcut to get from the beginning of a string to a certain index.
-    ==================================================================
+  # Shortcut to get from the beginning of a string to a certain index.
 
-    print(“Spaghetti”\[:4\]) \# =&gt; Spag print(“Spaghetti”\[:-1\]) \# =&gt; Spaghett
+  print(“Spaghetti”\[:4\]) \# =&gt; Spag print(“Spaghetti”\[:-1\]) \# =&gt; Spaghett
 
-    Shortcut to get from a certain index to the end of a string.
-    ============================================================
+  # Shortcut to get from a certain index to the end of a string.
 
-    print(“Spaghetti”\[1:\]) \# =&gt; paghetti print(“Spaghetti”\[-4:\]) \# =&gt; etti
+  print(“Spaghetti”\[1:\]) \# =&gt; paghetti print(“Spaghetti”\[-4:\]) \# =&gt; etti
 
--   The `index` string function is the equiv. of `indexOf()` in JS
+- The `index` string function is the equiv. of `indexOf()` in JS
 
-    print(“Spaghetti”.index(“h”)) \# =&gt; 4 print(“Spaghetti”.index(“t”)) \# =&gt; 6
+  print(“Spaghetti”.index(“h”)) \# =&gt; 4 print(“Spaghetti”.index(“t”)) \# =&gt; 6
 
--   The `count` function finds out how many times a substring appears in a string.
+- The `count` function finds out how many times a substring appears in a string.
 
-    print(“Spaghetti”.count(“h”)) \# =&gt; 1 print(“Spaghetti”.count(“t”)) \# =&gt; 2 print(“Spaghetti”.count(“s”)) \# =&gt; 0 print(’‘’We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.’’‘.count(’the’)) \# =&gt; 4
+  print(“Spaghetti”.count(“h”)) \# =&gt; 1 print(“Spaghetti”.count(“t”)) \# =&gt; 2 print(“Spaghetti”.count(“s”)) \# =&gt; 0 print(’‘’We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.’’‘.count(’the’)) \# =&gt; 4
 
--   You can use `+` to concatenate strings, just like in JS.
+- You can use `+` to concatenate strings, just like in JS.
 
--   You can also use “\*” to repeat strings or multiply strings.
+- You can also use “\*” to repeat strings or multiply strings.
 
--   Use the `format()` function to use placeholders in a string to input values later on.
+- Use the `format()` function to use placeholders in a string to input values later on.
 
-    first\_name = “Billy” last\_name = “Bob” print(‘Your name is {0} {1}’.format(first\_name, last\_name)) \# =&gt; Your name is Billy Bob
+  first_name = “Billy” last_name = “Bob” print(‘Your name is {0} {1}’.format(first_name, last_name)) \# =&gt; Your name is Billy Bob
 
--   Shorthand way to use format function is: `print(f'Your name is {first_name} {last_name}')`
+- Shorthand way to use format function is: `print(f'Your name is {first_name} {last_name}')`
 
--   Some useful string methods.
+- Some useful string methods.
 
-    -   Note that in JS `join` is used on an Array, in Python it is used on String. ![pic](https://i.gyazo.com/ed5094aa444e325b59ec3a11393b60f2.png)
+  - Note that in JS `join` is used on an Array, in Python it is used on String. ![pic](https://i.gyazo.com/ed5094aa444e325b59ec3a11393b60f2.png)
 
--   There are also many handy testing methods. ![pic](https://i.gyazo.com/af6244c64c06827fb19ac9cd86a75d17.png)
+- There are also many handy testing methods. ![pic](https://i.gyazo.com/af6244c64c06827fb19ac9cd86a75d17.png)
 
-------------------------------------------------------------------------
+---
 
-**Variables and Expressions**
------------------------------
+## **Variables and Expressions**
 
--   **Duck-Typing** : Programming Style which avoids checking an object’s type to figure out what it can do.
+- **Duck-Typing** : Programming Style which avoids checking an object’s type to figure out what it can do.
 
-    -   Duck Typing is the fundamental approach of Python.
+  - Duck Typing is the fundamental approach of Python.
 
--   Assignment of a value automatically declares.
+- Assignment of a value automatically declares.
 
-    a = 7 b = ‘Marbles’ print(a) \# =&gt; 7 print(b) \# =&gt; Marbles
+  a = 7 b = ‘Marbles’ print(a) \# =&gt; 7 print(b) \# =&gt; Marbles
 
--   You can chain variable assignments to give multiple var names the same value.
+- You can chain variable assignments to give multiple var names the same value.
 
-    -   Use with caution as this is highly unreadable
+  - Use with caution as this is highly unreadable
 
-    count = max = min = 0 print(count) \# =&gt; 0 print(max) \# =&gt; 0 print(min) \# =&gt; 0
+  count = max = min = 0 print(count) \# =&gt; 0 print(max) \# =&gt; 0 print(min) \# =&gt; 0
 
--   The value and type of a variable can be re-assigned at any time.
+- The value and type of a variable can be re-assigned at any time.
 
-    a = 17 print(a) \# =&gt; 17 a = ‘seventeen’ print(a) \# =&gt; seventeen
+  a = 17 print(a) \# =&gt; 17 a = ‘seventeen’ print(a) \# =&gt; seventeen
 
--   `NaN` does not exist in Python, but you can ‘create’ it like so: `print(float("nan"))`
+- `NaN` does not exist in Python, but you can ‘create’ it like so: `print(float("nan"))`
 
--   Python replaces `null` with `none`.
-    -   `none` is an object and can be directly assigned to a variable.
-    -   Using none is a convenient way to check to see why an action may not be operating correctly in your program.
+- Python replaces `null` with `none`.
+  - `none` is an object and can be directly assigned to a variable.
+  - Using none is a convenient way to check to see why an action may not be operating correctly in your program.
 
-------------------------------------------------------------------------
+---
 
-**Boolean Data Type**
----------------------
+## **Boolean Data Type**
 
--   One of the biggest benefits of Python is that it reads more like English than JS does. ![pic](https://i.gyazo.com/3d9fb881df9245a42024aae4ee38a1c5.png)
+- One of the biggest benefits of Python is that it reads more like English than JS does. ![pic](https://i.gyazo.com/3d9fb881df9245a42024aae4ee38a1c5.png)
 
-    Logical AND
-    ===========
+  # Logical AND
 
-    print(True and True) \# =&gt; True print(True and False) \# =&gt; False print(False and False) \# =&gt; False
+  print(True and True) \# =&gt; True print(True and False) \# =&gt; False print(False and False) \# =&gt; False
 
-    Logical OR
-    ==========
+  # Logical OR
 
-    print(True or True) \# =&gt; True print(True or False) \# =&gt; True print(False or False) \# =&gt; False
+  print(True or True) \# =&gt; True print(True or False) \# =&gt; True print(False or False) \# =&gt; False
 
-    Logical NOT
-    ===========
+  # Logical NOT
 
-    print(not True) \# =&gt; False print(not False and True) \# =&gt; True print(not True or False) \# =&gt; False
+  print(not True) \# =&gt; False print(not False and True) \# =&gt; True print(not True or False) \# =&gt; False
 
--   By default, Python considers an object to be true UNLESS it is one of the following:
+- By default, Python considers an object to be true UNLESS it is one of the following:
 
-    -   Constant `None` or `False`
-    -   Zero of any numeric type.
-    -   Empty Sequence or Collection.
+  - Constant `None` or `False`
+  - Zero of any numeric type.
+  - Empty Sequence or Collection.
 
--   `True` and `False` must be capitalized
+- `True` and `False` must be capitalized
 
-------------------------------------------------------------------------
+---
 
-**Comparison Operators**
-------------------------
+## **Comparison Operators**
 
--   Python uses all the same equality operators as JS.
+- Python uses all the same equality operators as JS.
 
--   In Python, equality operators are processed from left to right.
+- In Python, equality operators are processed from left to right.
 
--   Logical operators are processed in this order:
+- Logical operators are processed in this order:
 
-    1.  **NOT**
-    2.  **AND**
-    3.  **OR**
+  1.  **NOT**
+  2.  **AND**
+  3.  **OR**
 
--   Just like in JS, you can use `parentheses` to change the inherent order of operations.
+- Just like in JS, you can use `parentheses` to change the inherent order of operations.
 
--   **Short Circuit** : Stopping a program when a `true` or `false` has been reached. ![pic](https://i.gyazo.com/ccbe5511757813a61e3833d13c43fd8b.png)
+- **Short Circuit** : Stopping a program when a `true` or `false` has been reached. ![pic](https://i.gyazo.com/ccbe5511757813a61e3833d13c43fd8b.png)
 
-------------------------------------------------------------------------
+---
 
-**Identity vs Equality**
-------------------------
+## **Identity vs Equality**
 
     print (2 == '2')    # => False
     print (2 is '2')    # => False
@@ -231,12 +215,11 @@
     print (2 == 2.0)    # => True
     print (2 is 2.0)    # => False
 
--   In the Python community it is better to use `is` and `is not` over `==` or `!=`
+- In the Python community it is better to use `is` and `is not` over `==` or `!=`
 
-------------------------------------------------------------------------
+---
 
-**If Statements**
------------------
+## **If Statements**
 
     if name == 'Monica':
         print('Hi, Monica.')
@@ -255,176 +238,158 @@
     elif age > 100:
        print('You are not Monica, grannie.')
 
--   Remember the order of `elif` statements matter.
+- Remember the order of `elif` statements matter.
 
-------------------------------------------------------------------------
+---
 
-**While Statements**
---------------------
+## **While Statements**
 
     spam = 0
     while spam < 5:
       print('Hello, world.')
       spam = spam + 1
 
--   `Break` statement also exists in Python.
+- `Break` statement also exists in Python.
 
-    spam = 0 while True: print(‘Hello, world.’) spam = spam + 1 if spam &gt;= 5: break
+  spam = 0 while True: print(‘Hello, world.’) spam = spam + 1 if spam &gt;= 5: break
 
--   As are `continue` statements
+- As are `continue` statements
 
-    spam = 0 while True: print(‘Hello, world.’) spam = spam + 1 if spam &lt; 5: continue break
+  spam = 0 while True: print(‘Hello, world.’) spam = spam + 1 if spam &lt; 5: continue break
 
-------------------------------------------------------------------------
+---
 
-**Try/Except Statements**
--------------------------
+## **Try/Except Statements**
 
--   Python equivalent to `try/catch`
+- Python equivalent to `try/catch`
 
-    a = 321 try: print(len(a)) except: print(‘Silently handle error here’)
+  a = 321 try: print(len(a)) except: print(‘Silently handle error here’)
 
-        # Optionally include a correction to the issue
-        a = str(a)
-        print(len(a)
+      # Optionally include a correction to the issue
+      a = str(a)
+      print(len(a)
 
-    a = ‘321’ try: print(len(a)) except: print(‘Silently handle error here’)
+  a = ‘321’ try: print(len(a)) except: print(‘Silently handle error here’)
 
-        # Optionally include a correction to the issue
-        a = str(a)
-        print(len(a))
+      # Optionally include a correction to the issue
+      a = str(a)
+      print(len(a))
 
--   You can name an error to give the output more specificity.
+- You can name an error to give the output more specificity.
 
-    a = 100 b = 0 try: c = a / b except ZeroDivisionError: c = None print(c)
+  a = 100 b = 0 try: c = a / b except ZeroDivisionError: c = None print(c)
 
--   You can also use the `pass` commmand to by pass a certain error.
+- You can also use the `pass` commmand to by pass a certain error.
 
-    a = 100 b = 0 try: print(a / b) except ZeroDivisionError: pass
+  a = 100 b = 0 try: print(a / b) except ZeroDivisionError: pass
 
--   The `pass` method won’t allow you to bypass every single error so you can chain an exception series like so:
+- The `pass` method won’t allow you to bypass every single error so you can chain an exception series like so:
 
-    a = 100
+  a = 100
 
-    b = “5”
-    =======
+  # b = “5”
 
-    try: print(a / b) except ZeroDivisionError: pass except (TypeError, NameError): print(“ERROR!”)
+  try: print(a / b) except ZeroDivisionError: pass except (TypeError, NameError): print(“ERROR!”)
 
--   You can use an `else` statement to end a chain of `except` statements.
+- You can use an `else` statement to end a chain of `except` statements.
 
-    tuple of file names
-    ===================
+  # tuple of file names
 
-    files = (‘one.txt’, ‘two.txt’, ‘three.txt’)
+  files = (‘one.txt’, ‘two.txt’, ‘three.txt’)
 
-    simple loop
-    ===========
+  # simple loop
 
-    for filename in files: try: \# open the file in read mode f = open(filename, ‘r’) except OSError: \# handle the case where file does not exist or permission is denied print(‘cannot open file’, filename) else: \# do stuff with the file object (f) print(filename, ‘opened successfully’) print(‘found’, len(f.readlines()), ‘lines’) f.close()
+  for filename in files: try: \# open the file in read mode f = open(filename, ‘r’) except OSError: \# handle the case where file does not exist or permission is denied print(‘cannot open file’, filename) else: \# do stuff with the file object (f) print(filename, ‘opened successfully’) print(‘found’, len(f.readlines()), ‘lines’) f.close()
 
--   `finally` is used at the end to clean up all actions under any circumstance.
+- `finally` is used at the end to clean up all actions under any circumstance.
 
-    def divide(x, y): try: result = x / y except ZeroDivisionError: print(“Cannot divide by zero”) else: print(“Result is”, result) finally: print(“Finally…”)
+  def divide(x, y): try: result = x / y except ZeroDivisionError: print(“Cannot divide by zero”) else: print(“Result is”, result) finally: print(“Finally…”)
 
--   Using duck typing to check to see if some value is able to use a certain method.
+- Using duck typing to check to see if some value is able to use a certain method.
 
-    Try a number - nothing will print out
-    =====================================
+  # Try a number - nothing will print out
 
-    a = 321 if hasattr(a, ‘**len**’): print(len(a))
+  a = 321 if hasattr(a, ‘**len**’): print(len(a))
 
-    Try a string - the length will print out (4 in this case)
-    =========================================================
+  # Try a string - the length will print out (4 in this case)
 
-    b = “5555” if hasattr(b, ‘**len**’): print(len(b))
+  b = “5555” if hasattr(b, ‘**len**’): print(len(b))
 
-------------------------------------------------------------------------
+---
 
-**Pass**
---------
+## **Pass**
 
--   Pass Keyword is required to write the JS equivalent of :
+- Pass Keyword is required to write the JS equivalent of :
 
-    if (true) { }
+  if (true) { }
 
-    while (true) {}
+  while (true) {}
 
-    if True: pass
+  if True: pass
 
-    while True: pass
+  while True: pass
 
-------------------------------------------------------------------------
+---
 
-**Functions**
--------------
+## **Functions**
 
--   **Function** definition includes:
+- **Function** definition includes:
 
-    -   The `def` keyword
-    -   The name of the function
-    -   A list of parameters enclosed in parentheses.
-    -   A colon at the end of the line.
-    -   One tab indentation for the code to run.
+  - The `def` keyword
+  - The name of the function
+  - A list of parameters enclosed in parentheses.
+  - A colon at the end of the line.
+  - One tab indentation for the code to run.
 
--   You can use default parameters just like in JS
+- You can use default parameters just like in JS
 
-    def greeting(name, saying=“Hello”): print(saying, name)
+  def greeting(name, saying=“Hello”): print(saying, name)
 
-    greeting(“Monica”)
+  greeting(“Monica”)
 
-    Hello Monica
-    ============
+  # Hello Monica
 
-    greeting(“Barry”, “Hey”)
+  greeting(“Barry”, “Hey”)
 
-    Hey Barry
-    =========
+  # Hey Barry
 
--   Keep in mind, default parameters must always come after regular parameters.
+- Keep in mind, default parameters must always come after regular parameters.
 
-    THIS IS BAD CODE AND WILL NOT RUN
-    =================================
+  # THIS IS BAD CODE AND WILL NOT RUN
 
-    def increment(delta=1, value): return delta + value
+  def increment(delta=1, value): return delta + value
 
--   You can specify arguments by name without destructuring in Python.
+- You can specify arguments by name without destructuring in Python.
 
-    def greeting(name, saying=“Hello”): print(saying, name)
+  def greeting(name, saying=“Hello”): print(saying, name)
 
-    name has no default value, so just provide the value
-    ====================================================
+  # name has no default value, so just provide the value
 
-    saying has a default value, so use a keyword argument
-    =====================================================
+  # saying has a default value, so use a keyword argument
 
-    greeting(“Monica”, saying=“Hi”)
+  greeting(“Monica”, saying=“Hi”)
 
--   The `lambda` keyword is used to create anonymous functions and are supposed to be `one-liners`.
+- The `lambda` keyword is used to create anonymous functions and are supposed to be `one-liners`.
 
 `toUpper = lambda s: s.upper()`
 
-------------------------------------------------------------------------
+---
 
-Notes Formatted Strings Remember that in Python join() is called on a string with an array/list passed in as the argument. shopping\_list = \[‘bread’,‘milk’,‘eggs’\] print(‘,’.join(shopping\_list)) Python has a very powerful formatting engine. format() is also applied directly to strings.
+Notes Formatted Strings Remember that in Python join() is called on a string with an array/list passed in as the argument. shopping_list = \[‘bread’,‘milk’,‘eggs’\] print(‘,’.join(shopping_list)) Python has a very powerful formatting engine. format() is also applied directly to strings.
 
-Comma Thousands Separator
-=========================
+# Comma Thousands Separator
 
 print(‘{:,}’.format(1234567890)) ‘1,234,567,890’
 
-Date and Time
-=============
+# Date and Time
 
 d = datetime.datetime(2020, 7, 4, 12, 15, 58) print(‘{:%Y-%m-%d %H:%M:%S}’.format(d)) ‘2020-07-04 12:15:58’
 
-Percentage
-==========
+# Percentage
 
 points = 190 total = 220 print(‘Correct answers: {:.2%}’.format(points/total)) Correct answers: 86.36%
 
-Data Tables
-===========
+# Data Tables
 
 width=8 print(’ decimal hex binary’) print(‘-’\*27) for num in range(1,16): for base in ‘dXb’: print(‘{0:{width}{base}}’.format(num, base=base, width=width), end=’ ‘) print() Getting Input from the Command Line Python runs synchronously, all programs and processes will stop when listening for a user input. The input function shows a prompt to a user and waits for them to type ’ENTER’. Scripts vs Programs Programming Script : A set of code that runs in a linear fashion. The largest difference between scripts and programs is the level of complexity and purpose. Programs typically have many UI’s.
 
@@ -434,30 +399,25 @@ Structured Data Sequence : The most basic data structure in Python where the ind
 
 List Tuple Range Collections : Unordered data structures, hashable values.
 
-Dictionaries Sets Iterable : Generic name for a sequence or collection; any object that can be iterated through. Can be mutable or immutable. Built In Data Types Lists are the python equivalent of arrays. empty\_list = \[\] departments = \[‘HR’,‘Development’,‘Sales’,‘Finance’,‘IT’,‘Customer Support’\]
+Dictionaries Sets Iterable : Generic name for a sequence or collection; any object that can be iterated through. Can be mutable or immutable. Built In Data Types Lists are the python equivalent of arrays. empty_list = \[\] departments = \[‘HR’,‘Development’,‘Sales’,‘Finance’,‘IT’,‘Customer Support’\]
 
-You can instantiate
-===================
+# You can instantiate
 
 specials = list()
 
-Test if a value is in a list.
-=============================
+# Test if a value is in a list.
 
 print(1 in \[1, 2, 3\]) \#&gt; True print(4 in \[1, 2, 3\]) \#&gt; False Tuples : Very similar to lists, but they are immutable
 
-Instantiated with parentheses
-=============================
+# Instantiated with parentheses
 
-time\_blocks = (‘AM’,‘PM’)
+time_blocks = (‘AM’,‘PM’)
 
-Sometimes instantiated without
-==============================
+# Sometimes instantiated without
 
 colors = ‘red’,‘blue’,‘green’ numbers = 1, 2, 3
 
-Tuple() built in can be used to convert other data into a tuple
-===============================================================
+# Tuple() built in can be used to convert other data into a tuple
 
 tuple(‘abc’) \# returns (‘a’, ‘b’, ‘c’) tuple(\[1,2,3\]) \# returns (1, 2, 3) Think of tuples as constant variables.
 
@@ -475,10 +435,9 @@ Sets : Unordered collection of distinct objects; objects that need to be hashabl
 
 Always be unique, duplicate items are auto dropped from the set. Common Uses: Removing Duplicates Membership Testing Mathematical Operators: Intersection, Union, Difference, Symmetric Difference. Standard Set is mutable, Python has a immutable version called frozenset. Sets created by putting comma seperated values inside braces:
 
-school\_bag = {‘book’,‘paper’,‘pencil’,‘pencil’,‘book’,‘book’,‘book’,‘eraser’} print(school\_bag)
+school_bag = {‘book’,‘paper’,‘pencil’,‘pencil’,‘book’,‘book’,‘book’,‘eraser’} print(school_bag)
 
-Also can use set constructor to automatically put it into a set.
-================================================================
+# Also can use set constructor to automatically put it into a set.
 
 letters = set(‘abracadabra’) print(letters) Built-In Functions Functions using iterables
 
@@ -492,11 +451,9 @@ Output is always a list key: opt function which coverts and item to a value to b
 
 quarters = \[‘First’, ‘Second’, ‘Third’, ‘Fourth’\] print(enumerate(quarters)) print(enumerate(quarters, start=1))
 
-(0, ‘First’), (1, ‘Second’), (2, ‘Third’), (3, ‘Fourth’)
-========================================================
+# (0, ‘First’), (1, ‘Second’), (2, ‘Third’), (3, ‘Fourth’)
 
-(1, ‘First’), (2, ‘Second’), (3, ‘Third’), (4, ‘Fourth’)
-========================================================
+# (1, ‘First’), (2, ‘Second’), (3, ‘Third’), (4, ‘Fourth’)
 
 zip(\*iterables) : creates a zip object filled with tuples that combine 1 to 1 the items in each provided iterable. Functions that analyze iterables
 
@@ -534,78 +491,61 @@ total = 0 for num in range(101): total += num print(total) Looping over a list i
 
 lst = \[0, 1, 2, 3\] for i in lst: print(i) Common technique is to use the len() on a pre-defined list with a for loop to iterate over the indices of the list. supplies = \[‘pens’, ‘staplers’, ‘flame-throwers’, ‘binders’\] for i in range(len(supplies)): print(‘Index’ + str(i) + ’ in supplies is: ’ + supplies\[i\]) You can loop and destructure at the same time. l = \[\[1, 2\], \[3, 4\], \[5, 6\]\] for a, b in l: print(a, ‘,’, b)
 
-Prints 1, 2
-===========
+# Prints 1, 2
 
-Prints 3, 4
-===========
+# Prints 3, 4
 
-Prints 5, 6
-===========
+# Prints 5, 6
 
 You can use values() and keys() to loop over dictionaries. spam = {‘color’: ‘red’, ‘age’: 42} for v in spam.values(): print(v)
 
-Prints red
-==========
+# Prints red
 
-Prints 42
-=========
+# Prints 42
 
 for k in spam.keys(): print(k)
 
-Prints color
-============
+# Prints color
 
-Prints age
-==========
+# Prints age
 
 For loops can also iterate over both keys and values.
 
-Getting tuples
-==============
+# Getting tuples
 
 for i in spam.items(): print(i)
 
-Prints (‘color’, ‘red’)
-=======================
+# Prints (‘color’, ‘red’)
 
-Prints (‘age’, 42)
-==================
+# Prints (‘age’, 42)
 
-Destructuring to values
-=======================
+# Destructuring to values
 
 for k, v in spam.items(): print(‘Key:’ + k + ’ Value: ’ + str(v))
 
-Prints Key: age Value: 42
-=========================
+# Prints Key: age Value: 42
 
-Prints Key: color Value: red
-============================
+# Prints Key: color Value: red
 
-Looping over string for c in “abcdefg”: print(c) More On Functions Variable-length positional arguments : (*args) def add(a, b,* args): total = a + b; for n in args: total += n return total
+Looping over string for c in “abcdefg”: print(c) More On Functions Variable-length positional arguments : (_args) def add(a, b,_ args): total = a + b; for n in args: total += n return total
 
 add(1, 2) \# Returns 3
 
-add(2, 3, 4, 5) \# Returns 14 keyword arguments : (\*kwargs) def print\_names\_and\_countries(greeting, \*\*kwargs): for k, v in kwargs.items(): print(greeting, k, “from”, v)
+add(2, 3, 4, 5) \# Returns 14 keyword arguments : (\*kwargs) def print_names_and_countries(greeting, \*\*kwargs): for k, v in kwargs.items(): print(greeting, k, “from”, v)
 
-print\_names\_and\_countries(“Hi”, Monica=“Sweden”, Charles=“British Virgin Islands”, Carlo=“Portugal”)
+print_names_and_countries(“Hi”, Monica=“Sweden”, Charles=“British Virgin Islands”, Carlo=“Portugal”)
 
-Prints
-======
+# Prints
 
-Hi Monica from Sweden
-=====================
+# Hi Monica from Sweden
 
-Hi Charles from British Virgin Islands
-======================================
+# Hi Charles from British Virgin Islands
 
-Hi Carlo from Portugal
-======================
+# Hi Carlo from Portugal
 
-When you order arguments within a function or function call, the args need to occur in a particular order: formal positional args. *args keyword args with default values \*\*kwargs def example(arg\_1, arg\_2,* args, \*\*kwargs): pass
+When you order arguments within a function or function call, the args need to occur in a particular order: formal positional args. _args keyword args with default values \*\*kwargs def example(arg_1, arg_2,_ args, \*\*kwargs): pass
 
-def example2(arg\_1, arg\_2, \*args, kw\_1=“shark”, kw\_2=“blowfish”, \*\*kwargs): pass Importing in Python Modules are similar to packages in Node.js Come in different types: Built-In, Third-Party, Custom. All loaded using import statements. Terms
+def example2(arg_1, arg_2, \*args, kw_1=“shark”, kw_2=“blowfish”, \*\*kwargs): pass Importing in Python Modules are similar to packages in Node.js Come in different types: Built-In, Third-Party, Custom. All loaded using import statements. Terms
 
 module : Python code in a separate file. package : Path to a directory that contains modules. **init.py** : Default file for a package. submodule : Another file in a module’s folder. function : Function in a module.
 
@@ -621,8 +561,7 @@ format() was introduced with P3 All strings in P3 are unicode and encoded. md5 w
 
 print was a statement in P2, but is a function in P3.
 
-Topics revisited (in python syntax)
-===================================
+# Topics revisited (in python syntax)
 
     def say_hi(name):
         """<---- Multi-Line Comments and Docstrings

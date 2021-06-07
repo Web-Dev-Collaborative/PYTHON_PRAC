@@ -4,7 +4,7 @@
 
 [practices](practices/right.html)
 
-[readme\_resources](readme_resources/right.html)
+[readme_resources](readme_resources/right.html)
 
 [solutions](solutions/right.html)
 

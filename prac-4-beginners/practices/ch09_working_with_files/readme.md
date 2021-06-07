@@ -1,15 +1,12 @@
-Practice Exercises for file I/O
-===============================
+# Practice Exercises for file I/O
 
-Overview
---------
+## Overview
 
 In this section, you’ll have a chance to practice the concepts you’ve learned in the videos. First, review the core concepts covered that you’ll need to keep in mind. Then go through the exercises below.
 
 Remember, these are for your own benefit. Feel free to skip them if you don’t find a particular exercise valuable or you get stuck for too long.
 
-Core concepts
--------------
+## Core concepts
 
 ### Determining the full path to a file
 
@@ -47,11 +44,10 @@ Given a file stream, json can read or write objects to/from the json file format
     # save the leader dictionary to the fout file stream
     json.dump(leaders, fout)
 
-Exercises
----------
+## Exercises
 
 Now it’s your turn. In this practice, go back to the tic tac toe game we created back in the chapter on problem solving. Alternatively, if you made it through Connect 4, you can work with that one instead. Your job will be to:
 
--   Add a leader board (feel free to use JSON like we did).
--   Add a running log file (test with `tail -n 20 -f FILENAME` on macOS and Linux, just open in PyCharm on Windows and it’ll change).
--   For extra credit, you can try to use [LogBook](https://logbook.readthedocs.io/en/stable/) to improve the logging (but it will require a few concepts we haven’t covered yet).
+- Add a leader board (feel free to use JSON like we did).
+- Add a running log file (test with `tail -n 20 -f FILENAME` on macOS and Linux, just open in PyCharm on Windows and it’ll change).
+- For extra credit, you can try to use [LogBook](https://logbook.readthedocs.io/en/stable/) to improve the logging (but it will require a few concepts we haven’t covered yet).

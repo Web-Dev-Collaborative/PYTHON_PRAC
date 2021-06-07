@@ -2,7 +2,7 @@
 
 [&lt;Go Back&gt;](../right.html)
 
-[edge\_detection](edge_detection/right.html)
+[edge_detection](edge_detection/right.html)
 
 [histogram…zation](histogram_equalization/right.html)
 
@@ -12,7 +12,7 @@
 
 [filters](filters/right.html)
 
-[image\_data](image_data/right.html)
+[image_data](image_data/right.html)
 
 [rotation](rotation/right.html)
 

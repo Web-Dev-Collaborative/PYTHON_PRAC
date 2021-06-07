@@ -1,47 +1,45 @@
 ### Navigation
 
--   [index](https://docs.python.org/3/genindex.html "General Index")
--   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
--   [next](errors.html "8. Errors and Exceptions") |
--   [previous](modules.html "6. Modules") |
--   ![](../_static/py.png)
--   [Python](https://www.python.org/) »
--   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
--   [The Python Tutorial](index.html) »
--   
+- [index](https://docs.python.org/3/genindex.html "General Index")
+- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+- [next](errors.html "8. Errors and Exceptions") |
+- [previous](modules.html "6. Modules") |
+- ![](../_static/py.png)
+- [Python](https://www.python.org/) »
+- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+- [The Python Tutorial](index.html) »
+-
 
 <span id="tut-io"></span>
 
-<span class="section-number">7. </span>Input and Output<a href="#input-and-output" class="headerlink" title="Permalink to this headline">¶</a>
-==============================================================================================================================================
+# <span class="section-number">7. </span>Input and Output<a href="#input-and-output" class="headerlink" title="Permalink to this headline">¶</a>
 
 There are several ways to present the output of a program; data can be printed in a human-readable form, or written to a file for future use. This chapter will discuss some of the possibilities.
 
 <span id="tut-formatting"></span>
 
-<span class="section-number">7.1. </span>Fancier Output Formatting<a href="#fancier-output-formatting" class="headerlink" title="Permalink to this headline">¶</a>
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">7.1. </span>Fancier Output Formatting<a href="#fancier-output-formatting" class="headerlink" title="Permalink to this headline">¶</a>
 
-So far we’ve encountered two ways of writing values: *expression statements* and the <a href="https://docs.python.org/3/library/functions.html#print" class="reference internal" title="print"><code class="sourceCode python"><span class="bu">print</span>()</code></a> function. (A third way is using the `write()` method of file objects; the standard output file can be referenced as `sys.stdout`. See the Library Reference for more information on this.)
+So far we’ve encountered two ways of writing values: _expression statements_ and the <a href="https://docs.python.org/3/library/functions.html#print" class="reference internal" title="print"><code class="sourceCode python"><span class="bu">print</span>()</code></a> function. (A third way is using the `write()` method of file objects; the standard output file can be referenced as `sys.stdout`. See the Library Reference for more information on this.)
 
 Often you’ll want more control over the formatting of your output than simply printing space-separated values. There are several ways to format output.
 
--   To use <a href="#tut-f-strings" class="reference internal"><span class="std std-ref">formatted string literals</span></a>, begin a string with `f` or `F` before the opening quotation mark or triple quotation mark. Inside this string, you can write a Python expression between `{` and `}` characters that can refer to variables or literal values.
+- To use <a href="#tut-f-strings" class="reference internal"><span class="std std-ref">formatted string literals</span></a>, begin a string with `f` or `F` before the opening quotation mark or triple quotation mark. Inside this string, you can write a Python expression between `{` and `}` characters that can refer to variables or literal values.
 
-        >>> year = 2016
-        >>> event = 'Referendum'
-        >>> f'Results of the {year} {event}'
-        'Results of the 2016 Referendum'
+      >>> year = 2016
+      >>> event = 'Referendum'
+      >>> f'Results of the {year} {event}'
+      'Results of the 2016 Referendum'
 
--   The <a href="https://docs.python.org/3/library/stdtypes.html#str.format" class="reference internal" title="str.format"><code class="sourceCode python"><span class="bu">str</span>.<span class="bu">format</span>()</code></a> method of strings requires more manual effort. You’ll still use `{` and `}` to mark where a variable will be substituted and can provide detailed formatting directives, but you’ll also need to provide the information to be formatted.
+- The <a href="https://docs.python.org/3/library/stdtypes.html#str.format" class="reference internal" title="str.format"><code class="sourceCode python"><span class="bu">str</span>.<span class="bu">format</span>()</code></a> method of strings requires more manual effort. You’ll still use `{` and `}` to mark where a variable will be substituted and can provide detailed formatting directives, but you’ll also need to provide the information to be formatted.
 
-        >>> yes_votes = 42_572_654
-        >>> no_votes = 43_132_495
-        >>> percentage = yes_votes / (yes_votes + no_votes)
-        >>> '{:-9} YES votes  {:2.2%}'.format(yes_votes, percentage)
-        ' 42572654 YES votes  49.67%'
+      >>> yes_votes = 42_572_654
+      >>> no_votes = 43_132_495
+      >>> percentage = yes_votes / (yes_votes + no_votes)
+      >>> '{:-9} YES votes  {:2.2%}'.format(yes_votes, percentage)
+      ' 42572654 YES votes  49.67%'
 
--   Finally, you can do all the string handling yourself by using string slicing and concatenation operations to create any layout you can imagine. The string type has some methods that perform useful operations for padding strings to a given column width.
+- Finally, you can do all the string handling yourself by using string slicing and concatenation operations to create any layout you can imagine. The string type has some methods that perform useful operations for padding strings to a given column width.
 
 When you don’t need fancy output but just want a quick display of some variables for debugging purposes, you can convert any value to a string with the <a href="https://docs.python.org/3/library/functions.html#repr" class="reference internal" title="repr"><code class="sourceCode python"><span class="bu">repr</span>()</code></a> or <a href="https://docs.python.org/3/library/stdtypes.html#str" class="reference internal" title="str"><code class="sourceCode python"><span class="bu">str</span>()</code></a> functions.
 
@@ -210,16 +208,15 @@ More information can be found in the <a href="https://docs.python.org/3/library/
 
 <span id="tut-files"></span>
 
-<span class="section-number">7.2. </span>Reading and Writing Files<a href="#reading-and-writing-files" class="headerlink" title="Permalink to this headline">¶</a>
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <span class="section-number">7.2. </span>Reading and Writing Files<a href="#reading-and-writing-files" class="headerlink" title="Permalink to this headline">¶</a>
 
 <a href="https://docs.python.org/3/library/functions.html#open" class="reference internal" title="open"><code class="sourceCode python"><span class="bu">open</span>()</code></a> returns a <a href="https://docs.python.org/3/glossary.html#term-file-object" class="reference internal"><span class="xref std std-term">file object</span></a>, and is most commonly used with two arguments: `open(filename, mode)`.
 
     >>> f = open('workfile', 'w')
 
-The first argument is a string containing the filename. The second argument is another string containing a few characters describing the way in which the file will be used. *mode* can be `'r'` when the file will only be read, `'w'` for only writing (an existing file with the same name will be erased), and `'a'` opens the file for appending; any data written to the file is automatically added to the end. `'r+'` opens the file for both reading and writing. The *mode* argument is optional; `'r'` will be assumed if it’s omitted.
+The first argument is a string containing the filename. The second argument is another string containing a few characters describing the way in which the file will be used. _mode_ can be `'r'` when the file will only be read, `'w'` for only writing (an existing file with the same name will be erased), and `'a'` opens the file for appending; any data written to the file is automatically added to the end. `'r+'` opens the file for both reading and writing. The _mode_ argument is optional; `'r'` will be assumed if it’s omitted.
 
-Normally, files are opened in *text mode*, that means, you read and write strings from and to the file, which are encoded in a specific encoding. If encoding is not specified, the default is platform dependent (see <a href="https://docs.python.org/3/library/functions.html#open" class="reference internal" title="open"><code class="sourceCode python"><span class="bu">open</span>()</code></a>). `'b'` appended to the mode opens the file in *binary mode*: now the data is read and written in the form of bytes objects. This mode should be used for all files that don’t contain text.
+Normally, files are opened in _text mode_, that means, you read and write strings from and to the file, which are encoded in a specific encoding. If encoding is not specified, the default is platform dependent (see <a href="https://docs.python.org/3/library/functions.html#open" class="reference internal" title="open"><code class="sourceCode python"><span class="bu">open</span>()</code></a>). `'b'` appended to the mode opens the file in _binary mode_: now the data is read and written in the form of bytes objects. This mode should be used for all files that don’t contain text.
 
 In text mode, the default when reading is to convert platform-specific line endings (`\n` on Unix, `\r\n` on Windows) to just `\n`. When writing in text mode, the default is to convert occurrences of `\n` back to platform-specific line endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in `JPEG` or `EXE` files. Be very careful to use binary mode when reading and writing such files.
 
@@ -252,7 +249,7 @@ After a file object is closed, either by a <a href="https://docs.python.org/3/re
 
 The rest of the examples in this section will assume that a file object called `f` has already been created.
 
-To read a file’s contents, call `f.read(size)`, which reads some quantity of data and returns it as a string (in text mode) or bytes object (in binary mode). *size* is an optional numeric argument. When *size* is omitted or negative, the entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s memory. Otherwise, at most *size* characters (in text mode) or *size* bytes (in binary mode) are read and returned. If the end of the file has been reached, `f.read()` will return an empty string (`''`).
+To read a file’s contents, call `f.read(size)`, which reads some quantity of data and returns it as a string (in text mode) or bytes object (in binary mode). _size_ is an optional numeric argument. When _size_ is omitted or negative, the entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s memory. Otherwise, at most _size_ characters (in text mode) or _size_ bytes (in binary mode) are read and returned. If the end of the file has been reached, `f.read()` will return an empty string (`''`).
 
     >>> f.read()
     'This is the entire file.\n'
@@ -278,7 +275,7 @@ For reading lines from a file, you can loop over the file object. This is memory
 
 If you want to read all the lines of a file in a list you can also use `list(f)` or `f.readlines()`.
 
-`f.write(string)` writes the contents of *string* to the file, returning the number of characters written.
+`f.write(string)` writes the contents of _string_ to the file, returning the number of characters written.
 
     >>> f.write('This is a test\n')
     15
@@ -292,7 +289,7 @@ Other types of objects need to be converted – either to a string (in text mode
 
 `f.tell()` returns an integer giving the file object’s current position in the file represented as number of bytes from the beginning of the file when in binary mode and an opaque number when in text mode.
 
-To change the file object’s position, use `f.seek(offset, whence)`. The position is computed from adding *offset* to a reference point; the reference point is selected by the *whence* argument. A *whence* value of 0 measures from the beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. *whence* can be omitted and defaults to 0, using the beginning of the file as the reference point.
+To change the file object’s position, use `f.seek(offset, whence)`. The position is computed from adding _offset_ to a reference point; the reference point is selected by the _whence_ argument. A _whence_ value of 0 measures from the beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. _whence_ can be omitted and defaults to 0, using the beginning of the file as the reference point.
 
     >>> f = open('workfile', 'rb+')
     >>> f.write(b'0123456789abcdef')
@@ -306,7 +303,7 @@ To change the file object’s position, use `f.seek(offset, whence)`. The positi
     >>> f.read(1)
     b'd'
 
-In text files (those opened without a `b` in the mode string), only seeks relative to the beginning of the file are allowed (the exception being seeking to the very file end with `seek(0, 2)`) and the only valid *offset* values are those returned from the `f.tell()`, or zero. Any other *offset* value produces undefined behaviour.
+In text files (those opened without a `b` in the mode string), only seeks relative to the beginning of the file are allowed (the exception being seeking to the very file end with `seek(0, 2)`) and the only valid _offset_ values are those returned from the `f.tell()`, or zero. Any other _offset_ value produces undefined behaviour.
 
 File objects have some additional methods, such as `isatty()` and `truncate()` which are less frequently used; consult the Library Reference for a complete guide to file objects.
 
@@ -316,7 +313,7 @@ File objects have some additional methods, such as `isatty()` and `truncate()` w
 
 Strings can easily be written to and read from a file. Numbers take a bit more effort, since the `read()` method only returns strings, which will have to be passed to a function like <a href="https://docs.python.org/3/library/functions.html#int" class="reference internal" title="int"><code class="sourceCode python"><span class="bu">int</span>()</code></a>, which takes a string like `'123'` and returns its numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and serializing by hand becomes complicated.
 
-Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows you to use the popular data interchange format called <a href="http://json.org/" class="reference external">JSON (JavaScript Object Notation)</a>. The standard module called <a href="https://docs.python.org/3/library/json.html#module-json" class="reference internal" title="json: Encode and decode the JSON format."><code class="sourceCode python">json</code></a> can take Python data hierarchies, and convert them to string representations; this process is called *serializing*. Reconstructing the data from the string representation is called *deserializing*. Between serializing and deserializing, the string representing the object may have been stored in a file or data, or sent over a network connection to some distant machine.
+Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows you to use the popular data interchange format called <a href="http://json.org/" class="reference external">JSON (JavaScript Object Notation)</a>. The standard module called <a href="https://docs.python.org/3/library/json.html#module-json" class="reference internal" title="json: Encode and decode the JSON format."><code class="sourceCode python">json</code></a> can take Python data hierarchies, and convert them to string representations; this process is called _serializing_. Reconstructing the data from the string representation is called _deserializing_. Between serializing and deserializing, the string representing the object may have been stored in a file or data, or sent over a network connection to some distant machine.
 
 Note
 
@@ -343,19 +340,19 @@ See also
 
 <a href="https://docs.python.org/3/library/pickle.html#module-pickle" class="reference internal" title="pickle: Convert Python objects to streams of bytes and back."><code class="sourceCode python">pickle</code></a> - the pickle module
 
-Contrary to <a href="#tut-json" class="reference internal"><span class="std std-ref">JSON</span></a>, *pickle* is a protocol which allows the serialization of arbitrarily complex Python objects. As such, it is specific to Python and cannot be used to communicate with applications written in other languages. It is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code, if the data was crafted by a skilled attacker.
+Contrary to <a href="#tut-json" class="reference internal"><span class="std std-ref">JSON</span></a>, _pickle_ is a protocol which allows the serialization of arbitrarily complex Python objects. As such, it is specific to Python and cannot be used to communicate with applications written in other languages. It is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code, if the data was crafted by a skilled attacker.
 
 ### [Table of Contents](https://docs.python.org/3/contents.html)
 
--   <a href="#" class="reference internal">7. Input and Output</a>
-    -   <a href="#fancier-output-formatting" class="reference internal">7.1. Fancier Output Formatting</a>
-        -   <a href="#formatted-string-literals" class="reference internal">7.1.1. Formatted String Literals</a>
-        -   <a href="#the-string-format-method" class="reference internal">7.1.2. The String format() Method</a>
-        -   <a href="#manual-string-formatting" class="reference internal">7.1.3. Manual String Formatting</a>
-        -   <a href="#old-string-formatting" class="reference internal">7.1.4. Old string formatting</a>
-    -   <a href="#reading-and-writing-files" class="reference internal">7.2. Reading and Writing Files</a>
-        -   <a href="#methods-of-file-objects" class="reference internal">7.2.1. Methods of File Objects</a>
-        -   <a href="#saving-structured-data-with-json" class="reference internal">7.2.2. Saving structured data with <code class="sourceCode python">json</code></a>
+- <a href="#" class="reference internal">7. Input and Output</a>
+  - <a href="#fancier-output-formatting" class="reference internal">7.1. Fancier Output Formatting</a>
+    - <a href="#formatted-string-literals" class="reference internal">7.1.1. Formatted String Literals</a>
+    - <a href="#the-string-format-method" class="reference internal">7.1.2. The String format() Method</a>
+    - <a href="#manual-string-formatting" class="reference internal">7.1.3. Manual String Formatting</a>
+    - <a href="#old-string-formatting" class="reference internal">7.1.4. Old string formatting</a>
+  - <a href="#reading-and-writing-files" class="reference internal">7.2. Reading and Writing Files</a>
+    - <a href="#methods-of-file-objects" class="reference internal">7.2.1. Methods of File Objects</a>
+    - <a href="#saving-structured-data-with-json" class="reference internal">7.2.2. Saving structured data with <code class="sourceCode python">json</code></a>
 
 #### Previous topic
 
@@ -367,20 +364,20 @@ Contrary to <a href="#tut-json" class="reference internal"><span class="std std-
 
 ### This Page
 
--   [Report a Bug](https://docs.python.org/3/bugs.html)
--   [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/inputoutput.rst)
+- [Report a Bug](https://docs.python.org/3/bugs.html)
+- [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/inputoutput.rst)
 
 ### Navigation
 
--   [index](https://docs.python.org/3/genindex.html "General Index")
--   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
--   [next](errors.html "8. Errors and Exceptions") |
--   [previous](modules.html "6. Modules") |
--   ![](../_static/py.png)
--   [Python](https://www.python.org/) »
--   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
--   [The Python Tutorial](index.html) »
--   
+- [index](https://docs.python.org/3/genindex.html "General Index")
+- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+- [next](errors.html "8. Errors and Exceptions") |
+- [previous](modules.html "6. Modules") |
+- ![](../_static/py.png)
+- [Python](https://www.python.org/) »
+- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+- [The Python Tutorial](index.html) »
+-
 
 © [Copyright](https://docs.python.org/3/copyright.html) 2001-2021, Python Software Foundation.  
 The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)
