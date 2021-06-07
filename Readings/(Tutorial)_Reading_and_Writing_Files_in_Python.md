@@ -1,4 +1,5 @@
-# (Tutorial) Reading and Writing Files in Python
+(Tutorial) Reading and Writing Files in Python
+==============================================
 
 > Learn how to read and write data into flat files, such as CSV, JSON, text files, and binary files in Python using io and os modules.
 
@@ -8,16 +9,17 @@ As a data scientist, you handle a lot of data daily. And this data could be from
 
 You would also learn about the following topics in this tutorial:
 
-- Python file object
-- How to `open` a basic flat file like `.csv`, `json`, etc. and `read` data from a file
-- Write data to a file
-- You’ll also see some Python file object attributes
-- You would also dig into the Python os module
-- You would also learn about the `NumPy` library and how it can be used to import `Image` datasets
+-   Python file object
+-   How to `open` a basic flat file like `.csv`, `json`, etc. and `read` data from a file
+-   Write data to a file
+-   You’ll also see some Python file object attributes
+-   You would also dig into the Python os module
+-   You would also learn about the `NumPy` library and how it can be used to import `Image` datasets
 
 First, let’s understand the difference between flat files and non-flat files.
 
-## Flat Files vs. Non-Flat Files
+Flat Files vs. Non-Flat Files
+-----------------------------
 
 Flat files are data files that contain records with no structured relationships between the records, and there’s also no structure for indexing like you typically find it in relational databases. These files can contain only basic formatting, have a small fixed number of fields, and can or can not have a file format.
 
@@ -33,23 +35,24 @@ A non-flat file is a file where an index is assigned to every record. The exact 
 
 A flat file can be a plain text file having a `TSV`, `CSV` format, or a binary file format. In the former case, the files usually contain one record per line:
 
-- Comma Separated Values (CSV) files, which contain data values that are separated by `,` for example:
+-   Comma Separated Values (CSV) files, which contain data values that are separated by `,` for example:
 
-      NAME,ADDRESS,EMAIL
-      ABC,CITY A,abc@xyz.com
-      LMN,CITY B,lmn@xyz.com
-      PQR,CITY C,pqr@xyz.com
+        NAME,ADDRESS,EMAIL
+        ABC,CITY A,abc@xyz.com
+        LMN,CITY B,lmn@xyz.com
+        PQR,CITY C,pqr@xyz.com
 
-- Delimited files, which contain data values with a user-specified delimiter. This can be a `\t` tab or a symbol (`#`,`&`,`||`), for example:
+-   Delimited files, which contain data values with a user-specified delimiter. This can be a `\t` tab or a symbol (`#`,`&`,`||`), for example:
 
-      NAME||ADDRESS||EMAIL
-      ABC||CITY A||abc@xyz.com
-      LMN||CITY B||lmn@xyz.com
-      PQR||CITY C||pqr@xyz.com
+        NAME||ADDRESS||EMAIL
+        ABC||CITY A||abc@xyz.com
+        LMN||CITY B||lmn@xyz.com
+        PQR||CITY C||pqr@xyz.com
 
-  Let’s now understand how Python creates and reads these types of file formats having specific delimiters.
+    Let’s now understand how Python creates and reads these types of file formats having specific delimiters.
 
-## Python File Objects
+Python File Objects
+-------------------
 
 Python has in-built functions to create, read, write, and manipulate accessible files. The `io` module is the default module for accessing files that can be used off the shelf without even importing it. Before you read, write, or manipulate the file, you need to make use of the module `open(filename, access_mode)` that returns a file object called “handle”. After which you can simply use this handle to read from or write to a file. Like everything else, files in Python are also treated as an object, which has its own attributes and methods.
 
@@ -57,8 +60,8 @@ An IOError exception is raised if, while opening the file, the operation fails. 
 
 As you already read before, there are two types of flat files, text and binary files:
 
-- As you might have expected from reading the previous section, text files have an End-Of-Line (EOL) character to indicate each line’s termination. In Python, the new line character (`\n`) is the default EOL terminator.
-- Since binary files store data after converting it into a binary language (0s and 1s), there is no EOL character. This file type returns bytes. This file is used when dealing with non-text files such as images, `.exe`, or `.pyc`.
+-   As you might have expected from reading the previous section, text files have an End-Of-Line (EOL) character to indicate each line’s termination. In Python, the new line character (`\n`) is the default EOL terminator.
+-   Since binary files store data after converting it into a binary language (0s and 1s), there is no EOL character. This file type returns bytes. This file is used when dealing with non-text files such as images, `.exe`, or `.pyc`.
 
 Let’s now understand the Python file objects in detail, along with necessary examples.
 
@@ -76,7 +79,7 @@ Let’s understand the first argument, i.e., `file`.
 
 To put it simply, the `file` argument represents the path where your file resides in your system.
 
-If the path is in the current working directory, you can just provide the filename. If not then you have to provide the absolute path of the file, just like in the following examples: my_file_handle=open(“mynewtextfile.txt”) If the file resides in a directory other than the current directory, you have to provide the absolute path with the file name:
+If the path is in the current working directory, you can just provide the filename. If not then you have to provide the absolute path of the file, just like in the following examples: my\_file\_handle=open(“mynewtextfile.txt”) If the file resides in a directory other than the current directory, you have to provide the absolute path with the file name:
 
     my_file_handle=open("D://test.txt")
     my_file_handle.read()
@@ -122,10 +125,10 @@ Let’s understand the second argument of the `open` function, i.e., `access mod
 
 Access modes define in which way you want to open a file, whether you want to open a file in:
 
-- read-only mode
-- write-only mode
-- append mode
-- both read and write mode
+-   read-only mode
+-   write-only mode
+-   append mode
+-   both read and write mode
 
 Though a lot of access modes exist as shown in the below table, the most commonly used ones are read and write modes. It specifies where you want to start reading or writing in the file.
 
@@ -141,9 +144,9 @@ As you have seen in the first section, there are two types of flat files. This i
 
 Let’s try out all the reading methods for reading from a file, and you will also explore the access modes along with it! There are three ways to read from a file.
 
-- `read([n])`
-- `readline([n])`
-- `readlines()`
+-   `read([n])`
+-   `readline([n])`
+-   `readlines()`
 
 Here `n` is the number of bytes to be read. If nothing is passed to `n`, then the complete file is considered to be read.
 
@@ -218,8 +221,8 @@ The `readlines()` method maintains a list of each line in the file which can be 
 
 You can use three methods to write to a file in Python:
 
-- `write(string)` (for text) or `write(byte_string)` (for binary)
-- `writelines(list)`
+-   `write(string)` (for text) or `write(byte_string)` (for binary)
+-   `writelines(list)`
 
 Let’s create a new file. The following will create a new file in the specified folder because it does not exist. `Remember` to give correct path with correct filename; otherwise, you will get an error:
 
@@ -315,35 +318,35 @@ End-relative seeks such as `seek(-2,2)` are not allowed if file mode does not in
 
 ### Importing the Moby Dick Novel
 
-Moby Dick is an 1851 novel by American writer Herman Melville. You’ll be working with the file moby_dick.txt. It is a text file that contains the opening sentences of Moby Dick, one of the great American novels! Here you’ll get experience opening a text file, printing its contents, and, finally, closing it.
+Moby Dick is an 1851 novel by American writer Herman Melville. You’ll be working with the file moby\_dick.txt. It is a text file that contains the opening sentences of Moby Dick, one of the great American novels! Here you’ll get experience opening a text file, printing its contents, and, finally, closing it.
 
-You can download the moby dick text file from [here](<https://github.com/wblakecannon/DataCamp/blob/master/05-importing-data-in-python-(part-1)/_datasets/moby_dick.txt>).
+You can download the moby dick text file from [here](https://github.com/wblakecannon/DataCamp/blob/master/05-importing-data-in-python-(part-1)/_datasets/moby_dick.txt).
 
 You will do the following things:
 
-- Open the moby_dick.txt file in read-only mode and store it in the variable file
-- Print the contents of the file
-- Check whether the file is closed
-- Close the file using the close() method
-- Check again whether the file is closed
+-   Open the moby\_dick.txt file in read-only mode and store it in the variable file
+-   Print the contents of the file
+-   Check whether the file is closed
+-   Close the file using the close() method
+-   Check again whether the file is closed
 
-  file = open(‘moby_dick.txt’, ‘r’)
+    file = open(‘moby\_dick.txt’, ‘r’)
 
-  print(file.read()) print(‘’)
+    print(file.read()) print(‘’)
 
-  print(‘Is the file closed?:’, file.closed)
+    print(‘Is the file closed?:’, file.closed)
 
-  file.close() print(‘’)
+    file.close() print(‘’)
 
-  print(‘Is the file closed?:’, file.closed)
+    print(‘Is the file closed?:’, file.closed)
 
-  CHAPTER 1. Loomings.
+    CHAPTER 1. Loomings.
 
-  Call me Ishmael. Some years ago–never mind how long precisely–having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people’s hats off–then, I account it high time to get to sea as soon as I can. This is my substitute for pistol and ball. With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship. There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the same feelings towards the ocean with me.
+    Call me Ishmael. Some years ago–never mind how long precisely–having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people’s hats off–then, I account it high time to get to sea as soon as I can. This is my substitute for pistol and ball. With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship. There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the same feelings towards the ocean with me.
 
-  Is the file closed?: False
+    Is the file closed?: False
 
-  Is the file closed?: True
+    Is the file closed?: True
 
 #### Reading the Moby Dick Novel using Context Manager
 
@@ -481,22 +484,22 @@ Buffering is useful when you don’t know the size of the file you are working w
 
 Optionally, you can pass an integer to `buffering` to set the buffering policy:
 
-- `0` to switch off buffering (only allowed in binary mode)
-- `1` to select line buffering (only usable in text mode)
-- Any integer that is bigger than `1` to indicate the size in bytes of a fixed-size chunk buffer
-- Use negative values to set the buffering policy to the system default
+-   `0` to switch off buffering (only allowed in binary mode)
+-   `1` to select line buffering (only usable in text mode)
+-   Any integer that is bigger than `1` to indicate the size in bytes of a fixed-size chunk buffer
+-   Use negative values to set the buffering policy to the system default
 
 When you don’t specify any policy, the default is:
 
-- Binary files are buffered in fixed-size chunks
-- The size of the buffer is chosen depending on the underlying device’s “block size”. On many systems, the buffer will typically be 4096 or 8192 bytes long.
-- “Interactive” text files (files for which `isatty()` returns `True`) use line buffering. Other text files use the policy described above for binary files. Note that `isatty()` can be used to see if you’re connected to a Tele-TYpewriter(-like) device.
+-   Binary files are buffered in fixed-size chunks
+-   The size of the buffer is chosen depending on the underlying device’s “block size”. On many systems, the buffer will typically be 4096 or 8192 bytes long.
+-   “Interactive” text files (files for which `isatty()` returns `True`) use line buffering. Other text files use the policy described above for binary files. Note that `isatty()` can be used to see if you’re connected to a Tele-TYpewriter(-like) device.
 
-  import io print(“Default buffer size:”,io.DEFAULT_BUFFER_SIZE) file=open(“test1.txt”,mode=“r”,buffering=5) print(file.line_buffering) file_contents=file.buffer for line in file_contents: print(line)
+    import io print(“Default buffer size:”,io.DEFAULT\_BUFFER\_SIZE) file=open(“test1.txt”,mode=“r”,buffering=5) print(file.line\_buffering) file\_contents=file.buffer for line in file\_contents: print(line)
 
-  Default buffer size: 8192 False b’1st line’ b’2nd line’ b’3rd line’ b’4th line’ b’5th line’
+    Default buffer size: 8192 False b’1st line’ b’2nd line’ b’3rd line’ b’4th line’ b’5th line’
 
-**Note** that if you are using all arguments in the order that is specified in `open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)`, you don’t need to write argument name! If you skip arguments because you want to keep the default values, it’s better to write everything out in full.
+**Note** that if you are using all arguments in the order that is specified in `open(file, mode='r', buffering=-1, encoding=None, errors=None,         newline=None, closefd=True, opener=None)`, you don’t need to write argument name! If you skip arguments because you want to keep the default values, it’s better to write everything out in full.
 
 ### Errors
 
@@ -519,9 +522,9 @@ An optional string that specifies how encoding and decoding errors are to be han
 
 `newline` controls how universal newlines mode works (it only applies to text mode). It can be None, ’‘,’\\n’, ‘\\r’, and ‘\\r\\n’. In the example above, you see that passing `None` to `newline` translates `'\r\n'` to `'\n'`.
 
-- **None**:universal newlines mode is enabled. Lines in the input can end in ‘\\n’, ‘\\r’, or ‘\\r\\n’, and these are translated into default line separator
-- **" "**:universal newlines mode is enabled, but line endings are returned not translated
-- **‘\\n’,‘\\r’, ‘\\r\\n’**:Input lines are only terminated by the given string, and the line ending is not translated.
+-   **None**:universal newlines mode is enabled. Lines in the input can end in ‘\\n’, ‘\\r’, or ‘\\r\\n’, and these are translated into default line separator
+-   **" "**:universal newlines mode is enabled, but line endings are returned not translated
+-   **‘\\n’,‘\\r’, ‘\\r\\n’**:Input lines are only terminated by the given string, and the line ending is not translated.
 
 Note that universal newlines are a manner of interpreting text streams in which all of the following are recognized as ending a line: the Unix end-of-line convention ‘\\n’, the Windows convention ‘\\r\\n’, and the old Macintosh convention ‘\\r’.
 
@@ -723,7 +726,7 @@ Let’s see some examples of these methods:
 
     FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'my_folder'
 
-The next code chunk will create a folder named my_folder:
+The next code chunk will create a folder named my\_folder:
 
     open("my_folder\\newfile.txt","w")
     print("Contents of folder my_folder\n",os.listdir("my_folder"))
@@ -773,7 +776,7 @@ It is also useful for packages like `Pandas` and `Scikit-learn`. NumPy consists 
 
 #### MNIST data
 
-The sample MNIST `.csv` dataset can be downloaded from [here](<https://github.com/wblakecannon/DataCamp/blob/master/05-importing-data-in-python-(part-1)/_datasets/mnist_kaggle_some_rows.csv>).
+The sample MNIST `.csv` dataset can be downloaded from [here](https://github.com/wblakecannon/DataCamp/blob/master/05-importing-data-in-python-(part-1)/_datasets/mnist_kaggle_some_rows.csv).
 
 You can find more information about the MNIST dataset from [here](http://yann.lecun.com/exdb/mnist/) on the webpage of Yann LeCun.
 
@@ -807,7 +810,8 @@ Let’s check the number of rows and columns this dataset has:
 
 If you would like to learn more great ways to handle data in Python then check out [this tutorial](https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python).
 
-## Conclusion
+Conclusion
+----------
 
 Congratulations on finishing the tutorial.
 

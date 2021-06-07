@@ -1,12 +1,15 @@
-# Practice Exercises for problem solving
+Practice Exercises for problem solving
+======================================
 
-## Overview
+Overview
+--------
 
 In this section, you’ll have a chance to practice the concepts you’ve learned in the videos. First, review the core concepts covered that you’ll need to keep in mind. Then go through the exercises below.
 
 Remember, these are for your own benefit. Feel free to skip them if you don’t find a particular exercise valuable or you get stuck for too long.
 
-## Core concepts
+Core concepts
+-------------
 
 ### Michael’s problem solving techniques
 
@@ -20,7 +23,8 @@ Here are a few of the ideas I use to get traction while solving a problem
 6.  Remember this is **part of the journey**.
 7.  **Just start**, you can adjust as you go and learn more.
 
-## Exercises
+Exercises
+---------
 
 Now it’s your turn. For this round, you get to dive into a similar experience as we had building [**Tic Tac Toe**](https://www.google.com/search?client=firefox-b-1-d&q=Tic+Tac+Toe) in the videos.
 

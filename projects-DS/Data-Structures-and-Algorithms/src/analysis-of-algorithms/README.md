@@ -1,10 +1,12 @@
-# Analysis of Algorithms
+Analysis of Algorithms
+======================
 
 Analysis of the running time of various code snippets with respect to the input size of `n`.
 
----
+------------------------------------------------------------------------
 
-## a.
+a.
+--
 
     a = 0
     while a < n * n * n:
@@ -30,9 +32,10 @@ Another way to think about this: How many times do we we add `n * n` to get `n *
 
 If `n = 5`: `(5 * 5) + (5 * 5) + (5 * 5) + (5 * 5) + (5 * 5)`
 
----
+------------------------------------------------------------------------
 
-## b.
+b.
+--
 
     # array is of length n
     i = len(array) - 1
@@ -44,9 +47,10 @@ If `n = 5`: `(5 * 5) + (5 * 5) + (5 * 5) + (5 * 5) + (5 * 5)`
 
 The value of `i` is halved on each iteration of the loop.
 
----
+------------------------------------------------------------------------
 
-## c.
+c.
+--
 
     sum = 0;
     for (i = 0; i < sqrt(n) / 2; i++)
@@ -56,9 +60,10 @@ The value of `i` is halved on each iteration of the loop.
 
 The outer for loop grows with the size of `√n`. The `√n / 2` is a constant operation, as are the two inner for loops, so they’re not considered.
 
----
+------------------------------------------------------------------------
 
-## d.
+d.
+--
 
     sum = 0;
     for (i = 1; i < n; i *= 2) for (j = 0; j < n; j++) sum++;
@@ -67,9 +72,10 @@ The outer for loop grows with the size of `√n`. The `√n / 2` is a constant o
 
 Both for loops will grow as `n` grows, but the inner for loop is linear, and the outer for loop is logarithmic since `i` doubles with each iteration.
 
----
+------------------------------------------------------------------------
 
-## e.
+e.
+--
 
     sum = 0;
     for (i = 0; i < n; i++)
@@ -78,11 +84,12 @@ Both for loops will grow as `n` grows, but the inner for loop is linear, and the
 
 ### Cubic — O(n³)
 
-The inner-most for loop is considered constant (it only _ever_ iterates up to 10 and doesn’t grow with input size `n`), whereas the other 3 for loops are linear and grows with `n`.
+The inner-most for loop is considered constant (it only *ever* iterates up to 10 and doesn’t grow with input size `n`), whereas the other 3 for loops are linear and grows with `n`.
 
----
+------------------------------------------------------------------------
 
-## f.
+f.
+--
 
     // bunnies === n
     const bunnyEars = (bunnies) => {
@@ -108,9 +115,10 @@ If `n = 4`:
 
     2 + 2 + 2 + 2 + 0 = 8
 
----
+------------------------------------------------------------------------
 
-## g.
+g.
+--
 
     // arraySize === n
     const search = (array, arraySize, target) => {
@@ -125,8 +133,8 @@ If `n = 4`:
 
 The number of recursive calls grows with the input size of `n`. This function is linear since each recursive call decrements `n` by 1 until the base case of `arraySize > 0` is reached or the `target` is found.
 
----
+------------------------------------------------------------------------
 
-#### _Resources_
+#### *Resources*
 
-_[Time-complexity of various Python operations](https://wiki.python.org/moin/TimeComplexity)_
+*[Time-complexity of various Python operations](https://wiki.python.org/moin/TimeComplexity)*

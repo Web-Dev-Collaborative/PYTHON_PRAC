@@ -1,4 +1,5 @@
-## Step 2: Create a variable which is a whole number, compute the square and cube of it
+Step 2: Create a variable which is a whole number, compute the square and cube of it
+------------------------------------------------------------------------------------
 
     >>> num = 4
     >>> sqr = num * num

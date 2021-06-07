@@ -1,30 +1,34 @@
-# Tree
+Tree
+====
 
 A **tree** is a non-linear data structure that simulates a hierarchical tree structure.
 
-- [General Tree](#general-tree)
-- [Binary Tree](binary-tree)
-- [Binary Search Tree](binary-search-tree)
-- [Traversal](../../algorithms/tree)
-- [Terminology](#terminology)
+-   [General Tree](#general-tree)
+-   [Binary Tree](binary-tree)
+-   [Binary Search Tree](binary-search-tree)
+-   [Traversal](../../algorithms/tree)
+-   [Terminology](#terminology)
 
-## General Tree
+General Tree
+------------
 
 <img src="../../../assets/k-ary_tree.svg" width="600" />
 
-A **general tree**, or _k_-ary tree, is made up of **nodes** (or **vertices**) connected by **edges**.
+A **general tree**, or *k*-ary tree, is made up of **nodes** (or **vertices**) connected by **edges**.
 
 A tree has a **root** node and potentially many **levels** of an arbitrary number of **children** that form a hierarchy.
 
 If a node is connected to other nodes below it, that node is called the **parent** node, and the nodes following it are called **child** nodes. Each node in the tree can be see as a **subtree**.
 
-## Constraints
+Constraints
+-----------
 
-- A child has only _one_ parent and the root node has _no_ parent.
+-   A child has only *one* parent and the root node has *no* parent.
 
-_Note: A tree is a graph without cycles._
+*Note: A tree is a graph without cycles.*
 
-## Common Operations
+Common Operations
+-----------------
 
 #### Insert
 
@@ -42,7 +46,8 @@ Returns the minimum or maximum value in the tree.
 
 Removes a node from the tree.
 
-## Terminology
+Terminology
+-----------
 
 #### Root
 
@@ -100,10 +105,10 @@ The height of a tree is the height of its root node.
 
 A forest is a set of `n ≥ 0` disjoint trees.
 
----
+------------------------------------------------------------------------
 
-#### _References_
+#### *References*
 
-\_[Wikipedia — Tree (data structure)](<https://en.wikipedia.org/wiki/Tree_(data*structure)>)\*
+\_[Wikipedia — Tree (data structure)](https://en.wikipedia.org/wiki/Tree_(data*structure))\*
 
 [↑](#tree)

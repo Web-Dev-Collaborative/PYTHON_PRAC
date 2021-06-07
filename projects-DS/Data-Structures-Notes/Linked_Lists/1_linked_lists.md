@@ -1,4 +1,5 @@
-# Lecture 1: Linked Lists
+Lecture 1: Linked Lists
+=======================
 
 1.  [Additional Resources](#Additional-Resources)
 2.  [Arrays](#Arrays)
@@ -14,21 +15,23 @@
 
 [CS19 Brian Doyle Lecture](https://youtu.be/CyrHCJnFqLA)
 
-## Additional Resources
+Additional Resources
+--------------------
 
 [Pre-Class: The Queue Data Structure](https://youtu.be/j-fBJpSQ19g)
 
 [Pre-Class: The Linked List Data Structure](https://youtu.be/7sk4jG83q80)
 
-## Arrays
+Arrays
+------
 
 What is an array and how do they work?
 
-- They have a fixed length/size
-- A sequence of contiguous objects of the same type, storing data
-- Index based with a value
-- Time and Space efficient
-- Fast at inserting to the end, slow at inserting to the beginning (because all objects in the array are shifted one space to the right if there is available space OR a new copy of the array is made if there is no available space)
+-   They have a fixed length/size
+-   A sequence of contiguous objects of the same type, storing data
+-   Index based with a value
+-   Time and Space efficient
+-   Fast at inserting to the end, slow at inserting to the beginning (because all objects in the array are shifted one space to the right if there is available space OR a new copy of the array is made if there is no available space)
 
 > 01 01 was a race horse  
 > 10 10 was one too  
@@ -47,9 +50,9 @@ array\[5\] would point to the 20th bit because 5 \* 4 = 20.
 
 If we know that we want an array of 3, 12 bits of memory will be set aside for this array (3 \* 4 = 12).
 
-If we want to decrease the size of that array, we can easily indicate that the memory for that array is _less_ than 12 bits.
+If we want to decrease the size of that array, we can easily indicate that the memory for that array is *less* than 12 bits.
 
-But if we want to _add_ to the array, we have to first check _if_ the memory next to the end of the current array is already allocated.
+But if we want to *add* to the array, we have to first check *if* the memory next to the end of the current array is already allocated.
 
 If that memory is not already allocated, we can use it to expand the array. But if it is taken, how do we expand the array?
 
@@ -65,7 +68,8 @@ Not all languages de-allocate automatically. In Python it does, but in C, you ha
 
 For more in-depth information about how arrays work, [read here](https://github.com/juliejonak/Hash-Tables-Notes#Arrays).
 
-## LIFO/FILO
+LIFO/FILO
+---------
 
 > LIFO = Last In First Out  
 > FILO = First In Last Out
@@ -74,7 +78,8 @@ We can think of stacks like vertical stacks of paper on a desk. We add to the to
 
 You can also think of LIFO/FILO with your email inbox. Most people work through their email inbox from the top down (newest to oldest). Or, a social medai feed. The most recent thing would be considered the most important.
 
-## Queue
+Queue
+-----
 
 [TK: Queues](https://learn.lambdaschool.com/cs/module/recMcvOrFw5BWUku3)
 
@@ -88,7 +93,8 @@ Queues function the same way where they handle the oldest items first.
 
 Learn more about [LIFO v FIFO](https://www.geeksforgeeks.org/fifo-vs-lifo-approach-in-programming/).
 
-## Linked Lists
+Linked Lists
+------------
 
 [TK: Linked Lists](https://learn.lambdaschool.com/cs/module/rec3MaMAY78iDm7ax)
 
@@ -102,9 +108,9 @@ A linked list might be better represented as a bead necklace - little nodes conn
 
 ![Arrays v Linked Lists](Array_LList.png "Arrays v Linked Lists")
 
-Arrays _have_ to be contiguous because they are data stored next to each other in memory. In the bits, the allocated memory must always have a value – it isn’t null in memory. It’s either a 0 or a 1. No matter if we aren’t storing a value, a 0 is still being read. That position in memory is always being read, so even if it’s “empty”, it’ll be _read_ as nothing. (That memory is either still reserved for the array or marked as not in use, but probably contains unused data.)
+Arrays *have* to be contiguous because they are data stored next to each other in memory. In the bits, the allocated memory must always have a value – it isn’t null in memory. It’s either a 0 or a 1. No matter if we aren’t storing a value, a 0 is still being read. That position in memory is always being read, so even if it’s “empty”, it’ll be *read* as nothing. (That memory is either still reserved for the array or marked as not in use, but probably contains unused data.)
 
-Linked Lists are _not_ contiguous. The parts can exist in separate blocks of memory, pointing from one to the next.
+Linked Lists are *not* contiguous. The parts can exist in separate blocks of memory, pointing from one to the next.
 
 If we have a grocery list like so:
 
@@ -139,7 +145,8 @@ In this way, updating items in a Linked List is more time and space efficient th
 
 With the Linked List, we add a new node and update the previous node’s pointer. It’s quick and easy.
 
-## What are the advantages of each data structure?
+What are the advantages of each data structure?
+-----------------------------------------------
 
 If our memory is already being used up by other applications - there are available spots but not that many. If we use an array, we need that specific size of continuous space for that array. A linked list is more memory flexible by using the available spaces.
 
@@ -173,7 +180,8 @@ No matter how big the linked list is, the run time is constant `O(1)`.
 
 Adding or removing from the end of the linked list retains the same run time as an array too - so it’s more efficient overall and equally efficient to the array’s best case scenario.
 
-## Implementing Linked Lists
+Implementing Linked Lists
+-------------------------
 
 Typically with linked list implementations, there’s a node class and a linked list class (which builds on top of the node class). Let’s start building one in our [linked list python file](linked_list.py).
 
@@ -182,7 +190,7 @@ Typically with linked list implementations, there’s a node class and a linked 
             self.value = value
             self.next_node = next_node
 
-Our Node class starts with a value that defaults to none and a next_node that also defaults to None. We’ll also add some methods:
+Our Node class starts with a value that defaults to none and a next\_node that also defaults to None. We’ll also add some methods:
 
     class Node:
         def __init__(self, value=None, next_node=None):
@@ -209,7 +217,7 @@ To traverse a linked list, you have to start at the head node and keep moving th
 
 This is one of the major reasons arrays are more commonly used because indexing is useful.
 
-We’ll also adds a method to add a tail to the end of our linked list. Thinking about the way that adding a new item to the linked list is by creating a new node, the re-write the previous next_node reference to the new node, and then re-write the Tail Reference to this new node.
+We’ll also adds a method to add a tail to the end of our linked list. Thinking about the way that adding a new item to the linked list is by creating a new node, the re-write the previous next\_node reference to the new node, and then re-write the Tail Reference to this new node.
 
     class LinkedList:
         def __init__(self):
@@ -279,7 +287,7 @@ Now our Linked List class will look like this with the If/Else setup handling th
                 self.tail.set_next(new_node)
                 self.tail = new_node
 
-Now let’s add a remove head method. We need to take the old_head’s value, and update it to the next_node, then remove that node.
+Now let’s add a remove head method. We need to take the old\_head’s value, and update it to the next\_node, then remove that node.
 
             def remove_head(self):
                 # Store reference to node being removed to return value
@@ -293,7 +301,7 @@ A double linked list would imply that the flow of pointers goes in both directio
 
 > H -&gt; x -&gt; x -&gt; x -&gt; T
 
-A linked list where the nodes point to both the previous _and_ next node, then that is a doubly linked list, like so:
+A linked list where the nodes point to both the previous *and* next node, then that is a doubly linked list, like so:
 
 > H &lt;-&gt; x &lt;-&gt; x &lt;-&gt; x &lt;-&gt; T
 
@@ -307,7 +315,7 @@ We’ll check and return `None` if that is the case.
 
 Then the `self.head` will equal s`elf.tail`, because the head reference and tail reference will be to the same node.
 
-We’ll set our reference to the old_head and then update the current head and tail to None, since removing this single Node would mean there is no node left (empty list)
+We’ll set our reference to the old\_head and then update the current head and tail to None, since removing this single Node would mean there is no node left (empty list)
 
                 # what if our list is empty?
                 if not self.head and not self.tail:
@@ -319,7 +327,8 @@ We’ll set our reference to the old_head and then update the current head and t
                     self.tail = None
                     return old_head.get_value()
 
-## Iterating Through a Linked List
+Iterating Through a Linked List
+-------------------------------
 
 How can we iterate through a linked list, looking for a target value?
 

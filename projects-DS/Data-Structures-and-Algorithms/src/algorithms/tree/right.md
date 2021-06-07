@@ -2,7 +2,7 @@
 
 [&lt;Go Back&gt;](../right.html)
 
-[breadth-f...search](breadth-first-search/right.html)
+[breadth-f…search](breadth-first-search/right.html)
 
 [depth-first-search](depth-first-search/right.html)
 

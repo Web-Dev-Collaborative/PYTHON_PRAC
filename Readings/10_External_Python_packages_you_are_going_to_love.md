@@ -1,4 +1,5 @@
-# 10 External Python packages you are going to love
+10 External Python packages you are going to love
+=================================================
 
 > by Adam Goldschmidt 10 External Python packages you are going to lovePhoto by Brina Blum on UnsplashPython is an experiment in how much freedom programmers need. Too much freedom and nobody can read another’s code; too little and expressiveness is endangered. - Guido van RossumThis freedom that Guido talks
 
@@ -92,6 +93,6 @@ As I said before, this is the package I currently use as my standard static type
 
 ![](https://cdn-media-1.freecodecamp.org/images/dQoUny7l5N6sWs2GCECZKHALf59t9398hNNp)
 
-I have tried many Python formatters, and `black` is clearly my favourite. The syntax looks neat, and the command line runs quick and can either check the files or actually edit them - very useful for CI/CD. You can even try it [here!](<chrome-extension://cjedbglnccaioiolemnfhjncicchinao/%5Bhttps://black.now.sh%5D(https://black.now.sh/)>)
+I have tried many Python formatters, and `black` is clearly my favourite. The syntax looks neat, and the command line runs quick and can either check the files or actually edit them - very useful for CI/CD. You can even try it [here!](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/%5Bhttps://black.now.sh%5D(https://black.now.sh/))
 
 #### [flask](https://github.com/pallets/flask)

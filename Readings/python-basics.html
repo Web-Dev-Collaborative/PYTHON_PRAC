@@ -24,180 +24,6 @@
         width: 50%;
       }
     </style>
-    <style type="text/css">
-      a.sourceLine {
-        display: inline-block;
-        line-height: 1.25;
-      }
-      a.sourceLine {
-        pointer-events: none;
-        color: inherit;
-        text-decoration: inherit;
-      }
-      a.sourceLine:empty {
-        height: 1.2em;
-      }
-      .sourceCode {
-        overflow: visible;
-      }
-      code.sourceCode {
-        white-space: pre;
-        position: relative;
-      }
-      div.sourceCode {
-        margin: 1em 0;
-      }
-      pre.sourceCode {
-        margin: 0;
-      }
-      @media screen {
-        div.sourceCode {
-          overflow: auto;
-        }
-      }
-      @media print {
-        code.sourceCode {
-          white-space: pre-wrap;
-        }
-        a.sourceLine {
-          text-indent: -1em;
-          padding-left: 1em;
-        }
-      }
-      pre.numberSource a.sourceLine {
-        position: relative;
-        left: -4em;
-      }
-      pre.numberSource a.sourceLine::before {
-        content: attr(title);
-        position: relative;
-        left: -1em;
-        text-align: right;
-        vertical-align: baseline;
-        border: none;
-        pointer-events: all;
-        display: inline-block;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        padding: 0 4px;
-        width: 4em;
-        color: #aaaaaa;
-      }
-      pre.numberSource {
-        margin-left: 3em;
-        border-left: 1px solid #aaaaaa;
-        padding-left: 4px;
-      }
-      div.sourceCode {
-      }
-      @media screen {
-        a.sourceLine::before {
-          text-decoration: underline;
-        }
-      }
-      code span.al {
-        color: #ff0000;
-        font-weight: bold;
-      } /* Alert */
-      code span.an {
-        color: #60a0b0;
-        font-weight: bold;
-        font-style: italic;
-      } /* Annotation */
-      code span.at {
-        color: #7d9029;
-      } /* Attribute */
-      code span.bn {
-        color: #40a070;
-      } /* BaseN */
-      code span.bu {
-      } /* BuiltIn */
-      code span.cf {
-        color: #007020;
-        font-weight: bold;
-      } /* ControlFlow */
-      code span.ch {
-        color: #4070a0;
-      } /* Char */
-      code span.cn {
-        color: #880000;
-      } /* Constant */
-      code span.co {
-        color: #60a0b0;
-        font-style: italic;
-      } /* Comment */
-      code span.cv {
-        color: #60a0b0;
-        font-weight: bold;
-        font-style: italic;
-      } /* CommentVar */
-      code span.do {
-        color: #ba2121;
-        font-style: italic;
-      } /* Documentation */
-      code span.dt {
-        color: #902000;
-      } /* DataType */
-      code span.dv {
-        color: #40a070;
-      } /* DecVal */
-      code span.er {
-        color: #ff0000;
-        font-weight: bold;
-      } /* Error */
-      code span.ex {
-      } /* Extension */
-      code span.fl {
-        color: #40a070;
-      } /* Float */
-      code span.fu {
-        color: #06287e;
-      } /* Function */
-      code span.im {
-      } /* Import */
-      code span.in {
-        color: #60a0b0;
-        font-weight: bold;
-        font-style: italic;
-      } /* Information */
-      code span.kw {
-        color: #007020;
-        font-weight: bold;
-      } /* Keyword */
-      code span.op {
-        color: #666666;
-      } /* Operator */
-      code span.ot {
-        color: #007020;
-      } /* Other */
-      code span.pp {
-        color: #bc7a00;
-      } /* Preprocessor */
-      code span.sc {
-        color: #4070a0;
-      } /* SpecialChar */
-      code span.ss {
-        color: #bb6688;
-      } /* SpecialString */
-      code span.st {
-        color: #4070a0;
-      } /* String */
-      code span.va {
-        color: #19177c;
-      } /* Variable */
-      code span.vs {
-        color: #4070a0;
-      } /* VerbatimString */
-      code span.wa {
-        color: #60a0b0;
-        font-weight: bold;
-        font-style: italic;
-      } /* Warning */
-    </style>
   </head>
   <body>
     <h1 id="notes"><strong>Notes</strong></h1>
@@ -214,107 +40,88 @@
       </li>
       <li>
         <p><code>#</code> is used to make comments in your code.</p>
+        <p>
+          def foo(): """ The foo function does many amazing things that you
+          should not question. Just accept that it exists and use it with
+          caution. """ secretThing()
+        </p>
       </li>
-    </ul>
-    <div class="sourceCode" id="cb1">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">def</span> foo():</a>
-<a class="sourceLine" id="cb1-2" title="2">    <span class="co">&quot;&quot;&quot;</span></a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="co">    The foo function does many amazing things that you</span></a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="co">    should not question. Just accept that it exists and</span></a>
-<a class="sourceLine" id="cb1-5" title="5"><span class="co">    use it with caution.</span></a>
-<a class="sourceLine" id="cb1-6" title="6"><span class="co">    &quot;&quot;&quot;</span></a>
-<a class="sourceLine" id="cb1-7" title="7">    secretThing()</a></code></pre>
-    </div>
-    <ul>
       <li>
-        Python has a built in help function that let’s you see a description of
-        the source code without having to navigate to it.
+        <p>
+          Python has a built in help function that let’s you see a description
+          of the source code without having to navigate to it.
+        </p>
       </li>
     </ul>
     <hr />
     <h2 id="numbers"><strong>Numbers</strong></h2>
     <ul>
       <li>
-        Python has three types of numbers:
+        <p>Python has three types of numbers:</p>
         <ul>
           <li>
-            <strong>Integer</strong>
+            <p><strong>Integer</strong></p>
             <ul>
               <li>Positive and Negative Counting Numbers.</li>
               <li>No Decimal Point</li>
               <li>
-                Created by a literal non-decimal pt number or with the
-                <code>int()</code> constructor.
+                <p>
+                  Created by a literal non-decimal pt number or with the
+                  <code>int()</code> constructor.
+                </p>
+                <p>
+                  print(3) # =&gt; 3 print(int(19)) # =&gt; 19 print(int()) #
+                  =&gt; 0
+                </p>
               </li>
             </ul>
-            <div class="sourceCode" id="cb2">
-              <pre
-                class="sourceCode py"
-              ><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1"><span class="bu">print</span>(<span class="dv">3</span>)         <span class="co"># =&gt; 3</span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="bu">print</span>(<span class="bu">int</span>(<span class="dv">19</span>))   <span class="co"># =&gt; 19</span></a>
-<a class="sourceLine" id="cb2-3" title="3"><span class="bu">print</span>(<span class="bu">int</span>())     <span class="co"># =&gt; 0</span></a></code></pre>
-            </div>
             <blockquote>
               <p>Boolean is a subtype of integer in Python.</p>
             </blockquote>
           </li>
           <li>
-            <strong>Floating Point Number</strong>
+            <p><strong>Floating Point Number</strong></p>
             <ul>
-              <li>Decimal Numbers.</li>
+              <li>
+                <p>Decimal Numbers.</p>
+                <p>
+                  print(2.24) # =&gt; 2.24 print(2.) # =&gt; 2.0 print(float())
+                  # =&gt; 0.0 print(27e-5) # =&gt; 0.00027
+                </p>
+              </li>
             </ul>
-            <div class="sourceCode" id="cb3">
-              <pre
-                class="sourceCode py"
-              ><code class="sourceCode python"><a class="sourceLine" id="cb3-1" title="1"><span class="bu">print</span>(<span class="fl">2.24</span>)      <span class="co"># =&gt; 2.24</span></a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="bu">print</span>(<span class="fl">2.</span>)        <span class="co"># =&gt; 2.0</span></a>
-<a class="sourceLine" id="cb3-3" title="3"><span class="bu">print</span>(<span class="bu">float</span>())   <span class="co"># =&gt; 0.0</span></a>
-<a class="sourceLine" id="cb3-4" title="4"><span class="bu">print</span>(<span class="fl">27e-5</span>)     <span class="co"># =&gt; 0.00027</span></a></code></pre>
-            </div>
           </li>
           <li>
-            <strong>Complex Numbers</strong>
+            <p><strong>Complex Numbers</strong></p>
             <ul>
               <li>Consist of a real part and imaginary part.</li>
               <li>
-                The <code>i</code> is switched to a <code>j</code> in
-                programming.
+                <p>
+                  The <code>i</code> is switched to a <code>j</code> in
+                  programming.
+                </p>
+                <p>
+                  print(7j) # =&gt; 7j print(5.1+7.7j)) # =&gt; 5.1+7.7j
+                  print(complex(3, 5)) # =&gt; 3+5j print(complex(17)) # =&gt;
+                  17+0j print(complex()) # =&gt; 0j
+                </p>
               </li>
             </ul>
-            <div class="sourceCode" id="cb4">
-              <pre
-                class="sourceCode py"
-              ><code class="sourceCode python"><a class="sourceLine" id="cb4-1" title="1"><span class="bu">print</span>(7j)              <span class="co"># =&gt; 7j</span></a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="bu">print</span>(<span class="fl">5.1+7.7</span>j))     <span class="co"># =&gt; 5.1+7.7j</span></a>
-<a class="sourceLine" id="cb4-3" title="3"><span class="bu">print</span>(<span class="bu">complex</span>(<span class="dv">3</span>, <span class="dv">5</span>))    <span class="co"># =&gt; 3+5j</span></a>
-<a class="sourceLine" id="cb4-4" title="4"><span class="bu">print</span>(<span class="bu">complex</span>(<span class="dv">17</span>))     <span class="co"># =&gt; 17+0j</span></a>
-<a class="sourceLine" id="cb4-5" title="5"><span class="bu">print</span>(<span class="bu">complex</span>())       <span class="co"># =&gt; 0j</span></a></code></pre>
-            </div>
           </li>
         </ul>
       </li>
       <li>
-        <strong>Type Casting</strong> : The process of converting one number to
-        another.
+        <p>
+          <strong>Type Casting</strong> : The process of converting one number
+          to another.
+        </p>
+        <h1 id="using-float">Using Float</h1>
+        <p>print(17) # =&gt; 17 print(float(17)) # =&gt; 17.0</p>
+        <h1 id="using-int">Using Int</h1>
+        <p>print(17.0) # =&gt; 17.0 print(int(17.0)) # =&gt; 17</p>
+        <h1 id="using-str">Using Str</h1>
+        <p>print(str(17.0) + ’ and ’ + str(17)) # =&gt; 17.0 and 17</p>
       </li>
-    </ul>
-    <div class="sourceCode" id="cb5">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb5-1" title="1"><span class="co"># Using Float</span></a>
-<a class="sourceLine" id="cb5-2" title="2"><span class="bu">print</span>(<span class="dv">17</span>)               <span class="co"># =&gt; 17</span></a>
-<a class="sourceLine" id="cb5-3" title="3"><span class="bu">print</span>(<span class="bu">float</span>(<span class="dv">17</span>))        <span class="co"># =&gt; 17.0</span></a>
-<a class="sourceLine" id="cb5-4" title="4"></a>
-<a class="sourceLine" id="cb5-5" title="5"><span class="co"># Using Int</span></a>
-<a class="sourceLine" id="cb5-6" title="6"><span class="bu">print</span>(<span class="fl">17.0</span>)             <span class="co"># =&gt; 17.0</span></a>
-<a class="sourceLine" id="cb5-7" title="7"><span class="bu">print</span>(<span class="bu">int</span>(<span class="fl">17.0</span>))        <span class="co"># =&gt; 17</span></a>
-<a class="sourceLine" id="cb5-8" title="8"></a>
-<a class="sourceLine" id="cb5-9" title="9"><span class="co"># Using Str</span></a>
-<a class="sourceLine" id="cb5-10" title="10"><span class="bu">print</span>(<span class="bu">str</span>(<span class="fl">17.0</span>) <span class="op">+</span> <span class="st">&#39; and &#39;</span> <span class="op">+</span> <span class="bu">str</span>(<span class="dv">17</span>))        <span class="co"># =&gt; 17.0 and 17</span></a></code></pre>
-    </div>
-    <ul>
       <li>
         <p>
           The arithmetic operators are the same between JS and Python, with two
@@ -325,11 +132,7 @@
           <li>“//” : Integer Division.</li>
         </ul>
       </li>
-      <li>
-        <blockquote>
-          <p>There are no spaces between math operations in Python.</p>
-        </blockquote>
-      </li>
+      <li><p>There are no spaces between math operations in Python.</p></li>
       <li>
         <p>
           Integer Division gives the other part of the number from Module; it is
@@ -361,97 +164,80 @@
           <code>'Jodi asked, "What\'s up, Sam?"'</code>
         </p>
       </li>
-      <li><p>Multiline strings use triple quotes.</p></li>
-    </ul>
-    <div class="sourceCode" id="cb6">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb6-1" title="1"><span class="bu">print</span>(<span class="st">&#39;&#39;&#39;My instructions are very long so to make them</span></a>
-<a class="sourceLine" id="cb6-2" title="2"><span class="st">more readable in the code I am putting them on</span></a>
-<a class="sourceLine" id="cb6-3" title="3"><span class="st">more than one line. I can even include &quot;quotes&quot;</span></a>
-<a class="sourceLine" id="cb6-4" title="4"><span class="st">of any kind because they won&#39;t get confused with</span></a>
-<a class="sourceLine" id="cb6-5" title="5"><span class="st">the end of the string!&#39;&#39;&#39;</span>)</a></code></pre>
-    </div>
-    <ul>
+      <li>
+        <p>Multiline strings use triple quotes.</p>
+        <p>
+          print(’‘’My instructions are very long so to make them more readable
+          in the code I am putting them on more than one line. I can even
+          include “quotes” of any kind because they won’t get confused with the
+          end of the string!’’’)
+        </p>
+      </li>
       <li>
         <p>
           Use the <code>len()</code> function to get the length of a string.
         </p>
-        <div class="sourceCode" id="cb7">
-          <pre
-            class="sourceCode py"
-          ><code class="sourceCode python"><a class="sourceLine" id="cb7-1" title="1"><span class="bu">print</span>(<span class="bu">len</span>(<span class="st">&quot;Spaghetti&quot;</span>))    <span class="co"># =&gt; 9</span></a></code></pre>
-        </div>
+        <pre><code>print(len(&quot;Spaghetti&quot;))    # =&gt; 9</code></pre>
       </li>
       <li>Python uses <code>zero-based indexing</code></li>
       <li>
         <p>Python allows negative indexing (thank god!)</p>
-        <div class="sourceCode" id="cb8">
-          <pre
-            class="sourceCode py"
-          ><code class="sourceCode python"><a class="sourceLine" id="cb8-1" title="1"><span class="bu">print</span>(<span class="st">&quot;Spaghetti&quot;</span>[<span class="op">-</span><span class="dv">1</span>])    <span class="co"># =&gt; i</span></a>
-<a class="sourceLine" id="cb8-2" title="2"><span class="bu">print</span>(<span class="st">&quot;Spaghetti&quot;</span>[<span class="op">-</span><span class="dv">4</span>])    <span class="co"># =&gt; e</span></a></code></pre>
-        </div>
+        <pre><code>print(&quot;Spaghetti&quot;[-1])    # =&gt; i
+print(&quot;Spaghetti&quot;[-4])    # =&gt; e</code></pre>
       </li>
       <li>
         <p>Python let’s you use ranges</p>
-        <div class="sourceCode" id="cb9">
-          <pre
-            class="sourceCode py"
-          ><code class="sourceCode python"><a class="sourceLine" id="cb9-1" title="1"><span class="bu">print</span>(<span class="st">&quot;Spaghetti&quot;</span>[<span class="dv">1</span>:<span class="dv">4</span>])  <span class="co"># =&gt; pag</span></a>
-<a class="sourceLine" id="cb9-2" title="2"><span class="bu">print</span>(<span class="st">&quot;Spaghetti&quot;</span>[<span class="dv">4</span>:<span class="op">-</span><span class="dv">1</span>])    <span class="co"># =&gt; hett</span></a>
-<a class="sourceLine" id="cb9-3" title="3"><span class="bu">print</span>(<span class="st">&quot;Spaghetti&quot;</span>[<span class="dv">4</span>:<span class="dv">4</span>])  <span class="co"># =&gt; (empty string)</span></a></code></pre>
-        </div>
+        <pre><code>print(&quot;Spaghetti&quot;[1:4])  # =&gt; pag
+print(&quot;Spaghetti&quot;[4:-1])    # =&gt; hett
+print(&quot;Spaghetti&quot;[4:4])  # =&gt; (empty string)</code></pre>
         <ul>
           <li>
             The end range is exclusive just like <code>slice</code> in JS.
           </li>
         </ul>
+        <h1
+          id="shortcut-to-get-from-the-beginning-of-a-string-to-a-certain-index."
+        >
+          Shortcut to get from the beginning of a string to a certain index.
+        </h1>
+        <p>
+          print(“Spaghetti”[:4]) # =&gt; Spag print(“Spaghetti”[:-1]) # =&gt;
+          Spaghett
+        </p>
+        <h1 id="shortcut-to-get-from-a-certain-index-to-the-end-of-a-string.">
+          Shortcut to get from a certain index to the end of a string.
+        </h1>
+        <p>
+          print(“Spaghetti”[1:]) # =&gt; paghetti print(“Spaghetti”[-4:]) #
+          =&gt; etti
+        </p>
       </li>
-    </ul>
-    <div class="sourceCode" id="cb10">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb10-1" title="1"><span class="co"># Shortcut to get from the beginning of a string to a certain index.</span></a>
-<a class="sourceLine" id="cb10-2" title="2"><span class="bu">print</span>(<span class="st">&quot;Spaghetti&quot;</span>[:<span class="dv">4</span>])  <span class="co"># =&gt; Spag</span></a>
-<a class="sourceLine" id="cb10-3" title="3"><span class="bu">print</span>(<span class="st">&quot;Spaghetti&quot;</span>[:<span class="op">-</span><span class="dv">1</span>])    <span class="co"># =&gt; Spaghett</span></a>
-<a class="sourceLine" id="cb10-4" title="4"></a>
-<a class="sourceLine" id="cb10-5" title="5"><span class="co"># Shortcut to get from a certain index to the end of a string.</span></a>
-<a class="sourceLine" id="cb10-6" title="6"><span class="bu">print</span>(<span class="st">&quot;Spaghetti&quot;</span>[<span class="dv">1</span>:])  <span class="co"># =&gt; paghetti</span></a>
-<a class="sourceLine" id="cb10-7" title="7"><span class="bu">print</span>(<span class="st">&quot;Spaghetti&quot;</span>[<span class="op">-</span><span class="dv">4</span>:])    <span class="co"># =&gt; etti</span></a></code></pre>
-    </div>
-    <ul>
       <li>
-        The <code>index</code> string function is the equiv. of
-        <code>indexOf()</code> in JS
+        <p>
+          The <code>index</code> string function is the equiv. of
+          <code>indexOf()</code> in JS
+        </p>
+        <p>
+          print(“Spaghetti”.index(“h”)) # =&gt; 4 print(“Spaghetti”.index(“t”))
+          # =&gt; 6
+        </p>
       </li>
-    </ul>
-    <div class="sourceCode" id="cb11">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb11-1" title="1"><span class="bu">print</span>(<span class="st">&quot;Spaghetti&quot;</span>.index(<span class="st">&quot;h&quot;</span>))    <span class="co"># =&gt; 4</span></a>
-<a class="sourceLine" id="cb11-2" title="2"><span class="bu">print</span>(<span class="st">&quot;Spaghetti&quot;</span>.index(<span class="st">&quot;t&quot;</span>))    <span class="co"># =&gt; 6</span></a></code></pre>
-    </div>
-    <ul>
       <li>
-        The <code>count</code> function finds out how many times a substring
-        appears in a string.
+        <p>
+          The <code>count</code> function finds out how many times a substring
+          appears in a string.
+        </p>
+        <p>
+          print(“Spaghetti”.count(“h”)) # =&gt; 1 print(“Spaghetti”.count(“t”))
+          # =&gt; 2 print(“Spaghetti”.count(“s”)) # =&gt; 0 print(’‘’We choose
+          to go to the moon in this decade and do the other things, not because
+          they are easy, but because they are hard, because that goal will serve
+          to organize and measure the best of our energies and skills, because
+          that challenge is one that we are willing to accept, one we are
+          unwilling to postpone, and one which we intend to win, and the others,
+          too.’’‘.count(’the’)) # =&gt; 4
+        </p>
       </li>
-    </ul>
-    <div class="sourceCode" id="cb12">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb12-1" title="1"><span class="bu">print</span>(<span class="st">&quot;Spaghetti&quot;</span>.count(<span class="st">&quot;h&quot;</span>))    <span class="co"># =&gt; 1</span></a>
-<a class="sourceLine" id="cb12-2" title="2"><span class="bu">print</span>(<span class="st">&quot;Spaghetti&quot;</span>.count(<span class="st">&quot;t&quot;</span>))    <span class="co"># =&gt; 2</span></a>
-<a class="sourceLine" id="cb12-3" title="3"><span class="bu">print</span>(<span class="st">&quot;Spaghetti&quot;</span>.count(<span class="st">&quot;s&quot;</span>))    <span class="co"># =&gt; 0</span></a>
-<a class="sourceLine" id="cb12-4" title="4"><span class="bu">print</span>(<span class="st">&#39;&#39;&#39;We choose to go to the moon in this decade and do the other things,</span></a>
-<a class="sourceLine" id="cb12-5" title="5"><span class="st">not because they are easy, but because they are hard, because that goal will</span></a>
-<a class="sourceLine" id="cb12-6" title="6"><span class="st">serve to organize and measure the best of our energies and skills, because that</span></a>
-<a class="sourceLine" id="cb12-7" title="7"><span class="st">challenge is one that we are willing to accept, one we are unwilling to</span></a>
-<a class="sourceLine" id="cb12-8" title="8"><span class="st">postpone, and one which we intend to win, and the others, too.</span></a>
-<a class="sourceLine" id="cb12-9" title="9"><span class="st">&#39;&#39;&#39;</span>.count(<span class="st">&#39;the &#39;</span>))                <span class="co"># =&gt; 4</span></a></code></pre>
-    </div>
-    <ul>
       <li>
         <p>
           You can use <code>+</code> to concatenate strings, just like in JS.
@@ -465,16 +251,11 @@
           Use the <code>format()</code> function to use placeholders in a string
           to input values later on.
         </p>
+        <p>
+          first_name = “Billy” last_name = “Bob” print(‘Your name is {0}
+          {1}’.format(first_name, last_name)) # =&gt; Your name is Billy Bob
+        </p>
       </li>
-    </ul>
-    <div class="sourceCode" id="cb13">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb13-1" title="1">first_name <span class="op">=</span> <span class="st">&quot;Billy&quot;</span></a>
-<a class="sourceLine" id="cb13-2" title="2">last_name <span class="op">=</span> <span class="st">&quot;Bob&quot;</span></a>
-<a class="sourceLine" id="cb13-3" title="3"><span class="bu">print</span>(<span class="st">&#39;Your name is </span><span class="sc">{0}</span><span class="st"> </span><span class="sc">{1}</span><span class="st">&#39;</span>.<span class="bu">format</span>(first_name, last_name))  <span class="co"># =&gt; Your name is Billy Bob</span></a></code></pre>
-    </div>
-    <ul>
       <li>
         <p>
           Shorthand way to use format function is:
@@ -518,45 +299,29 @@
           <li>Duck Typing is the fundamental approach of Python.</li>
         </ul>
       </li>
-      <li><p>Assignment of a value automatically declares.</p></li>
-    </ul>
-    <div class="sourceCode" id="cb14">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb14-1" title="1">a <span class="op">=</span> <span class="dv">7</span></a>
-<a class="sourceLine" id="cb14-2" title="2">b <span class="op">=</span> <span class="st">&#39;Marbles&#39;</span></a>
-<a class="sourceLine" id="cb14-3" title="3"><span class="bu">print</span>(a)         <span class="co"># =&gt; 7</span></a>
-<a class="sourceLine" id="cb14-4" title="4"><span class="bu">print</span>(b)         <span class="co"># =&gt; Marbles</span></a></code></pre>
-    </div>
-    <ul>
       <li>
-        You can chain variable assignments to give multiple var names the same
-        value.
+        <p>Assignment of a value automatically declares.</p>
+        <p>a = 7 b = ‘Marbles’ print(a) # =&gt; 7 print(b) # =&gt; Marbles</p>
+      </li>
+      <li>
+        <p>
+          You can chain variable assignments to give multiple var names the same
+          value.
+        </p>
         <ul>
           <li>Use with caution as this is highly unreadable</li>
         </ul>
+        <p>
+          count = max = min = 0 print(count) # =&gt; 0 print(max) # =&gt; 0
+          print(min) # =&gt; 0
+        </p>
       </li>
-    </ul>
-    <div class="sourceCode" id="cb15">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb15-1" title="1">count <span class="op">=</span> <span class="bu">max</span> <span class="op">=</span> <span class="bu">min</span> <span class="op">=</span> <span class="dv">0</span></a>
-<a class="sourceLine" id="cb15-2" title="2"><span class="bu">print</span>(count)           <span class="co"># =&gt; 0</span></a>
-<a class="sourceLine" id="cb15-3" title="3"><span class="bu">print</span>(<span class="bu">max</span>)             <span class="co"># =&gt; 0</span></a>
-<a class="sourceLine" id="cb15-4" title="4"><span class="bu">print</span>(<span class="bu">min</span>)             <span class="co"># =&gt; 0</span></a></code></pre>
-    </div>
-    <ul>
-      <li>The value and type of a variable can be re-assigned at any time.</li>
-    </ul>
-    <div class="sourceCode" id="cb16">
-      <pre
-        class="sourceCode js"
-      ><code class="sourceCode javascript"><a class="sourceLine" id="cb16-1" title="1">a <span class="op">=</span> <span class="dv">17</span></a>
-<a class="sourceLine" id="cb16-2" title="2"><span class="at">print</span>(a)         # <span class="kw">=&gt;</span> <span class="dv">17</span></a>
-<a class="sourceLine" id="cb16-3" title="3">a <span class="op">=</span> <span class="st">&#39;seventeen&#39;</span></a>
-<a class="sourceLine" id="cb16-4" title="4"><span class="at">print</span>(a)         # <span class="kw">=&gt;</span> seventeen</a></code></pre>
-    </div>
-    <ul>
+      <li>
+        <p>The value and type of a variable can be re-assigned at any time.</p>
+        <p>
+          a = 17 print(a) # =&gt; 17 a = ‘seventeen’ print(a) # =&gt; seventeen
+        </p>
+      </li>
       <li>
         <p>
           <code>NaN</code> does not exist in Python, but you can ‘create’ it
@@ -581,33 +346,30 @@
     <h2 id="boolean-data-type"><strong>Boolean Data Type</strong></h2>
     <ul>
       <li>
-        One of the biggest benefits of Python is that it reads more like English
-        than JS does.
-        <img
-          src="https://i.gyazo.com/3d9fb881df9245a42024aae4ee38a1c5.png"
-          alt="pic"
-        />
+        <p>
+          One of the biggest benefits of Python is that it reads more like
+          English than JS does.
+          <img
+            src="https://i.gyazo.com/3d9fb881df9245a42024aae4ee38a1c5.png"
+            alt="pic"
+          />
+        </p>
+        <h1 id="logical-and">Logical AND</h1>
+        <p>
+          print(True and True) # =&gt; True print(True and False) # =&gt; False
+          print(False and False) # =&gt; False
+        </p>
+        <h1 id="logical-or">Logical OR</h1>
+        <p>
+          print(True or True) # =&gt; True print(True or False) # =&gt; True
+          print(False or False) # =&gt; False
+        </p>
+        <h1 id="logical-not">Logical NOT</h1>
+        <p>
+          print(not True) # =&gt; False print(not False and True) # =&gt; True
+          print(not True or False) # =&gt; False
+        </p>
       </li>
-    </ul>
-    <div class="sourceCode" id="cb17">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb17-1" title="1"><span class="co"># Logical AND</span></a>
-<a class="sourceLine" id="cb17-2" title="2"><span class="bu">print</span>(<span class="va">True</span> <span class="kw">and</span> <span class="va">True</span>)    <span class="co"># =&gt; True</span></a>
-<a class="sourceLine" id="cb17-3" title="3"><span class="bu">print</span>(<span class="va">True</span> <span class="kw">and</span> <span class="va">False</span>)   <span class="co"># =&gt; False</span></a>
-<a class="sourceLine" id="cb17-4" title="4"><span class="bu">print</span>(<span class="va">False</span> <span class="kw">and</span> <span class="va">False</span>)  <span class="co"># =&gt; False</span></a>
-<a class="sourceLine" id="cb17-5" title="5"></a>
-<a class="sourceLine" id="cb17-6" title="6"><span class="co"># Logical OR</span></a>
-<a class="sourceLine" id="cb17-7" title="7"><span class="bu">print</span>(<span class="va">True</span> <span class="kw">or</span> <span class="va">True</span>)     <span class="co"># =&gt; True</span></a>
-<a class="sourceLine" id="cb17-8" title="8"><span class="bu">print</span>(<span class="va">True</span> <span class="kw">or</span> <span class="va">False</span>)    <span class="co"># =&gt; True</span></a>
-<a class="sourceLine" id="cb17-9" title="9"><span class="bu">print</span>(<span class="va">False</span> <span class="kw">or</span> <span class="va">False</span>)   <span class="co"># =&gt; False</span></a>
-<a class="sourceLine" id="cb17-10" title="10"></a>
-<a class="sourceLine" id="cb17-11" title="11"><span class="co"># Logical NOT</span></a>
-<a class="sourceLine" id="cb17-12" title="12"><span class="bu">print</span>(<span class="kw">not</span> <span class="va">True</span>)             <span class="co"># =&gt; False</span></a>
-<a class="sourceLine" id="cb17-13" title="13"><span class="bu">print</span>(<span class="kw">not</span> <span class="va">False</span> <span class="kw">and</span> <span class="va">True</span>)   <span class="co"># =&gt; True</span></a>
-<a class="sourceLine" id="cb17-14" title="14"><span class="bu">print</span>(<span class="kw">not</span> <span class="va">True</span> <span class="kw">or</span> <span class="va">False</span>)    <span class="co"># =&gt; False</span></a></code></pre>
-    </div>
-    <ul>
       <li>
         <p>
           By default, Python considers an object to be true UNLESS it is one of
@@ -657,19 +419,15 @@
     </ul>
     <hr />
     <h2 id="identity-vs-equality"><strong>Identity vs Equality</strong></h2>
-    <div class="sourceCode" id="cb18">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb18-1" title="1"><span class="bu">print</span> (<span class="dv">2</span> <span class="op">==</span> <span class="st">&#39;2&#39;</span>)    <span class="co"># =&gt; False</span></a>
-<a class="sourceLine" id="cb18-2" title="2"><span class="bu">print</span> (<span class="dv">2</span> <span class="kw">is</span> <span class="st">&#39;2&#39;</span>)    <span class="co"># =&gt; False</span></a>
-<a class="sourceLine" id="cb18-3" title="3"></a>
-<a class="sourceLine" id="cb18-4" title="4"><span class="bu">print</span> (<span class="st">&quot;2&quot;</span> <span class="op">==</span> <span class="st">&#39;2&#39;</span>)    <span class="co"># =&gt; True</span></a>
-<a class="sourceLine" id="cb18-5" title="5"><span class="bu">print</span> (<span class="st">&quot;2&quot;</span> <span class="kw">is</span> <span class="st">&#39;2&#39;</span>)    <span class="co"># =&gt; True</span></a>
-<a class="sourceLine" id="cb18-6" title="6"></a>
-<a class="sourceLine" id="cb18-7" title="7"><span class="co"># There is a distinction between the number types.</span></a>
-<a class="sourceLine" id="cb18-8" title="8"><span class="bu">print</span> (<span class="dv">2</span> <span class="op">==</span> <span class="fl">2.0</span>)    <span class="co"># =&gt; True</span></a>
-<a class="sourceLine" id="cb18-9" title="9"><span class="bu">print</span> (<span class="dv">2</span> <span class="kw">is</span> <span class="fl">2.0</span>)    <span class="co"># =&gt; False</span></a></code></pre>
-    </div>
+    <pre><code>print (2 == &#39;2&#39;)    # =&gt; False
+print (2 is &#39;2&#39;)    # =&gt; False
+
+print (&quot;2&quot; == &#39;2&#39;)    # =&gt; True
+print (&quot;2&quot; is &#39;2&#39;)    # =&gt; True
+
+# There is a distinction between the number types.
+print (2 == 2.0)    # =&gt; True
+print (2 is 2.0)    # =&gt; False</code></pre>
     <ul>
       <li>
         In the Python community it is better to use <code>is</code> and
@@ -678,242 +436,150 @@
     </ul>
     <hr />
     <h2 id="if-statements"><strong>If Statements</strong></h2>
-    <div class="sourceCode" id="cb19">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb19-1" title="1"><span class="cf">if</span> name <span class="op">==</span> <span class="st">&#39;Monica&#39;</span>:</a>
-<a class="sourceLine" id="cb19-2" title="2">    <span class="bu">print</span>(<span class="st">&#39;Hi, Monica.&#39;</span>)</a></code></pre>
-    </div>
-    <div class="sourceCode" id="cb20">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb20-1" title="1"><span class="cf">if</span> name <span class="op">==</span> <span class="st">&#39;Monica&#39;</span>:</a>
-<a class="sourceLine" id="cb20-2" title="2">    <span class="bu">print</span>(<span class="st">&#39;Hi, Monica.&#39;</span>)</a>
-<a class="sourceLine" id="cb20-3" title="3"><span class="cf">else</span>:</a>
-<a class="sourceLine" id="cb20-4" title="4">    <span class="bu">print</span>(<span class="st">&#39;Hello, stranger.&#39;</span>)</a></code></pre>
-    </div>
-    <div class="sourceCode" id="cb21">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb21-1" title="1"><span class="cf">if</span> name <span class="op">==</span> <span class="st">&#39;Monica&#39;</span>:</a>
-<a class="sourceLine" id="cb21-2" title="2">    <span class="bu">print</span>(<span class="st">&#39;Hi, Monica.&#39;</span>)</a>
-<a class="sourceLine" id="cb21-3" title="3"><span class="cf">elif</span> age <span class="op">&lt;</span> <span class="dv">12</span>:</a>
-<a class="sourceLine" id="cb21-4" title="4">    <span class="bu">print</span>(<span class="st">&#39;You are not Monica, kiddo.&#39;</span>)</a>
-<a class="sourceLine" id="cb21-5" title="5"><span class="cf">elif</span> age <span class="op">&gt;</span> <span class="dv">2000</span>:</a>
-<a class="sourceLine" id="cb21-6" title="6">   <span class="bu">print</span>(<span class="st">&#39;Unlike you, Monica is not an undead, immortal vampire.&#39;</span>)</a>
-<a class="sourceLine" id="cb21-7" title="7"><span class="cf">elif</span> age <span class="op">&gt;</span> <span class="dv">100</span>:</a>
-<a class="sourceLine" id="cb21-8" title="8">   <span class="bu">print</span>(<span class="st">&#39;You are not Monica, grannie.&#39;</span>)</a></code></pre>
-    </div>
+    <pre><code>if name == &#39;Monica&#39;:
+    print(&#39;Hi, Monica.&#39;)
+
+if name == &#39;Monica&#39;:
+    print(&#39;Hi, Monica.&#39;)
+else:
+    print(&#39;Hello, stranger.&#39;)
+
+if name == &#39;Monica&#39;:
+    print(&#39;Hi, Monica.&#39;)
+elif age &lt; 12:
+    print(&#39;You are not Monica, kiddo.&#39;)
+elif age &gt; 2000:
+   print(&#39;Unlike you, Monica is not an undead, immortal vampire.&#39;)
+elif age &gt; 100:
+   print(&#39;You are not Monica, grannie.&#39;)</code></pre>
     <ul>
       <li>Remember the order of <code>elif</code> statements matter.</li>
     </ul>
     <hr />
     <h2 id="while-statements"><strong>While Statements</strong></h2>
-    <div class="sourceCode" id="cb22">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb22-1" title="1">spam <span class="op">=</span> <span class="dv">0</span></a>
-<a class="sourceLine" id="cb22-2" title="2"><span class="cf">while</span> spam <span class="op">&lt;</span> <span class="dv">5</span>:</a>
-<a class="sourceLine" id="cb22-3" title="3">  <span class="bu">print</span>(<span class="st">&#39;Hello, world.&#39;</span>)</a>
-<a class="sourceLine" id="cb22-4" title="4">  spam <span class="op">=</span> spam <span class="op">+</span> <span class="dv">1</span></a></code></pre>
-    </div>
+    <pre><code>spam = 0
+while spam &lt; 5:
+  print(&#39;Hello, world.&#39;)
+  spam = spam + 1</code></pre>
     <ul>
-      <li><code>Break</code> statement also exists in Python.</li>
+      <li>
+        <p><code>Break</code> statement also exists in Python.</p>
+        <p>
+          spam = 0 while True: print(‘Hello, world.’) spam = spam + 1 if spam
+          &gt;= 5: break
+        </p>
+      </li>
+      <li>
+        <p>As are <code>continue</code> statements</p>
+        <p>
+          spam = 0 while True: print(‘Hello, world.’) spam = spam + 1 if spam
+          &lt; 5: continue break
+        </p>
+      </li>
     </ul>
-    <div class="sourceCode" id="cb23">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb23-1" title="1">spam <span class="op">=</span> <span class="dv">0</span></a>
-<a class="sourceLine" id="cb23-2" title="2"><span class="cf">while</span> <span class="va">True</span>:</a>
-<a class="sourceLine" id="cb23-3" title="3">  <span class="bu">print</span>(<span class="st">&#39;Hello, world.&#39;</span>)</a>
-<a class="sourceLine" id="cb23-4" title="4">  spam <span class="op">=</span> spam <span class="op">+</span> <span class="dv">1</span></a>
-<a class="sourceLine" id="cb23-5" title="5">  <span class="cf">if</span> spam <span class="op">&gt;=</span> <span class="dv">5</span>:</a>
-<a class="sourceLine" id="cb23-6" title="6">    <span class="cf">break</span></a></code></pre>
-    </div>
-    <ul>
-      <li>As are <code>continue</code> statements</li>
-    </ul>
-    <div class="sourceCode" id="cb24">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb24-1" title="1">spam <span class="op">=</span> <span class="dv">0</span></a>
-<a class="sourceLine" id="cb24-2" title="2"><span class="cf">while</span> <span class="va">True</span>:</a>
-<a class="sourceLine" id="cb24-3" title="3">  <span class="bu">print</span>(<span class="st">&#39;Hello, world.&#39;</span>)</a>
-<a class="sourceLine" id="cb24-4" title="4">  spam <span class="op">=</span> spam <span class="op">+</span> <span class="dv">1</span></a>
-<a class="sourceLine" id="cb24-5" title="5">  <span class="cf">if</span> spam <span class="op">&lt;</span> <span class="dv">5</span>:</a>
-<a class="sourceLine" id="cb24-6" title="6">    <span class="cf">continue</span></a>
-<a class="sourceLine" id="cb24-7" title="7">  <span class="cf">break</span></a></code></pre>
-    </div>
     <hr />
     <h2 id="tryexcept-statements"><strong>Try/Except Statements</strong></h2>
     <ul>
-      <li>Python equivalent to <code>try/catch</code></li>
-    </ul>
-    <div class="sourceCode" id="cb25">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb25-1" title="1">a <span class="op">=</span> <span class="dv">321</span></a>
-<a class="sourceLine" id="cb25-2" title="2"><span class="cf">try</span>:</a>
-<a class="sourceLine" id="cb25-3" title="3">    <span class="bu">print</span>(<span class="bu">len</span>(a))</a>
-<a class="sourceLine" id="cb25-4" title="4"><span class="cf">except</span>:</a>
-<a class="sourceLine" id="cb25-5" title="5">    <span class="bu">print</span>(<span class="st">&#39;Silently handle error here&#39;</span>)</a>
-<a class="sourceLine" id="cb25-6" title="6"></a>
-<a class="sourceLine" id="cb25-7" title="7">    <span class="co"># Optionally include a correction to the issue</span></a>
-<a class="sourceLine" id="cb25-8" title="8">    a <span class="op">=</span> <span class="bu">str</span>(a)</a>
-<a class="sourceLine" id="cb25-9" title="9">    <span class="bu">print</span>(<span class="bu">len</span>(a)</a></code></pre>
-    </div>
-    <div class="sourceCode" id="cb26">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb26-1" title="1">a <span class="op">=</span> <span class="st">&#39;321&#39;</span></a>
-<a class="sourceLine" id="cb26-2" title="2"><span class="cf">try</span>:</a>
-<a class="sourceLine" id="cb26-3" title="3">    <span class="bu">print</span>(<span class="bu">len</span>(a))</a>
-<a class="sourceLine" id="cb26-4" title="4"><span class="cf">except</span>:</a>
-<a class="sourceLine" id="cb26-5" title="5">    <span class="bu">print</span>(<span class="st">&#39;Silently handle error here&#39;</span>)</a>
-<a class="sourceLine" id="cb26-6" title="6"></a>
-<a class="sourceLine" id="cb26-7" title="7">    <span class="co"># Optionally include a correction to the issue</span></a>
-<a class="sourceLine" id="cb26-8" title="8">    a <span class="op">=</span> <span class="bu">str</span>(a)</a>
-<a class="sourceLine" id="cb26-9" title="9">    <span class="bu">print</span>(<span class="bu">len</span>(a))</a></code></pre>
-    </div>
-    <ul>
-      <li>You can name an error to give the output more specificity.</li>
-    </ul>
-    <div class="sourceCode" id="cb27">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb27-1" title="1">a <span class="op">=</span> <span class="dv">100</span></a>
-<a class="sourceLine" id="cb27-2" title="2">b <span class="op">=</span> <span class="dv">0</span></a>
-<a class="sourceLine" id="cb27-3" title="3"><span class="cf">try</span>:</a>
-<a class="sourceLine" id="cb27-4" title="4">    c <span class="op">=</span> a <span class="op">/</span> b</a>
-<a class="sourceLine" id="cb27-5" title="5"><span class="cf">except</span> <span class="pp">ZeroDivisionError</span>:</a>
-<a class="sourceLine" id="cb27-6" title="6">    c <span class="op">=</span> <span class="va">None</span></a>
-<a class="sourceLine" id="cb27-7" title="7"><span class="bu">print</span>(c)</a></code></pre>
-    </div>
-    <ul>
       <li>
-        You can also use the <code>pass</code> commmand to by pass a certain
-        error.
+        <p>Python equivalent to <code>try/catch</code></p>
+        <p>
+          a = 321 try: print(len(a)) except: print(‘Silently handle error here’)
+        </p>
+        <pre><code># Optionally include a correction to the issue
+a = str(a)
+print(len(a)</code></pre>
+        <p>
+          a = ‘321’ try: print(len(a)) except: print(‘Silently handle error
+          here’)
+        </p>
+        <pre><code># Optionally include a correction to the issue
+a = str(a)
+print(len(a))</code></pre>
+      </li>
+      <li>
+        <p>You can name an error to give the output more specificity.</p>
+        <p>
+          a = 100 b = 0 try: c = a / b except ZeroDivisionError: c = None
+          print(c)
+        </p>
+      </li>
+      <li>
+        <p>
+          You can also use the <code>pass</code> commmand to by pass a certain
+          error.
+        </p>
+        <p>a = 100 b = 0 try: print(a / b) except ZeroDivisionError: pass</p>
+      </li>
+      <li>
+        <p>
+          The <code>pass</code> method won’t allow you to bypass every single
+          error so you can chain an exception series like so:
+        </p>
+        <p>a = 100</p>
+        <h1 id="b-5">b = “5”</h1>
+        <p>
+          try: print(a / b) except ZeroDivisionError: pass except (TypeError,
+          NameError): print(“ERROR!”)
+        </p>
+      </li>
+      <li>
+        <p>
+          You can use an <code>else</code> statement to end a chain of
+          <code>except</code> statements.
+        </p>
+        <h1 id="tuple-of-file-names">tuple of file names</h1>
+        <p>files = (‘one.txt’, ‘two.txt’, ‘three.txt’)</p>
+        <h1 id="simple-loop">simple loop</h1>
+        <p>
+          for filename in files: try: # open the file in read mode f =
+          open(filename, ‘r’) except OSError: # handle the case where file does
+          not exist or permission is denied print(‘cannot open file’, filename)
+          else: # do stuff with the file object (f) print(filename, ‘opened
+          successfully’) print(‘found’, len(f.readlines()), ‘lines’) f.close()
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>finally</code> is used at the end to clean up all actions under
+          any circumstance.
+        </p>
+        <p>
+          def divide(x, y): try: result = x / y except ZeroDivisionError:
+          print(“Cannot divide by zero”) else: print(“Result is”, result)
+          finally: print(“Finally…”)
+        </p>
+      </li>
+      <li>
+        <p>
+          Using duck typing to check to see if some value is able to use a
+          certain method.
+        </p>
+        <h1 id="try-a-number---nothing-will-print-out">
+          Try a number - nothing will print out
+        </h1>
+        <p>a = 321 if hasattr(a, ‘<strong>len</strong>’): print(len(a))</p>
+        <h1 id="try-a-string---the-length-will-print-out-4-in-this-case">
+          Try a string - the length will print out (4 in this case)
+        </h1>
+        <p>b = “5555” if hasattr(b, ‘<strong>len</strong>’): print(len(b))</p>
       </li>
     </ul>
-    <div class="sourceCode" id="cb28">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb28-1" title="1">a <span class="op">=</span> <span class="dv">100</span></a>
-<a class="sourceLine" id="cb28-2" title="2">b <span class="op">=</span> <span class="dv">0</span></a>
-<a class="sourceLine" id="cb28-3" title="3"><span class="cf">try</span>:</a>
-<a class="sourceLine" id="cb28-4" title="4">    <span class="bu">print</span>(a <span class="op">/</span> b)</a>
-<a class="sourceLine" id="cb28-5" title="5"><span class="cf">except</span> <span class="pp">ZeroDivisionError</span>:</a>
-<a class="sourceLine" id="cb28-6" title="6">    <span class="cf">pass</span></a></code></pre>
-    </div>
-    <ul>
-      <li>
-        The <code>pass</code> method won’t allow you to bypass every single
-        error so you can chain an exception series like so:
-      </li>
-    </ul>
-    <div class="sourceCode" id="cb29">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb29-1" title="1">a <span class="op">=</span> <span class="dv">100</span></a>
-<a class="sourceLine" id="cb29-2" title="2"><span class="co"># b = &quot;5&quot;</span></a>
-<a class="sourceLine" id="cb29-3" title="3"><span class="cf">try</span>:</a>
-<a class="sourceLine" id="cb29-4" title="4">    <span class="bu">print</span>(a <span class="op">/</span> b)</a>
-<a class="sourceLine" id="cb29-5" title="5"><span class="cf">except</span> <span class="pp">ZeroDivisionError</span>:</a>
-<a class="sourceLine" id="cb29-6" title="6">    <span class="cf">pass</span></a>
-<a class="sourceLine" id="cb29-7" title="7"><span class="cf">except</span> (<span class="pp">TypeError</span>, <span class="pp">NameError</span>):</a>
-<a class="sourceLine" id="cb29-8" title="8">    <span class="bu">print</span>(<span class="st">&quot;ERROR!&quot;</span>)</a></code></pre>
-    </div>
-    <ul>
-      <li>
-        You can use an <code>else</code> statement to end a chain of
-        <code>except</code> statements.
-      </li>
-    </ul>
-    <div class="sourceCode" id="cb30">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb30-1" title="1"><span class="co"># tuple of file names</span></a>
-<a class="sourceLine" id="cb30-2" title="2">files <span class="op">=</span> (<span class="st">&#39;one.txt&#39;</span>, <span class="st">&#39;two.txt&#39;</span>, <span class="st">&#39;three.txt&#39;</span>)</a>
-<a class="sourceLine" id="cb30-3" title="3"></a>
-<a class="sourceLine" id="cb30-4" title="4"><span class="co"># simple loop</span></a>
-<a class="sourceLine" id="cb30-5" title="5"><span class="cf">for</span> filename <span class="kw">in</span> files:</a>
-<a class="sourceLine" id="cb30-6" title="6">    <span class="cf">try</span>:</a>
-<a class="sourceLine" id="cb30-7" title="7">        <span class="co"># open the file in read mode</span></a>
-<a class="sourceLine" id="cb30-8" title="8">        f <span class="op">=</span> <span class="bu">open</span>(filename, <span class="st">&#39;r&#39;</span>)</a>
-<a class="sourceLine" id="cb30-9" title="9">    <span class="cf">except</span> <span class="pp">OSError</span>:</a>
-<a class="sourceLine" id="cb30-10" title="10">        <span class="co"># handle the case where file does not exist or permission is denied</span></a>
-<a class="sourceLine" id="cb30-11" title="11">        <span class="bu">print</span>(<span class="st">&#39;cannot open file&#39;</span>, filename)</a>
-<a class="sourceLine" id="cb30-12" title="12">    <span class="cf">else</span>:</a>
-<a class="sourceLine" id="cb30-13" title="13">        <span class="co"># do stuff with the file object (f)</span></a>
-<a class="sourceLine" id="cb30-14" title="14">        <span class="bu">print</span>(filename, <span class="st">&#39;opened successfully&#39;</span>)</a>
-<a class="sourceLine" id="cb30-15" title="15">        <span class="bu">print</span>(<span class="st">&#39;found&#39;</span>, <span class="bu">len</span>(f.readlines()), <span class="st">&#39;lines&#39;</span>)</a>
-<a class="sourceLine" id="cb30-16" title="16">        f.close()</a></code></pre>
-    </div>
-    <ul>
-      <li>
-        <code>finally</code> is used at the end to clean up all actions under
-        any circumstance.
-      </li>
-    </ul>
-    <div class="sourceCode" id="cb31">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb31-1" title="1"><span class="kw">def</span> divide(x, y):</a>
-<a class="sourceLine" id="cb31-2" title="2">    <span class="cf">try</span>:</a>
-<a class="sourceLine" id="cb31-3" title="3">        result <span class="op">=</span> x <span class="op">/</span> y</a>
-<a class="sourceLine" id="cb31-4" title="4">    <span class="cf">except</span> <span class="pp">ZeroDivisionError</span>:</a>
-<a class="sourceLine" id="cb31-5" title="5">        <span class="bu">print</span>(<span class="st">&quot;Cannot divide by zero&quot;</span>)</a>
-<a class="sourceLine" id="cb31-6" title="6">    <span class="cf">else</span>:</a>
-<a class="sourceLine" id="cb31-7" title="7">        <span class="bu">print</span>(<span class="st">&quot;Result is&quot;</span>, result)</a>
-<a class="sourceLine" id="cb31-8" title="8">    <span class="cf">finally</span>:</a>
-<a class="sourceLine" id="cb31-9" title="9">        <span class="bu">print</span>(<span class="st">&quot;Finally...&quot;</span>)</a></code></pre>
-    </div>
-    <ul>
-      <li>
-        Using duck typing to check to see if some value is able to use a certain
-        method.
-      </li>
-    </ul>
-    <div class="sourceCode" id="cb32">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb32-1" title="1"><span class="co"># Try a number - nothing will print out</span></a>
-<a class="sourceLine" id="cb32-2" title="2">a <span class="op">=</span> <span class="dv">321</span></a>
-<a class="sourceLine" id="cb32-3" title="3"><span class="cf">if</span> <span class="bu">hasattr</span>(a, <span class="st">&#39;__len__&#39;</span>):</a>
-<a class="sourceLine" id="cb32-4" title="4">    <span class="bu">print</span>(<span class="bu">len</span>(a))</a>
-<a class="sourceLine" id="cb32-5" title="5"></a>
-<a class="sourceLine" id="cb32-6" title="6"><span class="co"># Try a string - the length will print out (4 in this case)</span></a>
-<a class="sourceLine" id="cb32-7" title="7">b <span class="op">=</span> <span class="st">&quot;5555&quot;</span></a>
-<a class="sourceLine" id="cb32-8" title="8"><span class="cf">if</span> <span class="bu">hasattr</span>(b, <span class="st">&#39;__len__&#39;</span>):</a>
-<a class="sourceLine" id="cb32-9" title="9">    <span class="bu">print</span>(<span class="bu">len</span>(b))</a></code></pre>
-    </div>
     <hr />
     <h2 id="pass"><strong>Pass</strong></h2>
     <ul>
-      <li>Pass Keyword is required to write the JS equivalent of :</li>
+      <li>
+        <p>Pass Keyword is required to write the JS equivalent of :</p>
+        <p>if (true) { }</p>
+        <p>while (true) {}</p>
+        <p>if True: pass</p>
+        <p>while True: pass</p>
+      </li>
     </ul>
-    <div class="sourceCode" id="cb33">
-      <pre
-        class="sourceCode js"
-      ><code class="sourceCode javascript"><a class="sourceLine" id="cb33-1" title="1"><span class="cf">if</span> (<span class="kw">true</span>) <span class="op">{</span></a>
-<a class="sourceLine" id="cb33-2" title="2"><span class="op">}</span></a>
-<a class="sourceLine" id="cb33-3" title="3"></a>
-<a class="sourceLine" id="cb33-4" title="4"><span class="cf">while</span> (<span class="kw">true</span>) <span class="op">{}</span></a></code></pre>
-    </div>
-    <div class="sourceCode" id="cb34">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb34-1" title="1"><span class="cf">if</span> <span class="va">True</span>:</a>
-<a class="sourceLine" id="cb34-2" title="2">  <span class="cf">pass</span></a>
-<a class="sourceLine" id="cb34-3" title="3"></a>
-<a class="sourceLine" id="cb34-4" title="4"><span class="cf">while</span> <span class="va">True</span>:</a>
-<a class="sourceLine" id="cb34-5" title="5">  <span class="cf">pass</span></a></code></pre>
-    </div>
     <hr />
     <h2 id="functions"><strong>Functions</strong></h2>
     <ul>
       <li>
-        <strong>Function</strong> definition includes:
+        <p><strong>Function</strong> definition includes:</p>
         <ul>
           <li>The <code>def</code> keyword</li>
           <li>The name of the function</li>
@@ -922,57 +588,42 @@
           <li>One tab indentation for the code to run.</li>
         </ul>
       </li>
-    </ul>
-    <div class="sourceCode" id="cb35">
-      <pre class="sourceCode py"><code class="sourceCode python"></code></pre>
-    </div>
-    <ul>
-      <li>You can use default parameters just like in JS</li>
-    </ul>
-    <div class="sourceCode" id="cb36">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb36-1" title="1"><span class="kw">def</span> greeting(name, saying<span class="op">=</span><span class="st">&quot;Hello&quot;</span>):</a>
-<a class="sourceLine" id="cb36-2" title="2">    <span class="bu">print</span>(saying, name)</a>
-<a class="sourceLine" id="cb36-3" title="3"></a>
-<a class="sourceLine" id="cb36-4" title="4">greeting(<span class="st">&quot;Monica&quot;</span>)</a>
-<a class="sourceLine" id="cb36-5" title="5"><span class="co"># Hello Monica</span></a>
-<a class="sourceLine" id="cb36-6" title="6"></a>
-<a class="sourceLine" id="cb36-7" title="7">greeting(<span class="st">&quot;Barry&quot;</span>, <span class="st">&quot;Hey&quot;</span>)</a>
-<a class="sourceLine" id="cb36-8" title="8"><span class="co"># Hey Barry</span></a></code></pre>
-    </div>
-    <ul>
       <li>
-        Keep in mind, default parameters must always come after regular
-        parameters.
+        <p>You can use default parameters just like in JS</p>
+        <p>def greeting(name, saying=“Hello”): print(saying, name)</p>
+        <p>greeting(“Monica”)</p>
+        <h1 id="hello-monica">Hello Monica</h1>
+        <p>greeting(“Barry”, “Hey”)</p>
+        <h1 id="hey-barry">Hey Barry</h1>
       </li>
-    </ul>
-    <div class="sourceCode" id="cb37">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb37-1" title="1"><span class="co"># THIS IS BAD CODE AND WILL NOT RUN</span></a>
-<a class="sourceLine" id="cb37-2" title="2"><span class="kw">def</span> increment(delta<span class="op">=</span><span class="dv">1</span>, value):</a>
-<a class="sourceLine" id="cb37-3" title="3">    <span class="cf">return</span> delta <span class="op">+</span> value</a></code></pre>
-    </div>
-    <ul>
       <li>
-        You can specify arguments by name without destructuring in Python.
+        <p>
+          Keep in mind, default parameters must always come after regular
+          parameters.
+        </p>
+        <h1 id="this-is-bad-code-and-will-not-run">
+          THIS IS BAD CODE AND WILL NOT RUN
+        </h1>
+        <p>def increment(delta=1, value): return delta + value</p>
       </li>
-    </ul>
-    <div class="sourceCode" id="cb38">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb38-1" title="1"><span class="kw">def</span> greeting(name, saying<span class="op">=</span><span class="st">&quot;Hello&quot;</span>):</a>
-<a class="sourceLine" id="cb38-2" title="2">    <span class="bu">print</span>(saying, name)</a>
-<a class="sourceLine" id="cb38-3" title="3"></a>
-<a class="sourceLine" id="cb38-4" title="4"><span class="co"># name has no default value, so just provide the value</span></a>
-<a class="sourceLine" id="cb38-5" title="5"><span class="co"># saying has a default value, so use a keyword argument</span></a>
-<a class="sourceLine" id="cb38-6" title="6">greeting(<span class="st">&quot;Monica&quot;</span>, saying<span class="op">=</span><span class="st">&quot;Hi&quot;</span>)</a></code></pre>
-    </div>
-    <ul>
       <li>
-        The <code>lambda</code> keyword is used to create anonymous functions
-        and are supposed to be <code>one-liners</code>.
+        <p>
+          You can specify arguments by name without destructuring in Python.
+        </p>
+        <p>def greeting(name, saying=“Hello”): print(saying, name)</p>
+        <h1 id="name-has-no-default-value-so-just-provide-the-value">
+          name has no default value, so just provide the value
+        </h1>
+        <h1 id="saying-has-a-default-value-so-use-a-keyword-argument">
+          saying has a default value, so use a keyword argument
+        </h1>
+        <p>greeting(“Monica”, saying=“Hi”)</p>
+      </li>
+      <li>
+        <p>
+          The <code>lambda</code> keyword is used to create anonymous functions
+          and are supposed to be <code>one-liners</code>.
+        </p>
       </li>
     </ul>
     <p><code>toUpper = lambda s: s.upper()</code></p>
@@ -1204,8 +855,8 @@
     <h1 id="prints-key-color-value-red">Prints Key: color Value: red</h1>
     <p>
       Looping over string for c in “abcdefg”: print(c) More On Functions
-      Variable-length positional arguments : (<em>args) def add(a, b, </em
-      >args): total = a + b; for n in args: total += n return total
+      Variable-length positional arguments : (<em>args) def add(a, b,</em>
+      args): total = a + b; for n in args: total += n return total
     </p>
     <p>add(1, 2) # Returns 3</p>
     <p>
@@ -1228,8 +879,9 @@
       to occur in a particular order: formal positional args.
       <em
         >args keyword args with default values **kwargs def example(arg_1,
-        arg_2, </em
-      >args, **kwargs): pass
+        arg_2,</em
+      >
+      args, **kwargs): pass
     </p>
     <p>
       def example2(arg_1, arg_2, *args, kw_1=“shark”, kw_2=“blowfish”,
@@ -1264,532 +916,526 @@
     <h1 id="topics-revisited-in-python-syntax">
       Topics revisited (in python syntax)
     </h1>
-    <div class="sourceCode" id="cb39">
-      <pre
-        class="sourceCode py"
-      ><code class="sourceCode python"><a class="sourceLine" id="cb39-1" title="1"></a>
-<a class="sourceLine" id="cb39-2" title="2"></a>
-<a class="sourceLine" id="cb39-3" title="3"><span class="kw">def</span> say_hi(name):</a>
-<a class="sourceLine" id="cb39-4" title="4">    <span class="co">&quot;&quot;&quot;&lt;---- Multi-Line Comments and Docstrings</span></a>
-<a class="sourceLine" id="cb39-5" title="5"><span class="co">    This is where you put your content for help() to inform the user</span></a>
-<a class="sourceLine" id="cb39-6" title="6"><span class="co">    about what your function does and how to use it</span></a>
-<a class="sourceLine" id="cb39-7" title="7"><span class="co">    &quot;&quot;&quot;</span></a>
-<a class="sourceLine" id="cb39-8" title="8">    <span class="bu">print</span>(<span class="ss">f&quot;Hello </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">!&quot;</span>)</a>
-<a class="sourceLine" id="cb39-9" title="9"></a>
-<a class="sourceLine" id="cb39-10" title="10"></a>
-<a class="sourceLine" id="cb39-11" title="11"><span class="bu">print</span>(say_hi(<span class="st">&quot;Michael&quot;</span>))  <span class="co"># Should get the print inside the function, then None</span></a>
-<a class="sourceLine" id="cb39-12" title="12"></a>
-<a class="sourceLine" id="cb39-13" title="13"><span class="co"># Boolean Values</span></a>
-<a class="sourceLine" id="cb39-14" title="14"><span class="co"># Work the same as in JS, except they are title case: True and False</span></a>
-<a class="sourceLine" id="cb39-15" title="15">a <span class="op">=</span> <span class="va">True</span></a>
-<a class="sourceLine" id="cb39-16" title="16">b <span class="op">=</span> <span class="va">False</span></a>
-<a class="sourceLine" id="cb39-17" title="17"></a>
-<a class="sourceLine" id="cb39-18" title="18"><span class="co"># Logical Operators</span></a>
-<a class="sourceLine" id="cb39-19" title="19"><span class="co"># ! = not, || = or, &amp;&amp; = and</span></a>
-<a class="sourceLine" id="cb39-20" title="20"><span class="bu">print</span>(<span class="va">True</span> <span class="kw">and</span> <span class="va">True</span>)</a>
-<a class="sourceLine" id="cb39-21" title="21"><span class="bu">print</span>(<span class="va">True</span> <span class="kw">and</span> <span class="kw">not</span> <span class="va">True</span>)</a>
-<a class="sourceLine" id="cb39-22" title="22"><span class="bu">print</span>(<span class="va">True</span> <span class="kw">or</span> <span class="va">True</span>)</a>
-<a class="sourceLine" id="cb39-23" title="23"></a>
-<a class="sourceLine" id="cb39-24" title="24"><span class="co"># Truthiness - Everything is True except...</span></a>
-<a class="sourceLine" id="cb39-25" title="25"><span class="co"># False - None, False, &#39;&#39;, [], (), set(), range(0)</span></a>
-<a class="sourceLine" id="cb39-26" title="26"></a>
-<a class="sourceLine" id="cb39-27" title="27"><span class="co"># Number Values</span></a>
-<a class="sourceLine" id="cb39-28" title="28"><span class="co"># Integers are numbers without a floating decimal point</span></a>
-<a class="sourceLine" id="cb39-29" title="29"><span class="bu">print</span>(<span class="bu">type</span>(<span class="dv">3</span>))  <span class="co"># type returns the type of whatever argument you pass in</span></a>
-<a class="sourceLine" id="cb39-30" title="30"><span class="co"># Floating Point values are numbers with a floating decimal point</span></a>
-<a class="sourceLine" id="cb39-31" title="31"><span class="bu">print</span>(<span class="bu">type</span>(<span class="fl">3.5</span>))</a>
-<a class="sourceLine" id="cb39-32" title="32"></a>
-<a class="sourceLine" id="cb39-33" title="33"><span class="co"># Type Casting</span></a>
-<a class="sourceLine" id="cb39-34" title="34"><span class="co"># You can convert between ints and floats (along with other types...)</span></a>
-<a class="sourceLine" id="cb39-35" title="35"><span class="bu">print</span>(<span class="bu">float</span>(<span class="dv">3</span>))  <span class="co"># If you convert a float to an int, it will truncate the decimal</span></a>
-<a class="sourceLine" id="cb39-36" title="36"><span class="bu">print</span>(<span class="bu">int</span>(<span class="fl">4.5</span>))</a>
-<a class="sourceLine" id="cb39-37" title="37"><span class="bu">print</span>(<span class="bu">type</span>(<span class="bu">str</span>(<span class="dv">3</span>)))</a>
-<a class="sourceLine" id="cb39-38" title="38"><span class="co"># Python does not automatically convert types like JS</span></a>
-<a class="sourceLine" id="cb39-39" title="39"><span class="co"># print(17.0 + &#39; heyooo &#39; + 17)  # TypeError</span></a>
-<a class="sourceLine" id="cb39-40" title="40"></a>
-<a class="sourceLine" id="cb39-41" title="41"><span class="co"># Arithmetic Operators</span></a>
-<a class="sourceLine" id="cb39-42" title="42"><span class="co"># ** - exponent (comparable to Math.pow(num, pow))</span></a>
-<a class="sourceLine" id="cb39-43" title="43"><span class="co"># // - integer division</span></a>
-<a class="sourceLine" id="cb39-44" title="44"><span class="co"># There is no ++ or -- in Python</span></a>
-<a class="sourceLine" id="cb39-45" title="45"></a>
-<a class="sourceLine" id="cb39-46" title="46"><span class="co"># String Values</span></a>
-<a class="sourceLine" id="cb39-47" title="47"><span class="co"># We can use single quotes, double quotes, or f&#39;&#39; for string formats</span></a>
-<a class="sourceLine" id="cb39-48" title="48"><span class="co"># We can use triple single quotes for multiline strings</span></a>
-<a class="sourceLine" id="cb39-49" title="49"><span class="bu">print</span>(</a>
-<a class="sourceLine" id="cb39-50" title="50">    <span class="st">&quot;&quot;&quot;This here&#39;s a story</span></a>
-<a class="sourceLine" id="cb39-51" title="51"><span class="st">All about how</span></a>
-<a class="sourceLine" id="cb39-52" title="52"><span class="st">My life got twist</span></a>
-<a class="sourceLine" id="cb39-53" title="53"><span class="st">Turned upside down</span></a>
-<a class="sourceLine" id="cb39-54" title="54"><span class="st">&quot;&quot;&quot;</span></a>
-<a class="sourceLine" id="cb39-55" title="55">)</a>
-<a class="sourceLine" id="cb39-56" title="56"></a>
-<a class="sourceLine" id="cb39-57" title="57"><span class="co"># Three double quotes can also be used, but we typically reserve these for</span></a>
-<a class="sourceLine" id="cb39-58" title="58"><span class="co"># multi-line comments and function docstrings (refer to lines 6-9)(Nice :D)</span></a>
-<a class="sourceLine" id="cb39-59" title="59"><span class="co"># We use len() to get the length of something</span></a>
-<a class="sourceLine" id="cb39-60" title="60"><span class="bu">print</span>(<span class="bu">len</span>(<span class="st">&quot;Michael&quot;</span>))  <span class="co"># 7 characters</span></a>
-<a class="sourceLine" id="cb39-61" title="61"><span class="bu">print</span>(<span class="bu">len</span>([<span class="st">&quot;hey&quot;</span>, <span class="st">&quot;ho&quot;</span>, <span class="st">&quot;hey&quot;</span>, <span class="st">&quot;hey&quot;</span>, <span class="st">&quot;ho&quot;</span>]))  <span class="co"># 5 list items</span></a>
-<a class="sourceLine" id="cb39-62" title="62"><span class="bu">print</span>(<span class="bu">len</span>({<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">9</span>}))  <span class="co"># 8 set items</span></a>
-<a class="sourceLine" id="cb39-63" title="63"></a>
-<a class="sourceLine" id="cb39-64" title="64"><span class="co"># We can index into strings, list, etc..self.</span></a>
-<a class="sourceLine" id="cb39-65" title="65">name <span class="op">=</span> <span class="st">&quot;Michael&quot;</span></a>
-<a class="sourceLine" id="cb39-66" title="66"><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(name)):</a>
-<a class="sourceLine" id="cb39-67" title="67">    <span class="bu">print</span>(name[i])  <span class="co"># M, i, c, h, a, e, l</span></a>
-<a class="sourceLine" id="cb39-68" title="68"></a>
-<a class="sourceLine" id="cb39-69" title="69"><span class="co"># We can index starting from the end as well, with negatives</span></a>
-<a class="sourceLine" id="cb39-70" title="70">occupation <span class="op">=</span> <span class="st">&quot;Full Stack Software Engineer&quot;</span></a>
-<a class="sourceLine" id="cb39-71" title="71"><span class="bu">print</span>(occupation[<span class="op">-</span><span class="dv">3</span>])  <span class="co"># e</span></a>
-<a class="sourceLine" id="cb39-72" title="72"></a>
-<a class="sourceLine" id="cb39-73" title="73"><span class="co"># We can also get ranges in the index with the [start:stop:step] syntax</span></a>
-<a class="sourceLine" id="cb39-74" title="74"><span class="bu">print</span>(occupation[<span class="dv">0</span>:<span class="dv">4</span>:<span class="dv">1</span>])  <span class="co"># step and stop are optional, stop is exclusive</span></a>
-<a class="sourceLine" id="cb39-75" title="75"><span class="bu">print</span>(occupation[::<span class="dv">4</span>])  <span class="co"># beginning to end, every 4th letter</span></a>
-<a class="sourceLine" id="cb39-76" title="76"><span class="bu">print</span>(occupation[<span class="dv">4</span>:<span class="dv">14</span>:<span class="dv">2</span>])  <span class="co"># Let&#39;s get weird with it!</span></a>
-<a class="sourceLine" id="cb39-77" title="77"><span class="co"># </span><span class="al">NOTE</span><span class="co">: Indexing out of range will give you an IndexError</span></a>
-<a class="sourceLine" id="cb39-78" title="78"></a>
-<a class="sourceLine" id="cb39-79" title="79"><span class="co"># We can also get the index og things with the .index() method, similar to indexOf()</span></a>
-<a class="sourceLine" id="cb39-80" title="80"><span class="bu">print</span>(occupation.index(<span class="st">&quot;Stack&quot;</span>))</a>
-<a class="sourceLine" id="cb39-81" title="81"><span class="bu">print</span>([<span class="st">&quot;Mike&quot;</span>, <span class="st">&quot;Barry&quot;</span>, <span class="st">&quot;Cole&quot;</span>, <span class="st">&quot;James&quot;</span>, <span class="st">&quot;Mark&quot;</span>].index(<span class="st">&quot;Cole&quot;</span>))</a>
-<a class="sourceLine" id="cb39-82" title="82"></a>
-<a class="sourceLine" id="cb39-83" title="83"><span class="co"># We can count how many times a substring/item appears in something as well</span></a>
-<a class="sourceLine" id="cb39-84" title="84"><span class="bu">print</span>(occupation.count(<span class="st">&quot;S&quot;</span>))</a>
-<a class="sourceLine" id="cb39-85" title="85"><span class="bu">print</span>(</a>
-<a class="sourceLine" id="cb39-86" title="86">    <span class="st">&quot;&quot;&quot;Now this here&#39;s a story all about how</span></a>
-<a class="sourceLine" id="cb39-87" title="87"><span class="st">My life got twist turned upside down</span></a>
-<a class="sourceLine" id="cb39-88" title="88"><span class="st">I forget the rest but the the the potato</span></a>
-<a class="sourceLine" id="cb39-89" title="89"><span class="st">smells like the potato&quot;&quot;&quot;</span>.count(</a>
-<a class="sourceLine" id="cb39-90" title="90">        <span class="st">&quot;the&quot;</span></a>
-<a class="sourceLine" id="cb39-91" title="91">    )</a>
-<a class="sourceLine" id="cb39-92" title="92">)</a>
-<a class="sourceLine" id="cb39-93" title="93"></a>
-<a class="sourceLine" id="cb39-94" title="94"><span class="co"># We concatenate the same as Javascript, but we can also multiply strings</span></a>
-<a class="sourceLine" id="cb39-95" title="95"><span class="bu">print</span>(<span class="st">&quot;dog &quot;</span> <span class="op">+</span> <span class="st">&quot;show&quot;</span>)</a>
-<a class="sourceLine" id="cb39-96" title="96"><span class="bu">print</span>(<span class="st">&quot;ha&quot;</span> <span class="op">*</span> <span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb39-97" title="97"></a>
-<a class="sourceLine" id="cb39-98" title="98"><span class="co"># We can use format for a multitude of things, from spaces to decimal places</span></a>
-<a class="sourceLine" id="cb39-99" title="99">first_name <span class="op">=</span> <span class="st">&quot;Michael&quot;</span></a>
-<a class="sourceLine" id="cb39-100" title="100">last_name <span class="op">=</span> <span class="st">&quot;Shuff&quot;</span></a>
-<a class="sourceLine" id="cb39-101" title="101"><span class="bu">print</span>(<span class="st">&quot;Your name is </span><span class="sc">{0}</span><span class="st"> </span><span class="sc">{1}</span><span class="st">&quot;</span>.<span class="bu">format</span>(first_name, last_name))</a>
-<a class="sourceLine" id="cb39-102" title="102"></a>
-<a class="sourceLine" id="cb39-103" title="103"><span class="co"># Useful String Methods</span></a>
-<a class="sourceLine" id="cb39-104" title="104"><span class="bu">print</span>(<span class="st">&quot;Hello&quot;</span>.upper())  <span class="co"># HELLO</span></a>
-<a class="sourceLine" id="cb39-105" title="105"><span class="bu">print</span>(<span class="st">&quot;Hello&quot;</span>.lower())  <span class="co"># hello</span></a>
-<a class="sourceLine" id="cb39-106" title="106"><span class="bu">print</span>(<span class="st">&quot;HELLO&quot;</span>.islower())  <span class="co"># False</span></a>
-<a class="sourceLine" id="cb39-107" title="107"><span class="bu">print</span>(<span class="st">&quot;HELLO&quot;</span>.isupper())  <span class="co"># True</span></a>
-<a class="sourceLine" id="cb39-108" title="108"><span class="bu">print</span>(<span class="st">&quot;Hello&quot;</span>.startswith(<span class="st">&quot;he&quot;</span>))  <span class="co"># False</span></a>
-<a class="sourceLine" id="cb39-109" title="109"><span class="bu">print</span>(<span class="st">&quot;Hello&quot;</span>.endswith(<span class="st">&quot;lo&quot;</span>))  <span class="co"># True</span></a>
-<a class="sourceLine" id="cb39-110" title="110"><span class="bu">print</span>(<span class="st">&quot;Hello There&quot;</span>.split())  <span class="co"># [Hello, There]</span></a>
-<a class="sourceLine" id="cb39-111" title="111"><span class="bu">print</span>(<span class="st">&quot;hello1&quot;</span>.isalpha())  <span class="co"># False,  must consist only of letters</span></a>
-<a class="sourceLine" id="cb39-112" title="112"><span class="bu">print</span>(<span class="st">&quot;hello1&quot;</span>.isalnum())  <span class="co"># True, must consist of only letters and numbers</span></a>
-<a class="sourceLine" id="cb39-113" title="113"><span class="bu">print</span>(<span class="st">&quot;3215235123&quot;</span>.isdecimal())  <span class="co"># True, must be all numbers</span></a>
-<a class="sourceLine" id="cb39-114" title="114"><span class="co"># True, must consist of only spaces/tabs/newlines</span></a>
-<a class="sourceLine" id="cb39-115" title="115"><span class="bu">print</span>(<span class="st">&quot;       </span><span class="ch">\n</span><span class="st">     &quot;</span>.isspace())</a>
-<a class="sourceLine" id="cb39-116" title="116"><span class="co"># False, index 0 must be upper case and the rest lower</span></a>
-<a class="sourceLine" id="cb39-117" title="117"><span class="bu">print</span>(<span class="st">&quot;MichaeL&quot;</span>.istitle())</a>
-<a class="sourceLine" id="cb39-118" title="118"><span class="bu">print</span>(<span class="st">&quot;Michael Lee&quot;</span>.istitle())  <span class="co"># True!</span></a>
-<a class="sourceLine" id="cb39-119" title="119"></a>
-<a class="sourceLine" id="cb39-120" title="120"><span class="co"># Duck Typing - If it walks like a duck, and talks like a duck, it must be a duck</span></a>
-<a class="sourceLine" id="cb39-121" title="121"><span class="co"># Assignment - All like JS, but there are no special keywords like let or const</span></a>
-<a class="sourceLine" id="cb39-122" title="122">a <span class="op">=</span> <span class="dv">3</span></a>
-<a class="sourceLine" id="cb39-123" title="123">b <span class="op">=</span> a</a>
-<a class="sourceLine" id="cb39-124" title="124">c <span class="op">=</span> <span class="st">&quot;heyoo&quot;</span></a>
-<a class="sourceLine" id="cb39-125" title="125">b <span class="op">=</span> [<span class="st">&quot;reassignment&quot;</span>, <span class="st">&quot;is&quot;</span>, <span class="st">&quot;fine&quot;</span>, <span class="st">&quot;G!&quot;</span>]</a>
-<a class="sourceLine" id="cb39-126" title="126"></a>
-<a class="sourceLine" id="cb39-127" title="127"><span class="co"># Comparison Operators - Python uses the same equality operators as JS, but no ===</span></a>
-<a class="sourceLine" id="cb39-128" title="128"><span class="co"># &lt; - Less than</span></a>
-<a class="sourceLine" id="cb39-129" title="129"><span class="co"># &gt; - Greater than</span></a>
-<a class="sourceLine" id="cb39-130" title="130"><span class="co"># &lt;= - Less than or Equal</span></a>
-<a class="sourceLine" id="cb39-131" title="131"><span class="co"># &gt;= - Greater than or Equal</span></a>
-<a class="sourceLine" id="cb39-132" title="132"><span class="co"># == - Equal to</span></a>
-<a class="sourceLine" id="cb39-133" title="133"><span class="co"># != - Not equal to</span></a>
-<a class="sourceLine" id="cb39-134" title="134"><span class="co"># is - Refers to exact same memory location</span></a>
-<a class="sourceLine" id="cb39-135" title="135"><span class="co"># not - !</span></a>
-<a class="sourceLine" id="cb39-136" title="136"><span class="co"># Precedence - Negative Signs(not) are applied first(part of each number)</span></a>
-<a class="sourceLine" id="cb39-137" title="137"><span class="co">#            - Multiplication and Division(and) happen next</span></a>
-<a class="sourceLine" id="cb39-138" title="138"><span class="co">#            - Addition and Subtraction(or) are the last step</span></a>
-<a class="sourceLine" id="cb39-139" title="139"><span class="co">#  </span><span class="al">NOTE</span><span class="co">: Be careful when using not along with ==</span></a>
-<a class="sourceLine" id="cb39-140" title="140"><span class="bu">print</span>(<span class="kw">not</span> a <span class="op">==</span> b)  <span class="co"># True</span></a>
-<a class="sourceLine" id="cb39-141" title="141"><span class="co"># print(a == not b) # Syntax Error</span></a>
-<a class="sourceLine" id="cb39-142" title="142"><span class="bu">print</span>(a <span class="op">==</span> (<span class="kw">not</span> b))  <span class="co"># This fixes it. Answer: False</span></a>
-<a class="sourceLine" id="cb39-143" title="143"><span class="co"># Python does short-circuit evaluation</span></a>
-<a class="sourceLine" id="cb39-144" title="144"></a>
-<a class="sourceLine" id="cb39-145" title="145"><span class="co"># Assignment Operators - Mostly the same as JS except Python has **= and //= (int division)</span></a>
-<a class="sourceLine" id="cb39-146" title="146"></a>
-<a class="sourceLine" id="cb39-147" title="147"><span class="co"># Flow Control Statements - if, while, for</span></a>
-<a class="sourceLine" id="cb39-148" title="148"><span class="co"># Note: Python smushes &#39;else if&#39; into &#39;elif&#39;!</span></a>
-<a class="sourceLine" id="cb39-149" title="149"><span class="cf">if</span> <span class="dv">10</span> <span class="op">&lt;</span> <span class="dv">1</span>:</a>
-<a class="sourceLine" id="cb39-150" title="150">    <span class="bu">print</span>(<span class="st">&quot;We don&#39;t get here&quot;</span>)</a>
-<a class="sourceLine" id="cb39-151" title="151"><span class="cf">elif</span> <span class="dv">10</span> <span class="op">&lt;</span> <span class="dv">5</span>:</a>
-<a class="sourceLine" id="cb39-152" title="152">    <span class="bu">print</span>(<span class="st">&quot;Nor here...&quot;</span>)</a>
-<a class="sourceLine" id="cb39-153" title="153"><span class="cf">else</span>:</a>
-<a class="sourceLine" id="cb39-154" title="154">    <span class="bu">print</span>(<span class="st">&quot;Hey there!&quot;</span>)</a>
-<a class="sourceLine" id="cb39-155" title="155"></a>
-<a class="sourceLine" id="cb39-156" title="156"><span class="co"># Looping over a string</span></a>
-<a class="sourceLine" id="cb39-157" title="157"><span class="cf">for</span> c <span class="kw">in</span> <span class="st">&quot;abcdefgh&quot;</span>:</a>
-<a class="sourceLine" id="cb39-158" title="158">    <span class="bu">print</span>(c)</a>
-<a class="sourceLine" id="cb39-159" title="159"></a>
-<a class="sourceLine" id="cb39-160" title="160"><span class="co"># Looping over a range</span></a>
-<a class="sourceLine" id="cb39-161" title="161"><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</a>
-<a class="sourceLine" id="cb39-162" title="162">    <span class="bu">print</span>(i <span class="op">+</span> <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb39-163" title="163"></a>
-<a class="sourceLine" id="cb39-164" title="164"><span class="co"># Looping over a list</span></a>
-<a class="sourceLine" id="cb39-165" title="165">lst <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</a>
-<a class="sourceLine" id="cb39-166" title="166"><span class="cf">for</span> i <span class="kw">in</span> lst:</a>
-<a class="sourceLine" id="cb39-167" title="167">    <span class="bu">print</span>(i)</a>
-<a class="sourceLine" id="cb39-168" title="168"></a>
-<a class="sourceLine" id="cb39-169" title="169"><span class="co"># Looping over a dictionary</span></a>
-<a class="sourceLine" id="cb39-170" title="170">spam <span class="op">=</span> {<span class="st">&quot;color&quot;</span>: <span class="st">&quot;red&quot;</span>, <span class="st">&quot;age&quot;</span>: <span class="dv">42</span>, <span class="st">&quot;items&quot;</span>: [(<span class="dv">1</span>, <span class="st">&quot;hey&quot;</span>), (<span class="dv">2</span>, <span class="st">&quot;hooo!&quot;</span>)]}</a>
-<a class="sourceLine" id="cb39-171" title="171"><span class="cf">for</span> v <span class="kw">in</span> spam.values():</a>
-<a class="sourceLine" id="cb39-172" title="172">    <span class="bu">print</span>(v)</a>
-<a class="sourceLine" id="cb39-173" title="173"></a>
-<a class="sourceLine" id="cb39-174" title="174"><span class="co"># Loop over a list of tuples and destructuring the values</span></a>
-<a class="sourceLine" id="cb39-175" title="175"><span class="co"># Assuming spam.items returns a list of tuples each containing two items (k, v)</span></a>
-<a class="sourceLine" id="cb39-176" title="176"><span class="cf">for</span> k, v <span class="kw">in</span> spam.items():</a>
-<a class="sourceLine" id="cb39-177" title="177">    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{k}</span><span class="ss">: </span><span class="sc">{v}</span><span class="ss">&quot;</span>)</a>
-<a class="sourceLine" id="cb39-178" title="178"></a>
-<a class="sourceLine" id="cb39-179" title="179"><span class="co"># While loops as long as the condition is True</span></a>
-<a class="sourceLine" id="cb39-180" title="180"><span class="co">#  - Exit loop early with break</span></a>
-<a class="sourceLine" id="cb39-181" title="181"><span class="co">#  - Exit iteration early with continue</span></a>
-<a class="sourceLine" id="cb39-182" title="182">spam <span class="op">=</span> <span class="dv">0</span></a>
-<a class="sourceLine" id="cb39-183" title="183"><span class="cf">while</span> <span class="va">True</span>:</a>
-<a class="sourceLine" id="cb39-184" title="184">    <span class="bu">print</span>(<span class="st">&quot;Heyy girrllll&quot;</span>)</a>
-<a class="sourceLine" id="cb39-185" title="185">    spam <span class="op">+=</span> <span class="dv">1</span></a>
-<a class="sourceLine" id="cb39-186" title="186">    <span class="cf">if</span> spam <span class="op">&lt;</span> <span class="dv">5</span>:</a>
-<a class="sourceLine" id="cb39-187" title="187">        <span class="cf">continue</span></a>
-<a class="sourceLine" id="cb39-188" title="188">    <span class="cf">break</span></a>
-<a class="sourceLine" id="cb39-189" title="189"></a>
-<a class="sourceLine" id="cb39-190" title="190"></a>
-<a class="sourceLine" id="cb39-191" title="191"><span class="co"># Functions - use def keyword to define a function in Python</span></a>
-<a class="sourceLine" id="cb39-192" title="192"><span class="kw">def</span> printCopyright():</a>
-<a class="sourceLine" id="cb39-193" title="193">    <span class="bu">print</span>(<span class="st">&quot;Copyright 2020, ya boi, Mike Shuff&quot;</span>)</a>
-<a class="sourceLine" id="cb39-194" title="194"></a>
-<a class="sourceLine" id="cb39-195" title="195"></a>
-<a class="sourceLine" id="cb39-196" title="196"><span class="co"># Lambdas are one liners! (Should be at least, you can use parenthesis to disobey)</span></a>
-<a class="sourceLine" id="cb39-197" title="197">avg <span class="op">=</span> <span class="kw">lambda</span> num1, num2: <span class="bu">print</span>(num1 <span class="op">+</span> num2)</a>
-<a class="sourceLine" id="cb39-198" title="198"></a>
-<a class="sourceLine" id="cb39-199" title="199">avg(<span class="dv">1</span>, <span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb39-200" title="200"><span class="co"># Calling it with keyword arguments, order does not matter</span></a>
-<a class="sourceLine" id="cb39-201" title="201">avg(num2<span class="op">=</span><span class="dv">20</span>, num1<span class="op">=</span><span class="dv">1252</span>)</a>
-<a class="sourceLine" id="cb39-202" title="202">printCopyright()</a>
-<a class="sourceLine" id="cb39-203" title="203"></a>
-<a class="sourceLine" id="cb39-204" title="204"><span class="co"># We can give parameters default arguments like JS</span></a>
-<a class="sourceLine" id="cb39-205" title="205"><span class="kw">def</span> greeting(name, saying<span class="op">=</span><span class="st">&quot;Hello&quot;</span>):</a>
-<a class="sourceLine" id="cb39-206" title="206">    <span class="bu">print</span>(saying, name)</a>
-<a class="sourceLine" id="cb39-207" title="207"></a>
-<a class="sourceLine" id="cb39-208" title="208"></a>
-<a class="sourceLine" id="cb39-209" title="209">greeting(<span class="st">&quot;Mike&quot;</span>)  <span class="co"># Hello Mike</span></a>
-<a class="sourceLine" id="cb39-210" title="210">greeting(<span class="st">&quot;Michael&quot;</span>, saying<span class="op">=</span><span class="st">&quot;Hello there...&quot;</span>)</a>
-<a class="sourceLine" id="cb39-211" title="211"></a>
-<a class="sourceLine" id="cb39-212" title="212"><span class="co"># A common gotcha is using a mutable object for a default parameter</span></a>
-<a class="sourceLine" id="cb39-213" title="213"><span class="co"># All invocations of the function reference the same mutable object</span></a>
-<a class="sourceLine" id="cb39-214" title="214"><span class="kw">def</span> append_item(item_name, item_list<span class="op">=</span>[]):  <span class="co"># Will it obey and give us a new list?</span></a>
-<a class="sourceLine" id="cb39-215" title="215">    item_list.append(item_name)</a>
-<a class="sourceLine" id="cb39-216" title="216">    <span class="cf">return</span> item_list</a>
-<a class="sourceLine" id="cb39-217" title="217"></a>
-<a class="sourceLine" id="cb39-218" title="218"></a>
-<a class="sourceLine" id="cb39-219" title="219"><span class="co"># Uses same item list unless otherwise stated which is counterintuitive</span></a>
-<a class="sourceLine" id="cb39-220" title="220"><span class="bu">print</span>(append_item(<span class="st">&quot;notebook&quot;</span>))</a>
-<a class="sourceLine" id="cb39-221" title="221"><span class="bu">print</span>(append_item(<span class="st">&quot;notebook&quot;</span>))</a>
-<a class="sourceLine" id="cb39-222" title="222"><span class="bu">print</span>(append_item(<span class="st">&quot;notebook&quot;</span>, []))</a>
-<a class="sourceLine" id="cb39-223" title="223"></a>
-<a class="sourceLine" id="cb39-224" title="224"><span class="co"># Errors - Unlike JS, if we pass the incorrect amount of arguments to a function,</span></a>
-<a class="sourceLine" id="cb39-225" title="225"><span class="co">#          it will throw an error</span></a>
-<a class="sourceLine" id="cb39-226" title="226"><span class="co"># avg(1)  # TypeError</span></a>
-<a class="sourceLine" id="cb39-227" title="227"><span class="co"># avg(1, 2, 2) # TypeError</span></a>
-<a class="sourceLine" id="cb39-228" title="228"></a>
-<a class="sourceLine" id="cb39-229" title="229"><span class="co"># ----------------------------------- DAY 2 ----------------------------------------</span></a>
-<a class="sourceLine" id="cb39-230" title="230"><span class="co"># Functions - * to get rest of position arguments as tuple</span></a>
-<a class="sourceLine" id="cb39-231" title="231"><span class="co">#           - ** to get rest of keyword arguments as a dictionary</span></a>
-<a class="sourceLine" id="cb39-232" title="232"><span class="co"># Variable Length positional arguments</span></a>
-<a class="sourceLine" id="cb39-233" title="233"><span class="kw">def</span> add(a, b, <span class="op">*</span>args):</a>
-<a class="sourceLine" id="cb39-234" title="234">    <span class="co"># args is a tuple of the rest of the arguments</span></a>
-<a class="sourceLine" id="cb39-235" title="235">    total <span class="op">=</span> a <span class="op">+</span> b</a>
-<a class="sourceLine" id="cb39-236" title="236">    <span class="cf">for</span> n <span class="kw">in</span> args:</a>
-<a class="sourceLine" id="cb39-237" title="237">        total <span class="op">+=</span> n</a>
-<a class="sourceLine" id="cb39-238" title="238">    <span class="cf">return</span> total</a>
-<a class="sourceLine" id="cb39-239" title="239"></a>
-<a class="sourceLine" id="cb39-240" title="240"></a>
-<a class="sourceLine" id="cb39-241" title="241"><span class="bu">print</span>(add(<span class="dv">1</span>, <span class="dv">2</span>))  <span class="co"># args is None, returns 3</span></a>
-<a class="sourceLine" id="cb39-242" title="242"><span class="bu">print</span>(add(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>))  <span class="co"># args is (3, 4, 5, 6), returns 21</span></a>
-<a class="sourceLine" id="cb39-243" title="243"></a>
-<a class="sourceLine" id="cb39-244" title="244"><span class="co"># Variable Length Keyword Arguments</span></a>
-<a class="sourceLine" id="cb39-245" title="245"><span class="kw">def</span> print_names_and_countries(greeting, <span class="op">**</span>kwargs):</a>
-<a class="sourceLine" id="cb39-246" title="246">    <span class="co"># kwargs is a dictionary of the rest of the keyword arguments</span></a>
-<a class="sourceLine" id="cb39-247" title="247">    <span class="cf">for</span> k, v <span class="kw">in</span> kwargs.items():</a>
-<a class="sourceLine" id="cb39-248" title="248">        <span class="bu">print</span>(greeting, k, <span class="st">&quot;from&quot;</span>, v)</a>
-<a class="sourceLine" id="cb39-249" title="249"></a>
-<a class="sourceLine" id="cb39-250" title="250"></a>
-<a class="sourceLine" id="cb39-251" title="251">print_names_and_countries(</a>
-<a class="sourceLine" id="cb39-252" title="252">    <span class="st">&quot;Hey there&quot;</span>, Monica<span class="op">=</span><span class="st">&quot;Sweden&quot;</span>, Mike<span class="op">=</span><span class="st">&quot;The United States&quot;</span>, Mark<span class="op">=</span><span class="st">&quot;China&quot;</span></a>
-<a class="sourceLine" id="cb39-253" title="253">)</a>
-<a class="sourceLine" id="cb39-254" title="254"></a>
-<a class="sourceLine" id="cb39-255" title="255"><span class="co"># We can combine all of these together</span></a>
-<a class="sourceLine" id="cb39-256" title="256"><span class="kw">def</span> example2(arg1, arg2, <span class="op">*</span>args, kw_1<span class="op">=</span><span class="st">&quot;cheese&quot;</span>, kw_2<span class="op">=</span><span class="st">&quot;horse&quot;</span>, <span class="op">**</span>kwargs):</a>
-<a class="sourceLine" id="cb39-257" title="257">    <span class="cf">pass</span></a>
-<a class="sourceLine" id="cb39-258" title="258"></a>
-<a class="sourceLine" id="cb39-259" title="259"></a>
-<a class="sourceLine" id="cb39-260" title="260"><span class="co"># Lists are mutable arrays</span></a>
-<a class="sourceLine" id="cb39-261" title="261">empty_list <span class="op">=</span> []</a>
-<a class="sourceLine" id="cb39-262" title="262">roomates <span class="op">=</span> [<span class="st">&quot;Beau&quot;</span>, <span class="st">&quot;Delynn&quot;</span>]</a>
-<a class="sourceLine" id="cb39-263" title="263"><span class="co"># List built-in function makes a list too</span></a>
-<a class="sourceLine" id="cb39-264" title="264">specials <span class="op">=</span> <span class="bu">list</span>()</a>
-<a class="sourceLine" id="cb39-265" title="265"><span class="co"># We can use &#39;in&#39; to test if something is in the list, like &#39;includes&#39; in JS</span></a>
-<a class="sourceLine" id="cb39-266" title="266"><span class="bu">print</span>(<span class="dv">1</span> <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>])  <span class="co"># True</span></a>
-<a class="sourceLine" id="cb39-267" title="267"><span class="bu">print</span>(<span class="dv">2</span> <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>])  <span class="co"># False</span></a>
-<a class="sourceLine" id="cb39-268" title="268"></a>
-<a class="sourceLine" id="cb39-269" title="269"><span class="co"># Dictionaries - Similar to JS POJO&#39;s or Map, containing key value pairs</span></a>
-<a class="sourceLine" id="cb39-270" title="270">a <span class="op">=</span> {<span class="st">&quot;one&quot;</span>: <span class="dv">1</span>, <span class="st">&quot;two&quot;</span>: <span class="dv">2</span>, <span class="st">&quot;three&quot;</span>: <span class="dv">3</span>}</a>
-<a class="sourceLine" id="cb39-271" title="271">b <span class="op">=</span> <span class="bu">dict</span>(one<span class="op">=</span><span class="dv">1</span>, two<span class="op">=</span><span class="dv">2</span>, three<span class="op">=</span><span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb39-272" title="272"><span class="co"># Can use &#39;in&#39; on dictionaries too (for keys)</span></a>
-<a class="sourceLine" id="cb39-273" title="273"><span class="bu">print</span>(<span class="st">&quot;one&quot;</span> <span class="kw">in</span> a)  <span class="co"># True</span></a>
-<a class="sourceLine" id="cb39-274" title="274"><span class="bu">print</span>(<span class="dv">3</span> <span class="kw">in</span> b)  <span class="co"># False</span></a>
-<a class="sourceLine" id="cb39-275" title="275"></a>
-<a class="sourceLine" id="cb39-276" title="276"><span class="co"># Sets - Just like JS, unordered collection of distinct objects</span></a>
-<a class="sourceLine" id="cb39-277" title="277">bedroom <span class="op">=</span> {<span class="st">&quot;bed&quot;</span>, <span class="st">&quot;tv&quot;</span>, <span class="st">&quot;computer&quot;</span>, <span class="st">&quot;clothes&quot;</span>, <span class="st">&quot;playstation 4&quot;</span>}</a>
-<a class="sourceLine" id="cb39-278" title="278"><span class="co"># bedroom = set(&quot;bed&quot;, &quot;tv&quot;, &quot;computer&quot;, &quot;clothes&quot;, &quot;playstation 5&quot;)</span></a>
-<a class="sourceLine" id="cb39-279" title="279">school_bag <span class="op">=</span> <span class="bu">set</span>(</a>
-<a class="sourceLine" id="cb39-280" title="280">    [<span class="st">&quot;book&quot;</span>, <span class="st">&quot;paper&quot;</span>, <span class="st">&quot;pencil&quot;</span>, <span class="st">&quot;pencil&quot;</span>, <span class="st">&quot;book&quot;</span>, <span class="st">&quot;book&quot;</span>, <span class="st">&quot;book&quot;</span>, <span class="st">&quot;eraser&quot;</span>]</a>
-<a class="sourceLine" id="cb39-281" title="281">)</a>
-<a class="sourceLine" id="cb39-282" title="282"><span class="bu">print</span>(school_bag)</a>
-<a class="sourceLine" id="cb39-283" title="283"><span class="bu">print</span>(bedroom)</a>
-<a class="sourceLine" id="cb39-284" title="284"><span class="co"># We can use &#39;in&#39; on sets as wel</span></a>
-<a class="sourceLine" id="cb39-285" title="285"><span class="bu">print</span>(<span class="dv">1</span> <span class="kw">in</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>})  <span class="co"># True</span></a>
-<a class="sourceLine" id="cb39-286" title="286"><span class="bu">print</span>(<span class="dv">4</span> <span class="kw">in</span> {<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>})  <span class="co"># False</span></a>
-<a class="sourceLine" id="cb39-287" title="287"></a>
-<a class="sourceLine" id="cb39-288" title="288"><span class="co"># Tuples are immutable lists of items</span></a>
-<a class="sourceLine" id="cb39-289" title="289">time_blocks <span class="op">=</span> (<span class="st">&quot;AM&quot;</span>, <span class="st">&quot;PM&quot;</span>)</a>
-<a class="sourceLine" id="cb39-290" title="290">colors <span class="op">=</span> <span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>  <span class="co"># Parenthesis not needed but encouraged</span></a>
-<a class="sourceLine" id="cb39-291" title="291"><span class="co"># The tuple built-in function can be used to convert things to tuples</span></a>
-<a class="sourceLine" id="cb39-292" title="292"><span class="bu">print</span>(<span class="bu">tuple</span>(<span class="st">&quot;abc&quot;</span>))</a>
-<a class="sourceLine" id="cb39-293" title="293"><span class="bu">print</span>(<span class="bu">tuple</span>([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]))</a>
-<a class="sourceLine" id="cb39-294" title="294"><span class="co"># &#39;in&#39; may be used on tuples as well</span></a>
-<a class="sourceLine" id="cb39-295" title="295"><span class="bu">print</span>(<span class="dv">1</span> <span class="kw">in</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))  <span class="co"># True</span></a>
-<a class="sourceLine" id="cb39-296" title="296"><span class="bu">print</span>(<span class="dv">5</span> <span class="kw">in</span> (<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>))  <span class="co"># False</span></a>
-<a class="sourceLine" id="cb39-297" title="297"></a>
-<a class="sourceLine" id="cb39-298" title="298"><span class="co"># Ranges are immutable lists of numbers, often used with for loops</span></a>
-<a class="sourceLine" id="cb39-299" title="299"><span class="co">#   - start - default: 0, first number in sequence</span></a>
-<a class="sourceLine" id="cb39-300" title="300"><span class="co">#   - stop - required, next number past last number in sequence</span></a>
-<a class="sourceLine" id="cb39-301" title="301"><span class="co">#   - step - default: 1, difference between each number in sequence</span></a>
-<a class="sourceLine" id="cb39-302" title="302">range1 <span class="op">=</span> <span class="bu">range</span>(<span class="dv">5</span>)  <span class="co"># [0,1,2,3,4]</span></a>
-<a class="sourceLine" id="cb39-303" title="303">range2 <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">5</span>)  <span class="co"># [1,2,3,4]</span></a>
-<a class="sourceLine" id="cb39-304" title="304">range3 <span class="op">=</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">25</span>, <span class="dv">5</span>)  <span class="co"># [0,5,10,15,20]</span></a>
-<a class="sourceLine" id="cb39-305" title="305">range4 <span class="op">=</span> <span class="bu">range</span>(<span class="dv">0</span>)  <span class="co"># []</span></a>
-<a class="sourceLine" id="cb39-306" title="306"><span class="cf">for</span> i <span class="kw">in</span> range1:</a>
-<a class="sourceLine" id="cb39-307" title="307">    <span class="bu">print</span>(i)</a>
-<a class="sourceLine" id="cb39-308" title="308"></a>
-<a class="sourceLine" id="cb39-309" title="309"><span class="co"># Built-in functions:</span></a>
-<a class="sourceLine" id="cb39-310" title="310"><span class="co"># Filter</span></a>
-<a class="sourceLine" id="cb39-311" title="311">isOdd <span class="op">=</span> <span class="kw">lambda</span> num: num <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span></a>
-<a class="sourceLine" id="cb39-312" title="312"></a>
-<a class="sourceLine" id="cb39-313" title="313">filtered <span class="op">=</span> <span class="bu">filter</span>(isOdd, [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</a>
-<a class="sourceLine" id="cb39-314" title="314"><span class="bu">print</span>(<span class="bu">list</span>(filtered))</a>
-<a class="sourceLine" id="cb39-315" title="315"><span class="cf">for</span> num <span class="kw">in</span> filtered:</a>
-<a class="sourceLine" id="cb39-316" title="316">    <span class="bu">print</span>(<span class="ss">f&quot;first way: </span><span class="sc">{</span>num<span class="sc">}</span><span class="ss">&quot;</span>)</a>
-<a class="sourceLine" id="cb39-317" title="317"><span class="bu">print</span>(<span class="st">&quot;--&quot;</span> <span class="op">*</span> <span class="dv">20</span>)</a>
-<a class="sourceLine" id="cb39-318" title="318">[<span class="bu">print</span>(<span class="ss">f&quot;list comprehension: </span><span class="sc">{i}</span><span class="ss">&quot;</span>) <span class="cf">for</span> i <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>] <span class="cf">if</span> i <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb39-319" title="319"></a>
-<a class="sourceLine" id="cb39-320" title="320"><span class="co"># Map</span></a>
-<a class="sourceLine" id="cb39-321" title="321"><span class="kw">def</span> toUpper(<span class="bu">str</span>):</a>
-<a class="sourceLine" id="cb39-322" title="322">    <span class="cf">return</span> <span class="bu">str</span>.upper()</a>
-<a class="sourceLine" id="cb39-323" title="323"></a>
-<a class="sourceLine" id="cb39-324" title="324"></a>
-<a class="sourceLine" id="cb39-325" title="325">upperCased <span class="op">=</span> <span class="bu">map</span>(toUpper, [<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>])</a>
-<a class="sourceLine" id="cb39-326" title="326"><span class="bu">print</span>(<span class="bu">list</span>(upperCased))</a>
-<a class="sourceLine" id="cb39-327" title="327"></a>
-<a class="sourceLine" id="cb39-328" title="328"><span class="co"># Sorted</span></a>
-<a class="sourceLine" id="cb39-329" title="329">sorted_items <span class="op">=</span> <span class="bu">sorted</span>([<span class="st">&quot;john&quot;</span>, <span class="st">&quot;tom&quot;</span>, <span class="st">&quot;sonny&quot;</span>, <span class="st">&quot;Mike&quot;</span>])</a>
-<a class="sourceLine" id="cb39-330" title="330"><span class="bu">print</span>(<span class="bu">list</span>(sorted_items))  <span class="co"># Notice uppercase comes before lowercase</span></a>
-<a class="sourceLine" id="cb39-331" title="331"><span class="co"># Using a key function to control the sorting and make it case insensitive</span></a>
-<a class="sourceLine" id="cb39-332" title="332">sorted_items <span class="op">=</span> <span class="bu">sorted</span>([<span class="st">&quot;john&quot;</span>, <span class="st">&quot;tom&quot;</span>, <span class="st">&quot;sonny&quot;</span>, <span class="st">&quot;Mike&quot;</span>], key<span class="op">=</span><span class="bu">str</span>.lower)</a>
-<a class="sourceLine" id="cb39-333" title="333"><span class="bu">print</span>(sorted_items)</a>
-<a class="sourceLine" id="cb39-334" title="334"><span class="co"># You can also reverse the sort</span></a>
-<a class="sourceLine" id="cb39-335" title="335">sorted_items <span class="op">=</span> <span class="bu">sorted</span>([<span class="st">&quot;john&quot;</span>, <span class="st">&quot;tom&quot;</span>, <span class="st">&quot;sonny&quot;</span>, <span class="st">&quot;Mike&quot;</span>], key<span class="op">=</span><span class="bu">str</span>.lower, reverse<span class="op">=</span><span class="va">True</span>)</a>
-<a class="sourceLine" id="cb39-336" title="336"><span class="bu">print</span>(sorted_items)</a>
-<a class="sourceLine" id="cb39-337" title="337"></a>
-<a class="sourceLine" id="cb39-338" title="338"><span class="co"># Enumerate creates a tuple with an index for what you&#39;re enumerating</span></a>
-<a class="sourceLine" id="cb39-339" title="339">quarters <span class="op">=</span> [<span class="st">&quot;First&quot;</span>, <span class="st">&quot;Second&quot;</span>, <span class="st">&quot;Third&quot;</span>, <span class="st">&quot;Fourth&quot;</span>]</a>
-<a class="sourceLine" id="cb39-340" title="340"><span class="bu">print</span>(<span class="bu">list</span>(<span class="bu">enumerate</span>(quarters)))</a>
-<a class="sourceLine" id="cb39-341" title="341"><span class="bu">print</span>(<span class="bu">list</span>(<span class="bu">enumerate</span>(quarters, start<span class="op">=</span><span class="dv">1</span>)))</a>
-<a class="sourceLine" id="cb39-342" title="342"></a>
-<a class="sourceLine" id="cb39-343" title="343"><span class="co"># Zip takes list and combines them as key value pairs, or really however you need</span></a>
-<a class="sourceLine" id="cb39-344" title="344">keys <span class="op">=</span> (<span class="st">&quot;Name&quot;</span>, <span class="st">&quot;Email&quot;</span>)</a>
-<a class="sourceLine" id="cb39-345" title="345">values <span class="op">=</span> (<span class="st">&quot;Buster&quot;</span>, <span class="st">&quot;cheetoh@johhnydepp.com&quot;</span>)</a>
-<a class="sourceLine" id="cb39-346" title="346">zipped <span class="op">=</span> <span class="bu">zip</span>(keys, values)</a>
-<a class="sourceLine" id="cb39-347" title="347"><span class="bu">print</span>(<span class="bu">list</span>(zipped))</a>
-<a class="sourceLine" id="cb39-348" title="348"><span class="co"># You can zip more than 2</span></a>
-<a class="sourceLine" id="cb39-349" title="349">x_coords <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</a>
-<a class="sourceLine" id="cb39-350" title="350">y_coords <span class="op">=</span> [<span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">10</span>, <span class="dv">9</span>, <span class="dv">10</span>]</a>
-<a class="sourceLine" id="cb39-351" title="351">z_coords <span class="op">=</span> [<span class="dv">20</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">9</span>, <span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb39-352" title="352">coords <span class="op">=</span> <span class="bu">zip</span>(x_coords, y_coords, z_coords)</a>
-<a class="sourceLine" id="cb39-353" title="353"><span class="bu">print</span>(<span class="bu">list</span>(coords))</a>
-<a class="sourceLine" id="cb39-354" title="354"></a>
-<a class="sourceLine" id="cb39-355" title="355"><span class="co"># Len reports the length of strings along with list and any other object data type</span></a>
-<a class="sourceLine" id="cb39-356" title="356">print_len <span class="op">=</span> <span class="kw">lambda</span> item: <span class="bu">print</span>(<span class="bu">len</span>(item))  <span class="co"># doing this to save myself some typing</span></a>
-<a class="sourceLine" id="cb39-357" title="357"></a>
-<a class="sourceLine" id="cb39-358" title="358">print_len(<span class="st">&quot;Mike&quot;</span>)</a>
-<a class="sourceLine" id="cb39-359" title="359">print_len([<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">3</span>, <span class="dv">10</span>])</a>
-<a class="sourceLine" id="cb39-360" title="360">print_len({<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">9</span>, <span class="dv">10</span>})  <span class="co"># 4 because there is a duplicate here (10)</span></a>
-<a class="sourceLine" id="cb39-361" title="361">print_len((<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">10</span>, <span class="dv">9</span>, <span class="dv">20</span>))</a>
-<a class="sourceLine" id="cb39-362" title="362"></a>
-<a class="sourceLine" id="cb39-363" title="363"><span class="co"># Max will return the max number in a given scenario</span></a>
-<a class="sourceLine" id="cb39-364" title="364"><span class="bu">print</span>(<span class="bu">max</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">35</span>, <span class="dv">1012</span>, <span class="dv">1</span>))</a>
-<a class="sourceLine" id="cb39-365" title="365"></a>
-<a class="sourceLine" id="cb39-366" title="366"><span class="co"># Min</span></a>
-<a class="sourceLine" id="cb39-367" title="367"><span class="bu">print</span>(<span class="bu">min</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">10</span>))</a>
-<a class="sourceLine" id="cb39-368" title="368"><span class="bu">print</span>(<span class="bu">min</span>([<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">10</span>]))</a>
-<a class="sourceLine" id="cb39-369" title="369"></a>
-<a class="sourceLine" id="cb39-370" title="370"><span class="co"># Sum</span></a>
-<a class="sourceLine" id="cb39-371" title="371"><span class="bu">print</span>(<span class="bu">sum</span>([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>]))</a>
-<a class="sourceLine" id="cb39-372" title="372"></a>
-<a class="sourceLine" id="cb39-373" title="373"><span class="co"># Any</span></a>
-<a class="sourceLine" id="cb39-374" title="374"><span class="bu">print</span>(<span class="bu">any</span>([<span class="va">True</span>, <span class="va">False</span>, <span class="va">False</span>]))</a>
-<a class="sourceLine" id="cb39-375" title="375"><span class="bu">print</span>(<span class="bu">any</span>([<span class="va">False</span>, <span class="va">False</span>, <span class="va">False</span>]))</a>
-<a class="sourceLine" id="cb39-376" title="376"></a>
-<a class="sourceLine" id="cb39-377" title="377"><span class="co"># All</span></a>
-<a class="sourceLine" id="cb39-378" title="378"><span class="bu">print</span>(<span class="bu">all</span>([<span class="va">True</span>, <span class="va">True</span>, <span class="va">False</span>]))</a>
-<a class="sourceLine" id="cb39-379" title="379"><span class="bu">print</span>(<span class="bu">all</span>([<span class="va">True</span>, <span class="va">True</span>, <span class="va">True</span>]))</a>
-<a class="sourceLine" id="cb39-380" title="380"></a>
-<a class="sourceLine" id="cb39-381" title="381"><span class="co"># Dir returns all the attributes of an object including it&#39;s methods and dunder methods</span></a>
-<a class="sourceLine" id="cb39-382" title="382">user <span class="op">=</span> {<span class="st">&quot;Name&quot;</span>: <span class="st">&quot;Bob&quot;</span>, <span class="st">&quot;Email&quot;</span>: <span class="st">&quot;bob@bob.com&quot;</span>}</a>
-<a class="sourceLine" id="cb39-383" title="383"><span class="bu">print</span>(<span class="bu">dir</span>(user))</a>
-<a class="sourceLine" id="cb39-384" title="384"></a>
-<a class="sourceLine" id="cb39-385" title="385"><span class="co"># Importing packages and modules</span></a>
-<a class="sourceLine" id="cb39-386" title="386"><span class="co">#  - Module - A Python code in a file or directory</span></a>
-<a class="sourceLine" id="cb39-387" title="387"><span class="co">#  - Package - A module which is a directory containing an __init__.py file</span></a>
-<a class="sourceLine" id="cb39-388" title="388"><span class="co">#  - Submodule - A module which is contained within a package</span></a>
-<a class="sourceLine" id="cb39-389" title="389"><span class="co">#  - Name - An exported function, class, or variable in a module</span></a>
-<a class="sourceLine" id="cb39-390" title="390"><span class="co"># Unlike JS, modules export ALL names contained within them without any special export key</span></a>
-<a class="sourceLine" id="cb39-391" title="391"></a>
-<a class="sourceLine" id="cb39-392" title="392"><span class="co"># Assuming we have the following package with four submodules</span></a>
-<a class="sourceLine" id="cb39-393" title="393"><span class="co">#  math</span></a>
-<a class="sourceLine" id="cb39-394" title="394"><span class="co">#  |  __init__.py</span></a>
-<a class="sourceLine" id="cb39-395" title="395"><span class="co">#  | addition.py</span></a>
-<a class="sourceLine" id="cb39-396" title="396"><span class="co">#  | subtraction.py</span></a>
-<a class="sourceLine" id="cb39-397" title="397"><span class="co">#  | multiplication.py</span></a>
-<a class="sourceLine" id="cb39-398" title="398"><span class="co">#  | division.py</span></a>
-<a class="sourceLine" id="cb39-399" title="399"></a>
-<a class="sourceLine" id="cb39-400" title="400"><span class="co"># If we peek into the addition.py file we see there&#39;s an add function</span></a>
-<a class="sourceLine" id="cb39-401" title="401"><span class="co"># addition.py</span></a>
-<a class="sourceLine" id="cb39-402" title="402"><span class="co"># We can import &#39;add&#39; from other places because it&#39;s a &#39;name&#39; and is automatically exported</span></a>
-<a class="sourceLine" id="cb39-403" title="403"><span class="kw">def</span> add(num1, num2):</a>
-<a class="sourceLine" id="cb39-404" title="404">    <span class="cf">return</span> num1 <span class="op">+</span> num2</a>
-<a class="sourceLine" id="cb39-405" title="405"></a>
-<a class="sourceLine" id="cb39-406" title="406"></a>
-<a class="sourceLine" id="cb39-407" title="407"><span class="co"># Notice the . syntax because this package can import it&#39;s own submodules.</span></a>
-<a class="sourceLine" id="cb39-408" title="408"><span class="co"># Our __init__.py has the following files</span></a>
-<a class="sourceLine" id="cb39-409" title="409"><span class="co"># This imports the &#39;add&#39; function</span></a>
-<a class="sourceLine" id="cb39-410" title="410"><span class="co"># And now it&#39;s also re-exported in here as well</span></a>
-<a class="sourceLine" id="cb39-411" title="411"><span class="co"># from .addition import add</span></a>
-<a class="sourceLine" id="cb39-412" title="412"><span class="co"># These import and re-export the rest of the functions from the submodule</span></a>
-<a class="sourceLine" id="cb39-413" title="413"><span class="co"># from .subtraction import subtract</span></a>
-<a class="sourceLine" id="cb39-414" title="414"><span class="co"># from .division import divide</span></a>
-<a class="sourceLine" id="cb39-415" title="415"><span class="co"># from .multiplication import multiply</span></a>
-<a class="sourceLine" id="cb39-416" title="416"><span class="co"># So if we have a script.py and want to import add, we could do it many ways</span></a>
-<a class="sourceLine" id="cb39-417" title="417"></a>
-<a class="sourceLine" id="cb39-418" title="418"><span class="co"># This will load and execute the &#39;math/__init__.py&#39; file and give</span></a>
-<a class="sourceLine" id="cb39-419" title="419"><span class="co"># us an object with the exported names in &#39;math/__init__.py&#39;</span></a>
-<a class="sourceLine" id="cb39-420" title="420"><span class="im">import</span> math</a>
-<a class="sourceLine" id="cb39-421" title="421"></a>
-<a class="sourceLine" id="cb39-422" title="422"><span class="co"># print(math.add(1,2))</span></a>
-<a class="sourceLine" id="cb39-423" title="423"></a>
-<a class="sourceLine" id="cb39-424" title="424"><span class="co"># This imports JUST the add from &#39;math/__init__.py&#39;</span></a>
-<a class="sourceLine" id="cb39-425" title="425"><span class="co"># from math import add</span></a>
-<a class="sourceLine" id="cb39-426" title="426"></a>
-<a class="sourceLine" id="cb39-427" title="427"><span class="co"># print(add(1, 2))</span></a>
-<a class="sourceLine" id="cb39-428" title="428"></a>
-<a class="sourceLine" id="cb39-429" title="429"><span class="co"># This skips importing from &#39;math/__init__.py&#39; (although it still runs)</span></a>
-<a class="sourceLine" id="cb39-430" title="430"><span class="co"># and imports directly from the addition.py file</span></a>
-<a class="sourceLine" id="cb39-431" title="431"><span class="co"># from math.addition import add</span></a>
-<a class="sourceLine" id="cb39-432" title="432"></a>
-<a class="sourceLine" id="cb39-433" title="433"><span class="co"># This imports all the functions individually from &#39;math/__init__.py&#39;</span></a>
-<a class="sourceLine" id="cb39-434" title="434"><span class="co"># from math import add, subtract, multiply, divide</span></a>
-<a class="sourceLine" id="cb39-435" title="435"></a>
-<a class="sourceLine" id="cb39-436" title="436"><span class="co"># print(add(1, 2))</span></a>
-<a class="sourceLine" id="cb39-437" title="437"><span class="co"># print(subtract(2, 1))</span></a>
-<a class="sourceLine" id="cb39-438" title="438"></a>
-<a class="sourceLine" id="cb39-439" title="439"><span class="co"># This imports &#39;add&#39; renames it to &#39;add_some_numbers&#39;</span></a>
-<a class="sourceLine" id="cb39-440" title="440"><span class="co"># from math import add as add_some_numbers</span></a>
-<a class="sourceLine" id="cb39-441" title="441"></a>
-<a class="sourceLine" id="cb39-442" title="442"><span class="co"># --------------------------------------- DAY 3 ---------------------------------------</span></a>
-<a class="sourceLine" id="cb39-443" title="443"><span class="co"># Classes, Methods, and Properties</span></a>
-<a class="sourceLine" id="cb39-444" title="444"><span class="kw">class</span> AngryBird:</a>
-<a class="sourceLine" id="cb39-445" title="445">    <span class="co"># Slots optimize property access and memory usage and prevent you</span></a>
-<a class="sourceLine" id="cb39-446" title="446">    <span class="co"># from arbitrarily assigning new properties the instance</span></a>
-<a class="sourceLine" id="cb39-447" title="447">    __slots__ <span class="op">=</span> [<span class="st">&quot;_x&quot;</span>, <span class="st">&quot;_y&quot;</span>]</a>
-<a class="sourceLine" id="cb39-448" title="448"></a>
-<a class="sourceLine" id="cb39-449" title="449">    <span class="co"># Constructor</span></a>
-<a class="sourceLine" id="cb39-450" title="450">    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, x<span class="op">=</span><span class="dv">0</span>, y<span class="op">=</span><span class="dv">0</span>):</a>
-<a class="sourceLine" id="cb39-451" title="451">        <span class="co"># Doc String</span></a>
-<a class="sourceLine" id="cb39-452" title="452">        <span class="co">&quot;&quot;&quot;</span></a>
-<a class="sourceLine" id="cb39-453" title="453"><span class="co">        Construct a new AngryBird by setting it&#39;s position to (0, 0)</span></a>
-<a class="sourceLine" id="cb39-454" title="454"><span class="co">        &quot;&quot;&quot;</span></a>
-<a class="sourceLine" id="cb39-455" title="455">        <span class="co">## Instance Variables</span></a>
-<a class="sourceLine" id="cb39-456" title="456">        <span class="va">self</span>._x <span class="op">=</span> x</a>
-<a class="sourceLine" id="cb39-457" title="457">        <span class="va">self</span>._y <span class="op">=</span> y</a>
-<a class="sourceLine" id="cb39-458" title="458"></a>
-<a class="sourceLine" id="cb39-459" title="459">    <span class="co"># Instance Method</span></a>
-<a class="sourceLine" id="cb39-460" title="460">    <span class="kw">def</span> move_up_by(<span class="va">self</span>, delta):</a>
-<a class="sourceLine" id="cb39-461" title="461">        <span class="va">self</span>._y <span class="op">+=</span> delta</a>
-<a class="sourceLine" id="cb39-462" title="462"></a>
-<a class="sourceLine" id="cb39-463" title="463">    <span class="co"># Getter</span></a>
-<a class="sourceLine" id="cb39-464" title="464">    <span class="at">@property</span></a>
-<a class="sourceLine" id="cb39-465" title="465">    <span class="kw">def</span> x(<span class="va">self</span>):</a>
-<a class="sourceLine" id="cb39-466" title="466">        <span class="cf">return</span> <span class="va">self</span>._x</a>
-<a class="sourceLine" id="cb39-467" title="467"></a>
-<a class="sourceLine" id="cb39-468" title="468">    <span class="co"># Setter</span></a>
-<a class="sourceLine" id="cb39-469" title="469">    <span class="at">@x.setter</span></a>
-<a class="sourceLine" id="cb39-470" title="470">    <span class="kw">def</span> x(<span class="va">self</span>, value):</a>
-<a class="sourceLine" id="cb39-471" title="471">        <span class="cf">if</span> value <span class="op">&lt;</span> <span class="dv">0</span>:</a>
-<a class="sourceLine" id="cb39-472" title="472">            value <span class="op">=</span> <span class="dv">0</span></a>
-<a class="sourceLine" id="cb39-473" title="473">        <span class="va">self</span>._x <span class="op">=</span> value</a>
-<a class="sourceLine" id="cb39-474" title="474"></a>
-<a class="sourceLine" id="cb39-475" title="475">    <span class="at">@property</span></a>
-<a class="sourceLine" id="cb39-476" title="476">    <span class="kw">def</span> y(<span class="va">self</span>):</a>
-<a class="sourceLine" id="cb39-477" title="477">        <span class="cf">return</span> <span class="va">self</span>._y</a>
-<a class="sourceLine" id="cb39-478" title="478"></a>
-<a class="sourceLine" id="cb39-479" title="479">    <span class="at">@y.setter</span></a>
-<a class="sourceLine" id="cb39-480" title="480">    <span class="kw">def</span> y(<span class="va">self</span>, value):</a>
-<a class="sourceLine" id="cb39-481" title="481">        <span class="va">self</span>._y <span class="op">=</span> value</a>
-<a class="sourceLine" id="cb39-482" title="482"></a>
-<a class="sourceLine" id="cb39-483" title="483">    <span class="co"># Dunder Repr... called by &#39;print&#39;</span></a>
-<a class="sourceLine" id="cb39-484" title="484">    <span class="kw">def</span> <span class="fu">__repr__</span>(<span class="va">self</span>):</a>
-<a class="sourceLine" id="cb39-485" title="485">        <span class="cf">return</span> <span class="ss">f&quot;&lt;AngryBird (</span><span class="sc">{</span><span class="va">self</span><span class="sc">._x}</span><span class="ss">, </span><span class="sc">{</span><span class="va">self</span><span class="sc">._y}</span><span class="ss">)&gt;&quot;</span></a>
-<a class="sourceLine" id="cb39-486" title="486"></a>
-<a class="sourceLine" id="cb39-487" title="487"></a>
-<a class="sourceLine" id="cb39-488" title="488"><span class="co"># JS to Python Classes cheat table</span></a>
-<a class="sourceLine" id="cb39-489" title="489"><span class="co">#        JS                    Python</span></a>
-<a class="sourceLine" id="cb39-490" title="490"><span class="co">#   constructor()         def __init__(self):</span></a>
-<a class="sourceLine" id="cb39-491" title="491"><span class="co">#      super()            super().__init__()</span></a>
-<a class="sourceLine" id="cb39-492" title="492"><span class="co">#   this.property           self.property</span></a>
-<a class="sourceLine" id="cb39-493" title="493"><span class="co">#    this.method            self.method()</span></a>
-<a class="sourceLine" id="cb39-494" title="494"><span class="co"># method(arg1, arg2){}    def method(self, arg1, ...)</span></a>
-<a class="sourceLine" id="cb39-495" title="495"><span class="co"># get someProperty(){}    @property</span></a>
-<a class="sourceLine" id="cb39-496" title="496"><span class="co"># set someProperty(){}    @someProperty.setter</span></a>
-<a class="sourceLine" id="cb39-497" title="497"></a>
-<a class="sourceLine" id="cb39-498" title="498"><span class="co"># List Comprehensions are a way to transform a list from one format to another</span></a>
-<a class="sourceLine" id="cb39-499" title="499"><span class="co">#  - Pythonic Alternative to using map or filter</span></a>
-<a class="sourceLine" id="cb39-500" title="500"><span class="co">#  - Syntax of a list comprehension</span></a>
-<a class="sourceLine" id="cb39-501" title="501"><span class="co">#     - new_list = [value loop condition]</span></a>
-<a class="sourceLine" id="cb39-502" title="502"><span class="co"># Using a for loop</span></a>
-<a class="sourceLine" id="cb39-503" title="503">squares <span class="op">=</span> []</a>
-<a class="sourceLine" id="cb39-504" title="504"><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</a>
-<a class="sourceLine" id="cb39-505" title="505">    squares.append(i <span class="op">**</span> <span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb39-506" title="506"><span class="bu">print</span>(squares)</a>
-<a class="sourceLine" id="cb39-507" title="507"></a>
-<a class="sourceLine" id="cb39-508" title="508"><span class="co"># value = i ** 2</span></a>
-<a class="sourceLine" id="cb39-509" title="509"><span class="co"># loop = for i in range(10)</span></a>
-<a class="sourceLine" id="cb39-510" title="510">squares <span class="op">=</span> [i <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)]</a>
-<a class="sourceLine" id="cb39-511" title="511"><span class="bu">print</span>(<span class="bu">list</span>(squares))</a>
-<a class="sourceLine" id="cb39-512" title="512"></a>
-<a class="sourceLine" id="cb39-513" title="513">sentence <span class="op">=</span> <span class="st">&quot;the rocket came back from mars&quot;</span></a>
-<a class="sourceLine" id="cb39-514" title="514">vowels <span class="op">=</span> [character <span class="cf">for</span> character <span class="kw">in</span> sentence <span class="cf">if</span> character <span class="kw">in</span> <span class="st">&quot;aeiou&quot;</span>]</a>
-<a class="sourceLine" id="cb39-515" title="515"><span class="bu">print</span>(vowels)</a>
-<a class="sourceLine" id="cb39-516" title="516"></a>
-<a class="sourceLine" id="cb39-517" title="517"><span class="co"># You can also use them on dictionaries. We can use the items() method</span></a>
-<a class="sourceLine" id="cb39-518" title="518"><span class="co"># for the dictionary to loop through it getting the keys and values out at once</span></a>
-<a class="sourceLine" id="cb39-519" title="519">person <span class="op">=</span> {<span class="st">&quot;name&quot;</span>: <span class="st">&quot;Corina&quot;</span>, <span class="st">&quot;age&quot;</span>: <span class="dv">32</span>, <span class="st">&quot;height&quot;</span>: <span class="fl">1.4</span>}</a>
-<a class="sourceLine" id="cb39-520" title="520"></a>
-<a class="sourceLine" id="cb39-521" title="521"><span class="co"># This loops through and capitalizes the first letter of all keys</span></a>
-<a class="sourceLine" id="cb39-522" title="522">newPerson <span class="op">=</span> {key.title(): value <span class="cf">for</span> key, value <span class="kw">in</span> person.items()}</a>
-<a class="sourceLine" id="cb39-523" title="523"><span class="bu">print</span>(<span class="bu">list</span>(newPerson.items()))</a></code></pre>
-    </div>
+    <pre><code>def say_hi(name):
+    &quot;&quot;&quot;&lt;---- Multi-Line Comments and Docstrings
+    This is where you put your content for help() to inform the user
+    about what your function does and how to use it
+    &quot;&quot;&quot;
+    print(f&quot;Hello {name}!&quot;)
+
+
+print(say_hi(&quot;Michael&quot;))  # Should get the print inside the function, then None
+
+# Boolean Values
+# Work the same as in JS, except they are title case: True and False
+a = True
+b = False
+
+# Logical Operators
+# ! = not, || = or, &amp;&amp; = and
+print(True and True)
+print(True and not True)
+print(True or True)
+
+# Truthiness - Everything is True except...
+# False - None, False, &#39;&#39;, [], (), set(), range(0)
+
+# Number Values
+# Integers are numbers without a floating decimal point
+print(type(3))  # type returns the type of whatever argument you pass in
+# Floating Point values are numbers with a floating decimal point
+print(type(3.5))
+
+# Type Casting
+# You can convert between ints and floats (along with other types...)
+print(float(3))  # If you convert a float to an int, it will truncate the decimal
+print(int(4.5))
+print(type(str(3)))
+# Python does not automatically convert types like JS
+# print(17.0 + &#39; heyooo &#39; + 17)  # TypeError
+
+# Arithmetic Operators
+# ** - exponent (comparable to Math.pow(num, pow))
+# // - integer division
+# There is no ++ or -- in Python
+
+# String Values
+# We can use single quotes, double quotes, or f&#39;&#39; for string formats
+# We can use triple single quotes for multiline strings
+print(
+    &quot;&quot;&quot;This here&#39;s a story
+All about how
+My life got twist
+Turned upside down
+&quot;&quot;&quot;
+)
+
+# Three double quotes can also be used, but we typically reserve these for
+# multi-line comments and function docstrings (refer to lines 6-9)(Nice :D)
+# We use len() to get the length of something
+print(len(&quot;Michael&quot;))  # 7 characters
+print(len([&quot;hey&quot;, &quot;ho&quot;, &quot;hey&quot;, &quot;hey&quot;, &quot;ho&quot;]))  # 5 list items
+print(len({1, 2, 3, 4, 5, 6, 7, 9}))  # 8 set items
+
+# We can index into strings, list, etc..self.
+name = &quot;Michael&quot;
+for i in range(len(name)):
+    print(name[i])  # M, i, c, h, a, e, l
+
+# We can index starting from the end as well, with negatives
+occupation = &quot;Full Stack Software Engineer&quot;
+print(occupation[-3])  # e
+
+# We can also get ranges in the index with the [start:stop:step] syntax
+print(occupation[0:4:1])  # step and stop are optional, stop is exclusive
+print(occupation[::4])  # beginning to end, every 4th letter
+print(occupation[4:14:2])  # Let&#39;s get weird with it!
+# NOTE: Indexing out of range will give you an IndexError
+
+# We can also get the index og things with the .index() method, similar to indexOf()
+print(occupation.index(&quot;Stack&quot;))
+print([&quot;Mike&quot;, &quot;Barry&quot;, &quot;Cole&quot;, &quot;James&quot;, &quot;Mark&quot;].index(&quot;Cole&quot;))
+
+# We can count how many times a substring/item appears in something as well
+print(occupation.count(&quot;S&quot;))
+print(
+    &quot;&quot;&quot;Now this here&#39;s a story all about how
+My life got twist turned upside down
+I forget the rest but the the the potato
+smells like the potato&quot;&quot;&quot;.count(
+        &quot;the&quot;
+    )
+)
+
+# We concatenate the same as Javascript, but we can also multiply strings
+print(&quot;dog &quot; + &quot;show&quot;)
+print(&quot;ha&quot; * 10)
+
+# We can use format for a multitude of things, from spaces to decimal places
+first_name = &quot;Michael&quot;
+last_name = &quot;Shuff&quot;
+print(&quot;Your name is {0} {1}&quot;.format(first_name, last_name))
+
+# Useful String Methods
+print(&quot;Hello&quot;.upper())  # HELLO
+print(&quot;Hello&quot;.lower())  # hello
+print(&quot;HELLO&quot;.islower())  # False
+print(&quot;HELLO&quot;.isupper())  # True
+print(&quot;Hello&quot;.startswith(&quot;he&quot;))  # False
+print(&quot;Hello&quot;.endswith(&quot;lo&quot;))  # True
+print(&quot;Hello There&quot;.split())  # [Hello, There]
+print(&quot;hello1&quot;.isalpha())  # False,  must consist only of letters
+print(&quot;hello1&quot;.isalnum())  # True, must consist of only letters and numbers
+print(&quot;3215235123&quot;.isdecimal())  # True, must be all numbers
+# True, must consist of only spaces/tabs/newlines
+print(&quot;       \n     &quot;.isspace())
+# False, index 0 must be upper case and the rest lower
+print(&quot;MichaeL&quot;.istitle())
+print(&quot;Michael Lee&quot;.istitle())  # True!
+
+# Duck Typing - If it walks like a duck, and talks like a duck, it must be a duck
+# Assignment - All like JS, but there are no special keywords like let or const
+a = 3
+b = a
+c = &quot;heyoo&quot;
+b = [&quot;reassignment&quot;, &quot;is&quot;, &quot;fine&quot;, &quot;G!&quot;]
+
+# Comparison Operators - Python uses the same equality operators as JS, but no ===
+# &lt; - Less than
+# &gt; - Greater than
+# &lt;= - Less than or Equal
+# &gt;= - Greater than or Equal
+# == - Equal to
+# != - Not equal to
+# is - Refers to exact same memory location
+# not - !
+# Precedence - Negative Signs(not) are applied first(part of each number)
+#            - Multiplication and Division(and) happen next
+#            - Addition and Subtraction(or) are the last step
+#  NOTE: Be careful when using not along with ==
+print(not a == b)  # True
+# print(a == not b) # Syntax Error
+print(a == (not b))  # This fixes it. Answer: False
+# Python does short-circuit evaluation
+
+# Assignment Operators - Mostly the same as JS except Python has **= and //= (int division)
+
+# Flow Control Statements - if, while, for
+# Note: Python smushes &#39;else if&#39; into &#39;elif&#39;!
+if 10 &lt; 1:
+    print(&quot;We don&#39;t get here&quot;)
+elif 10 &lt; 5:
+    print(&quot;Nor here...&quot;)
+else:
+    print(&quot;Hey there!&quot;)
+
+# Looping over a string
+for c in &quot;abcdefgh&quot;:
+    print(c)
+
+# Looping over a range
+for i in range(5):
+    print(i + 1)
+
+# Looping over a list
+lst = [1, 2, 3, 4]
+for i in lst:
+    print(i)
+
+# Looping over a dictionary
+spam = {&quot;color&quot;: &quot;red&quot;, &quot;age&quot;: 42, &quot;items&quot;: [(1, &quot;hey&quot;), (2, &quot;hooo!&quot;)]}
+for v in spam.values():
+    print(v)
+
+# Loop over a list of tuples and destructuring the values
+# Assuming spam.items returns a list of tuples each containing two items (k, v)
+for k, v in spam.items():
+    print(f&quot;{k}: {v}&quot;)
+
+# While loops as long as the condition is True
+#  - Exit loop early with break
+#  - Exit iteration early with continue
+spam = 0
+while True:
+    print(&quot;Heyy girrllll&quot;)
+    spam += 1
+    if spam &lt; 5:
+        continue
+    break
+
+
+# Functions - use def keyword to define a function in Python
+def printCopyright():
+    print(&quot;Copyright 2020, ya boi, Mike Shuff&quot;)
+
+
+# Lambdas are one liners! (Should be at least, you can use parenthesis to disobey)
+avg = lambda num1, num2: print(num1 + num2)
+
+avg(1, 2)
+# Calling it with keyword arguments, order does not matter
+avg(num2=20, num1=1252)
+printCopyright()
+
+# We can give parameters default arguments like JS
+def greeting(name, saying=&quot;Hello&quot;):
+    print(saying, name)
+
+
+greeting(&quot;Mike&quot;)  # Hello Mike
+greeting(&quot;Michael&quot;, saying=&quot;Hello there...&quot;)
+
+# A common gotcha is using a mutable object for a default parameter
+# All invocations of the function reference the same mutable object
+def append_item(item_name, item_list=[]):  # Will it obey and give us a new list?
+    item_list.append(item_name)
+    return item_list
+
+
+# Uses same item list unless otherwise stated which is counterintuitive
+print(append_item(&quot;notebook&quot;))
+print(append_item(&quot;notebook&quot;))
+print(append_item(&quot;notebook&quot;, []))
+
+# Errors - Unlike JS, if we pass the incorrect amount of arguments to a function,
+#          it will throw an error
+# avg(1)  # TypeError
+# avg(1, 2, 2) # TypeError
+
+# ----------------------------------- DAY 2 ----------------------------------------
+# Functions - * to get rest of position arguments as tuple
+#           - ** to get rest of keyword arguments as a dictionary
+# Variable Length positional arguments
+def add(a, b, *args):
+    # args is a tuple of the rest of the arguments
+    total = a + b
+    for n in args:
+        total += n
+    return total
+
+
+print(add(1, 2))  # args is None, returns 3
+print(add(1, 2, 3, 4, 5, 6))  # args is (3, 4, 5, 6), returns 21
+
+# Variable Length Keyword Arguments
+def print_names_and_countries(greeting, **kwargs):
+    # kwargs is a dictionary of the rest of the keyword arguments
+    for k, v in kwargs.items():
+        print(greeting, k, &quot;from&quot;, v)
+
+
+print_names_and_countries(
+    &quot;Hey there&quot;, Monica=&quot;Sweden&quot;, Mike=&quot;The United States&quot;, Mark=&quot;China&quot;
+)
+
+# We can combine all of these together
+def example2(arg1, arg2, *args, kw_1=&quot;cheese&quot;, kw_2=&quot;horse&quot;, **kwargs):
+    pass
+
+
+# Lists are mutable arrays
+empty_list = []
+roomates = [&quot;Beau&quot;, &quot;Delynn&quot;]
+# List built-in function makes a list too
+specials = list()
+# We can use &#39;in&#39; to test if something is in the list, like &#39;includes&#39; in JS
+print(1 in [1, 2, 4])  # True
+print(2 in [1, 3, 5])  # False
+
+# Dictionaries - Similar to JS POJO&#39;s or Map, containing key value pairs
+a = {&quot;one&quot;: 1, &quot;two&quot;: 2, &quot;three&quot;: 3}
+b = dict(one=1, two=2, three=3)
+# Can use &#39;in&#39; on dictionaries too (for keys)
+print(&quot;one&quot; in a)  # True
+print(3 in b)  # False
+
+# Sets - Just like JS, unordered collection of distinct objects
+bedroom = {&quot;bed&quot;, &quot;tv&quot;, &quot;computer&quot;, &quot;clothes&quot;, &quot;playstation 4&quot;}
+# bedroom = set(&quot;bed&quot;, &quot;tv&quot;, &quot;computer&quot;, &quot;clothes&quot;, &quot;playstation 5&quot;)
+school_bag = set(
+    [&quot;book&quot;, &quot;paper&quot;, &quot;pencil&quot;, &quot;pencil&quot;, &quot;book&quot;, &quot;book&quot;, &quot;book&quot;, &quot;eraser&quot;]
+)
+print(school_bag)
+print(bedroom)
+# We can use &#39;in&#39; on sets as wel
+print(1 in {1, 2, 3})  # True
+print(4 in {1, 3, 5})  # False
+
+# Tuples are immutable lists of items
+time_blocks = (&quot;AM&quot;, &quot;PM&quot;)
+colors = &quot;red&quot;, &quot;green&quot;, &quot;blue&quot;  # Parenthesis not needed but encouraged
+# The tuple built-in function can be used to convert things to tuples
+print(tuple(&quot;abc&quot;))
+print(tuple([1, 2, 3]))
+# &#39;in&#39; may be used on tuples as well
+print(1 in (1, 2, 3))  # True
+print(5 in (1, 4, 3))  # False
+
+# Ranges are immutable lists of numbers, often used with for loops
+#   - start - default: 0, first number in sequence
+#   - stop - required, next number past last number in sequence
+#   - step - default: 1, difference between each number in sequence
+range1 = range(5)  # [0,1,2,3,4]
+range2 = range(1, 5)  # [1,2,3,4]
+range3 = range(0, 25, 5)  # [0,5,10,15,20]
+range4 = range(0)  # []
+for i in range1:
+    print(i)
+
+# Built-in functions:
+# Filter
+isOdd = lambda num: num % 2 == 1
+
+filtered = filter(isOdd, [1, 2, 3, 4])
+print(list(filtered))
+for num in filtered:
+    print(f&quot;first way: {num}&quot;)
+print(&quot;--&quot; * 20)
+[print(f&quot;list comprehension: {i}&quot;) for i in [1, 2, 3, 4, 5, 6, 7, 8] if i % 2 == 1]
+
+# Map
+def toUpper(str):
+    return str.upper()
+
+
+upperCased = map(toUpper, [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;])
+print(list(upperCased))
+
+# Sorted
+sorted_items = sorted([&quot;john&quot;, &quot;tom&quot;, &quot;sonny&quot;, &quot;Mike&quot;])
+print(list(sorted_items))  # Notice uppercase comes before lowercase
+# Using a key function to control the sorting and make it case insensitive
+sorted_items = sorted([&quot;john&quot;, &quot;tom&quot;, &quot;sonny&quot;, &quot;Mike&quot;], key=str.lower)
+print(sorted_items)
+# You can also reverse the sort
+sorted_items = sorted([&quot;john&quot;, &quot;tom&quot;, &quot;sonny&quot;, &quot;Mike&quot;], key=str.lower, reverse=True)
+print(sorted_items)
+
+# Enumerate creates a tuple with an index for what you&#39;re enumerating
+quarters = [&quot;First&quot;, &quot;Second&quot;, &quot;Third&quot;, &quot;Fourth&quot;]
+print(list(enumerate(quarters)))
+print(list(enumerate(quarters, start=1)))
+
+# Zip takes list and combines them as key value pairs, or really however you need
+keys = (&quot;Name&quot;, &quot;Email&quot;)
+values = (&quot;Buster&quot;, &quot;cheetoh@johhnydepp.com&quot;)
+zipped = zip(keys, values)
+print(list(zipped))
+# You can zip more than 2
+x_coords = [0, 1, 2, 3, 4]
+y_coords = [4, 6, 10, 9, 10]
+z_coords = [20, 10, 5, 9, 1]
+coords = zip(x_coords, y_coords, z_coords)
+print(list(coords))
+
+# Len reports the length of strings along with list and any other object data type
+print_len = lambda item: print(len(item))  # doing this to save myself some typing
+
+print_len(&quot;Mike&quot;)
+print_len([1, 5, 2, 10, 3, 10])
+print_len({1, 5, 10, 9, 10})  # 4 because there is a duplicate here (10)
+print_len((1, 4, 10, 9, 20))
+
+# Max will return the max number in a given scenario
+print(max(1, 2, 35, 1012, 1))
+
+# Min
+print(min(1, 5, 2, 10))
+print(min([1, 4, 7, 10]))
+
+# Sum
+print(sum([1, 2, 4]))
+
+# Any
+print(any([True, False, False]))
+print(any([False, False, False]))
+
+# All
+print(all([True, True, False]))
+print(all([True, True, True]))
+
+# Dir returns all the attributes of an object including it&#39;s methods and dunder methods
+user = {&quot;Name&quot;: &quot;Bob&quot;, &quot;Email&quot;: &quot;bob@bob.com&quot;}
+print(dir(user))
+
+# Importing packages and modules
+#  - Module - A Python code in a file or directory
+#  - Package - A module which is a directory containing an __init__.py file
+#  - Submodule - A module which is contained within a package
+#  - Name - An exported function, class, or variable in a module
+# Unlike JS, modules export ALL names contained within them without any special export key
+
+# Assuming we have the following package with four submodules
+#  math
+#  |  __init__.py
+#  | addition.py
+#  | subtraction.py
+#  | multiplication.py
+#  | division.py
+
+# If we peek into the addition.py file we see there&#39;s an add function
+# addition.py
+# We can import &#39;add&#39; from other places because it&#39;s a &#39;name&#39; and is automatically exported
+def add(num1, num2):
+    return num1 + num2
+
+
+# Notice the . syntax because this package can import it&#39;s own submodules.
+# Our __init__.py has the following files
+# This imports the &#39;add&#39; function
+# And now it&#39;s also re-exported in here as well
+# from .addition import add
+# These import and re-export the rest of the functions from the submodule
+# from .subtraction import subtract
+# from .division import divide
+# from .multiplication import multiply
+# So if we have a script.py and want to import add, we could do it many ways
+
+# This will load and execute the &#39;math/__init__.py&#39; file and give
+# us an object with the exported names in &#39;math/__init__.py&#39;
+import math
+
+# print(math.add(1,2))
+
+# This imports JUST the add from &#39;math/__init__.py&#39;
+# from math import add
+
+# print(add(1, 2))
+
+# This skips importing from &#39;math/__init__.py&#39; (although it still runs)
+# and imports directly from the addition.py file
+# from math.addition import add
+
+# This imports all the functions individually from &#39;math/__init__.py&#39;
+# from math import add, subtract, multiply, divide
+
+# print(add(1, 2))
+# print(subtract(2, 1))
+
+# This imports &#39;add&#39; renames it to &#39;add_some_numbers&#39;
+# from math import add as add_some_numbers
+
+# --------------------------------------- DAY 3 ---------------------------------------
+# Classes, Methods, and Properties
+class AngryBird:
+    # Slots optimize property access and memory usage and prevent you
+    # from arbitrarily assigning new properties the instance
+    __slots__ = [&quot;_x&quot;, &quot;_y&quot;]
+
+    # Constructor
+    def __init__(self, x=0, y=0):
+        # Doc String
+        &quot;&quot;&quot;
+        Construct a new AngryBird by setting it&#39;s position to (0, 0)
+        &quot;&quot;&quot;
+        ## Instance Variables
+        self._x = x
+        self._y = y
+
+    # Instance Method
+    def move_up_by(self, delta):
+        self._y += delta
+
+    # Getter
+    @property
+    def x(self):
+        return self._x
+
+    # Setter
+    @x.setter
+    def x(self, value):
+        if value &lt; 0:
+            value = 0
+        self._x = value
+
+    @property
+    def y(self):
+        return self._y
+
+    @y.setter
+    def y(self, value):
+        self._y = value
+
+    # Dunder Repr... called by &#39;print&#39;
+    def __repr__(self):
+        return f&quot;&lt;AngryBird ({self._x}, {self._y})&gt;&quot;
+
+
+# JS to Python Classes cheat table
+#        JS                    Python
+#   constructor()         def __init__(self):
+#      super()            super().__init__()
+#   this.property           self.property
+#    this.method            self.method()
+# method(arg1, arg2){}    def method(self, arg1, ...)
+# get someProperty(){}    @property
+# set someProperty(){}    @someProperty.setter
+
+# List Comprehensions are a way to transform a list from one format to another
+#  - Pythonic Alternative to using map or filter
+#  - Syntax of a list comprehension
+#     - new_list = [value loop condition]
+# Using a for loop
+squares = []
+for i in range(10):
+    squares.append(i ** 2)
+print(squares)
+
+# value = i ** 2
+# loop = for i in range(10)
+squares = [i ** 2 for i in range(10)]
+print(list(squares))
+
+sentence = &quot;the rocket came back from mars&quot;
+vowels = [character for character in sentence if character in &quot;aeiou&quot;]
+print(vowels)
+
+# You can also use them on dictionaries. We can use the items() method
+# for the dictionary to loop through it getting the keys and values out at once
+person = {&quot;name&quot;: &quot;Corina&quot;, &quot;age&quot;: 32, &quot;height&quot;: 1.4}
+
+# This loops through and capitalizes the first letter of all keys
+newPerson = {key.title(): value for key, value in person.items()}
+print(list(newPerson.items()))</code></pre>
   </body>
 </html>

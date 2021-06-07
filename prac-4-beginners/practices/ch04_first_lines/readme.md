@@ -1,12 +1,15 @@
-# Practice Exercises for first lines of code
+Practice Exercises for first lines of code
+==========================================
 
-## Overview
+Overview
+--------
 
 In this section, you’ll have a chance to practice the concepts you’ve learned in the videos. First, review the core concepts covered that you’ll need to keep in mind. Then go through the exercises below.
 
 Remember, these are for your own benefit. Feel free to skip them if you don’t find a particular exercise valuable or you get stuck for too long.
 
-## Core concepts
+Core concepts
+-------------
 
 ### REPL
 
@@ -51,7 +54,8 @@ Data is converted to numerical types using the type name (int, float, etc). Here
     whole_number = int(text)   # value = 7
     number       = float(text) # value = 7.2
 
-## Exercises
+Exercises
+---------
 
 Now it’s your turn. Here are some ideas to practice.
 

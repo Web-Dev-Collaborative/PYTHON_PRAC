@@ -1,16 +1,18 @@
-# Working with Jupyter Notebooks in Visual Studio Code
+Working with Jupyter Notebooks in Visual Studio Code
+====================================================
 
 > Working with Jupyter Notebooks in Visual Studio Code
 
 [Jupyter](https://jupyter-notebook.readthedocs.io/en/latest/) (formerly IPython Notebook) is an open-source project that lets you easily combine Markdown text and executable Python source code on one canvas called a **notebook**. Visual Studio Code supports working with Jupyter Notebooks natively, as well as through [Python code files](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/python/jupyter-support-py). This topic covers the native support available for Jupyter Notebooks and demonstrates how to:
 
-- Create, open, and save Jupyter Notebooks
-- Work with Jupyter code cells
-- View, inspect, and filter variables using the Variable explorer and Data viewer
-- Connect to a remote Jupyter server
-- Debug a Jupyter notebook
+-   Create, open, and save Jupyter Notebooks
+-   Work with Jupyter code cells
+-   View, inspect, and filter variables using the Variable explorer and Data viewer
+-   Connect to a remote Jupyter server
+-   Debug a Jupyter notebook
 
-## Setting up your environment[\#](#_setting-up-your-environment)
+Setting up your environment[\#](#_setting-up-your-environment)
+--------------------------------------------------------------
 
 To work with Jupyter notebooks, you must activate an Anaconda environment in VS Code, or another Python environment in which you’ve installed the [Jupyter package](https://pypi.org/project/jupyter/). To select an environment, use the **Python: Select Interpreter** command from the Command Palette (Ctrl+Shift+P).
 
@@ -18,7 +20,8 @@ Once the appropriate environment is activated, you can create and open a Jupyter
 
 > **Note:** By default, the Visual Studio Code Python extension will open a Jupyter Notebook (.ipynb) in the Notebook Editor. If you want to disable this behavior you can turn it off in settings. (Python &gt; Data Science: Use Notebook Editor).
 
-## Create or open a Jupyter Notebook[\#](#_create-or-open-a-jupyter-notebook)
+Create or open a Jupyter Notebook[\#](#_create-or-open-a-jupyter-notebook)
+--------------------------------------------------------------------------
 
 You can create a Jupyter Notebook by running the **Jupyter: Create Blank New Jupyter Notebook** command from the Command Palette (Ctrl+Shift+P) or by creating a new .ipynb file in your workspace. When you select the file, the Notebook Editor is launched allowing you to edit and run code cells.
 
@@ -30,7 +33,8 @@ Once you have a Notebook created, you can run a code cell using the green run ic
 
 ![Run Jupyter code cell](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/assets/docs/python/jupyter/native-code-cells-03.png)
 
-## Trusted Notebooks[\#](#_trusted-notebooks)
+Trusted Notebooks[\#](#_trusted-notebooks)
+------------------------------------------
 
 It’s possible for malicious source code to be contained in a Jupyter Notebook. With that in mind, to help protect you, any Notebook that’s not created with VS Code on your local machine (or explicitly set to **Trusted** by you) is considered **Not Trusted**. When a Notebook is **Not Trusted**, VS Code will not render Markdown cells or display the output of code cells within the Notebook. Instead, just the source of Markdown and code cells will be shown. The Notebook is essentially in read-only mode, with toolbars disabled and no ability to edit the file, until you set it as **Trusted**.
 
@@ -46,7 +50,8 @@ If you select **Trust**, the Notebook will be trusted going forward. If you opt 
 
 You can relaunch the trust notification prompt after reviewing the Notebook by clicking on the **Not Trusted** status.
 
-## Save your Jupyter Notebook[\#](#_save-your-jupyter-notebook)
+Save your Jupyter Notebook[\#](#_save-your-jupyter-notebook)
+------------------------------------------------------------
 
 You can save your Jupyter Notebook using the keyboard combo Ctrl+S or through the save icon on the Notebook Editor toolbar.
 
@@ -54,7 +59,8 @@ You can save your Jupyter Notebook using the keyboard combo Ctrl+S or through th
 
 > **Note:** At present, you must use the methods discussed above to save your Notebook. The **File**&gt;**Save** menu does not save your Notebook, just the toolbar icon or keyboard command.
 
-## Export your Jupyter Notebook[\#](#_export-your-jupyter-notebook)
+Export your Jupyter Notebook[\#](#_export-your-jupyter-notebook)
+----------------------------------------------------------------
 
 You can export a Jupyter Notebook as a Python file (.py), a PDF, or an HTML file. To export, just click the convert icon on the main toolbar. You’ll then be presented with file options from the Command Palette.
 
@@ -62,7 +68,8 @@ You can export a Jupyter Notebook as a Python file (.py), a PDF, or an HTML file
 
 > **Note:** For PDF export, you must have TeX installed. If you don’t, you will be notified that you need to install it when you select the PDF option. Also, be aware that if you have SVG-only output in your Notebook, they will not be displayed in the PDF. To have SVG graphics in a PDF, either ensure that your output includes a non-SVG image format or else you can first export to HTML and then save as PDF using your browser.
 
-## Work with code cells in the Notebook Editor[\#](#_work-with-code-cells-in-the-notebook-editor)
+Work with code cells in the Notebook Editor[\#](#_work-with-code-cells-in-the-notebook-editor)
+----------------------------------------------------------------------------------------------
 
 The Notebook Editor makes it easy to create, edit, and run code cells within your Jupyter Notebook.
 
@@ -179,13 +186,15 @@ You can enable or disable line numbering within a code cell using the L key.
 
 ![Line numbers enabled in code cell](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/assets/docs/python/jupyter/native-line-number.png)
 
-## IntelliSense support in the Jupyter Notebook Editor[\#](#_intellisense-support-in-the-jupyter-notebook-editor)
+IntelliSense support in the Jupyter Notebook Editor[\#](#_intellisense-support-in-the-jupyter-notebook-editor)
+--------------------------------------------------------------------------------------------------------------
 
 The Python Jupyter Notebook Editor window has full IntelliSense – code completions, member lists, quick info for methods, and parameter hints. You can be just as productive typing in the Notebook Editor window as you are in the code editor.
 
 ![IntelliSense support](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/assets/docs/python/jupyter/native-intellisense.png)
 
-## Variable explorer and data viewer[\#](#_variable-explorer-and-data-viewer)
+Variable explorer and data viewer[\#](#_variable-explorer-and-data-viewer)
+--------------------------------------------------------------------------
 
 Within the Python Notebook Editor, it’s possible to view, inspect, and filter the variables within your current Jupyter session. By clicking the **Variables** icon in the top toolbar after running code and cells, you’ll see a list of the current variables, which will automatically update as variables are used in code.
 
@@ -197,7 +206,8 @@ For additional information about your variables, you can also double-click on a 
 
 > **Note:** Variable explorer is enabled by default, but can be turned off in settings (Python &gt; Data Science: Show Jupyter Variable Explorer).
 
-## Plot viewer[\#](#_plot-viewer)
+Plot viewer[\#](#_plot-viewer)
+------------------------------
 
 The Plot Viewer gives you the ability to work more deeply with your plots. In the viewer you can pan, zoom, and navigate plots in the current session. You can also export plots to PDF, SVG, and PNG formats.
 
@@ -209,7 +219,8 @@ Within the Notebook Editor window, double-click any plot to open it in the viewe
 
 > **Note:** There is support for rendering plots created with [matplotlib](https://matplotlib.org/) and [Altair](https://altair-viz.github.io/index.html).
 
-## Debug a Jupyter Notebook[\#](#_debug-a-jupyter-notebook)
+Debug a Jupyter Notebook[\#](#_debug-a-jupyter-notebook)
+--------------------------------------------------------
 
 If you need additional debug support in order to diagnose an issue in your code cells, you can export it as a Python file. Once exported as a Python file, the Visual Studio Code debugger lets you step through your code, set breakpoints, examine state, and analyze problems. Using the debugger is a helpful way to find and correct issues in notebook code. To debug your Python file:
 
@@ -222,14 +233,15 @@ If you need additional debug support in order to diagnose an issue in your code 
 
 3.  After saving the .py file, to start the debugger, use one of the following options:
 
-    - For the whole Notebook, open the Command Palette (Ctrl+Shift+P) and run the **Python: Debug Current File in Python Interactive Window** command.
-    - For an individual cell, use the **Debug Cell** adornment that appears above the cell. The debugger specifically starts on the code in that cell. By default, **Debug Cell** just steps into user code. If you want to step into non-user code, you need to uncheck **Data Science: Debug Just My Code** in the Python extension settings (Ctrl+,).
+    -   For the whole Notebook, open the Command Palette (Ctrl+Shift+P) and run the **Python: Debug Current File in Python Interactive Window** command.
+    -   For an individual cell, use the **Debug Cell** adornment that appears above the cell. The debugger specifically starts on the code in that cell. By default, **Debug Cell** just steps into user code. If you want to step into non-user code, you need to uncheck **Data Science: Debug Just My Code** in the Python extension settings (Ctrl+,).
 
 4.  To familiarize yourself with the general debugging features of VS Code, such as inspecting variables, setting breakpoints, and other activities, review [VS Code debugging](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/editor/debugging).
 5.  As you find issues, stop the debugger, correct your code, save the file, and start the debugger again.
 6.  When you’re satisfied that all your code is correct, use the Python Interactive window to export the Python file as a Jupyter Notebook (.ipynb).
 
-## Connect to a remote Jupyter server[\#](#_connect-to-a-remote-jupyter-server)
+Connect to a remote Jupyter server[\#](#_connect-to-a-remote-jupyter-server)
+----------------------------------------------------------------------------
 
 You can offload intensive computation in a Jupyter Notebook to other computers by connecting to a remote Jupyter server. Once connected, code cells run on the remote server rather than the local computer.
 

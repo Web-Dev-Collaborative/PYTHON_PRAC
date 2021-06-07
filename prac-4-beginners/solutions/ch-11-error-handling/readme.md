@@ -1,4 +1,5 @@
-## Solution for error handling in tic-tac-toe
+Solution for error handling in tic-tac-toe
+------------------------------------------
 
 The only part of this first pass on the game that could fail is choosing the location.
 
@@ -36,4 +37,4 @@ That’s what we fixed here with `try/except`:
 
 For a more advanced version, you could edit the tic-tac-toe from files and make sure we have permissions to save to the files and that they are in a correct format for `json` to read and so on.
 
-See [tictactoe_errors_handled.py](./tictactoe_errors_handled.py)
+See [tictactoe\_errors\_handled.py](./tictactoe_errors_handled.py)

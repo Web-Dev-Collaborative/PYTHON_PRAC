@@ -1,12 +1,15 @@
-# Practice exercises for interactive code
+Practice exercises for interactive code
+=======================================
 
-## Overview
+Overview
+--------
 
 In this section, you’ll have a chance to practice the concepts you’ve learned in the videos. First, review the core concepts covered that you’ll need to keep in mind. Then go through the exercises below.
 
 Remember, these are for your own benefit. Feel free to skip them if you don’t find a particular exercise valuable or you get stuck for too long.
 
-## Core concepts
+Core concepts
+-------------
 
 ### Running Python code
 
@@ -61,11 +64,12 @@ Then we can test whether a number is even if it is evenly divisible by 2 or has 
 
     remainder = num % 2  # Is this 0 or 1?
 
-## Exercises
+Exercises
+---------
 
 Now it’s your turn. Here are some ideas to practice.
 
-1.  Create a **hello_world.py** file and execute it with Python. This can be in PyCharm or in another editor and using the technique above. Seems trivial but will help you verify everything is working right there. Just have the program output “Hello world”
+1.  Create a **hello\_world.py** file and execute it with Python. This can be in PyCharm or in another editor and using the technique above. Seems trivial but will help you verify everything is working right there. Just have the program output “Hello world”
 2.  Write a program that requests a number from the user. Have the program print “Even” or “Odd” depending on whether they entered an even or odd number.
 3.  Extend the program above to repeatedly ask that question as long as the user enters a nonzero number. But if they enter 0, it should then stop asking and say goodbye.
 4.  Take one of these sets of code and visualize them with [pythontutor.com](http://pythontutor.com/visualize.html#mode=edit)

@@ -1,4 +1,5 @@
-## Step 1: Run the Python REPL and verify you have Python 3.6 or higher.
+Step 1: Run the Python REPL and verify you have Python 3.6 or higher.
+---------------------------------------------------------------------
 
 ### On macOS and Linux
 

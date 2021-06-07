@@ -1,4 +1,5 @@
-## Solution for Connect4
+Solution for Connect4
+---------------------
 
 This one is VERY similar to TIC-TAC-TOE. There are three fundamental changes, other than this, it’s the same code for both games.
 

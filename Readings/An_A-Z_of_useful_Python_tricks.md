@@ -1,12 +1,13 @@
-# An A-Z of useful Python tricks
+An A-Z of useful Python tricks
+==============================
 
 > Python is one of the world’s most popular, in-demand programming languages. This is for many reasons: it’s easy to learnit’s super versatileit has a huge range of modules and librariesI use Python daily as an integral part of my job as a data scientist. Along the way,
 
 Python is one of the world’s most popular, in-demand programming languages. This is for many reasons:
 
-- it’s easy to learn
-- it’s super versatile
-- it has a huge range of modules and libraries
+-   it’s easy to learn
+-   it’s super versatile
+-   it has a huge range of modules and libraries
 
 I use Python daily as an integral part of my job as a data scientist. Along the way, I’ve picked up a few useful tricks and tips.
 

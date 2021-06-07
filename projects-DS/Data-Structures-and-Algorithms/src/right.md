@@ -4,7 +4,7 @@
 
 [algorithms](algorithms/right.html)
 
-[analysis-...rithms](analysis-of-algorithms/right.html)
+[analysis-…rithms](analysis-of-algorithms/right.html)
 
 [data-structures](data-structures/right.html)
 

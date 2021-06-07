@@ -1,4 +1,5 @@
-# Big-O Notation
+Big-O Notation
+==============
 
 ![](../../../assets/big-o-notation.svg)
 

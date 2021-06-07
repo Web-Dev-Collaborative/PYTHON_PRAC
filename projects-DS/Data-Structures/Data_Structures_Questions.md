@@ -1,6 +1,7 @@
 Answer the following questions for each of the data structures you implemented as part of this project.
 
-## Queue
+Queue
+-----
 
 1.  What is the runtime complexity of `enqueue`?
 
@@ -8,7 +9,8 @@ Answer the following questions for each of the data structures you implemented a
 
 3.  What is the runtime complexity of `len`?
 
-## Binary Search Tree
+Binary Search Tree
+------------------
 
 1.  What is the runtime complexity of `insert`?
 
@@ -16,7 +18,8 @@ Answer the following questions for each of the data structures you implemented a
 
 3.  What is the runtime complexity of `get_max`?
 
-## Heap
+Heap
+----
 
 1.  What is the runtime complexity of `_bubble_up`?
 
@@ -28,7 +31,8 @@ Answer the following questions for each of the data structures you implemented a
 
 5.  What is the runtime complexity of `get_max`?
 
-## Doubly Linked List
+Doubly Linked List
+------------------
 
 1.  What is the runtime complexity of `ListNode.insert_after`?
 

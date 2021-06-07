@@ -1,4 +1,5 @@
-# How to build a URL crawler to map a website using Python
+How to build a URL crawler to map a website using Python
+========================================================
 
 > by Ahad Sheriff How to build a URL crawler to map a website using PythonA simple project for learning the fundamentals of web scrapingBefore we start, let’s make sure we understand what web scraping is: Web scraping is the process of extracting data from websites to present it in
 
@@ -83,7 +84,7 @@ If you want to crawl all URLs use:
 
     if not link in new_urls and not link in processed_urls:    new_urls.append(link)
 
-**_Warning:_** _The way the program currently works, crawling foreign URL’s will take a_ **_VERY_** _long time. You could possibly get into trouble for scraping websites without permission._ **_Use at your own risk!_**
+***Warning:*** *The way the program currently works, crawling foreign URL’s will take a* ***VERY*** *long time. You could possibly get into trouble for scraping websites without permission.* ***Use at your own risk!***
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*Y5DwSdLwAIGOWuuyvp1HnA.png)
 

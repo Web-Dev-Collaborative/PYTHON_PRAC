@@ -10,19 +10,21 @@ Lecture 4: [Heaps & Interview Practice](Interview_Problems/Heaps_and_Interview.m
 
 If you found these notes helpful and want to show appreciation to the author, [coffee donations](https://www.buymeacoffee.com/G1stPBuYU) are much loved.
 
-# Data Structures
+Data Structures
+===============
 
-Data Structures, like tools, have a best use case that they are each optimal for. We could hammer in a nail using a wrench or a screwdriver instead of a hammer – but the tool that _best_ handles nails is a hammer.
+Data Structures, like tools, have a best use case that they are each optimal for. We could hammer in a nail using a wrench or a screwdriver instead of a hammer – but the tool that *best* handles nails is a hammer.
 
 Learning about the strengths and pitfalls of each data structure will help us use them most appropriately when writing code.
 
-Just because something _can_ get the job done, doesn’t mean it will do it efficiently. Choosing the best use type helps improve run time or space efficiency.
+Just because something *can* get the job done, doesn’t mean it will do it efficiently. Choosing the best use type helps improve run time or space efficiency.
 
 Some types have more use cases than others, even if they are rarer in real life implementation (heaps v arrays and hash tables).
 
 In interviews, it’s common to be asked about more niche implementations of data structures or accurately choosing the most efficient data structure to solve an algorithm.
 
-# What is a data structure?
+What is a data structure?
+=========================
 
 An optimized way of storing data sets.
 

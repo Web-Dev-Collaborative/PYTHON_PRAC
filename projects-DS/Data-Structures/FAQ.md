@@ -1,6 +1,8 @@
-# Data Structures FAQ
+Data Structures FAQ
+===================
 
-## Contents
+Contents
+--------
 
 ### General
 

@@ -4,6 +4,6 @@
 
 [rocks-game](rocks-game/right.html)
 
-[simple_dict](simple_dict/right.html)
+[simple\_dict](simple_dict/right.html)
 
 Folders: 3

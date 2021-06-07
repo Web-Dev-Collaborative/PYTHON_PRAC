@@ -6,7 +6,7 @@
 
 [mail](mail/right.html)
 
-[oop_basic](oop_basic/right.html)
+[oop\_basic](oop_basic/right.html)
 
 [advance](advance/right.html)
 
@@ -36,7 +36,7 @@
 
 [gui](gui/right.html)
 
-[oop_advance](oop_advance/right.html)
+[oop\_advance](oop_advance/right.html)
 
 [web](web/right.html)
 

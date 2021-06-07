@@ -1,4 +1,5 @@
-## Linked List
+Linked List
+-----------
 
 `add_to_tail`
 
@@ -8,7 +9,8 @@
 
 `get_max`
 
-## Queues
+Queues
+------
 
 `enqueue`
 
@@ -16,7 +18,8 @@
 
 `len`
 
-## Binary Search Trees
+Binary Search Trees
+-------------------
 
 `insert`
 
@@ -24,7 +27,8 @@
 
 `get_max`
 
-## Heaps
+Heaps
+-----
 
 `insert`
 
