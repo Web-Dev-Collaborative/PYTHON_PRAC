@@ -1,24 +1,26 @@
 ### Navigation
 
-- [index](https://docs.python.org/3/genindex.html "General Index")
-- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
-- [next](classes.html "9. Classes") |
-- [previous](inputoutput.html "7. Input and Output") |
-- ![](../_static/py.png)
-- [Python](https://www.python.org/) »
-- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
-- [The Python Tutorial](index.html) »
--
+-   [index](https://docs.python.org/3/genindex.html "General Index")
+-   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+-   [next](classes.html "9. Classes") |
+-   [previous](inputoutput.html "7. Input and Output") |
+-   ![](../_static/py.png)
+-   [Python](https://www.python.org/) »
+-   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+-   [The Python Tutorial](index.html) »
+-   
 
 <span id="tut-errors"></span>
 
-# <span class="section-number">8. </span>Errors and Exceptions<a href="#errors-and-exceptions" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">8. </span>Errors and Exceptions<a href="#errors-and-exceptions" class="headerlink" title="Permalink to this headline">¶</a>
+========================================================================================================================================================
 
-Until now error messages haven’t been more than mentioned, but if you have tried out the examples you have probably seen some. There are (at least) two distinguishable kinds of errors: _syntax errors_ and _exceptions_.
+Until now error messages haven’t been more than mentioned, but if you have tried out the examples you have probably seen some. There are (at least) two distinguishable kinds of errors: *syntax errors* and *exceptions*.
 
 <span id="tut-syntaxerrors"></span>
 
-## <span class="section-number">8.1. </span>Syntax Errors<a href="#syntax-errors" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">8.1. </span>Syntax Errors<a href="#syntax-errors" class="headerlink" title="Permalink to this headline">¶</a>
+------------------------------------------------------------------------------------------------------------------------------------------
 
 Syntax errors, also known as parsing errors, are perhaps the most common kind of complaint you get while you are still learning Python:
 
@@ -28,13 +30,14 @@ Syntax errors, also known as parsing errors, are perhaps the most common kind of
                        ^
     SyntaxError: invalid syntax
 
-The parser repeats the offending line and displays a little ‘arrow’ pointing at the earliest point in the line where the error was detected. The error is caused by (or at least detected at) the token _preceding_ the arrow: in the example, the error is detected at the function <a href="https://docs.python.org/3/library/functions.html#print" class="reference internal" title="print"><code class="sourceCode python"><span class="bu">print</span>()</code></a>, since a colon (`':'`) is missing before it. File name and line number are printed so you know where to look in case the input came from a script.
+The parser repeats the offending line and displays a little ‘arrow’ pointing at the earliest point in the line where the error was detected. The error is caused by (or at least detected at) the token *preceding* the arrow: in the example, the error is detected at the function <a href="https://docs.python.org/3/library/functions.html#print" class="reference internal" title="print"><code class="sourceCode python"><span class="bu">print</span>()</code></a>, since a colon (`':'`) is missing before it. File name and line number are printed so you know where to look in case the input came from a script.
 
 <span id="tut-exceptions"></span>
 
-## <span class="section-number">8.2. </span>Exceptions<a href="#exceptions" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">8.2. </span>Exceptions<a href="#exceptions" class="headerlink" title="Permalink to this headline">¶</a>
+------------------------------------------------------------------------------------------------------------------------------------
 
-Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute it. Errors detected during execution are called _exceptions_ and are not unconditionally fatal: you will soon learn how to handle them in Python programs. Most exceptions are not handled by programs, however, and result in error messages as shown here:
+Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute it. Errors detected during execution are called *exceptions* and are not unconditionally fatal: you will soon learn how to handle them in Python programs. Most exceptions are not handled by programs, however, and result in error messages as shown here:
 
     >>> 10 * (1/0)
     Traceback (most recent call last):
@@ -59,7 +62,8 @@ The preceding part of the error message shows the context where the exception oc
 
 <span id="tut-handling"></span>
 
-## <span class="section-number">8.3. </span>Handling Exceptions<a href="#handling-exceptions" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">8.3. </span>Handling Exceptions<a href="#handling-exceptions" class="headerlink" title="Permalink to this headline">¶</a>
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
 It is possible to write programs that handle selected exceptions. Look at the following example, which asks the user for input until a valid integer has been entered, but allows the user to interrupt the program (using Control-C or whatever the operating system supports); note that a user-generated interruption is signalled by raising the <a href="https://docs.python.org/3/library/exceptions.html#KeyboardInterrupt" class="reference internal" title="KeyboardInterrupt"><code class="sourceCode python"><span class="pp">KeyboardInterrupt</span></code></a> exception.
 
@@ -73,13 +77,13 @@ It is possible to write programs that handle selected exceptions. Look at the fo
 
 The <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> statement works as follows.
 
-- First, the _try clause_ (the statement(s) between the <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> and <a href="https://docs.python.org/3/reference/compound_stmts.html#except" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">except</code></a> keywords) is executed.
+-   First, the *try clause* (the statement(s) between the <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> and <a href="https://docs.python.org/3/reference/compound_stmts.html#except" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">except</code></a> keywords) is executed.
 
-- If no exception occurs, the _except clause_ is skipped and execution of the <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> statement is finished.
+-   If no exception occurs, the *except clause* is skipped and execution of the <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> statement is finished.
 
-- If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then if its type matches the exception named after the <a href="https://docs.python.org/3/reference/compound_stmts.html#except" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">except</code></a> keyword, the except clause is executed, and then execution continues after the <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> statement.
+-   If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then if its type matches the exception named after the <a href="https://docs.python.org/3/reference/compound_stmts.html#except" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">except</code></a> keyword, the except clause is executed, and then execution continues after the <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> statement.
 
-- If an exception occurs which does not match the exception named in the except clause, it is passed on to outer <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> statements; if no handler is found, it is an _unhandled exception_ and execution stops with a message as shown above.
+-   If an exception occurs which does not match the exception named in the except clause, it is passed on to outer <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> statements; if no handler is found, it is an *unhandled exception* and execution stops with a message as shown above.
 
 A <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> statement may have more than one except clause, to specify handlers for different exceptions. At most one handler will be executed. Handlers only handle exceptions that occur in the corresponding try clause, not in other handlers of the same `try` statement. An except clause may name multiple exceptions as a parenthesized tuple, for example:
 
@@ -125,7 +129,7 @@ The last except clause may omit the exception name(s), to serve as a wildcard. U
         print("Unexpected error:", sys.exc_info()[0])
         raise
 
-The <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> … <a href="https://docs.python.org/3/reference/compound_stmts.html#except" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">except</code></a> statement has an optional _else clause_, which, when present, must follow all except clauses. It is useful for code that must be executed if the try clause does not raise an exception. For example:
+The <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> … <a href="https://docs.python.org/3/reference/compound_stmts.html#except" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">except</code></a> statement has an optional *else clause*, which, when present, must follow all except clauses. It is useful for code that must be executed if the try clause does not raise an exception. For example:
 
     for arg in sys.argv[1:]:
         try:
@@ -138,7 +142,7 @@ The <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class=
 
 The use of the `else` clause is better than adding additional code to the <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> clause because it avoids accidentally catching an exception that wasn’t raised by the code being protected by the `try` … `except` statement.
 
-When an exception occurs, it may have an associated value, also known as the exception’s _argument_. The presence and type of the argument depend on the exception type.
+When an exception occurs, it may have an associated value, also known as the exception’s *argument*. The presence and type of the argument depend on the exception type.
 
 The except clause may specify a variable after the exception name. The variable is bound to an exception instance with the arguments stored in `instance.args`. For convenience, the exception instance defines <a href="https://docs.python.org/3/reference/datamodel.html#object.__str__" class="reference internal" title="object.__str__"><code class="sourceCode python"><span class="bu">str</span>()</code></a> so the arguments can be printed directly without having to reference `.args`. One may also instantiate an exception first before raising it and add any attributes to it as desired.
 
@@ -175,7 +179,8 @@ Exception handlers don’t just handle exceptions if they occur immediately in t
 
 <span id="tut-raising"></span>
 
-## <span class="section-number">8.4. </span>Raising Exceptions<a href="#raising-exceptions" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">8.4. </span>Raising Exceptions<a href="#raising-exceptions" class="headerlink" title="Permalink to this headline">¶</a>
+----------------------------------------------------------------------------------------------------------------------------------------------------
 
 The <a href="https://docs.python.org/3/reference/simple_stmts.html#raise" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">raise</code></a> statement allows the programmer to force a specified exception to occur. For example:
 
@@ -203,7 +208,8 @@ If you need to determine whether an exception was raised but don’t intend to h
 
 <span id="tut-exception-chaining"></span>
 
-## <span class="section-number">8.5. </span>Exception Chaining<a href="#exception-chaining" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">8.5. </span>Exception Chaining<a href="#exception-chaining" class="headerlink" title="Permalink to this headline">¶</a>
+----------------------------------------------------------------------------------------------------------------------------------------------------
 
 The <a href="https://docs.python.org/3/reference/simple_stmts.html#raise" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">raise</code></a> statement allows an optional <a href="https://docs.python.org/3/reference/simple_stmts.html#raise" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">from</code></a> which enables chaining exceptions. For example:
 
@@ -246,7 +252,8 @@ For more information about chaining mechanics, see <a href="https://docs.python.
 
 <span id="tut-userexceptions"></span>
 
-## <span class="section-number">8.6. </span>User-defined Exceptions<a href="#user-defined-exceptions" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">8.6. </span>User-defined Exceptions<a href="#user-defined-exceptions" class="headerlink" title="Permalink to this headline">¶</a>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Programs may name their own exceptions by creating a new exception class (see <a href="classes.html#tut-classes" class="reference internal"><span class="std std-ref">Classes</span></a> for more about Python classes). Exceptions should typically be derived from the <a href="https://docs.python.org/3/library/exceptions.html#Exception" class="reference internal" title="Exception"><code class="sourceCode python"><span class="pp">Exception</span></code></a> class, either directly or indirectly.
 
@@ -289,7 +296,8 @@ Many standard modules define their own exceptions to report errors that may occu
 
 <span id="tut-cleanup"></span>
 
-## <span class="section-number">8.7. </span>Defining Clean-up Actions<a href="#defining-clean-up-actions" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">8.7. </span>Defining Clean-up Actions<a href="#defining-clean-up-actions" class="headerlink" title="Permalink to this headline">¶</a>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> statement has another optional clause which is intended to define clean-up actions that must be executed under all circumstances. For example:
 
@@ -305,15 +313,15 @@ The <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class=
 
 If a <a href="https://docs.python.org/3/reference/compound_stmts.html#finally" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">finally</code></a> clause is present, the `finally` clause will execute as the last task before the <a href="https://docs.python.org/3/reference/compound_stmts.html#try" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">try</code></a> statement completes. The `finally` clause runs whether or not the `try` statement produces an exception. The following points discuss more complex cases when an exception occurs:
 
-- If an exception occurs during execution of the `try` clause, the exception may be handled by an <a href="https://docs.python.org/3/reference/compound_stmts.html#except" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">except</code></a> clause. If the exception is not handled by an `except` clause, the exception is re-raised after the `finally` clause has been executed.
+-   If an exception occurs during execution of the `try` clause, the exception may be handled by an <a href="https://docs.python.org/3/reference/compound_stmts.html#except" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">except</code></a> clause. If the exception is not handled by an `except` clause, the exception is re-raised after the `finally` clause has been executed.
 
-- An exception could occur during execution of an `except` or `else` clause. Again, the exception is re-raised after the `finally` clause has been executed.
+-   An exception could occur during execution of an `except` or `else` clause. Again, the exception is re-raised after the `finally` clause has been executed.
 
-- If the `finally` clause executes a <a href="https://docs.python.org/3/reference/simple_stmts.html#break" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">break</code></a>, <a href="https://docs.python.org/3/reference/simple_stmts.html#continue" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">continue</code></a> or <a href="https://docs.python.org/3/reference/simple_stmts.html#return" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">return</code></a> statement, exceptions are not re-raised.
+-   If the `finally` clause executes a <a href="https://docs.python.org/3/reference/simple_stmts.html#break" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">break</code></a>, <a href="https://docs.python.org/3/reference/simple_stmts.html#continue" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">continue</code></a> or <a href="https://docs.python.org/3/reference/simple_stmts.html#return" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">return</code></a> statement, exceptions are not re-raised.
 
-- If the `try` statement reaches a <a href="https://docs.python.org/3/reference/simple_stmts.html#break" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">break</code></a>, <a href="https://docs.python.org/3/reference/simple_stmts.html#continue" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">continue</code></a> or <a href="https://docs.python.org/3/reference/simple_stmts.html#return" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">return</code></a> statement, the `finally` clause will execute just prior to the `break`, `continue` or `return` statement’s execution.
+-   If the `try` statement reaches a <a href="https://docs.python.org/3/reference/simple_stmts.html#break" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">break</code></a>, <a href="https://docs.python.org/3/reference/simple_stmts.html#continue" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">continue</code></a> or <a href="https://docs.python.org/3/reference/simple_stmts.html#return" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">return</code></a> statement, the `finally` clause will execute just prior to the `break`, `continue` or `return` statement’s execution.
 
-- If a `finally` clause includes a `return` statement, the returned value will be the one from the `finally` clause’s `return` statement, not the value from the `try` clause’s `return` statement.
+-   If a `finally` clause includes a `return` statement, the returned value will be the one from the `finally` clause’s `return` statement, not the value from the `try` clause’s `return` statement.
 
 For example:
 
@@ -357,7 +365,8 @@ In real world applications, the <a href="https://docs.python.org/3/reference/com
 
 <span id="tut-cleanup-with"></span>
 
-## <span class="section-number">8.8. </span>Predefined Clean-up Actions<a href="#predefined-clean-up-actions" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">8.8. </span>Predefined Clean-up Actions<a href="#predefined-clean-up-actions" class="headerlink" title="Permalink to this headline">¶</a>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Some objects define standard clean-up actions to be undertaken when the object is no longer needed, regardless of whether or not the operation using the object succeeded or failed. Look at the following example, which tries to open a file and print its contents to the screen.
 
@@ -370,19 +379,19 @@ The problem with this code is that it leaves the file open for an indeterminate 
         for line in f:
             print(line, end="")
 
-After the statement is executed, the file _f_ is always closed, even if a problem was encountered while processing the lines. Objects which, like files, provide predefined clean-up actions will indicate this in their documentation.
+After the statement is executed, the file *f* is always closed, even if a problem was encountered while processing the lines. Objects which, like files, provide predefined clean-up actions will indicate this in their documentation.
 
 ### [Table of Contents](https://docs.python.org/3/contents.html)
 
-- <a href="#" class="reference internal">8. Errors and Exceptions</a>
-  - <a href="#syntax-errors" class="reference internal">8.1. Syntax Errors</a>
-  - <a href="#exceptions" class="reference internal">8.2. Exceptions</a>
-  - <a href="#handling-exceptions" class="reference internal">8.3. Handling Exceptions</a>
-  - <a href="#raising-exceptions" class="reference internal">8.4. Raising Exceptions</a>
-  - <a href="#exception-chaining" class="reference internal">8.5. Exception Chaining</a>
-  - <a href="#user-defined-exceptions" class="reference internal">8.6. User-defined Exceptions</a>
-  - <a href="#defining-clean-up-actions" class="reference internal">8.7. Defining Clean-up Actions</a>
-  - <a href="#predefined-clean-up-actions" class="reference internal">8.8. Predefined Clean-up Actions</a>
+-   <a href="#" class="reference internal">8. Errors and Exceptions</a>
+    -   <a href="#syntax-errors" class="reference internal">8.1. Syntax Errors</a>
+    -   <a href="#exceptions" class="reference internal">8.2. Exceptions</a>
+    -   <a href="#handling-exceptions" class="reference internal">8.3. Handling Exceptions</a>
+    -   <a href="#raising-exceptions" class="reference internal">8.4. Raising Exceptions</a>
+    -   <a href="#exception-chaining" class="reference internal">8.5. Exception Chaining</a>
+    -   <a href="#user-defined-exceptions" class="reference internal">8.6. User-defined Exceptions</a>
+    -   <a href="#defining-clean-up-actions" class="reference internal">8.7. Defining Clean-up Actions</a>
+    -   <a href="#predefined-clean-up-actions" class="reference internal">8.8. Predefined Clean-up Actions</a>
 
 #### Previous topic
 
@@ -394,20 +403,20 @@ After the statement is executed, the file _f_ is always closed, even if a proble
 
 ### This Page
 
-- [Report a Bug](https://docs.python.org/3/bugs.html)
-- [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/errors.rst)
+-   [Report a Bug](https://docs.python.org/3/bugs.html)
+-   [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/errors.rst)
 
 ### Navigation
 
-- [index](https://docs.python.org/3/genindex.html "General Index")
-- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
-- [next](classes.html "9. Classes") |
-- [previous](inputoutput.html "7. Input and Output") |
-- ![](../_static/py.png)
-- [Python](https://www.python.org/) »
-- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
-- [The Python Tutorial](index.html) »
--
+-   [index](https://docs.python.org/3/genindex.html "General Index")
+-   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+-   [next](classes.html "9. Classes") |
+-   [previous](inputoutput.html "7. Input and Output") |
+-   ![](../_static/py.png)
+-   [Python](https://www.python.org/) »
+-   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+-   [The Python Tutorial](index.html) »
+-   
 
 © [Copyright](https://docs.python.org/3/copyright.html) 2001-2021, Python Software Foundation.  
 The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)

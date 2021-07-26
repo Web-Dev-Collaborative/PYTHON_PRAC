@@ -493,7 +493,7 @@ This means the code will need to do the following:
 
 If you use Windows, you can easily run this script from the Run… window by creating a batch file named _mcb.bat_ with the following content:
 
-<span class="citation" data-cites="pyw.exe"><span class="citation" data-cites="pyw.exe">@pyw.exe</span></span> C:\\Python34\\mcb.pyw %\*
+<span class="citation" data-cites="pyw.exe"><span class="citation" data-cites="pyw.exe"><span class="citation" data-cites="pyw.exe">@pyw.exe</span></span></span> C:\\Python34\\mcb.pyw %\*
 
 ## Step 1: Comments and Shelf Setup
 

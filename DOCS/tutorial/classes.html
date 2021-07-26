@@ -56,7 +56,7 @@
         <a href="https://docs.python.org/3/index.html">3.9.5 Documentation</a> »
       </li>
       <li><a href="index.html">The Python Tutorial</a> »</li>
-      <li><div class="line-block"></div></li>
+      <li></li>
     </ul>
     <p><span id="tut-classes"></span></p>
     <h1 id="classes">
@@ -205,7 +205,7 @@
         href="https://docs.python.org/3/library/__main__.html#module-__main__"
         class="reference internal"
         title="__main__: The environment where the top-level script is run."
-        ><code class="sourceCode python"><strong>main</strong></code></a
+        ><code class="sourceCode python">main</code></a
       >, so they have their own global namespace. (The built-in names actually
       also live in a module; this is called
       <a
@@ -551,10 +551,7 @@ In global scope: global spam</code></pre>
         href="https://docs.python.org/3/reference/datamodel.html#object.__init__"
         class="reference internal"
         title="object.__init__"
-        ><code class="sourceCode python"
-          ><span class="fu"><strong>init</strong></span
-          >()</code
-        ></a
+        ><code class="sourceCode python">init()</code></a
       >, like this:
     </p>
     <pre><code>def __init__(self):
@@ -565,20 +562,14 @@ In global scope: global spam</code></pre>
         href="https://docs.python.org/3/reference/datamodel.html#object.__init__"
         class="reference internal"
         title="object.__init__"
-        ><code class="sourceCode python"
-          ><span class="fu"><strong>init</strong></span
-          >()</code
-        ></a
+        ><code class="sourceCode python">init()</code></a
       >
       method, class instantiation automatically invokes
       <a
         href="https://docs.python.org/3/reference/datamodel.html#object.__init__"
         class="reference internal"
         title="object.__init__"
-        ><code class="sourceCode python"
-          ><span class="fu"><strong>init</strong></span
-          >()</code
-        ></a
+        ><code class="sourceCode python">init()</code></a
       >
       for the newly-created class instance. So in this example, a new,
       initialized instance can be obtained by:
@@ -590,10 +581,7 @@ In global scope: global spam</code></pre>
         href="https://docs.python.org/3/reference/datamodel.html#object.__init__"
         class="reference internal"
         title="object.__init__"
-        ><code class="sourceCode python"
-          ><span class="fu"><strong>init</strong></span
-          >()</code
-        ></a
+        ><code class="sourceCode python">init()</code></a
       >
       method may have arguments for greater flexibility. In that case, arguments
       given to the class instantiation operator are passed on to
@@ -601,10 +589,7 @@ In global scope: global spam</code></pre>
         href="https://docs.python.org/3/reference/datamodel.html#object.__init__"
         class="reference internal"
         title="object.__init__"
-        ><code class="sourceCode python"
-          ><span class="fu"><strong>init</strong></span
-          >()</code
-        ></a
+        ><code class="sourceCode python">init()</code></a
       >. For example,
     </p>
     <pre><code>&gt;&gt;&gt; class Complex:
@@ -1288,8 +1273,7 @@ for line in open(&quot;myfile.txt&quot;):
         class="reference internal"
         title="iterator.__next__"
         ><code class="sourceCode python"
-          ><span class="fu"><strong>next</strong></span
-          >()</code
+          ><span class="bu">next</span>()</code
         ></a
       >
       which accesses elements in the container one at a time. When there are no
@@ -1299,8 +1283,7 @@ for line in open(&quot;myfile.txt&quot;):
         class="reference internal"
         title="iterator.__next__"
         ><code class="sourceCode python"
-          ><span class="fu"><strong>next</strong></span
-          >()</code
+          ><span class="bu">next</span>()</code
         ></a
       >
       raises a
@@ -1319,8 +1302,7 @@ for line in open(&quot;myfile.txt&quot;):
         class="reference internal"
         title="iterator.__next__"
         ><code class="sourceCode python"
-          ><span class="fu"><strong>next</strong></span
-          >()</code
+          ><span class="bu">next</span>()</code
         ></a
       >
       method using the
@@ -1357,8 +1339,7 @@ StopIteration</code></pre>
         class="reference internal"
         title="object.__iter__"
         ><code class="sourceCode python"
-          ><span class="fu"><strong>iter</strong></span
-          >()</code
+          ><span class="bu">iter</span>()</code
         ></a
       >
       method which returns an object with a
@@ -1367,8 +1348,7 @@ StopIteration</code></pre>
         class="reference internal"
         title="iterator.__next__"
         ><code class="sourceCode python"
-          ><span class="fu"><strong>next</strong></span
-          >()</code
+          ><span class="bu">next</span>()</code
         ></a
       >
       method. If the class defines <code>__next__()</code>, then
@@ -1377,8 +1357,7 @@ StopIteration</code></pre>
         class="reference internal"
         title="object.__iter__"
         ><code class="sourceCode python"
-          ><span class="fu"><strong>iter</strong></span
-          >()</code
+          ><span class="bu">iter</span>()</code
         ></a
       >
       can just return <code>self</code>:
@@ -1465,8 +1444,7 @@ g</code></pre>
         class="reference internal"
         title="object.__iter__"
         ><code class="sourceCode python"
-          ><span class="fu"><strong>iter</strong></span
-          >()</code
+          ><span class="bu">iter</span>()</code
         ></a
       >
       and
@@ -1475,8 +1453,7 @@ g</code></pre>
         class="reference internal"
         title="generator.__next__"
         ><code class="sourceCode python"
-          ><span class="fu"><strong>next</strong></span
-          >()</code
+          ><span class="bu">next</span>()</code
         ></a
       >
       methods are created automatically.
@@ -1544,7 +1521,7 @@ g</code></pre>
         href="https://docs.python.org/3/library/stdtypes.html#object.__dict__"
         class="reference internal"
         title="object.__dict__"
-        ><code class="sourceCode python"><strong>dict</strong></code></a
+        ><code class="sourceCode python"><span class="bu">dict</span></code></a
       >
       which returns the dictionary used to implement the module’s namespace; the
       name
@@ -1552,7 +1529,7 @@ g</code></pre>
         href="https://docs.python.org/3/library/stdtypes.html#object.__dict__"
         class="reference internal"
         title="object.__dict__"
-        ><code class="sourceCode python"><strong>dict</strong></code></a
+        ><code class="sourceCode python"><span class="bu">dict</span></code></a
       >
       is an attribute but not a global name. Obviously, using this violates the
       abstraction of namespace implementation, and should be restricted to
@@ -1712,7 +1689,7 @@ g</code></pre>
         <a href="https://docs.python.org/3/index.html">3.9.5 Documentation</a> »
       </li>
       <li><a href="index.html">The Python Tutorial</a> »</li>
-      <li><div class="line-block"></div></li>
+      <li></li>
     </ul>
     <p>
       ©

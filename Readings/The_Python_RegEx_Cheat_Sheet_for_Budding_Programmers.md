@@ -166,7 +166,7 @@ print(a)
 
 output: \[‘Hello’, ‘regular’\]
 
-string<span class="math inline"><span class="math inline">$Check if a variable ends with a set of stringsimport re someText="Hello regular expression" a=re.findall("expression$</span></span>", someText)
+string<span class="math inline"><span class="math inline"><span class="math inline">$Check if a variable ends with a set of stringsimport re someText="Hello regular expression" a=re.findall("expression$</span></span></span>", someText)
 
 output: \[‘expression’\]
 
@@ -446,7 +446,7 @@ print(a)
 
 output: \[1, 3, 2, 4, 1, 6, 6, 4\]
 
-memoryview(x)Access the internal buffers of an objecta=memoryview(object)bytes()Convert a memory buffer protocol into bytesbytes(a\[0:2\])bytearray()Return an array of bytesbytearray(object)\#Write a single line of comment or prevent a line of code from being executed\# Python regex cheat sheet""" "““Write a multi-line comment”““The Python regex cheat sheet is good for beginners  
+memoryview(x)Access the internal buffers of an objecta=memoryview(object)bytes()Convert a memory buffer protocol into bytesbytes(a\[0:2\])bytearray()Return an array of bytesbytearray(object)\#Write a single line of comment or prevent a line of code from being executed\# Python regex cheat sheet""" “““Write a multi-line comment”““The Python regex cheat sheet is good for beginners  
 It’s equally a great refresher for experts”““**Command Line**pip install packageInstall an online librarypip install pandasvirtualenv nameUse virtaulenv to create a virtual environmentvirtualenv myprojectmkvirtualenv nameUse virtual environment wrapper to create virtual environmentmkvirtualenv myprojectpython file.pyRun the commands in a Python file”python my_file.pypip freezeList out all the installed packages in a virtual environmentpip freezepip freeze &gt; somefilesCopy all installed libraries in a single filepip freeze &gt; requirements.txtwhereFind the installation path of Pythonwhere python–versionCheck the version of a packagepython –version.exeRun a Python shellpython.exewith open(file, ‘w’)Write to an existing file and overwrite its existing contentwith open(‘regex.txt’, ‘w’) as wf:  
 wf.write(“Hello World!”)with open(file, ‘r’)Open a file as read-onlywith open(‘regex.txt’, ‘r’) as rf:  
 print(rf.read()with open(file, ‘a’)Write to a file without overwriting its existing contentwith open(‘regex.txt’, ‘a’) as af:  

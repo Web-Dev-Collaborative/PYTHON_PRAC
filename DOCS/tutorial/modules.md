@@ -1,22 +1,23 @@
 ### Navigation
 
-- [index](https://docs.python.org/3/genindex.html "General Index")
-- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
-- [next](inputoutput.html "7. Input and Output") |
-- [previous](datastructures.html "5. Data Structures") |
-- ![](../_static/py.png)
-- [Python](https://www.python.org/) »
-- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
-- [The Python Tutorial](index.html) »
--
+-   [index](https://docs.python.org/3/genindex.html "General Index")
+-   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+-   [next](inputoutput.html "7. Input and Output") |
+-   [previous](datastructures.html "5. Data Structures") |
+-   ![](../_static/py.png)
+-   [Python](https://www.python.org/) »
+-   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+-   [The Python Tutorial](index.html) »
+-   
 
 <span id="tut-modules"></span>
 
-# <span class="section-number">6. </span>Modules<a href="#modules" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">6. </span>Modules<a href="#modules" class="headerlink" title="Permalink to this headline">¶</a>
+============================================================================================================================
 
-If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables) are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare the input for the interpreter and running it with that file as input instead. This is known as creating a _script_. As your program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a handy function that you’ve written in several programs without copying its definition into each program.
+If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables) are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare the input for the interpreter and running it with that file as input instead. This is known as creating a *script*. As your program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a handy function that you’ve written in several programs without copying its definition into each program.
 
-To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance of the interpreter. Such a file is called a _module_; definitions from a module can be _imported_ into other modules or into the _main_ module (the collection of variables that you have access to in a script executed at the top level and in calculator mode).
+To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance of the interpreter. Such a file is called a *module*; definitions from a module can be *imported* into other modules or into the *main* module (the collection of variables that you have access to in a script executed at the top level and in calculator mode).
 
 A module is a file containing Python definitions and statements. The file name is the module name with the suffix `.py` appended. Within a module, the module’s name (as a string) is available as the value of the global variable `__name__`. For instance, use your favorite text editor to create a file called `fibo.py` in the current directory with the following contents:
 
@@ -58,9 +59,10 @@ If you intend to use a function often you can assign it to a local name:
 
 <span id="tut-moremodules"></span>
 
-## <span class="section-number">6.1. </span>More on Modules<a href="#more-on-modules" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">6.1. </span>More on Modules<a href="#more-on-modules" class="headerlink" title="Permalink to this headline">¶</a>
+----------------------------------------------------------------------------------------------------------------------------------------------
 
-A module can contain executable statements as well as function definitions. These statements are intended to initialize the module. They are executed only the _first_ time the module name is encountered in an import statement. <a href="#id2" id="id1" class="footnote-reference brackets">1</a> (They are also run if the file is executed as a script.)
+A module can contain executable statements as well as function definitions. These statements are intended to initialize the module. They are executed only the *first* time the module name is encountered in an import statement. <a href="#id2" id="id1" class="footnote-reference brackets">1</a> (They are also run if the file is executed as a script.)
 
 Each module has its own private symbol table, which is used as the global symbol table by all functions defined in the module. Thus, the author of a module can use global variables in the module without worrying about accidental clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s global variables with the same notation used to refer to its functions, `modname.itemname`.
 
@@ -134,11 +136,11 @@ This is often used either to provide a convenient user interface to a module, or
 
 When a module named `spam` is imported, the interpreter first searches for a built-in module with that name. If not found, it then searches for a file named `spam.py` in a list of directories given by the variable <a href="https://docs.python.org/3/library/sys.html#sys.path" class="reference internal" title="sys.path"><code class="sourceCode python">sys.path</code></a>. <a href="https://docs.python.org/3/library/sys.html#sys.path" class="reference internal" title="sys.path"><code class="sourceCode python">sys.path</code></a> is initialized from these locations:
 
-- The directory containing the input script (or the current directory when no file is specified).
+-   The directory containing the input script (or the current directory when no file is specified).
 
-- <span id="index-1" class="target"></span><a href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH" class="reference internal"><code class="xref std std-envvar docutils literal notranslate">PYTHONPATH</code></a> (a list of directory names, with the same syntax as the shell variable <span id="index-2" class="target"></span>`PATH`).
+-   <span id="index-1" class="target"></span><a href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH" class="reference internal"><code class="xref std std-envvar docutils literal notranslate">PYTHONPATH</code></a> (a list of directory names, with the same syntax as the shell variable <span id="index-2" class="target"></span>`PATH`).
 
-- The installation-dependent default.
+-   The installation-dependent default.
 
 Note
 
@@ -156,17 +158,18 @@ Python does not check the cache in two circumstances. First, it always recompile
 
 Some tips for experts:
 
-- You can use the <a href="https://docs.python.org/3/using/cmdline.html#cmdoption-o" class="reference internal"><code class="xref std std-option docutils literal notranslate">-O</code></a> or <a href="https://docs.python.org/3/using/cmdline.html#cmdoption-oo" class="reference internal"><code class="xref std std-option docutils literal notranslate">-OO</code></a> switches on the Python command to reduce the size of a compiled module. The `-O` switch removes assert statements, the `-OO` switch removes both assert statements and \_\_doc\_\_ strings. Since some programs may rely on having these available, you should only use this option if you know what you’re doing. “Optimized” modules have an `opt-` tag and are usually smaller. Future releases may change the effects of optimization.
+-   You can use the <a href="https://docs.python.org/3/using/cmdline.html#cmdoption-o" class="reference internal"><code class="xref std std-option docutils literal notranslate">-O</code></a> or <a href="https://docs.python.org/3/using/cmdline.html#cmdoption-oo" class="reference internal"><code class="xref std std-option docutils literal notranslate">-OO</code></a> switches on the Python command to reduce the size of a compiled module. The `-O` switch removes assert statements, the `-OO` switch removes both assert statements and \_\_doc\_\_ strings. Since some programs may rely on having these available, you should only use this option if you know what you’re doing. “Optimized” modules have an `opt-` tag and are usually smaller. Future releases may change the effects of optimization.
 
-- A program doesn’t run any faster when it is read from a `.pyc` file than when it is read from a `.py` file; the only thing that’s faster about `.pyc` files is the speed with which they are loaded.
+-   A program doesn’t run any faster when it is read from a `.pyc` file than when it is read from a `.py` file; the only thing that’s faster about `.pyc` files is the speed with which they are loaded.
 
-- The module <a href="https://docs.python.org/3/library/compileall.html#module-compileall" class="reference internal" title="compileall: Tools for byte-compiling all Python source files in a directory tree."><code class="sourceCode python">compileall</code></a> can create .pyc files for all modules in a directory.
+-   The module <a href="https://docs.python.org/3/library/compileall.html#module-compileall" class="reference internal" title="compileall: Tools for byte-compiling all Python source files in a directory tree."><code class="sourceCode python">compileall</code></a> can create .pyc files for all modules in a directory.
 
-- There is more detail on this process, including a flow chart of the decisions, in <span id="index-3" class="target"></span><a href="https://www.python.org/dev/peps/pep-3147" class="pep reference external"><strong>PEP 3147</strong></a>.
+-   There is more detail on this process, including a flow chart of the decisions, in <span id="index-3" class="target"></span><a href="https://www.python.org/dev/peps/pep-3147" class="pep reference external"><strong>PEP 3147</strong></a>.
 
 <span id="tut-standardmodules"></span>
 
-## <span class="section-number">6.2. </span>Standard Modules<a href="#standard-modules" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">6.2. </span>Standard Modules<a href="#standard-modules" class="headerlink" title="Permalink to this headline">¶</a>
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 Python comes with a library of standard modules, described in a separate document, the Python Library Reference (“Library Reference” hereafter). Some modules are built into the interpreter; these provide access to operations that are not part of the core of the language but are nevertheless built in, either for efficiency or to provide access to operating system primitives such as system calls. The set of such modules is a configuration option which also depends on the underlying platform. For example, the <a href="https://docs.python.org/3/library/winreg.html#module-winreg" class="reference internal" title="winreg: Routines and objects for manipulating the Windows registry. (Windows)"><code class="sourceCode python">winreg</code></a> module is only provided on Windows systems. One particular module deserves some attention: <a href="https://docs.python.org/3/library/sys.html#module-sys" class="reference internal" title="sys: Access system-specific parameters and functions."><code class="sourceCode python">sys</code></a>, which is built into every Python interpreter. The variables `sys.ps1` and `sys.ps2` define the strings used as primary and secondary prompts:
 
@@ -189,7 +192,8 @@ The variable `sys.path` is a list of strings that determines the interpreter’s
 
 <span id="tut-dir"></span>
 
-## <span class="section-number">6.3. </span>The <a href="https://docs.python.org/3/library/functions.html#dir" class="reference internal" title="dir"><code class="sourceCode python"><span class="bu">dir</span>()</code></a> Function<a href="#the-dir-function" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">6.3. </span>The <a href="https://docs.python.org/3/library/functions.html#dir" class="reference internal" title="dir"><code class="sourceCode python"><span class="bu">dir</span>()</code></a> Function<a href="#the-dir-function" class="headerlink" title="Permalink to this headline">¶</a>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The built-in function <a href="https://docs.python.org/3/library/functions.html#dir" class="reference internal" title="dir"><code class="sourceCode python"><span class="bu">dir</span>()</code></a> is used to find out which names a module defines. It returns a sorted list of strings:
 
@@ -265,7 +269,8 @@ Note that it lists all types of names: variables, modules, functions, etc.
 
 <span id="tut-packages"></span>
 
-## <span class="section-number">6.4. </span>Packages<a href="#packages" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">6.4. </span>Packages<a href="#packages" class="headerlink" title="Permalink to this headline">¶</a>
+--------------------------------------------------------------------------------------------------------------------------------
 
 Packages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the module name `A.B` designates a submodule named `B` in a package named `A`. Just like the use of modules saves the authors of different modules from having to worry about each other’s global variable names, the use of dotted module names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s module names.
 
@@ -339,7 +344,7 @@ The only solution is for the package author to provide an explicit index of the 
 
 This would mean that `from sound.effects import *` would import the three named submodules of the `sound` package.
 
-If `__all__` is not defined, the statement `from sound.effects import *` does _not_ import all submodules from the package `sound.effects` into the current namespace; it only ensures that the package `sound.effects` has been imported (possibly running any initialization code in `__init__.py`) and then imports whatever names are defined in the package. This includes any names defined (and submodules explicitly loaded) by `__init__.py`. It also includes any submodules of the package that were explicitly loaded by previous <a href="https://docs.python.org/3/reference/simple_stmts.html#import" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">import</code></a> statements. Consider this code:
+If `__all__` is not defined, the statement `from sound.effects import *` does *not* import all submodules from the package `sound.effects` into the current namespace; it only ensures that the package `sound.effects` has been imported (possibly running any initialization code in `__init__.py`) and then imports whatever names are defined in the package. This includes any names defined (and submodules explicitly loaded) by `__init__.py`. It also includes any submodules of the package that were explicitly loaded by previous <a href="https://docs.python.org/3/reference/simple_stmts.html#import" class="reference internal"><code class="xref std std-keyword docutils literal notranslate">import</code></a> statements. Consider this code:
 
     import sound.effects.echo
     import sound.effects.surround
@@ -376,17 +381,17 @@ In fact function definitions are also ‘statements’ that are ‘executed’; 
 
 ### [Table of Contents](https://docs.python.org/3/contents.html)
 
-- <a href="#" class="reference internal">6. Modules</a>
-  - <a href="#more-on-modules" class="reference internal">6.1. More on Modules</a>
-    - <a href="#executing-modules-as-scripts" class="reference internal">6.1.1. Executing modules as scripts</a>
-    - <a href="#the-module-search-path" class="reference internal">6.1.2. The Module Search Path</a>
-    - <a href="#compiled-python-files" class="reference internal">6.1.3. “Compiled” Python files</a>
-  - <a href="#standard-modules" class="reference internal">6.2. Standard Modules</a>
-  - <a href="#the-dir-function" class="reference internal">6.3. The <code class="sourceCode python"><span class="bu">dir</span>()</code> Function</a>
-  - <a href="#packages" class="reference internal">6.4. Packages</a>
-    - <a href="#importing-from-a-package" class="reference internal">6.4.1. Importing \* From a Package</a>
-    - <a href="#intra-package-references" class="reference internal">6.4.2. Intra-package References</a>
-    - <a href="#packages-in-multiple-directories" class="reference internal">6.4.3. Packages in Multiple Directories</a>
+-   <a href="#" class="reference internal">6. Modules</a>
+    -   <a href="#more-on-modules" class="reference internal">6.1. More on Modules</a>
+        -   <a href="#executing-modules-as-scripts" class="reference internal">6.1.1. Executing modules as scripts</a>
+        -   <a href="#the-module-search-path" class="reference internal">6.1.2. The Module Search Path</a>
+        -   <a href="#compiled-python-files" class="reference internal">6.1.3. “Compiled” Python files</a>
+    -   <a href="#standard-modules" class="reference internal">6.2. Standard Modules</a>
+    -   <a href="#the-dir-function" class="reference internal">6.3. The <code class="sourceCode python"><span class="bu">dir</span>()</code> Function</a>
+    -   <a href="#packages" class="reference internal">6.4. Packages</a>
+        -   <a href="#importing-from-a-package" class="reference internal">6.4.1. Importing * From a Package</a>
+        -   <a href="#intra-package-references" class="reference internal">6.4.2. Intra-package References</a>
+        -   <a href="#packages-in-multiple-directories" class="reference internal">6.4.3. Packages in Multiple Directories</a>
 
 #### Previous topic
 
@@ -398,20 +403,20 @@ In fact function definitions are also ‘statements’ that are ‘executed’; 
 
 ### This Page
 
-- [Report a Bug](https://docs.python.org/3/bugs.html)
-- [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/modules.rst)
+-   [Report a Bug](https://docs.python.org/3/bugs.html)
+-   [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/modules.rst)
 
 ### Navigation
 
-- [index](https://docs.python.org/3/genindex.html "General Index")
-- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
-- [next](inputoutput.html "7. Input and Output") |
-- [previous](datastructures.html "5. Data Structures") |
-- ![](../_static/py.png)
-- [Python](https://www.python.org/) »
-- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
-- [The Python Tutorial](index.html) »
--
+-   [index](https://docs.python.org/3/genindex.html "General Index")
+-   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+-   [next](inputoutput.html "7. Input and Output") |
+-   [previous](datastructures.html "5. Data Structures") |
+-   ![](../_static/py.png)
+-   [Python](https://www.python.org/) »
+-   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+-   [The Python Tutorial](index.html) »
+-   
 
 © [Copyright](https://docs.python.org/3/copyright.html) 2001-2021, Python Software Foundation.  
 The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)

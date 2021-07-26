@@ -1,10 +1,8 @@
-<pre>
-<i>'math'</i> Sub-directory contains all the math related scripts
-<strong>This dir does not contain mathematical algorithms,
-only math related scripts</strong> 
-</pre>
+    'math' Sub-directory contains all the math related scripts
+    This dir does not contain mathematical algorithms,
+    only math related scripts
 
-The programs have been <strong>re-checked</strong> and <strong>re-mastered</strong> by me!<br>
-Although i've tried to keep it as orignal as possible.<br>
-Keep Patience It'll take time to go through every program!!<br>
-<b>Thanks</b>
+The programs have been **re-checked** and **re-mastered** by me!  
+Although i’ve tried to keep it as orignal as possible.  
+Keep Patience It’ll take time to go through every program!!  
+**Thanks**

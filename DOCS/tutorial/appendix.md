@@ -1,22 +1,24 @@
 ### Navigation
 
-- [index](https://docs.python.org/3/genindex.html "General Index")
-- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
-- [next](https://docs.python.org/3/using/index.html "Python Setup and Usage") |
-- [previous](floatingpoint.html "15. Floating Point Arithmetic: Issues and Limitations") |
-- ![](../_static/py.png)
-- [Python](https://www.python.org/) »
-- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
-- [The Python Tutorial](index.html) »
--
+-   [index](https://docs.python.org/3/genindex.html "General Index")
+-   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+-   [next](https://docs.python.org/3/using/index.html "Python Setup and Usage") |
+-   [previous](floatingpoint.html "15. Floating Point Arithmetic: Issues and Limitations") |
+-   ![](../_static/py.png)
+-   [Python](https://www.python.org/) »
+-   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+-   [The Python Tutorial](index.html) »
+-   
 
 <span id="tut-appendix"></span>
 
-# <span class="section-number">16. </span>Appendix<a href="#appendix" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">16. </span>Appendix<a href="#appendix" class="headerlink" title="Permalink to this headline">¶</a>
+===============================================================================================================================
 
 <span id="tut-interac"></span>
 
-## <span class="section-number">16.1. </span>Interactive Mode<a href="#interactive-mode" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">16.1. </span>Interactive Mode<a href="#interactive-mode" class="headerlink" title="Permalink to this headline">¶</a>
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 <span id="tut-error"></span>
 
@@ -50,7 +52,7 @@ When you use Python interactively, it is frequently handy to have some standard 
 
 This file is only read in interactive sessions, not when Python reads commands from a script, and not when `/dev/tty` is given as the explicit source of commands (which otherwise behaves like an interactive session). It is executed in the same namespace where interactive commands are executed, so that objects that it defines or imports can be used without qualification in the interactive session. You can also change the prompts `sys.ps1` and `sys.ps2` in this file.
 
-If you want to read an additional start-up file from the current directory, you can program this in the global start-up file using code like `if os.path.isfile('.pythonrc.py'): exec(open('.pythonrc.py').read())`. If you want to use the startup file in a script, you must do this explicitly in the script:
+If you want to read an additional start-up file from the current directory, you can program this in the global start-up file using code like `if os.path.isfile('.pythonrc.py'):         exec(open('.pythonrc.py').read())`. If you want to use the startup file in a script, you must do this explicitly in the script:
 
     import os
     filename = os.environ.get('PYTHONSTARTUP')
@@ -80,12 +82,12 @@ A problem with the GNU Readline package may prevent this.
 
 ### [Table of Contents](https://docs.python.org/3/contents.html)
 
-- <a href="#" class="reference internal">16. Appendix</a>
-  - <a href="#interactive-mode" class="reference internal">16.1. Interactive Mode</a>
-    - <a href="#error-handling" class="reference internal">16.1.1. Error Handling</a>
-    - <a href="#executable-python-scripts" class="reference internal">16.1.2. Executable Python Scripts</a>
-    - <a href="#the-interactive-startup-file" class="reference internal">16.1.3. The Interactive Startup File</a>
-    - <a href="#the-customization-modules" class="reference internal">16.1.4. The Customization Modules</a>
+-   <a href="#" class="reference internal">16. Appendix</a>
+    -   <a href="#interactive-mode" class="reference internal">16.1. Interactive Mode</a>
+        -   <a href="#error-handling" class="reference internal">16.1.1. Error Handling</a>
+        -   <a href="#executable-python-scripts" class="reference internal">16.1.2. Executable Python Scripts</a>
+        -   <a href="#the-interactive-startup-file" class="reference internal">16.1.3. The Interactive Startup File</a>
+        -   <a href="#the-customization-modules" class="reference internal">16.1.4. The Customization Modules</a>
 
 #### Previous topic
 
@@ -97,20 +99,20 @@ A problem with the GNU Readline package may prevent this.
 
 ### This Page
 
-- [Report a Bug](https://docs.python.org/3/bugs.html)
-- [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/appendix.rst)
+-   [Report a Bug](https://docs.python.org/3/bugs.html)
+-   [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/appendix.rst)
 
 ### Navigation
 
-- [index](https://docs.python.org/3/genindex.html "General Index")
-- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
-- [next](https://docs.python.org/3/using/index.html "Python Setup and Usage") |
-- [previous](floatingpoint.html "15. Floating Point Arithmetic: Issues and Limitations") |
-- ![](../_static/py.png)
-- [Python](https://www.python.org/) »
-- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
-- [The Python Tutorial](index.html) »
--
+-   [index](https://docs.python.org/3/genindex.html "General Index")
+-   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+-   [next](https://docs.python.org/3/using/index.html "Python Setup and Usage") |
+-   [previous](floatingpoint.html "15. Floating Point Arithmetic: Issues and Limitations") |
+-   ![](../_static/py.png)
+-   [Python](https://www.python.org/) »
+-   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+-   [The Python Tutorial](index.html) »
+-   
 
 © [Copyright](https://docs.python.org/3/copyright.html) 2001-2021, Python Software Foundation.  
 The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)

@@ -1,20 +1,22 @@
 ### Navigation
 
-- [index](https://docs.python.org/3/genindex.html "General Index")
-- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
-- [next](whatnow.html "13. What Now?") |
-- [previous](stdlib2.html "11. Brief Tour of the Standard Library — Part II") |
-- ![](../_static/py.png)
-- [Python](https://www.python.org/) »
-- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
-- [The Python Tutorial](index.html) »
--
+-   [index](https://docs.python.org/3/genindex.html "General Index")
+-   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+-   [next](whatnow.html "13. What Now?") |
+-   [previous](stdlib2.html "11. Brief Tour of the Standard Library — Part II") |
+-   ![](../_static/py.png)
+-   [Python](https://www.python.org/) »
+-   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+-   [The Python Tutorial](index.html) »
+-   
 
 <span id="tut-venv"></span>
 
-# <span class="section-number">12. </span>Virtual Environments and Packages<a href="#virtual-environments-and-packages" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">12. </span>Virtual Environments and Packages<a href="#virtual-environments-and-packages" class="headerlink" title="Permalink to this headline">¶</a>
+=================================================================================================================================================================================
 
-## <span class="section-number">12.1. </span>Introduction<a href="#introduction" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">12.1. </span>Introduction<a href="#introduction" class="headerlink" title="Permalink to this headline">¶</a>
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 Python applications will often use packages and modules that don’t come as part of the standard library. Applications will sometimes need a specific version of a library, because the application may require that a particular bug has been fixed or the application may be written using an obsolete version of the library’s interface.
 
@@ -24,7 +26,8 @@ The solution for this problem is to create a <a href="https://docs.python.org/3/
 
 Different applications can then use different virtual environments. To resolve the earlier example of conflicting requirements, application A can have its own virtual environment with version 1.0 installed while application B has another virtual environment with version 2.0. If application B requires a library be upgraded to version 3.0, this will not affect application A’s environment.
 
-## <span class="section-number">12.2. </span>Creating Virtual Environments<a href="#creating-virtual-environments" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">12.2. </span>Creating Virtual Environments<a href="#creating-virtual-environments" class="headerlink" title="Permalink to this headline">¶</a>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The module used to create and manage virtual environments is called <a href="https://docs.python.org/3/library/venv.html#module-venv" class="reference internal" title="venv: Creation of virtual environments."><code class="sourceCode python">venv</code></a>. <a href="https://docs.python.org/3/library/venv.html#module-venv" class="reference internal" title="venv: Creation of virtual environments."><code class="sourceCode python">venv</code></a> will usually install the most recent version of Python that you have available. If you have multiple versions of Python on your system, you can select a specific Python version by running `python3` or whichever version you want.
 
@@ -60,7 +63,8 @@ Activating the virtual environment will change your shell’s prompt to show wha
     '~/envs/tutorial-env/lib/python3.5/site-packages']
     >>>
 
-## <span class="section-number">12.3. </span>Managing Packages with pip<a href="#managing-packages-with-pip" class="headerlink" title="Permalink to this headline">¶</a>
+<span class="section-number">12.3. </span>Managing Packages with pip<a href="#managing-packages-with-pip" class="headerlink" title="Permalink to this headline">¶</a>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 You can install, upgrade, and remove packages using a program called **pip**. By default `pip` will install packages from the Python Package Index, &lt;<a href="https://pypi.org/" class="reference external">https://pypi.org</a>&gt;. You can browse the Python Package Index by going to it in your web browser.
 
@@ -144,10 +148,10 @@ The `requirements.txt` can then be committed to version control and shipped as p
 
 ### [Table of Contents](https://docs.python.org/3/contents.html)
 
-- <a href="#" class="reference internal">12. Virtual Environments and Packages</a>
-  - <a href="#introduction" class="reference internal">12.1. Introduction</a>
-  - <a href="#creating-virtual-environments" class="reference internal">12.2. Creating Virtual Environments</a>
-  - <a href="#managing-packages-with-pip" class="reference internal">12.3. Managing Packages with pip</a>
+-   <a href="#" class="reference internal">12. Virtual Environments and Packages</a>
+    -   <a href="#introduction" class="reference internal">12.1. Introduction</a>
+    -   <a href="#creating-virtual-environments" class="reference internal">12.2. Creating Virtual Environments</a>
+    -   <a href="#managing-packages-with-pip" class="reference internal">12.3. Managing Packages with pip</a>
 
 #### Previous topic
 
@@ -159,20 +163,20 @@ The `requirements.txt` can then be committed to version control and shipped as p
 
 ### This Page
 
-- [Report a Bug](https://docs.python.org/3/bugs.html)
-- [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/venv.rst)
+-   [Report a Bug](https://docs.python.org/3/bugs.html)
+-   [Show Source](https://github.com/python/cpython/blob/3.9/Doc/tutorial/venv.rst)
 
 ### Navigation
 
-- [index](https://docs.python.org/3/genindex.html "General Index")
-- [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
-- [next](whatnow.html "13. What Now?") |
-- [previous](stdlib2.html "11. Brief Tour of the Standard Library — Part II") |
-- ![](../_static/py.png)
-- [Python](https://www.python.org/) »
-- [3.9.5 Documentation](https://docs.python.org/3/index.html) »
-- [The Python Tutorial](index.html) »
--
+-   [index](https://docs.python.org/3/genindex.html "General Index")
+-   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+-   [next](whatnow.html "13. What Now?") |
+-   [previous](stdlib2.html "11. Brief Tour of the Standard Library — Part II") |
+-   ![](../_static/py.png)
+-   [Python](https://www.python.org/) »
+-   [3.9.5 Documentation](https://docs.python.org/3/index.html) »
+-   [The Python Tutorial](index.html) »
+-   
 
 © [Copyright](https://docs.python.org/3/copyright.html) 2001-2021, Python Software Foundation.  
 The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)

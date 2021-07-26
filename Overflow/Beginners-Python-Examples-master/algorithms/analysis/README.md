@@ -1,6 +1,4 @@
-<pre>
-<i>'analysis'</i> Sub-directory contains all 
-<strong>analysis related algorithms</strong>.
+    'analysis' Sub-directory contains all
+    analysis related algorithms.
 
-<strong>Thanks</strong>
-</pre>
+    Thanks

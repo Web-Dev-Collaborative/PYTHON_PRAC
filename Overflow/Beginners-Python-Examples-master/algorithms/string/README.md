@@ -1,6 +1,4 @@
-<pre>
-<i>'string'</i> Sub-directory contains all 
-<strong>string related algorithms</strong>
+    'string' Sub-directory contains all
+    string related algorithms
 
-<strong>Thanks</strong>
-</pre>
+    Thanks
