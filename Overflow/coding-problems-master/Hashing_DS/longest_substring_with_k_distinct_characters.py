@@ -1,4 +1,4 @@
-'''
+"""
 Longest Substring With k Distinct Characters
 
 Given an integer k and a string s, find the length of the longest substring that contains at most k distinct characters.
@@ -10,12 +10,13 @@ Output: 'bcb'
 Simple solution (like sliding window or queue, add to the end and remove from the front).
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def longest_substring_with_distinct_characters(s, k):
     letters = {}
@@ -32,7 +33,7 @@ def longest_substring_with_distinct_characters(s, k):
             # so the count of distinct letters will be k-1
             while len(letters) == k:
                 firstLetter = s[i - length]
-                letters[firstLetter] -= 1 # decrease the counter
+                letters[firstLetter] -= 1  # decrease the counter
                 if letters[firstLetter] == 0:
                     # remove this letter from the dictionary because
                     # in the susbtring there are no letters like this
@@ -55,8 +56,8 @@ def longest_substring_with_distinct_characters(s, k):
 
 # Test 1
 # Correct result => 3
-print(longest_substring_with_distinct_characters('abcba', 2))
+print(longest_substring_with_distinct_characters("abcba", 2))
 
 # Test 2
 # Correct result => 8
-print(longest_substring_with_distinct_characters('abcbcbcbba', 2))
+print(longest_substring_with_distinct_characters("abcbcbcbba", 2))

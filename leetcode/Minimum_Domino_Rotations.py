@@ -25,7 +25,6 @@
 
 class Solution:
     def min_domino(self, A, B):
-
         def check(x):
 
             rotations_a = rotations_b = 0

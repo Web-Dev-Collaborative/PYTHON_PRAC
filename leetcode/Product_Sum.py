@@ -5,6 +5,7 @@
 # it should be summed themselves and then multiplied by their level of depth. For example, the
 # product sum of [x, y] is x + y; the product sum of [x, [y, z]] is x + 2y + 2z.
 
+
 class Solution:
     def productSum(self, arr, depth):
         Sum = 0

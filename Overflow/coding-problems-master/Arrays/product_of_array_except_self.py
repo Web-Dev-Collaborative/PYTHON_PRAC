@@ -1,4 +1,4 @@
-'''
+"""
 Product of Array Except Self
 
 Given an array nums of n integers where n > 1,
@@ -16,12 +16,13 @@ Output: [24, 12, 8, 6]
 Make the products as this: from 0 to i-1 and from i-1 to N-1, and in the end only multiply these 2 products.
     Time Complexity:    O(N)
     Space Complexity:   O(N)    , According to the desciption O(1), the result array is not couted as extra space.
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def product_except_self(nums):
     n = len(nums)

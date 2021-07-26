@@ -23,7 +23,18 @@ class Solution:
 
         pointer1 = 0
         pointer2 = len(strs) - 1
-        dict = {'a': 1, 'e': 2, 'i': 3, 'o': 4, 'u': 5, 'A': 6, 'E': 7, 'I': 8, 'O': 9, 'U': 10}
+        dict = {
+            "a": 1,
+            "e": 2,
+            "i": 3,
+            "o": 4,
+            "u": 5,
+            "A": 6,
+            "E": 7,
+            "I": 8,
+            "O": 9,
+            "U": 10,
+        }
 
         while pointer1 < pointer2:
 
@@ -33,7 +44,11 @@ class Solution:
             while pointer1 <= pointer2 and strs[pointer2] not in dict:
                 pointer2 -= 1
 
-            if pointer1 <= pointer2 and strs[pointer1] in dict and strs[pointer2] in dict:
+            if (
+                pointer1 <= pointer2
+                and strs[pointer1] in dict
+                and strs[pointer2] in dict
+            ):
                 strs[pointer1], strs[pointer2] = strs[pointer2], strs[pointer1]
                 pointer1 += 1
                 pointer2 -= 1

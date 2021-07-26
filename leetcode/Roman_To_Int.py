@@ -47,15 +47,7 @@
 
 
 def roman_to_int(s):
-    romanNumeral = {
-        'I': 1,
-        'V': 5,
-        'X': 10,
-        'L': 50,
-        'C': 100,
-        'D': 500,
-        'M': 1000
-    }
+    romanNumeral = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
 
     prev = 0
     Sum = 0
@@ -72,7 +64,7 @@ def roman_to_int(s):
     return Sum
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # MMMCMXCIX => 3999
     ex1 = "MMMCMXCIX"
     ex2 = "I"

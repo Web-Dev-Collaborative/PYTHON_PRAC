@@ -1,4 +1,4 @@
-'''
+"""
 Shuffle an Array
 
 Given an array (array elements could be of any type/kind),
@@ -21,7 +21,7 @@ This algorithm is called Fisher–Yates shuffle (https://en.wikipedia.org/wiki/F
 
 Note: In Python there is already implemented shuffle (in random module "from random import shuffle") method
 which works in similar way. But it's easy to be implemented and I wanted to show how to implement it.
-'''
+"""
 
 
 ############
@@ -30,15 +30,17 @@ which works in similar way. But it's easy to be implemented and I wanted to show
 
 from random import randint
 
+
 def shuffle_array(arr):
     n = len(arr)
 
     for i in range(n):
-        rand = randint(i, n - 1) # or randint(0, i) it's same
-        arr[i], arr[rand] = arr[rand], arr[i] # swap elements
+        rand = randint(i, n - 1)  # or randint(0, i) it's same
+        arr[i], arr[rand] = arr[rand], arr[i]  # swap elements
 
     # the original arr is already changed
     return arr
+
 
 ###########
 # Testing #

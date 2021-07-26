@@ -1,4 +1,4 @@
-'''
+"""
 Container With Most Water
 
 Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai).
@@ -12,12 +12,13 @@ Output: 49
 Playing with pointers from both sides, eliminate smaller heights and search for a bigger height.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def max_area(height):
     l = 0

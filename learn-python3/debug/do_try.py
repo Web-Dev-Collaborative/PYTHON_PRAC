@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 
 try:
-    print('try...')
+    print("try...")
     r = 10 / 0
-    print('result:', r)
+    print("result:", r)
 except ZeroDivisionError as e:
-    print('except:', e)
+    print("except:", e)
 finally:
-    print('finally...')
-print('END')
+    print("finally...")
+print("END")

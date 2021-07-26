@@ -1,4 +1,4 @@
-'''
+"""
 Prime Factors of Integers
 
 As the fundamental theorem of arithmetic again reminds us, every positive integer can be broken
@@ -15,12 +15,13 @@ Now n is odd, so you won't need to check if divisible by some even number, becau
 jump by 2 numbers.
     Time Complexity:    O(N)    , if prime number then N/2 checks, if all prime factors are 2 then LogN checks
     Space Complexity:   O(LogN) , if all prime factors are 2, else less than LogN space
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def prime_factors(n):
     factors = []
@@ -55,7 +56,7 @@ print(prime_factors(42))
 
 # Test 2
 # Correct result => [2, 2, 2, 2, 2, 2, 5, 5, 5, 5, 5, 5]
-print(prime_factors(10**6))
+print(prime_factors(10 ** 6))
 
 # Test 3
 # Correct result => [127, 9721]

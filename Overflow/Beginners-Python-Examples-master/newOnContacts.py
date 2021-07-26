@@ -15,7 +15,7 @@ def newContact():
             break
         elif add.strip() == "Try again":
             continue
-        else :
+        else:
             print("Invalid Input.try again")
             continue
         startAgain = raw_input("Add more or continue : ")
@@ -25,6 +25,7 @@ def newContact():
         elif startAgain.strip() == "continue":
             print(" ")
             break
+
 
 # func to search for a contact
 def searchContact():
@@ -40,6 +41,7 @@ def searchContact():
             print(" ")
             break
 
+
 # func to edit a contact
 def editContact():
     while True:
@@ -52,6 +54,7 @@ def editContact():
         elif startAgain.strip() == "continue":
             print(" ")
             break
+
 
 # main code to interact
 while True:
@@ -67,13 +70,13 @@ while True:
             print(searchContact())
         elif addSearchEdit.strip() == "Edit":
             print(editContact())
-        else :
+        else:
             print("Invalid Input . Try Again")
             continue
     elif startOrEnd.strip() == "End":
         print("Ending...")
         break
-    else :
+    else:
         print("Invalid Input . Try Again")
         continue
     # part of main code to start again or end
@@ -84,5 +87,5 @@ while True:
     elif startAgain.strip() == "End":
         print("Ending program...")
         break
-    else :
+    else:
         break

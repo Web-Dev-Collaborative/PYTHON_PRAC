@@ -1,33 +1,36 @@
-class Node():
-  '''
-  '''
-  def __init__(self, value):
-    self._value = value
-    self._left = None
-    self._right = None
+class Node:
+    """
+  """
 
-class BST():
-  '''
-  '''
-  def __init__(self):
-    self._root = None
+    def __init__(self, value):
+        self._value = value
+        self._left = None
+        self._right = None
 
-  def insert_value(self, value, current_node=False):
-    ''' '''
-    # TODO: Implement node value insertion method
-    print(f"insert {value} here!")
 
-  # TODO: Implement iterative search method
-  def search_iteratively(self, value):
-    pass
+class BST:
+    """
+  """
 
-  # TODO: Implement recursive search method
-  def search_recursively(self, value, current_node=False):
-    pass
+    def __init__(self):
+        self._root = None
+
+    def insert_value(self, value, current_node=False):
+        """ """
+        # TODO: Implement node value insertion method
+        print(f"insert {value} here!")
+
+    # TODO: Implement iterative search method
+    def search_iteratively(self, value):
+        pass
+
+    # TODO: Implement recursive search method
+    def search_recursively(self, value, current_node=False):
+        pass
 
 
 tree = BST()
-print(tree._root)                         # None
+print(tree._root)  # None
 
 # 1. Test node value insertion
 tree.insert_value(3)

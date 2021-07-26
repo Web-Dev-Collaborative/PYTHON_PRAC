@@ -1,4 +1,4 @@
-'''
+"""
 Maximum Difference Sub-Linked List
 
 Given a linked list of integers, find and return the sub-linked list of k consecutive elements where
@@ -14,7 +14,7 @@ Using 2 pointers (start and end), traverse the linked list and compare the resul
 But first, move the end pointer for k places.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
@@ -24,9 +24,10 @@ But first, move the end pointer for k places.
 # import ListNode class from ll_helpers.py
 from ll_helpers import ListNode
 
+
 def max_diference_subll(ll, k):
     if ll is None:
-            return None
+        return None
 
     start, end = ll, ll
 

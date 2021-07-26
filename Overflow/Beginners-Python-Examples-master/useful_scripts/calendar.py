@@ -7,11 +7,11 @@ viewCalender = lambda yy, mm: print("\n\n Calendar > \n %s\n" % calendar.month(y
 
 # UI
 while True:
-	if str(input("[+] Start [Y/n] ?  ")).strip().lower() == "y":
-		try:
-			viewCalender(int(input("\nYear: ")), int(input("Month: ")))
-		except IndexError:
-			print("  -> Try Again! With valid numbers!\n")
-	else:
-		print("\nSee Ya Soon!")
-		sys.exit(0)
+    if str(input("[+] Start [Y/n] ?  ")).strip().lower() == "y":
+        try:
+            viewCalender(int(input("\nYear: ")), int(input("Month: ")))
+        except IndexError:
+            print("  -> Try Again! With valid numbers!\n")
+    else:
+        print("\nSee Ya Soon!")
+        sys.exit(0)

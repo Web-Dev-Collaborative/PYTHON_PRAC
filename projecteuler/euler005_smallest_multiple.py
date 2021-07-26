@@ -27,6 +27,6 @@ def run():
     print(range_lcm(20))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

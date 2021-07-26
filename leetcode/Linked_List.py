@@ -3,8 +3,8 @@
 # together. So a whole Linked List is essentially just chained up Nodes.
 # Program for traversal of linked list
 
-class ListNode:
 
+class ListNode:
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -47,15 +47,15 @@ if __name__ == "__main__":
     l2 = [2, 4, 6, 8, 10]
     n1 = list2linkedlist(l1)
     n2 = list2linkedlist(l2)
-    print (n1)
-    print (n2)
+    print(n1)
+    print(n2)
     # adding a new node in n1
 
-    print ("Lets add a new node in n1")
+    print("Lets add a new node in n1")
     newnode = ListNode(1)
-    print (newnode)
+    print(newnode)
     newnode.next = n1
-    print (newnode)
+    print(newnode)
     print("Deleting from the linked list")
     newnode.next = newnode.next.next
     print(newnode)

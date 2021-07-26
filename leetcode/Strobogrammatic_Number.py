@@ -18,7 +18,7 @@
 
 class Solution:
     def isStrobogrammatic(self, num):
-        dict = {'6': '9', '9': '6', '8': '8', '0': '0', '1': '1'}
+        dict = {"6": "9", "9": "6", "8": "8", "0": "0", "1": "1"}
 
         pointer = len(num) - 1
         nums = []

@@ -1,4 +1,4 @@
-'''
+"""
 Safe Squares from Rooks
 
 On a generalized n-by-n chessboard, there are some number of rooks, each rook represented as a
@@ -15,12 +15,13 @@ The result is a multiplication between free rows and free columns.
 Use hashsets to store the free rows and columns.
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def safe_squares_rooks(rooks, n):
     rows = set()

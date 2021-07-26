@@ -1,4 +1,4 @@
-'''
+"""
 Reverse string
 
 Reverse string, in linear time complexity.
@@ -19,15 +19,16 @@ Exist 2 more "Pythonic" ways of reversing strings/arrays:
 But I wanted to show how to implement a reverse algorithm step by step so someone will know how to implement it in other languages.
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
 # Solution #
 ############
 
+
 def reverse_sentence(sentence):
-    arr = [c for c in sentence] # or just arr = list(sentence)
+    arr = [c for c in sentence]  # or just arr = list(sentence)
     start = 0
     end = len(arr) - 1
 
@@ -38,16 +39,17 @@ def reverse_sentence(sentence):
         start += 1
         end -= 1
 
-    return ''.join(arr)
+    return "".join(arr)
+
 
 def swap(arr, i, j):
     # swapping two elements from a same array
     arr[i], arr[j] = arr[j], arr[i]
-    '''same as
+    """same as
     temp = arr[i]
     arr[i] = arr[j]
     arr[j] = temp
-    '''
+    """
 
 
 ###########
@@ -56,8 +58,8 @@ def swap(arr, i, j):
 
 # Test 1
 # Correct result => 'hcum yrev margorp siht ekil i'
-print(reverse_sentence('i like this program very much'))
+print(reverse_sentence("i like this program very much"))
 
 # Test 2
 # Correct result => 'uoy era woh'
-print(reverse_sentence('how are you'))
+print(reverse_sentence("how are you"))

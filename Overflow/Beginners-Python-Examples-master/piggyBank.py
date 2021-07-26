@@ -10,6 +10,7 @@ def addMoney():
     money = money + userAdd
     print("After adding current Money you have is " + str(money) + " rupees")
 
+
 # function to withdraw money from current amount
 def withdrawMoney():
     print(" ")
@@ -18,10 +19,12 @@ def withdrawMoney():
     money = money + userWithdraw
     print("After adding current Money you have is " + str(money) + " rupees")
 
+
 # function to display current amount
 def currentMoney():
     print(" ")
     current = "Current money you have is " + str(money) + " rupees"
+
 
 # main code
 print(" ")
@@ -40,18 +43,18 @@ while True:
         elif controlPiggy.strip() == "Check":
             print(currentMoney())
             continue
-        else :
+        else:
             print(" ")
             print("Invalid Input.Try again")
             continue
 
-    elif user.strip() == "End" :
+    elif user.strip() == "End":
         print(" ")
         print("------------Program Ended-----------")
         print(" ")
         break
 
-    else :
+    else:
         print(" ")
         print("Invalid Input. Try again")
         continue

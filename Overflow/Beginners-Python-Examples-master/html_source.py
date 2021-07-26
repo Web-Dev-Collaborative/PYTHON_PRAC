@@ -2,10 +2,11 @@
 # Getting Html text and saving it to a file.
 import urllib
 
-def get_html(url , fname):
+
+def get_html(url, fname):
     try:
         responsive = urllib.urlopen(url)
-        save_file = open(fname + '.html' , 'w')
+        save_file = open(fname + ".html", "w")
         save_file.write(responsive.read())
         save_file.close()
     except IOError:
@@ -19,10 +20,13 @@ def get_html(url , fname):
     # openFile.close()
     # return emp
 
-print('Hello,')
-while(True):
-    start_or_end = str(raw_input('start or end: ')).strip().lower()
-    if start_or_end == 'start':
-        print(get_html(raw_input('URL: ').strip() , raw_input('file name: ').strip()), "\n")
+
+print("Hello,")
+while True:
+    start_or_end = str(raw_input("start or end: ")).strip().lower()
+    if start_or_end == "start":
+        print(
+            get_html(raw_input("URL: ").strip(), raw_input("file name: ").strip()), "\n"
+        )
         continue
     quit()

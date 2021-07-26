@@ -37,6 +37,6 @@ def run():
     print(len(power_combinations(100)))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

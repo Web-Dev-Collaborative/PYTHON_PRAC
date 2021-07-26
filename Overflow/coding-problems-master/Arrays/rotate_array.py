@@ -1,4 +1,4 @@
-'''
+"""
 Array rotation/shifting
 
 Rotate array in right (or left) for K places.
@@ -19,14 +19,15 @@ And after that shift all elements in that set for one position in right/left.
 (A Juggling Algorithm, https://www.geeksforgeeks.org/array-rotation/)
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ##############
 # Solution 1 #
 ##############
 
-def rotate_array_1(arr, k, right = True):
+
+def rotate_array_1(arr, k, right=True):
     n = len(arr)
     right %= n
 
@@ -42,7 +43,8 @@ def rotate_array_1(arr, k, right = True):
 # Solution 2 #
 ##############
 
-def rotate_array_2(arr, k, right = True):
+
+def rotate_array_2(arr, k, right=True):
     n = len(arr)
     right %= n
 
@@ -66,15 +68,16 @@ def rotate_array_2(arr, k, right = True):
 
             # add the previous element on this position
             curr, arr[idx] = arr[idx], curr
-            '''same as
+            """same as
             temp = curr
             curr = arr[idx]
             arr[idx] = temp
-            '''
+            """
 
         i += 1
 
     return arr
+
 
 # greatest common divisor
 def gcd(a, b):

@@ -1,4 +1,4 @@
-'''
+"""
 Random Sample
 
 Given an array and length of the sample, find a random sample from that array.
@@ -29,7 +29,7 @@ Note 3: Don't use solutions which are iterating until K distinct elements/indice
 Why? Because if you try it with an array with 100 000 elements and K equal to 99 999, then the code inside the "while"
 could be executed more than 1 million times, that's O(10*N). So this algorithm doesn't work good when K is close to N,
 to many duplicates will be choosen, read about Birthday Problem (https://en.wikipedia.org/wiki/Birthday_problem).
-'''
+"""
 
 
 ##############
@@ -37,6 +37,7 @@ to many duplicates will be choosen, read about Birthday Problem (https://en.wiki
 ##############
 
 from random import randint
+
 
 def reservoir_sampling(arr, k):
     # fill the reservoir array
@@ -61,6 +62,7 @@ def reservoir_sampling(arr, k):
 
 from random import random
 
+
 def probabilistic_sampling(arr, k):
     sample = []
     n = len(arr)
@@ -70,8 +72,8 @@ def probabilistic_sampling(arr, k):
         # (k / n) is the probability for this element to be choosen (0 <= X <= 1)
         if random() < (k / n):
             sample.append(el)
-            k -= 1 # left elements to be choosen
-        n -= 1 # left elements for choosing
+            k -= 1  # left elements to be choosen
+        n -= 1  # left elements for choosing
 
     return sample
 

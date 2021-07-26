@@ -28,10 +28,10 @@
 
 
 # TEST DATA
-print(simple_german_translator("Guten, Tag"))       # > "Hello"
-print(simple_german_translator("Hallo"))            # > "Hello"
-print(simple_german_translator("Tschuss"))          # > "Bye"
+print(simple_german_translator("Guten, Tag"))  # > "Hello"
+print(simple_german_translator("Hallo"))  # > "Hello"
+print(simple_german_translator("Tschuss"))  # > "Bye"
 print(simple_german_translator("Auf wiedersehen"))  # > "Bye"
-print(simple_german_translator("Ich liebe dich"))   # > "I love you"
-print(simple_german_translator("Wo sind Sie"))      # > "Where are you"
-print(simple_german_translator("This ain't it"))    # > None
+print(simple_german_translator("Ich liebe dich"))  # > "I love you"
+print(simple_german_translator("Wo sind Sie"))  # > "Where are you"
+print(simple_german_translator("This ain't it"))  # > None

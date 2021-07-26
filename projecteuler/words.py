@@ -13,4 +13,4 @@ http://creativecommons.org/licenses/by-sa/3.0/
 
 
 def alphabetical_value(s):
-    return sum(1 + ord(c) - ord('A') for c in s)
+    return sum(1 + ord(c) - ord("A") for c in s)

@@ -1,4 +1,4 @@
-'''
+"""
 Longest Increasing Subarray
 
 Find the longest increasing subarray (subarray is when all elements are neighboring in the original array).
@@ -10,12 +10,13 @@ Output: 4
 Only in one iteration, check if the current element is bigger than the previous and increase the counter if true.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def longest_increasing_subarray(arr):
     n = len(arr)

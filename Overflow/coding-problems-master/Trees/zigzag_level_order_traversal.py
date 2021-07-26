@@ -1,4 +1,4 @@
-'''
+"""
 Binary Tree Zigzag Level Order Traversal
 
 Given a binary tree, return the zigzag level order traversal of its nodes' values.
@@ -16,7 +16,7 @@ Breadth first (level order) traversal, using queue.
 In the end reverse each odd level.
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
@@ -28,11 +28,13 @@ from tree_helpers import TreeNode
 
 from collections import deque
 
+
 class TreeNode:
     def __init__(self, val, left=None, right=None):
         self.val = val
-        self.left= left
+        self.left = left
         self.right = right
+
 
 def zigzag_level_order_traversal(root):
     results = []

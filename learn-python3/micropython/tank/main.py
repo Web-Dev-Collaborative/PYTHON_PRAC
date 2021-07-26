@@ -3,8 +3,24 @@
 import struct, threading
 
 from pybricks import ev3brick as brick
-from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor, InfraredSensor, UltrasonicSensor, GyroSensor)
-from pybricks.parameters import (Port, Stop, Direction, Button, Color, SoundFile, ImageFile, Align)
+from pybricks.ev3devices import (
+    Motor,
+    TouchSensor,
+    ColorSensor,
+    InfraredSensor,
+    UltrasonicSensor,
+    GyroSensor,
+)
+from pybricks.parameters import (
+    Port,
+    Stop,
+    Direction,
+    Button,
+    Color,
+    SoundFile,
+    ImageFile,
+    Align,
+)
 from pybricks.tools import print, wait, StopWatch
 from pybricks.robotics import DriveBase
 
@@ -21,7 +37,8 @@ STATUS_STEERING = 3
 
 COLORS = (None, Color.GREEN, Color.RED, Color.YELLOW)
 
-class Driver():
+
+class Driver:
     def __init__(self, leftMotor, rightMotor, diameter, axle):
         self.driver = DriveBase(leftMotor, rightMotor, diameter, axle)
         self.x = 0
@@ -37,8 +54,19 @@ class Driver():
         else:
             self.driver.drive(self.speed, self.steering)
 
-class Robot():
-    def __init__(self, leftMotor, rightMotor, topMotor, diameter, axle, maxSpeed=300, maxSteering=180, port=Port.S4):
+
+class Robot:
+    def __init__(
+        self,
+        leftMotor,
+        rightMotor,
+        topMotor,
+        diameter,
+        axle,
+        maxSpeed=300,
+        maxSteering=180,
+        port=Port.S4,
+    ):
         self.driver = Driver(leftMotor, rightMotor, diameter, axle)
         self.cannon = topMotor
         self.ultrasonic = UltrasonicSensor(port)
@@ -57,12 +85,13 @@ class Robot():
         self.cannon.run(-x // 327)
 
     def fire(self):
-        brick.sound.file('cannon.wav')
+        brick.sound.file("cannon.wav")
 
     def inactive(self):
         self.active = False
         self.drive(0, 0)
         brick.sound.beep()
+
 
 def autoStopLoop(robot):
     while robot.active:
@@ -70,9 +99,10 @@ def autoStopLoop(robot):
             robot.drive(0, 0)
         wait(100)
 
+
 def main():
     brick.sound.beep()
-    joystickEvent = detectJoystick(['Controller'])
+    joystickEvent = detectJoystick(["Controller"])
     if joystickEvent:
         robot = Robot(Motor(Port.D), Motor(Port.A), Motor(Port.B), 55, 200)
         t = threading.Thread(target=autoStopLoop, args=(robot,))
@@ -99,5 +129,6 @@ def main():
         joystick.startLoop()
     else:
         brick.sound.beep()
+
 
 main()

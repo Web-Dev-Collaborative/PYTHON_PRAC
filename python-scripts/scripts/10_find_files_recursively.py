@@ -2,8 +2,8 @@ import fnmatch
 import os
 
 # constants
-PATH = './'
-PATTERN = '*.md'
+PATH = "./"
+PATTERN = "*.md"
 
 
 def get_file_names(filepath, pattern):
@@ -27,12 +27,12 @@ def output_files(list_of_files):
         print(filename)
 
 
-if __name__ == '__main__':
-    get_file_names('./', '*.py')
+if __name__ == "__main__":
+    get_file_names("./", "*.py")
 
 
 # 05:09:47|bryan@LAPTOP-9LGJ3JGS:[scripts] scripts_exitstatus:1[╗__________________________________________________________o>
-# 
+#
 # python3 10_find_files_recursively.py
 # Found 31 files:
 # 02_find_all_links.py

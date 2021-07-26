@@ -22,7 +22,7 @@ class Solution:
             strs.append(c)
 
         for i in range(len(strs) - 1):
-            if strs[i] == '+' and strs[i + 1] == '+':
-                res.append(s[:i] + "--" + s[i + 2:])
+            if strs[i] == "+" and strs[i + 1] == "+":
+                res.append(s[:i] + "--" + s[i + 2 :])
 
         return res

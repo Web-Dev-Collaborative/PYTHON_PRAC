@@ -27,7 +27,7 @@ def find_prime_series(n, q):
     r = sorted(q)
     for i in range(len(r) - (n - 1)):
         first = r[i]
-        for second in r[i + 1:len(r) - (n - 2)]:
+        for second in r[i + 1 : len(r) - (n - 2)]:
             diff = second - first
             result = [first, second]
             k = n - 2
@@ -42,15 +42,15 @@ def find_prime_series(n, q):
 
 def prime_permutations(p):
     def int_permutations(n):
-        return set(int(''.join(x)) for x in permutations(sorted(str(n))))
+        return set(int("".join(x)) for x in permutations(sorted(str(n))))
 
     return (x for x in int_permutations(p) if x >= p and is_prime(x))
 
 
 def all_prime_perm_series(k, n):
     def _find_all():
-        left = int('1' * k)
-        right = int('9' * k)
+        left = int("1" * k)
+        right = int("9" * k)
         pri = set(x for x in primes_upto(right) if x >= left)
         for p in sorted(pri):
             e = find_prime_series(n, prime_permutations(p))
@@ -61,7 +61,7 @@ def all_prime_perm_series(k, n):
 
 
 def concatenated(series):
-    return int(''.join(str(c) for c in series))
+    return int("".join(str(c) for c in series))
 
 
 def test():
@@ -74,6 +74,6 @@ def run():
     assert 296962999629 == concatenated(all_prime_perm_series(4, 3)[-1])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

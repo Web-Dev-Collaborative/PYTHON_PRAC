@@ -1,4 +1,4 @@
-'''
+"""
 K Closest Points
 
 Given an array with points, and another one point. Find the closest K points of the array to the given point.
@@ -15,12 +15,13 @@ More precisly in-place quick sort. Recursive solution.
 Completely the same algorithm as the previous one, but without recursion. This solution is cleaner.
     Time Complexity:    O(N)
     Space Complexity:   O(K)
-'''
+"""
 
 
 ##############
 # Solution 1 #
 ##############
+
 
 def find_k_closes_recursive(arr, pt, k):
     n = len(arr)
@@ -33,6 +34,7 @@ def find_k_closes_recursive(arr, pt, k):
 
     return arr[:k]
 
+
 def kth_closest(arr, k, left, right, pt):
     pivot = pivoting(arr, left, right, pt)
 
@@ -40,6 +42,7 @@ def kth_closest(arr, k, left, right, pt):
         kth_closest(arr, k, left, pivot - 1, pt)
     elif pivot < k:
         kth_closest(arr, k, pivot + 1, right, pt)
+
 
 def pivoting(arr, left, right, pt):
     # Linear time complexity pivoting
@@ -61,9 +64,11 @@ def pivoting(arr, left, right, pt):
     # return the new pivot
     return new_pivot
 
+
 def swap(arr, i, j):
     # swaps two elements in an array
     arr[i], arr[j] = arr[j], arr[i]
+
 
 def sqr_dist(a, b):
     # no need from the square root
@@ -73,6 +78,7 @@ def sqr_dist(a, b):
 ##############
 # Solution 2 #
 ##############
+
 
 def find_k_closes(arr, pt, k):
     n = len(arr)
@@ -86,14 +92,16 @@ def find_k_closes(arr, pt, k):
     right = n - 1
 
     while True:
-        pivot = pivoting(arr, left, right, pt) # the same method from the previous solution
+        pivot = pivoting(
+            arr, left, right, pt
+        )  # the same method from the previous solution
 
         if pivot > k:
             right = pivot - 1
         elif pivot < k:
             left = pivot + 1
         else:
-            return arr[:k + 1]
+            return arr[: k + 1]
 
     # not possible
     return None
@@ -105,8 +113,42 @@ def find_k_closes(arr, pt, k):
 
 # Test 1
 # Correct result => [(2, 2), (2, 1.5), (2, 1)]
-print(find_k_closes_recursive([(0, 1), (3, 3), (1, 2), (2, 1.5), (3, -1), (2, 1), (4, 3), (5, 1), (-1, 2), (2, 2)], (2, 2), 3))
-print(find_k_closes([(0, 1), (3, 3), (1, 2), (2, 1.5), (3, -1), (2, 1), (4, 3), (5, 1), (-1, 2), (2, 2)], (2, 2), 3))
+print(
+    find_k_closes_recursive(
+        [
+            (0, 1),
+            (3, 3),
+            (1, 2),
+            (2, 1.5),
+            (3, -1),
+            (2, 1),
+            (4, 3),
+            (5, 1),
+            (-1, 2),
+            (2, 2),
+        ],
+        (2, 2),
+        3,
+    )
+)
+print(
+    find_k_closes(
+        [
+            (0, 1),
+            (3, 3),
+            (1, 2),
+            (2, 1.5),
+            (3, -1),
+            (2, 1),
+            (4, 3),
+            (5, 1),
+            (-1, 2),
+            (2, 2),
+        ],
+        (2, 2),
+        3,
+    )
+)
 
 # Test 2
 # Correct result => [(1, 2), (2, 1)]

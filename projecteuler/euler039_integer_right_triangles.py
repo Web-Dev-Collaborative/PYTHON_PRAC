@@ -17,7 +17,7 @@ def perimeter_combinations_for(limit):
     perims = defaultdict(set)
     for a in range(1, limit // 2):
         for b in range(1, limit - a - 1):
-            c = sqrt(a**2 + b**2)
+            c = sqrt(a ** 2 + b ** 2)
             p = int(a + b + c)
             if p >= limit:
                 break
@@ -37,6 +37,6 @@ def run():
     print(max((len(s), p) for p, s in perimeter_combinations_for(1001).items())[1])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

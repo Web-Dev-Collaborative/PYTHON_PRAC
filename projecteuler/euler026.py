@@ -54,6 +54,6 @@ def run():
     print(find_longest_recurring(1000)[1])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

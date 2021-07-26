@@ -1,4 +1,4 @@
-'''
+"""
 Longest Substring Without Repeating Characters
 
 Given a string, find the length of the longest substring without repeating characters.
@@ -16,12 +16,13 @@ Simple string iteration, use hashset to save unique characters.
 If the current character exists in the set then move the left index till the one
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def length_of_longest_substring(s):
     unique_chars = set()
@@ -48,8 +49,8 @@ def length_of_longest_substring(s):
 
 # Test 1
 # Correct result => 3
-print(length_of_longest_substring('abcabcbb'))
+print(length_of_longest_substring("abcabcbb"))
 
 # Test 2
 # Correct result => 1
-print(length_of_longest_substring('bbbbb'))
+print(length_of_longest_substring("bbbbb"))

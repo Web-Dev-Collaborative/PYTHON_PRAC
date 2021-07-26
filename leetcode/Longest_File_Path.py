@@ -32,15 +32,15 @@
 
 class Solution:
     def lengthLongestPath(self, input):
-        paths = input.split('\n')
+        paths = input.split("\n")
 
         maxLength = 0
         dict = {-1: 0}
         for line in paths:
 
-            depth = line.count('\t')
+            depth = line.count("\t")
             dict[depth] = len(line) - depth + dict[depth - 1]
 
-            if '.' in line:
+            if "." in line:
                 maxLength = max(maxLength, dict[depth] + depth)
         return maxLength

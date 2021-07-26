@@ -50,6 +50,6 @@ def run():
     assert 997651 == consecutive_primes_that_sum_prime(10 ** 6)[0]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

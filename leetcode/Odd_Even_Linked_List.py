@@ -15,6 +15,7 @@ class ListNode:
         self.val = val
         self.next = None
 
+
 class Solution:
     def oddeven(self, head):
 

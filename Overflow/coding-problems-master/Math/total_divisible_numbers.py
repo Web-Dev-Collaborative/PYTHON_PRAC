@@ -1,4 +1,4 @@
-'''
+"""
 Total Divisible Numbers
 
 Given an array A of N numbers,
@@ -13,12 +13,13 @@ Find least common multiple of all numbers in the array (lcm can be found using g
 And in the end check how many numbers are divisble by the lcm number (smaller or equal to S).
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def total_divisible_numbers(arr, S):
     # find lcm for all numbers in the array
@@ -29,9 +30,10 @@ def total_divisible_numbers(arr, S):
     # return the count of numbers divisble by the lcm number (smaller or equal to S)
     return S // lcm
 
+
 def gcd(a, b):
     while a != 0:
-        a, b = b % a, a # "Pythonic way"
+        a, b = b % a, a  # "Pythonic way"
         # or temp = a; a = b % a; b = temp; in the other languages
     return b
 

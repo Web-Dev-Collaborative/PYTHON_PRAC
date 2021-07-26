@@ -1,1135 +1,743 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="generator" content="pandoc" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=yes"
-    />
-    <title>index</title>
-    <style type="text/css">
-      code {
-        white-space: pre-wrap;
-      }
-      span.smallcaps {
-        font-variant: small-caps;
-      }
-      span.underline {
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    * { padding: 0; margin: 0; }
+    body {
+        font-family: sans-serif;
+        text-rendering: optimizespeed;
+        background-color: #ffffff;
+    }
+    a {
+        color: #006ed3;
+        text-decoration: none;
+    }
+    a:hover,
+    h1 a:hover {
+        color: #319cff;
+    }
+    header,
+    #summary {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    th:first-child,
+    td:first-child {
+        width: 5%;
+    }
+    th:last-child,
+    td:last-child {
+        width: 5%;
+    }
+    header {
+        padding-top: 25px;
+        padding-bottom: 15px;
+        background-color: #f2f2f2;
+    }
+    h1 {
+        font-size: 20px;
+        font-weight: normal;
+        white-space: nowrap;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        color: #999;
+    }
+    h1 a {
+        color: #000;
+        margin: 0 4px;
+    }
+    h1 a:hover {
         text-decoration: underline;
-      }
-      div.column {
-        display: inline-block;
-        vertical-align: top;
-        width: 50%;
-      }
+    }
+    h1 a:first-child {
+        margin: 0;
+    }
+    main {
+        display: block;
+    }
+    .meta {
+        font-size: 12px;
+        font-family: Verdana, sans-serif;
+        border-bottom: 1px solid #9C9C9C;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .meta-item {
+        margin-right: 1em;
+    }
+    #filter {
+        padding: 4px;
+        border: 1px solid #CCC;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    tr {
+        border-bottom: 1px dashed #dadada;
+    }
+    tbody tr:hover {
+        background-color: #ffffec;
+    }
+    th,
+    td {
+        text-align: left;
+        padding: 10px 0;
+    }
+    th {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+    th a {
+        color: black;
+    }
+    th svg {
+        vertical-align: middle;
+    }
+    td {
+        white-space: nowrap;
+        font-size: 14px;
+    }
+    td:nth-child(2) {
+        width: 80%;
+    }
+    td:nth-child(3) {
+        padding: 0 20px 0 20px;
+    }
+    th:nth-child(4),
+    td:nth-child(4) {
+        text-align: right;
+    }
+    td:nth-child(2) svg {
+        position: absolute;
+    }
+    td .name {
+        margin-left: 1.75em;
+        word-break: break-all;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+    }
+    td .goup {
+        margin-left: 1.75em;
+        padding: 0;
+        word-break: break-all;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+    }
+    .icon {
+        margin-right: 5px;
+    }
+    tr.clickable { 
+        cursor: pointer; 
+    } 
+    tr.clickable a { 
+        display: block; 
+    } 
+    @media (max-width: 600px) {
+        * {
+            font-size: 1.06rem;
+        }
+        .hideable {
+            display: none;
+        }
+        td:nth-child(2) {
+            width: auto;
+        }
+        th:nth-child(3),
+        td:nth-child(3) {
+            padding-right: 5%;
+            text-align: right;
+        }
+        h1 {
+            color: #000;
+        }
+        h1 a {
+            margin: 0;
+        }
+        #filter {
+            max-width: 100px;
+        }
+    }
     </style>
-  </head>
-  <body>
-    <h3 id="navigation">Navigation</h3>
-    <ul>
-      <li>
-        <a href="https://docs.python.org/3/genindex.html" title="General Index"
-          >index</a
-        >
-      </li>
-      <li>
-        <a href="./directory.html" title="General Index"
-          >Directory/Playground</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://docs.python.org/3/py-modindex.html"
-          title="Python Module Index"
-          >modules</a
-        >
-        |
-      </li>
-      <li>
-        <a href="appetite.html" title="1. Whetting Your Appetite">next</a> |
-      </li>
-      <li>
-        <a
-          href="https://docs.python.org/3/whatsnew/changelog.html"
-          title="Changelog"
-          >previous</a
-        >
-        |
-      </li>
-      <li><img src="../_static/py.png" /></li>
-      <li><a href="https://www.python.org/">Python</a> »</li>
-      <li>
-        <a href="https://docs.python.org/3/index.html">3.9.5 Documentation</a> »
-      </li>
-      <li><div class="line-block"></div></li>
-    </ul>
-    <p><span id="tutorial-index"></span></p>
-    <h1 id="the-python-tutorial">
-      The Python Tutorial<a
-        href="#the-python-tutorial"
-        class="headerlink"
-        title="Permalink to this headline"
-        >¶</a
-      >
-    </h1>
-    <p>
-      Python is an easy to learn, powerful programming language. It has
-      efficient high-level data structures and a simple but effective approach
-      to object-oriented programming. Python’s elegant syntax and dynamic
-      typing, together with its interpreted nature, make it an ideal language
-      for scripting and rapid application development in many areas on most
-      platforms.
-    </p>
-    <p>
-      The Python interpreter and the extensive standard library are freely
-      available in source or binary form for all major platforms from the Python
-      Web site,
-      <a href="https://www.python.org/" class="reference external"
-        >https://www.python.org/</a
-      >, and may be freely distributed. The same site also contains
-      distributions of and pointers to many free third party Python modules,
-      programs and tools, and additional documentation.
-    </p>
-    <p>
-      The Python interpreter is easily extended with new functions and data
-      types implemented in C or C++ (or other languages callable from C). Python
-      is also suitable as an extension language for customizable applications.
-    </p>
-    <p>
-      This tutorial introduces the reader informally to the basic concepts and
-      features of the Python language and system. It helps to have a Python
-      interpreter handy for hands-on experience, but all examples are
-      self-contained, so the tutorial can be read off-line as well.
-    </p>
-    <p>
-      For a description of standard objects and modules, see
-      <a
-        href="https://docs.python.org/3/library/index.html#library-index"
-        class="reference internal"
-        ><span class="std std-ref">The Python Standard Library</span></a
-      >.
-      <a
-        href="https://docs.python.org/3/reference/index.html#reference-index"
-        class="reference internal"
-        ><span class="std std-ref">The Python Language Reference</span></a
-      >
-      gives a more formal definition of the language. To write extensions in C
-      or C++, read
-      <a
-        href="https://docs.python.org/3/extending/index.html#extending-index"
-        class="reference internal"
-        ><span class="std std-ref"
-          >Extending and Embedding the Python Interpreter</span
-        ></a
-      >
-      and
-      <a
-        href="https://docs.python.org/3/c-api/index.html#c-api-index"
-        class="reference internal"
-        ><span class="std std-ref">Python/C API Reference Manual</span></a
-      >. There are also several books covering Python in depth.
-    </p>
-    <p>
-      This tutorial does not attempt to be comprehensive and cover every single
-      feature, or even every commonly used feature. Instead, it introduces many
-      of Python’s most noteworthy features, and will give you a good idea of the
-      language’s flavor and style. After reading it, you will be able to read
-      and write Python modules and programs, and you will be ready to learn more
-      about the various Python library modules described in
-      <a
-        href="https://docs.python.org/3/library/index.html#library-index"
-        class="reference internal"
-        ><span class="std std-ref">The Python Standard Library</span></a
-      >.
-    </p>
-    <p>
-      The
-      <a
-        href="https://docs.python.org/3/glossary.html#glossary"
-        class="reference internal"
-        ><span class="std std-ref">Glossary</span></a
-      >
-      is also worth going through.
-    </p>
-    <ul>
-      <li>
-        <a href="appetite.html" class="reference internal"
-          >1. Whetting Your Appetite</a
-        >
-      </li>
-      <li>
-        <a href="interpreter.html" class="reference internal"
-          >2. Using the Python Interpreter</a
-        >
-        <ul>
-          <li>
-            <a
-              href="interpreter.html#invoking-the-interpreter"
-              class="reference internal"
-              >2.1. Invoking the Interpreter</a
-            >
-            <ul>
-              <li>
-                <a
-                  href="interpreter.html#argument-passing"
-                  class="reference internal"
-                  >2.1.1. Argument Passing</a
-                >
-              </li>
-              <li>
-                <a
-                  href="interpreter.html#interactive-mode"
-                  class="reference internal"
-                  >2.1.2. Interactive Mode</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="interpreter.html#the-interpreter-and-its-environment"
-              class="reference internal"
-              >2.2. The Interpreter and Its Environment</a
-            >
-            <ul>
-              <li>
-                <a
-                  href="interpreter.html#source-code-encoding"
-                  class="reference internal"
-                  >2.2.1. Source Code Encoding</a
-                >
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="introduction.html" class="reference internal"
-          >3. An Informal Introduction to Python</a
-        >
-        <ul>
-          <li>
-            <a
-              href="introduction.html#using-python-as-a-calculator"
-              class="reference internal"
-              >3.1. Using Python as a Calculator</a
-            >
-            <ul>
-              <li>
-                <a href="introduction.html#numbers" class="reference internal"
-                  >3.1.1. Numbers</a
-                >
-              </li>
-              <li>
-                <a href="introduction.html#strings" class="reference internal"
-                  >3.1.2. Strings</a
-                >
-              </li>
-              <li>
-                <a href="introduction.html#lists" class="reference internal"
-                  >3.1.3. Lists</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="introduction.html#first-steps-towards-programming"
-              class="reference internal"
-              >3.2. First Steps Towards Programming</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="controlflow.html" class="reference internal"
-          >4. More Control Flow Tools</a
-        >
-        <ul>
-          <li>
-            <a href="controlflow.html#if-statements" class="reference internal"
-              >4.1.
-              <code class="xref std std-keyword docutils literal notranslate"
-                >if</code
-              >
-              Statements</a
-            >
-          </li>
-          <li>
-            <a href="controlflow.html#for-statements" class="reference internal"
-              >4.2.
-              <code class="xref std std-keyword docutils literal notranslate"
-                >for</code
-              >
-              Statements</a
-            >
-          </li>
-          <li>
-            <a
-              href="controlflow.html#the-range-function"
-              class="reference internal"
-              >4.3. The
-              <code class="sourceCode python"
-                ><span class="bu">range</span>()</code
-              >
-              Function</a
-            >
-          </li>
-          <li>
-            <a
-              href="controlflow.html#break-and-continue-statements-and-else-clauses-on-loops"
-              class="reference internal"
-              >4.4.
-              <code class="xref std std-keyword docutils literal notranslate"
-                >break</code
-              >
-              and
-              <code class="xref std std-keyword docutils literal notranslate"
-                >continue</code
-              >
-              Statements, and
-              <code class="xref std std-keyword docutils literal notranslate"
-                >else</code
-              >
-              Clauses on Loops</a
-            >
-          </li>
-          <li>
-            <a
-              href="controlflow.html#pass-statements"
-              class="reference internal"
-              >4.5.
-              <code class="xref std std-keyword docutils literal notranslate"
-                >pass</code
-              >
-              Statements</a
-            >
-          </li>
-          <li>
-            <a
-              href="controlflow.html#defining-functions"
-              class="reference internal"
-              >4.6. Defining Functions</a
-            >
-          </li>
-          <li>
-            <a
-              href="controlflow.html#more-on-defining-functions"
-              class="reference internal"
-              >4.7. More on Defining Functions</a
-            >
-            <ul>
-              <li>
-                <a
-                  href="controlflow.html#default-argument-values"
-                  class="reference internal"
-                  >4.7.1. Default Argument Values</a
-                >
-              </li>
-              <li>
-                <a
-                  href="controlflow.html#keyword-arguments"
-                  class="reference internal"
-                  >4.7.2. Keyword Arguments</a
-                >
-              </li>
-              <li>
-                <a
-                  href="controlflow.html#special-parameters"
-                  class="reference internal"
-                  >4.7.3. Special parameters</a
-                >
-                <ul>
-                  <li>
-                    <a
-                      href="controlflow.html#positional-or-keyword-arguments"
-                      class="reference internal"
-                      >4.7.3.1. Positional-or-Keyword Arguments</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="controlflow.html#positional-only-parameters"
-                      class="reference internal"
-                      >4.7.3.2. Positional-Only Parameters</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="controlflow.html#keyword-only-arguments"
-                      class="reference internal"
-                      >4.7.3.3. Keyword-Only Arguments</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="controlflow.html#function-examples"
-                      class="reference internal"
-                      >4.7.3.4. Function Examples</a
-                    >
-                  </li>
-                  <li>
-                    <a href="controlflow.html#recap" class="reference internal"
-                      >4.7.3.5. Recap</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a
-                  href="controlflow.html#arbitrary-argument-lists"
-                  class="reference internal"
-                  >4.7.4. Arbitrary Argument Lists</a
-                >
-              </li>
-              <li>
-                <a
-                  href="controlflow.html#unpacking-argument-lists"
-                  class="reference internal"
-                  >4.7.5. Unpacking Argument Lists</a
-                >
-              </li>
-              <li>
-                <a
-                  href="controlflow.html#lambda-expressions"
-                  class="reference internal"
-                  >4.7.6. Lambda Expressions</a
-                >
-              </li>
-              <li>
-                <a
-                  href="controlflow.html#documentation-strings"
-                  class="reference internal"
-                  >4.7.7. Documentation Strings</a
-                >
-              </li>
-              <li>
-                <a
-                  href="controlflow.html#function-annotations"
-                  class="reference internal"
-                  >4.7.8. Function Annotations</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="controlflow.html#intermezzo-coding-style"
-              class="reference internal"
-              >4.8. Intermezzo: Coding Style</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="datastructures.html" class="reference internal"
-          >5. Data Structures</a
-        >
-        <ul>
-          <li>
-            <a
-              href="datastructures.html#more-on-lists"
-              class="reference internal"
-              >5.1. More on Lists</a
-            >
-            <ul>
-              <li>
-                <a
-                  href="datastructures.html#using-lists-as-stacks"
-                  class="reference internal"
-                  >5.1.1. Using Lists as Stacks</a
-                >
-              </li>
-              <li>
-                <a
-                  href="datastructures.html#using-lists-as-queues"
-                  class="reference internal"
-                  >5.1.2. Using Lists as Queues</a
-                >
-              </li>
-              <li>
-                <a
-                  href="datastructures.html#list-comprehensions"
-                  class="reference internal"
-                  >5.1.3. List Comprehensions</a
-                >
-              </li>
-              <li>
-                <a
-                  href="datastructures.html#nested-list-comprehensions"
-                  class="reference internal"
-                  >5.1.4. Nested List Comprehensions</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="datastructures.html#the-del-statement"
-              class="reference internal"
-              >5.2. The
-              <code class="xref std std-keyword docutils literal notranslate"
-                >del</code
-              >
-              statement</a
-            >
-          </li>
-          <li>
-            <a
-              href="datastructures.html#tuples-and-sequences"
-              class="reference internal"
-              >5.3. Tuples and Sequences</a
-            >
-          </li>
-          <li>
-            <a href="datastructures.html#sets" class="reference internal"
-              >5.4. Sets</a
-            >
-          </li>
-          <li>
-            <a
-              href="datastructures.html#dictionaries"
-              class="reference internal"
-              >5.5. Dictionaries</a
-            >
-          </li>
-          <li>
-            <a
-              href="datastructures.html#looping-techniques"
-              class="reference internal"
-              >5.6. Looping Techniques</a
-            >
-          </li>
-          <li>
-            <a
-              href="datastructures.html#more-on-conditions"
-              class="reference internal"
-              >5.7. More on Conditions</a
-            >
-          </li>
-          <li>
-            <a
-              href="datastructures.html#comparing-sequences-and-other-types"
-              class="reference internal"
-              >5.8. Comparing Sequences and Other Types</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="modules.html" class="reference internal">6. Modules</a>
-        <ul>
-          <li>
-            <a href="modules.html#more-on-modules" class="reference internal"
-              >6.1. More on Modules</a
-            >
-            <ul>
-              <li>
-                <a
-                  href="modules.html#executing-modules-as-scripts"
-                  class="reference internal"
-                  >6.1.1. Executing modules as scripts</a
-                >
-              </li>
-              <li>
-                <a
-                  href="modules.html#the-module-search-path"
-                  class="reference internal"
-                  >6.1.2. The Module Search Path</a
-                >
-              </li>
-              <li>
-                <a
-                  href="modules.html#compiled-python-files"
-                  class="reference internal"
-                  >6.1.3. “Compiled” Python files</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="modules.html#standard-modules" class="reference internal"
-              >6.2. Standard Modules</a
-            >
-          </li>
-          <li>
-            <a href="modules.html#the-dir-function" class="reference internal"
-              >6.3. The
-              <code class="sourceCode python"
-                ><span class="bu">dir</span>()</code
-              >
-              Function</a
-            >
-          </li>
-          <li>
-            <a href="modules.html#packages" class="reference internal"
-              >6.4. Packages</a
-            >
-            <ul>
-              <li>
-                <a
-                  href="modules.html#importing-from-a-package"
-                  class="reference internal"
-                  >6.4.1. Importing * From a Package</a
-                >
-              </li>
-              <li>
-                <a
-                  href="modules.html#intra-package-references"
-                  class="reference internal"
-                  >6.4.2. Intra-package References</a
-                >
-              </li>
-              <li>
-                <a
-                  href="modules.html#packages-in-multiple-directories"
-                  class="reference internal"
-                  >6.4.3. Packages in Multiple Directories</a
-                >
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="inputoutput.html" class="reference internal"
-          >7. Input and Output</a
-        >
-        <ul>
-          <li>
-            <a
-              href="inputoutput.html#fancier-output-formatting"
-              class="reference internal"
-              >7.1. Fancier Output Formatting</a
-            >
-            <ul>
-              <li>
-                <a
-                  href="inputoutput.html#formatted-string-literals"
-                  class="reference internal"
-                  >7.1.1. Formatted String Literals</a
-                >
-              </li>
-              <li>
-                <a
-                  href="inputoutput.html#the-string-format-method"
-                  class="reference internal"
-                  >7.1.2. The String format() Method</a
-                >
-              </li>
-              <li>
-                <a
-                  href="inputoutput.html#manual-string-formatting"
-                  class="reference internal"
-                  >7.1.3. Manual String Formatting</a
-                >
-              </li>
-              <li>
-                <a
-                  href="inputoutput.html#old-string-formatting"
-                  class="reference internal"
-                  >7.1.4. Old string formatting</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="inputoutput.html#reading-and-writing-files"
-              class="reference internal"
-              >7.2. Reading and Writing Files</a
-            >
-            <ul>
-              <li>
-                <a
-                  href="inputoutput.html#methods-of-file-objects"
-                  class="reference internal"
-                  >7.2.1. Methods of File Objects</a
-                >
-              </li>
-              <li>
-                <a
-                  href="inputoutput.html#saving-structured-data-with-json"
-                  class="reference internal"
-                  >7.2.2. Saving structured data with
-                  <code class="sourceCode python">json</code></a
-                >
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="errors.html" class="reference internal"
-          >8. Errors and Exceptions</a
-        >
-        <ul>
-          <li>
-            <a href="errors.html#syntax-errors" class="reference internal"
-              >8.1. Syntax Errors</a
-            >
-          </li>
-          <li>
-            <a href="errors.html#exceptions" class="reference internal"
-              >8.2. Exceptions</a
-            >
-          </li>
-          <li>
-            <a href="errors.html#handling-exceptions" class="reference internal"
-              >8.3. Handling Exceptions</a
-            >
-          </li>
-          <li>
-            <a href="errors.html#raising-exceptions" class="reference internal"
-              >8.4. Raising Exceptions</a
-            >
-          </li>
-          <li>
-            <a href="errors.html#exception-chaining" class="reference internal"
-              >8.5. Exception Chaining</a
-            >
-          </li>
-          <li>
-            <a
-              href="errors.html#user-defined-exceptions"
-              class="reference internal"
-              >8.6. User-defined Exceptions</a
-            >
-          </li>
-          <li>
-            <a
-              href="errors.html#defining-clean-up-actions"
-              class="reference internal"
-              >8.7. Defining Clean-up Actions</a
-            >
-          </li>
-          <li>
-            <a
-              href="errors.html#predefined-clean-up-actions"
-              class="reference internal"
-              >8.8. Predefined Clean-up Actions</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="classes.html" class="reference internal">9. Classes</a>
-        <ul>
-          <li>
-            <a
-              href="classes.html#a-word-about-names-and-objects"
-              class="reference internal"
-              >9.1. A Word About Names and Objects</a
-            >
-          </li>
-          <li>
-            <a
-              href="classes.html#python-scopes-and-namespaces"
-              class="reference internal"
-              >9.2. Python Scopes and Namespaces</a
-            >
-            <ul>
-              <li>
-                <a
-                  href="classes.html#scopes-and-namespaces-example"
-                  class="reference internal"
-                  >9.2.1. Scopes and Namespaces Example</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="classes.html#a-first-look-at-classes"
-              class="reference internal"
-              >9.3. A First Look at Classes</a
-            >
-            <ul>
-              <li>
-                <a
-                  href="classes.html#class-definition-syntax"
-                  class="reference internal"
-                  >9.3.1. Class Definition Syntax</a
-                >
-              </li>
-              <li>
-                <a href="classes.html#class-objects" class="reference internal"
-                  >9.3.2. Class Objects</a
-                >
-              </li>
-              <li>
-                <a
-                  href="classes.html#instance-objects"
-                  class="reference internal"
-                  >9.3.3. Instance Objects</a
-                >
-              </li>
-              <li>
-                <a href="classes.html#method-objects" class="reference internal"
-                  >9.3.4. Method Objects</a
-                >
-              </li>
-              <li>
-                <a
-                  href="classes.html#class-and-instance-variables"
-                  class="reference internal"
-                  >9.3.5. Class and Instance Variables</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="classes.html#random-remarks" class="reference internal"
-              >9.4. Random Remarks</a
-            >
-          </li>
-          <li>
-            <a href="classes.html#inheritance" class="reference internal"
-              >9.5. Inheritance</a
-            >
-            <ul>
-              <li>
-                <a
-                  href="classes.html#multiple-inheritance"
-                  class="reference internal"
-                  >9.5.1. Multiple Inheritance</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="classes.html#private-variables" class="reference internal"
-              >9.6. Private Variables</a
-            >
-          </li>
-          <li>
-            <a href="classes.html#odds-and-ends" class="reference internal"
-              >9.7. Odds and Ends</a
-            >
-          </li>
-          <li>
-            <a href="classes.html#iterators" class="reference internal"
-              >9.8. Iterators</a
-            >
-          </li>
-          <li>
-            <a href="classes.html#generators" class="reference internal"
-              >9.9. Generators</a
-            >
-          </li>
-          <li>
-            <a
-              href="classes.html#generator-expressions"
-              class="reference internal"
-              >9.10. Generator Expressions</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="stdlib.html" class="reference internal"
-          >10. Brief Tour of the Standard Library</a
-        >
-        <ul>
-          <li>
-            <a
-              href="stdlib.html#operating-system-interface"
-              class="reference internal"
-              >10.1. Operating System Interface</a
-            >
-          </li>
-          <li>
-            <a href="stdlib.html#file-wildcards" class="reference internal"
-              >10.2. File Wildcards</a
-            >
-          </li>
-          <li>
-            <a
-              href="stdlib.html#command-line-arguments"
-              class="reference internal"
-              >10.3. Command Line Arguments</a
-            >
-          </li>
-          <li>
-            <a
-              href="stdlib.html#error-output-redirection-and-program-termination"
-              class="reference internal"
-              >10.4. Error Output Redirection and Program Termination</a
-            >
-          </li>
-          <li>
-            <a
-              href="stdlib.html#string-pattern-matching"
-              class="reference internal"
-              >10.5. String Pattern Matching</a
-            >
-          </li>
-          <li>
-            <a href="stdlib.html#mathematics" class="reference internal"
-              >10.6. Mathematics</a
-            >
-          </li>
-          <li>
-            <a href="stdlib.html#internet-access" class="reference internal"
-              >10.7. Internet Access</a
-            >
-          </li>
-          <li>
-            <a href="stdlib.html#dates-and-times" class="reference internal"
-              >10.8. Dates and Times</a
-            >
-          </li>
-          <li>
-            <a href="stdlib.html#data-compression" class="reference internal"
-              >10.9. Data Compression</a
-            >
-          </li>
-          <li>
-            <a
-              href="stdlib.html#performance-measurement"
-              class="reference internal"
-              >10.10. Performance Measurement</a
-            >
-          </li>
-          <li>
-            <a href="stdlib.html#quality-control" class="reference internal"
-              >10.11. Quality Control</a
-            >
-          </li>
-          <li>
-            <a href="stdlib.html#batteries-included" class="reference internal"
-              >10.12. Batteries Included</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="stdlib2.html" class="reference internal"
-          >11. Brief Tour of the Standard Library — Part II</a
-        >
-        <ul>
-          <li>
-            <a href="stdlib2.html#output-formatting" class="reference internal"
-              >11.1. Output Formatting</a
-            >
-          </li>
-          <li>
-            <a href="stdlib2.html#templating" class="reference internal"
-              >11.2. Templating</a
-            >
-          </li>
-          <li>
-            <a
-              href="stdlib2.html#working-with-binary-data-record-layouts"
-              class="reference internal"
-              >11.3. Working with Binary Data Record Layouts</a
-            >
-          </li>
-          <li>
-            <a href="stdlib2.html#multi-threading" class="reference internal"
-              >11.4. Multi-threading</a
-            >
-          </li>
-          <li>
-            <a href="stdlib2.html#logging" class="reference internal"
-              >11.5. Logging</a
-            >
-          </li>
-          <li>
-            <a href="stdlib2.html#weak-references" class="reference internal"
-              >11.6. Weak References</a
-            >
-          </li>
-          <li>
-            <a
-              href="stdlib2.html#tools-for-working-with-lists"
-              class="reference internal"
-              >11.7. Tools for Working with Lists</a
-            >
-          </li>
-          <li>
-            <a
-              href="stdlib2.html#decimal-floating-point-arithmetic"
-              class="reference internal"
-              >11.8. Decimal Floating Point Arithmetic</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="venv.html" class="reference internal"
-          >12. Virtual Environments and Packages</a
-        >
-        <ul>
-          <li>
-            <a href="venv.html#introduction" class="reference internal"
-              >12.1. Introduction</a
-            >
-          </li>
-          <li>
-            <a
-              href="venv.html#creating-virtual-environments"
-              class="reference internal"
-              >12.2. Creating Virtual Environments</a
-            >
-          </li>
-          <li>
-            <a
-              href="venv.html#managing-packages-with-pip"
-              class="reference internal"
-              >12.3. Managing Packages with pip</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="whatnow.html" class="reference internal">13. What Now?</a>
-      </li>
-      <li>
-        <a href="interactive.html" class="reference internal"
-          >14. Interactive Input Editing and History Substitution</a
-        >
-        <ul>
-          <li>
-            <a
-              href="interactive.html#tab-completion-and-history-editing"
-              class="reference internal"
-              >14.1. Tab Completion and History Editing</a
-            >
-          </li>
-          <li>
-            <a
-              href="interactive.html#alternatives-to-the-interactive-interpreter"
-              class="reference internal"
-              >14.2. Alternatives to the Interactive Interpreter</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="floatingpoint.html" class="reference internal"
-          >15. Floating Point Arithmetic: Issues and Limitations</a
-        >
-        <ul>
-          <li>
-            <a
-              href="floatingpoint.html#representation-error"
-              class="reference internal"
-              >15.1. Representation Error</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="appendix.html" class="reference internal">16. Appendix</a>
-        <ul>
-          <li>
-            <a href="appendix.html#interactive-mode" class="reference internal"
-              >16.1. Interactive Mode</a
-            >
-            <ul>
-              <li>
-                <a
-                  href="appendix.html#error-handling"
-                  class="reference internal"
-                  >16.1.1. Error Handling</a
-                >
-              </li>
-              <li>
-                <a
-                  href="appendix.html#executable-python-scripts"
-                  class="reference internal"
-                  >16.1.2. Executable Python Scripts</a
-                >
-              </li>
-              <li>
-                <a
-                  href="appendix.html#the-interactive-startup-file"
-                  class="reference internal"
-                  >16.1.3. The Interactive Startup File</a
-                >
-              </li>
-              <li>
-                <a
-                  href="appendix.html#the-customization-modules"
-                  class="reference internal"
-                  >16.1.4. The Customization Modules</a
-                >
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <h4 id="previous-topic">Previous topic</h4>
-    <p>
-      <a
-        href="https://docs.python.org/3/whatsnew/changelog.html"
-        title="previous chapter"
-        >Changelog</a
-      >
-    </p>
-    <h4 id="next-topic">Next topic</h4>
-    <p>
-      <a href="appetite.html" title="next chapter"
-        ><span class="section-number">1. </span>Whetting Your Appetite</a
-      >
-    </p>
-    <h3 id="this-page">This Page</h3>
-    <ul>
-      <li><a href="https://docs.python.org/3/bugs.html">Report a Bug</a></li>
-      <li>
-        <a
-          href="https://github.com/python/cpython/blob/3.9/Doc/tutorial/index.rst"
-          >Show Source</a
-        >
-      </li>
-    </ul>
-    <h3 id="navigation-1">Navigation</h3>
-    <ul>
-      <li>
-        <a href="https://docs.python.org/3/genindex.html" title="General Index"
-          >index</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://docs.python.org/3/py-modindex.html"
-          title="Python Module Index"
-          >modules</a
-        >
-        |
-      </li>
-      <li>
-        <a href="appetite.html" title="1. Whetting Your Appetite">next</a> |
-      </li>
-      <li>
-        <a
-          href="https://docs.python.org/3/whatsnew/changelog.html"
-          title="Changelog"
-          >previous</a
-        >
-        |
-      </li>
-      <li><img src="../_static/py.png" /></li>
-      <li><a href="https://www.python.org/">Python</a> »</li>
-      <li>
-        <a href="https://docs.python.org/3/index.html">3.9.5 Documentation</a> »
-      </li>
-      <li><div class="line-block"></div></li>
-    </ul>
-    <p>
-      ©
-      <a href="https://docs.python.org/3/copyright.html">Copyright</a>
-      2001-2021, Python Software Foundation.<br />
-      The Python Software Foundation is a non-profit corporation.
-      <a href="https://www.python.org/psf/donations/">Please donate.</a>
-    </p>
-    <p>
-      Last updated on May 30, 2021.
-      <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?<br />
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 2.4.4.
-    </p>
-  </body>
+</head>
+<body>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="0" width="0" style="position: absolute;">
+    <defs>
+        <!-- Go-up -->
+        <g id="go-up">
+            <path d="M10,9V5L3,12L10,19V14.9C15,14.9 18.5,16.5 21,20C20,15 17,10 10,9Z" fill="#696969"/>
+        </g>
+        <!-- Folder -->
+        <g id="folder" fill-rule="nonzero" fill="none">
+            <path d="M285.22 37.55h-142.6L110.9 0H31.7C14.25 0 0 16.9 0 37.55v75.1h316.92V75.1c0-20.65-14.26-37.55-31.7-37.55z" fill="#FFA000"/>
+            <path d="M285.22 36H31.7C14.25 36 0 50.28 0 67.74v158.7c0 17.47 14.26 31.75 31.7 31.75H285.2c17.44 0 31.7-14.3 31.7-31.75V67.75c0-17.47-14.26-31.75-31.7-31.75z" fill="#FFCA28"/>
+        </g>
+        <g id="folder-shortcut" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="folder-shortcut-group" fill-rule="nonzero">
+                <g id="folder-shortcut-shape">
+                    <path d="M285.224876,37.5486902 L142.612438,37.5486902 L110.920785,0 L31.6916529,0 C14.2612438,0 0,16.8969106 0,37.5486902 L0,112.646071 L316.916529,112.646071 L316.916529,75.0973805 C316.916529,54.4456008 302.655285,37.5486902 285.224876,37.5486902 Z" id="Shape" fill="#FFA000"></path>
+                    <path d="M285.224876,36 L31.6916529,36 C14.2612438,36 0,50.2838568 0,67.7419039 L0,226.451424 C0,243.909471 14.2612438,258.193328 31.6916529,258.193328 L285.224876,258.193328 C302.655285,258.193328 316.916529,243.909471 316.916529,226.451424 L316.916529,67.7419039 C316.916529,50.2838568 302.655285,36 285.224876,36 Z" id="Shape" fill="#FFCA28"></path>
+                </g>
+                <path d="M126.154134,250.559184 C126.850974,251.883673 127.300549,253.006122 127.772602,254.106122 C128.469442,255.206122 128.919016,256.104082 129.638335,257.002041 C130.559962,258.326531 131.728855,259 133.100057,259 C134.493737,259 135.415364,258.55102 136.112204,257.67551 C136.809044,257.002041 137.258619,255.902041 137.258619,254.577551 C137.258619,253.904082 137.258619,252.804082 137.033832,251.457143 C136.786566,249.908163 136.561779,249.032653 136.561779,248.583673 C136.089726,242.814286 135.864939,237.920408 135.864939,233.273469 C135.864939,225.057143 136.786566,217.514286 138.180246,210.846939 C139.798713,204.202041 141.889234,198.634694 144.429328,193.763265 C147.216689,188.869388 150.678411,184.873469 154.836973,181.326531 C158.995535,177.779592 163.626149,174.883673 168.481552,172.661224 C173.336954,170.438776 179.113983,168.665306 185.587852,167.340816 C192.061722,166.218367 198.760378,165.342857 205.481514,164.669388 C212.18017,164.220408 219.598146,163.995918 228.162535,163.995918 L246.055591,163.995918 L246.055591,195.514286 C246.055591,197.736735 246.752431,199.510204 248.370899,201.059184 C250.214153,202.608163 252.079886,203.506122 254.372715,203.506122 C256.463236,203.506122 258.531277,202.608163 260.172223,201.059184 L326.102289,137.797959 C327.720757,136.24898 328.642384,134.47551 328.642384,132.253061 C328.642384,130.030612 327.720757,128.257143 326.102289,126.708163 L260.172223,63.4469388 C258.553756,61.8979592 256.463236,61 254.395194,61 C252.079886,61 250.236632,61.8979592 248.393377,63.4469388 C246.77491,64.9959184 246.07807,66.7693878 246.07807,68.9918367 L246.07807,100.510204 L228.162535,100.510204 C166.863084,100.510204 129.166282,117.167347 115.274437,150.459184 C110.666301,161.54898 108.350993,175.310204 108.350993,191.742857 C108.350993,205.279592 113.903236,223.912245 124.760454,247.438776 C125.00772,248.112245 125.457294,249.010204 126.154134,250.559184 Z" id="Shape" fill="#FFFFFF" transform="translate(218.496689, 160.000000) scale(-1, 1) translate(-218.496689, -160.000000) "></path>
+            </g>
+        </g>
+        <!-- File -->
+        <g id="file" stroke="#000" stroke-width="25" fill="#FFF" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 24.12v274.76c0 6.16 5.87 11.12 13.17 11.12H239c7.3 0 13.17-4.96 13.17-11.12V136.15S132.6 13 128.37 13H26.17C18.87 13 13 17.96 13 24.12z"/>
+            <path d="M129.37 13L129 113.9c0 10.58 7.26 19.1 16.27 19.1H249L129.37 13z"/>
+        </g>
+        <g id="file-shortcut" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="file-shortcut-group" transform="translate(13.000000, 13.000000)">
+                <g id="file-shortcut-shape" stroke="#000000" stroke-width="25" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M0,11.1214886 L0,285.878477 C0,292.039924 5.87498876,296.999983 13.1728373,296.999983 L225.997983,296.999983 C233.295974,296.999983 239.17082,292.039942 239.17082,285.878477 L239.17082,123.145388 C239.17082,123.145388 119.58541,2.84217094e-14 115.369423,2.84217094e-14 L13.1728576,2.84217094e-14 C5.87500907,-1.71479982e-05 0,4.96022995 0,11.1214886 Z" id="rect1171"></path>
+                    <path d="M116.37005,0 L116,100.904964 C116,111.483663 123.258008,120 132.273377,120 L236,120 L116.37005,0 L116.37005,0 Z" id="rect1794"></path>
+                </g>
+                <path d="M47.803141,294.093878 C48.4999811,295.177551 48.9495553,296.095918 49.4216083,296.995918 C50.1184484,297.895918 50.5680227,298.630612 51.2873415,299.365306 C52.2089688,300.44898 53.3778619,301 54.7490634,301 C56.1427436,301 57.0643709,300.632653 57.761211,299.916327 C58.4580511,299.365306 58.9076254,298.465306 58.9076254,297.381633 C58.9076254,296.830612 58.9076254,295.930612 58.6828382,294.828571 C58.4355724,293.561224 58.2107852,292.844898 58.2107852,292.477551 C57.7387323,287.757143 57.5139451,283.753061 57.5139451,279.95102 C57.5139451,273.228571 58.4355724,267.057143 59.8292526,261.602041 C61.44772,256.165306 63.5382403,251.610204 66.0783349,247.62449 C68.8656954,243.620408 72.3274172,240.35102 76.4859792,237.44898 C80.6445412,234.546939 85.2751561,232.177551 90.1305582,230.359184 C94.9859603,228.540816 100.76299,227.089796 107.236859,226.006122 C113.710728,225.087755 120.409385,224.371429 127.13052,223.820408 C133.829177,223.453061 141.247152,223.269388 149.811542,223.269388 L167.704598,223.269388 L167.704598,249.057143 C167.704598,250.87551 168.401438,252.326531 170.019905,253.593878 C171.86316,254.861224 173.728893,255.595918 176.021722,255.595918 C178.112242,255.595918 180.180284,254.861224 181.82123,253.593878 L247.751296,201.834694 C249.369763,200.567347 250.291391,199.116327 250.291391,197.297959 C250.291391,195.479592 249.369763,194.028571 247.751296,192.761224 L181.82123,141.002041 C180.202763,139.734694 178.112242,139 176.044201,139 C173.728893,139 171.885639,139.734694 170.042384,141.002041 C168.423917,142.269388 167.727077,143.720408 167.727077,145.538776 L167.727077,171.326531 L149.811542,171.326531 C88.5120908,171.326531 50.8152886,184.955102 36.9234437,212.193878 C32.3153075,221.267347 30,232.526531 30,245.971429 C30,257.046939 35.5522422,272.291837 46.4094607,291.540816 C46.6567266,292.091837 47.1063009,292.826531 47.803141,294.093878 Z" id="Shape-Copy" fill="#000000" fill-rule="nonzero" transform="translate(140.145695, 220.000000) scale(-1, 1) translate(-140.145695, -220.000000) "></path>
+            </g>
+        </g>
+    </defs>
+    </svg>
+<header>
+    <h1>tutorial</h1>
+                 </header>
+                 <main>
+                 <div class="listing">
+                     <table aria-describedby="summary">
+                         <thead>
+                         <tr>
+                             <th></th>
+                             <th>Name</th>
+                             <th>Size</th>
+                             <th class="hideable">
+                                 Modified
+                             </th>
+                             <th class="hideable"></th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr class="clickable">
+                             <td></td>
+                             <td><a href=".."><svg width="1.5em" height="1em" version="1.1" viewBox="0 0 24 24"><use xlink:href="#go-up"></use></svg>
+                 <span class="goup">..</span></a></td>
+                             <td>&mdash;</td>
+                             <td class="hideable">&mdash;</td>
+                             <td class="hideable"></td>
+                         </tr>
+                 
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="appendix.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">appendix.html</span>
+                </a>
+            </td>
+            <td data-order="13823">13 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="appendix.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">appendix.md</span>
+                </a>
+            </td>
+            <td data-order="9075">8 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="appetite.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">appetite.html</span>
+                </a>
+            </td>
+            <td data-order="9076">8 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="appetite.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">appetite.md</span>
+                </a>
+            </td>
+            <td data-order="6218">6 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="classes.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">classes.html</span>
+                </a>
+            </td>
+            <td data-order="67288">65 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="classes.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">classes.md</span>
+                </a>
+            </td>
+            <td data-order="51402">50 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="controlflow.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">controlflow.html</span>
+                </a>
+            </td>
+            <td data-order="64184">62 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="controlflow.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">controlflow.md</span>
+                </a>
+            </td>
+            <td data-order="47246">46 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="datastructures.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">datastructures.html</span>
+                </a>
+            </td>
+            <td data-order="47228">46 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="datastructures.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">datastructures.md</span>
+                </a>
+            </td>
+            <td data-order="34648">33 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="directory.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">directory.html</span>
+                </a>
+            </td>
+            <td data-order="672">672 bytes</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="directory.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">directory.md</span>
+                </a>
+            </td>
+            <td data-order="0">0 bytes</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="errors.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">errors.html</span>
+                </a>
+            </td>
+            <td data-order="38294">37 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="errors.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">errors.md</span>
+                </a>
+            </td>
+            <td data-order="28283">27 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="floatingpoint.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">floatingpoint.html</span>
+                </a>
+            </td>
+            <td data-order="21691">21 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="floatingpoint.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">floatingpoint.md</span>
+                </a>
+            </td>
+            <td data-order="15707">15 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="index.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">index.md</span>
+                </a>
+            </td>
+            <td data-order="19696">19 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="inputoutput.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">inputoutput.html</span>
+                </a>
+            </td>
+            <td data-order="41470">40 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="inputoutput.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">inputoutput.md</span>
+                </a>
+            </td>
+            <td data-order="30273">29 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="interactive.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">interactive.html</span>
+                </a>
+            </td>
+            <td data-order="8481">8 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="interactive.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">interactive.md</span>
+                </a>
+            </td>
+            <td data-order="5228">5 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="interpreter.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">interpreter.html</span>
+                </a>
+            </td>
+            <td data-order="17209">16 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="interpreter.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">interpreter.md</span>
+                </a>
+            </td>
+            <td data-order="11688">11 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="introduction.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">introduction.html</span>
+                </a>
+            </td>
+            <td data-order="34796">33 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="introduction.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">introduction.md</span>
+                </a>
+            </td>
+            <td data-order="24876">24 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="left.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">left.html</span>
+                </a>
+            </td>
+            <td data-order="970">970 bytes</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="left.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">left.md</span>
+                </a>
+            </td>
+            <td data-order="171">171 bytes</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="modules.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">modules.html</span>
+                </a>
+            </td>
+            <td data-order="44581">43 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="modules.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">modules.md</span>
+                </a>
+            </td>
+            <td data-order="32520">31 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="right.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">right.html</span>
+                </a>
+            </td>
+            <td data-order="2676">2 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="right.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">right.md</span>
+                </a>
+            </td>
+            <td data-order="1414">1 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="stdlib.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">stdlib.html</span>
+                </a>
+            </td>
+            <td data-order="34374">33 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="stdlib.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">stdlib.md</span>
+                </a>
+            </td>
+            <td data-order="24779">24 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="stdlib2.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">stdlib2.html</span>
+                </a>
+            </td>
+            <td data-order="32613">31 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="stdlib2.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">stdlib2.md</span>
+                </a>
+            </td>
+            <td data-order="24437">23 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="venv.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">venv.html</span>
+                </a>
+            </td>
+            <td data-order="15152">14 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="venv.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">venv.md</span>
+                </a>
+            </td>
+            <td data-order="10815">10 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="whatnow.html">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">whatnow.html</span>
+                </a>
+            </td>
+            <td data-order="10155">9 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="whatnow.md">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"></svg>
+                    <span class="name">whatnow.md</span>
+                </a>
+            </td>
+            <td data-order="6458">6 KB</td>
+            <td class="hideable"><time datetime="2021-07-26T22:29:09">Mon Jul 26 22:29:09 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+            </tbody>
+        </table>
+    </div>
+</main>
+</body>
 </html>

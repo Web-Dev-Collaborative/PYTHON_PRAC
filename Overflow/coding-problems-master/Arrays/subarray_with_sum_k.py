@@ -1,4 +1,4 @@
-'''
+"""
 Subarray with given sum
 
 Given an unsorted array A of size N of non-negative integers, find a continuous sub-array
@@ -14,12 +14,13 @@ If sum is bigger than K, remove element from the start idx from the sum.
 Else add element from the end idx to the sum.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def find_subarray(arr, k):
     n = len(arr)

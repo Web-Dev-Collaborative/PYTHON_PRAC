@@ -1,4 +1,4 @@
-'''
+"""
 Jumping numbers
 
 A number is called as a Jumping Number if all adjacent digits in it differ by 1.
@@ -14,12 +14,13 @@ Make a tree (DFS way/backtracking), for each next digit take the last digit, go 
 (example: 123, last digit is 3, so next digit should be 2 or 4).
     Time Complexity:    O(9 * 2^(NumOfDigits(N) - 1))
     Space Complexity:   O(1)        , recursion stack will have depth 9 (but this can be considered as constant)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def jumping_numbers(x):
     result = []
@@ -29,6 +30,7 @@ def jumping_numbers(x):
         jumping_num(i, x, result)
 
     return result
+
 
 def jumping_num(num, x, result):
     if num > x:

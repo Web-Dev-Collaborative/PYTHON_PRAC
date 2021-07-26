@@ -1,4 +1,4 @@
-'''
+"""
 Find second largest node in bst
 
 Given the root to a binary search tree, find the second largest node in the tree.
@@ -11,7 +11,7 @@ Only 1 branch is searched to the end (leaf), not the whole tree.
 The second solution is simpler and it's same as find_kth_smallest_node_bst.py but K is 2.
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ##############
@@ -21,10 +21,12 @@ The second solution is simpler and it's same as find_kth_smallest_node_bst.py bu
 # import TreeNode class from tree_helpers.py
 from tree_helpers import TreeNode
 
+
 def find_second_largest_bst_1(root):
     if root == None:
         return None
     return search_1(root, False)
+
 
 def search_1(node, visited_left):
     # the right child is bigger than the current node
@@ -54,8 +56,10 @@ def search_1(node, visited_left):
 # Solution 2 #
 ##############
 
+
 def find_second_largest_bst_2(root):
     return search_2(root, 2)[1]
+
 
 def search_2(node, k):
     if node == None:
@@ -81,13 +85,19 @@ def search_2(node, k):
 
 # Test 1
 # Correct result => 10
-tree = TreeNode(5, TreeNode(3, TreeNode(1), TreeNode(4)), TreeNode(8, TreeNode(7), TreeNode(12, TreeNode(10, TreeNode(13)))))
+tree = TreeNode(
+    5,
+    TreeNode(3, TreeNode(1), TreeNode(4)),
+    TreeNode(8, TreeNode(7), TreeNode(12, TreeNode(10, TreeNode(13)))),
+)
 print(find_second_largest_bst_1(tree).val)
 print(find_second_largest_bst_2(tree).val)
 
 # Test 2
 # Correct result => 8
-tree = TreeNode(5, TreeNode(3, TreeNode(1), TreeNode(4)), TreeNode(8, TreeNode(7), TreeNode(12)))
+tree = TreeNode(
+    5, TreeNode(3, TreeNode(1), TreeNode(4)), TreeNode(8, TreeNode(7), TreeNode(12))
+)
 print(find_second_largest_bst_1(tree).val)
 print(find_second_largest_bst_2(tree).val)
 
@@ -99,12 +109,24 @@ print(find_second_largest_bst_2(tree).val)
 
 # Test 4
 # Correct result => 7
-tree = TreeNode(5, TreeNode(3, TreeNode(1), TreeNode(4)), TreeNode(8, TreeNode(6, None, TreeNode(7))))
+tree = TreeNode(
+    5,
+    TreeNode(3, TreeNode(1), TreeNode(4)),
+    TreeNode(8, TreeNode(6, None, TreeNode(7))),
+)
 print(find_second_largest_bst_1(tree).val)
 print(find_second_largest_bst_2(tree).val)
 
 # Test 5
 # Correct result => 11
-tree = TreeNode(5, TreeNode(3, TreeNode(1), TreeNode(4)), TreeNode(8, TreeNode(7), TreeNode(12, TreeNode(9, None, TreeNode(10, None, TreeNode(11))))))
+tree = TreeNode(
+    5,
+    TreeNode(3, TreeNode(1), TreeNode(4)),
+    TreeNode(
+        8,
+        TreeNode(7),
+        TreeNode(12, TreeNode(9, None, TreeNode(10, None, TreeNode(11)))),
+    ),
+)
 print(find_second_largest_bst_1(tree).val)
 print(find_second_largest_bst_2(tree).val)

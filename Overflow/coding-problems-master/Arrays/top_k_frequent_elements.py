@@ -1,4 +1,4 @@
-'''
+"""
 Top K Frequent Elements
 
 Given a non-empty array of integers, return the k most frequent elements.
@@ -19,7 +19,7 @@ Using pivoting, this solution is based on the quick sort algorithm (divide and c
 Same pivoting solution as the nth_smallest.py.
     Time Complexity:    O(U)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ##############
@@ -39,6 +39,7 @@ class PQElement:
     def __lt__(self, other):
         return self.frequency < other.frequency
 
+
 # priority queue
 class PriorityQueue:
     def __init__(self):
@@ -52,6 +53,7 @@ class PriorityQueue:
 
     def count(self):
         return len(self.data)
+
 
 def top_k_frequent_1(nums, k):
     frequency = {}
@@ -88,6 +90,7 @@ def top_k_frequent_1(nums, k):
 # Solution 2 #
 ##############
 
+
 def top_k_frequent_2(nums, k):
     frequency = {}
 
@@ -119,10 +122,11 @@ def top_k_frequent_2(nums, k):
         elif pivot < k:
             left = pivot + 1
         else:
-            return [el[1] for el in arr[:k + 1]]
+            return [el[1] for el in arr[: k + 1]]
 
     # not possible
     return None
+
 
 def pivoting(arr, left, right):
     # Linear time complexity pivoting
@@ -143,6 +147,7 @@ def pivoting(arr, left, right):
 
     # return the new pivot
     return new_pivot
+
 
 def swap(arr, i, j):
     # swaps two elements in an array

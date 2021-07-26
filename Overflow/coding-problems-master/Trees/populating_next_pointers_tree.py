@@ -1,4 +1,4 @@
-'''
+"""
 Populating Next Right Pointers in Each Node
 
 You are given a perfect binary tree where all leaves are on the same level, and every parent has two children.
@@ -19,7 +19,7 @@ Save the previous node and level and if the current level is same
 then make the previous node to point to the current node.
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
@@ -35,6 +35,7 @@ class Node:
         self.left = left
         self.right = right
         self.next = next
+
 
 def populating_next_pointers_tree(root):
     previous = None

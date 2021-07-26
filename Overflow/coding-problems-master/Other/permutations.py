@@ -1,4 +1,4 @@
-'''
+"""
 Permutations
 
 Given a collection of distinct integers, return all possible permutations.
@@ -18,12 +18,13 @@ Output:
 A classical recursive algorithm for  permutations.
     Time Complexity:    O(N!)
     Space Complexity:   O(N!)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def permutations(nums):
     result = []
@@ -34,11 +35,14 @@ def permutations(nums):
 
     return result
 
+
 def permute(result, nums, permutation):
     if len(nums) == 0:
         result.append([num for num in permutation])
     else:
-        for num in list(nums): # create a new object with the same values because nums will be changed later
+        for num in list(
+            nums
+        ):  # create a new object with the same values because nums will be changed later
             nums.remove(num)
             permutation.append(num)
 

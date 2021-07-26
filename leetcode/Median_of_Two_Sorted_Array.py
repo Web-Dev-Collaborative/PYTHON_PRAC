@@ -54,16 +54,30 @@ def find_median_sorted_arrays(nums1, nums2):
         return (arr[m] + arr[m + 1]) / 2
 
     else:
-        m = (len(arr) // 2)
+        m = len(arr) // 2
 
         return arr[m]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     ex1 = [1, 2]
     ex2 = [3, 4]
     ex3 = [1, 3]
     ex4 = [2]
 
-    print("The median of arrays : " + str(ex1) + " " + str(ex2) + " is : " + str(find_median_sorted_arrays(ex1, ex2)))
-    print("The median of arrays : " + str(ex3) + " " + str(ex4) + " is : " + str(find_median_sorted_arrays(ex3, ex4)))
+    print(
+        "The median of arrays : "
+        + str(ex1)
+        + " "
+        + str(ex2)
+        + " is : "
+        + str(find_median_sorted_arrays(ex1, ex2))
+    )
+    print(
+        "The median of arrays : "
+        + str(ex3)
+        + " "
+        + str(ex4)
+        + " is : "
+        + str(find_median_sorted_arrays(ex3, ex4))
+    )

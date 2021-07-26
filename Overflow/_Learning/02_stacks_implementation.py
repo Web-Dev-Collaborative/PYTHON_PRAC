@@ -27,7 +27,7 @@ class Stack:
         return len(self._items)
 
 
-books = Stack(['testing'])
+books = Stack(["testing"])
 print(books.peek())
 
 # Stack Method Two - top is the first item in stack - insert/pop - O(n)
@@ -44,7 +44,7 @@ class Stack_2:
         self._items.insert(0, item)  # O(n)
 
     def pop(self):
-        return self._items.pop(0)   # O(n)
+        return self._items.pop(0)  # O(n)
 
     def peek(self):
         return self._items[0]
@@ -54,5 +54,5 @@ class Stack_2:
         return len(self._items)
 
 
-books2 = Stack_2(['testing'])
+books2 = Stack_2(["testing"])
 print(books2.size)

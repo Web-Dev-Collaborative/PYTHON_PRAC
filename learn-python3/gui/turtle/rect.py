@@ -10,15 +10,15 @@ forward(200)
 right(90)
 
 # 笔刷颜色:
-pencolor('red')
+pencolor("red")
 forward(100)
 right(90)
 
-pencolor('green')
+pencolor("green")
 forward(200)
 right(90)
 
-pencolor('blue')
+pencolor("blue")
 forward(100)
 right(90)
 

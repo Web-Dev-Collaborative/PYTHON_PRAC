@@ -1,4 +1,4 @@
-'''
+"""
 Reverse All Lists
 
 Return a list that contains the items in reverse, but so that whenever each item is
@@ -13,7 +13,7 @@ This problem can be solved using queue, stack (or recursion). Use in place rever
 inner lists for reversing later.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
@@ -21,6 +21,7 @@ inner lists for reversing later.
 ############
 
 from collections import deque
+
 
 def reverse_all_lists(arr):
     queue = deque()
@@ -39,6 +40,7 @@ def reverse_all_lists(arr):
 
     # the arr is already reversed
     return arr
+
 
 def reverse_arr(arr):
     start = 0
@@ -60,8 +62,8 @@ def reverse_arr(arr):
 
 # Test 1
 # Correct result => [5, ['yeah', 4, 3, 2], 1]
-print(reverse_all_lists([1, [2, 3, 4, 'yeah'], 5]))
+print(reverse_all_lists([1, [2, 3, 4, "yeah"], 5]))
 
 # Test 2
 # Correct result => [[[[['boo!'], 33], 17], 99], 42]
-print(reverse_all_lists([42, [99, [17, [33, ['boo!']]]]]))
+print(reverse_all_lists([42, [99, [17, [33, ["boo!"]]]]]))

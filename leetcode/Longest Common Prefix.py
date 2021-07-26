@@ -41,7 +41,7 @@ def longestCommonPrefix(strs):
 
                 break
 
-        commmon_prefix = commmon_prefix[:j + 1]
+        commmon_prefix = commmon_prefix[: j + 1]
 
     return commmon_prefix
 
@@ -53,8 +53,33 @@ if __name__ == "__main__":
     example4 = ["dog", "racecar", "car"]
     example5 = []
 
-    print("longest common prefix  for " + str(example1) + " is : " + longestCommonPrefix(example1))
-    print("longest common prefix  for " + str(example2) + " is : " + longestCommonPrefix(example2))
-    print("longest common prefix  for " + str(example3) + " is : " + longestCommonPrefix(example3))
-    print("longest common prefix  for " + str(example4) + " is : " + longestCommonPrefix(example4))
-    print("longest common prefix  for " + str(example5) + " is : " + longestCommonPrefix(example5))
+    print(
+        "longest common prefix  for "
+        + str(example1)
+        + " is : "
+        + longestCommonPrefix(example1)
+    )
+    print(
+        "longest common prefix  for "
+        + str(example2)
+        + " is : "
+        + longestCommonPrefix(example2)
+    )
+    print(
+        "longest common prefix  for "
+        + str(example3)
+        + " is : "
+        + longestCommonPrefix(example3)
+    )
+    print(
+        "longest common prefix  for "
+        + str(example4)
+        + " is : "
+        + longestCommonPrefix(example4)
+    )
+    print(
+        "longest common prefix  for "
+        + str(example5)
+        + " is : "
+        + longestCommonPrefix(example5)
+    )

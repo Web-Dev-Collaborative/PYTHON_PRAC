@@ -1,4 +1,4 @@
-'''
+"""
 Find missing number in second array
 
 Given 2 arrays, first array with N elements and second array with N-1 elements.
@@ -22,16 +22,19 @@ and the second one from the DIVIDE of each element. In the end use these 2 sums 
 The second solution is XOR soulution, make XOR to each element from the both arrays (same as find_unpaired.py).
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ##############
 # Solution 1 #
 ##############
 
+
 def find_missing_number(arr1, arr2):
     n = len(arr2)
-    mod = 10000	    # this can be every number, this should be true max_length * mod < max_integer
+    mod = (
+        10000
+    )  # this can be every number, this should be true max_length * mod < max_integer
     sum_diff = 0
     mod_diff = 0
     i = 0
@@ -52,6 +55,7 @@ def find_missing_number(arr1, arr2):
 ##############
 # Solution 2 #
 ##############
+
 
 def find_missing_number_2(arr1, arr2):
     n = len(arr2)

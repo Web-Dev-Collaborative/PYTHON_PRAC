@@ -1,4 +1,4 @@
-'''
+"""
 Remove Duplicates from Sorted Linked List
 
 Given a sorted linked list nums, remove the duplicates in-place such that each element appear only once and return the modified linked list.
@@ -14,7 +14,7 @@ Output: 0 -> 1 -> 2 -> 3 -> 4
 Iterate the linked list and jump the neighbouring duplicates (change the next pointer).
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
@@ -23,6 +23,7 @@ Iterate the linked list and jump the neighbouring duplicates (change the next po
 
 # import ListNode class from ll_helpers.py
 from ll_helpers import ListNode
+
 
 def remove_duplicates(nums):
     if nums is None:

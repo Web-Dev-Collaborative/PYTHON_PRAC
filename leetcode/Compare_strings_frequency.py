@@ -18,6 +18,7 @@
 import bisect
 import collections
 
+
 class Solution:
     def numSmallerByFrequency(self, queries, words):
 

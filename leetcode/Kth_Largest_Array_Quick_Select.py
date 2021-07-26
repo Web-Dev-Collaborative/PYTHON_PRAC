@@ -12,7 +12,6 @@
 
 
 class Solution:
-
     def quickSelect(self, nums, k):
         k = len(nums) - k
         return self.helper(nums, 0, len(nums) - 1, k)

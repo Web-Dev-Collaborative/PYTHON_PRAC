@@ -24,13 +24,7 @@ def n_digits_from_power(k, n):
 
 
 def n_digits_from_sum_of_powers(k, p):
-    return last_k_digits(
-        k,
-        sum(
-            n_digits_from_power(k, i)
-            for i in range(1, p + 1)
-        )
-    )
+    return last_k_digits(k, sum(n_digits_from_power(k, i) for i in range(1, p + 1)))
 
 
 def test():
@@ -41,6 +35,6 @@ def run():
     assert 9110846700 == n_digits_from_sum_of_powers(10, 1000)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

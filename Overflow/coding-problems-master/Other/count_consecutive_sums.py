@@ -1,4 +1,4 @@
-'''
+"""
 Count Consecutive Sums
 
 Positive integers can be expressed as sums of consecutive positive integers in various ways.
@@ -12,12 +12,13 @@ Iterate all N elements and add each to the sum, but store the start element and 
 bigger than N substract the front elements.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def count_consecutive_sums(n):
     start = 1

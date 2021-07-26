@@ -13,8 +13,8 @@ from collections import namedtuple
 from copy import deepcopy
 from heapq import heappop, heappush
 
-Node = namedtuple('Node', 'cost i j')
-Graph = namedtuple('Graph', 'nodes edges')
+Node = namedtuple("Node", "cost i j")
+Graph = namedtuple("Graph", "nodes edges")
 
 
 def build_graph_from_triangle(triangle):

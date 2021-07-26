@@ -1,4 +1,4 @@
-'''
+"""
 Multiples of a OR b
 
 If we list all the natural numbers below 10 that are multiples of 3 OR 5, we get 3, 5, 6 and 9.
@@ -12,16 +12,22 @@ Sum(K)*N = 1*N + 2*N + ... + (K-1)*N + K*N
 Use sum formula - (N * (N + 1))/2
     Time Complexity:    O(1)
     Space Complexity:   O(1)
-'''
+"""
 
 ############
 # Solution #
 ############
 
+
 def sum_of_multiples_below(a, b, total):
     total -= 1
     # sum of dividens of A + sum of dividens of B - sum of common dividens (because they're added twice)
-    return sum_of_dividends(total, a) + sum_of_dividends(total, b) - sum_of_dividends(total, a * b)
+    return (
+        sum_of_dividends(total, a)
+        + sum_of_dividends(total, b)
+        - sum_of_dividends(total, a * b)
+    )
+
 
 def sum_of_dividends(total, divisor):
     n = total // divisor

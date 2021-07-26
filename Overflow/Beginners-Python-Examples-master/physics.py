@@ -1,8 +1,8 @@
 # physics calcy
 
-operations = [ "Preassure" , "Force" , "Speed" , "Velocity" , "Accelaration" , "Momentum" ]
+operations = ["Preassure", "Force", "Speed", "Velocity", "Accelaration", "Momentum"]
 
-#pre code sector I
+# pre code sector I
 # preassure function to calculate preassure
 def preassure():
     print(" ")
@@ -12,6 +12,7 @@ def preassure():
     preassure = force / area
     print(" ")
     print("Preassure is " + str(preassure) + "pascal")
+
 
 # force function to calculate force
 def force():
@@ -23,6 +24,7 @@ def force():
     print(" ")
     print("Force is " + str(force) + "newton")
 
+
 # speed func to calculate speed of object
 def speed():
     print(" ")
@@ -33,6 +35,7 @@ def speed():
     print(" ")
     print("Speed of object is " + str(speed))
 
+
 # velocity func to calculate velocity of object
 def velocity():
     print(" ")
@@ -42,6 +45,7 @@ def velocity():
     velocity = displacement / time
     print(" ")
     print("Velocity of object is " + str(velocity))
+
 
 # accelaration func to calculate accelaration
 def accelaration():
@@ -55,6 +59,7 @@ def accelaration():
     print(" ")
     print("Accelaration is " + str(acce) + "m/s sq.")
 
+
 # monentum func to calculate momentum
 def moment():
     print(" ")
@@ -66,6 +71,7 @@ def moment():
     print(" ")
     print("Momentum is " + str(momentum))
 
+
 # CLI code sector II
 
 while True:
@@ -74,7 +80,7 @@ while True:
     print(" ")
     startOrEnd = raw_input("Start or End : ")
     print(" ")
-    if startOrEnd.strip() == "Start" :
+    if startOrEnd.strip() == "Start":
         for op in operations:
             print(op)
             print(" ")
@@ -98,7 +104,7 @@ while True:
         elif main.strip() == "Momentum":
             print(moment())
             continue
-        else :
+        else:
             print("Invalid operation")
             continue
     elif startOrEnd.strip() == "End":

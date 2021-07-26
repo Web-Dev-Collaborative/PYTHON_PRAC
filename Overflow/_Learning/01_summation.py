@@ -26,11 +26,14 @@ def arithmetic_sum(n):
     return total, end - start
 
 
-output_template = '{}({}) = {:10d} ({:8.7f} seconds)'
+output_template = "{}({}) = {:10d} ({:8.7f} seconds)"
 
 # for i in range(1, 5):
 #     print(output_template.format('sum_to_n', i * 1000000, *sum_to_n(i * 1000000)))
 # print('-'*80)
 for i in range(1, 5):
-    print(output_template.format('arithmetic_sum',
-                                 i * 1000000, *arithmetic_sum(i * 1000000)))
+    print(
+        output_template.format(
+            "arithmetic_sum", i * 1000000, *arithmetic_sum(i * 1000000)
+        )
+    )

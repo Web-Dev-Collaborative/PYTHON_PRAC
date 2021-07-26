@@ -1,4 +1,4 @@
-'''
+"""
 Find two missing numbers in a sequence
 
 Find two missing numbers in a sequence,
@@ -23,13 +23,14 @@ Squared sum formula = N*(N+1)*(2*N+1)/6
 
 Note: this idea also could be used when more than 2 numbers are missing,
 but you'll need more computations/equations, because you'll have K unknowns.
-'''
+"""
 
 ############
 # Solution #
 ############
 
 import math
+
 
 def missing_numbers(nums):
     # find sums from the array

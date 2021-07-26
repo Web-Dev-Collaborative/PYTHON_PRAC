@@ -1,5 +1,4 @@
 class Dict(dict):
-
     def __init__(self, **kw):
         super().__init__(**kw)
 
@@ -11,4 +10,3 @@ class Dict(dict):
 
     def __setattr__(self, key, value):
         self[key] = value
-

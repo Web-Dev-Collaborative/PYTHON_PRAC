@@ -23,7 +23,6 @@
 
 
 class Solution:
-
     def __init__(self, s, t):
         self.s = s
         self.t = t

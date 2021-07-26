@@ -1,4 +1,4 @@
-'''
+"""
 Min Swaps
 
 You have a list of numbers and you want to sort the list.
@@ -19,12 +19,13 @@ Itterate the array and check if each position has the right element,
 if not, put that element in the right position and check again.
     Time Complexity:    O(N)    , the solution looks like O(N^2) but that's not possible, at most O(2*N) operations can be done
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def min_swaps(a):
     n = len(a)

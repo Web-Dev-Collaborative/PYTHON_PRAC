@@ -93,7 +93,7 @@ def test():
     assert not is_exagonal(10)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     print(list(pentagonals(1)))
     print(list(pentagonals(5)))

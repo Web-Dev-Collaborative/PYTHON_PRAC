@@ -19,11 +19,7 @@ Find the pair of pentagonal numbers, Pj and Pk, for which their sum and
 difference is pentagonal and D = |Pk − Pj| is minimised; what is the value
 of D?
 """
-from series import (
-    pentagonals,
-    pentagonal,
-    is_pentagonal
-)
+from series import pentagonals, pentagonal, is_pentagonal
 
 
 def pentagonal_sum_and_diff():
@@ -44,6 +40,6 @@ def run():
     print(abs(j - k))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

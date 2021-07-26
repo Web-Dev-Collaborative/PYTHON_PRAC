@@ -26,17 +26,17 @@ def nth_element(iterable, n):
 
 
 def nth_permutation(digits, n):
-    return ''.join(nth_element(permutations(digits), n))
+    return "".join(nth_element(permutations(digits), n))
 
 
 def test():
-    assert '210' == nth_permutation('012', 6)
+    assert "210" == nth_permutation("012", 6)
 
 
 def run():
-    print(nth_permutation('0123456789', 10 ** 6))
+    print(nth_permutation("0123456789", 10 ** 6))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

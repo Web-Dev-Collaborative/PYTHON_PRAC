@@ -1,4 +1,4 @@
-'''
+"""
 Reverse Integer
 
 Given signed integer, reverse digits of an integer.
@@ -16,12 +16,13 @@ Output: 21
 Simple solution, mod 10 to find all digits.
     Time Complexity:    O(N)    , N = number of digits
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def reverse_integer(x):
     if x == 0:

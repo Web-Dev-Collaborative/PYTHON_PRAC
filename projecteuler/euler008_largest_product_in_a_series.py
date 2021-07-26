@@ -37,7 +37,7 @@ TARGET = """
 71636269561882670428252483600823257530420752963450
 """
 
-TARGET = ''.join(TARGET.strip().split())
+TARGET = "".join(TARGET.strip().split())
 
 
 def largest_product_of(n, k):
@@ -58,6 +58,6 @@ def run():
     print(largest_product_of(TARGET, 13))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

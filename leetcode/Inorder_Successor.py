@@ -28,7 +28,7 @@ class Solution:
                 curr = curr.left
             return curr
 
-        stack, inorder = [], float('inf')
+        stack, inorder = [], float("inf")
 
         while stack or root:
             while root:

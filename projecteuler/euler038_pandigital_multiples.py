@@ -26,12 +26,12 @@ from digits import is_semi_pandigital
 
 
 def concatenated_product(n, k):
-    return ''.join(str(n * i) for i in range(1, k + 1))
+    return "".join(str(n * i) for i in range(1, k + 1))
 
 
 def largest_pandigital_concatenated_product():
     top = 1
-    for n in range(1, int('9' * 5)):
+    for n in range(1, int("9" * 5)):
         if not is_semi_pandigital(n):
             continue
         cprod = str(n)
@@ -48,8 +48,8 @@ def largest_pandigital_concatenated_product():
 
 
 def test():
-    assert '192384576' == concatenated_product(192, 3), concatenated_product(192, 3)
-    assert '918273645' == concatenated_product(9, 5)
+    assert "192384576" == concatenated_product(192, 3), concatenated_product(192, 3)
+    assert "918273645" == concatenated_product(9, 5)
     assert is_pandigital(concatenated_product(9, 5))
 
 
@@ -57,6 +57,6 @@ def run():
     print(largest_pandigital_concatenated_product())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

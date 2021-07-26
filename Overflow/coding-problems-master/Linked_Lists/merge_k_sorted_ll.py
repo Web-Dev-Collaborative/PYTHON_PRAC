@@ -1,4 +1,4 @@
-'''
+"""
 Merge K Sorted Linked Lists
 
 Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
@@ -10,7 +10,7 @@ Using Priority Queue (heap) in each step chose the smallest element from the lis
 Using Divide and Conquer, similar to Merge sort.
     Time Complexity:    O(N * LogK)
     Space Complexity:   O(1)  , (using the same old list)
-'''
+"""
 
 
 ##############
@@ -31,6 +31,7 @@ class PQNode:
     def __lt__(self, other):
         return self.val < other.val
 
+
 # priority queue
 class PriorityQueue:
     def __init__(self):
@@ -44,6 +45,7 @@ class PriorityQueue:
 
     def is_empty(self):
         return len(self.data) == 0
+
 
 def merge_k_lists_1(lists):
     heap = PriorityQueue()
@@ -76,6 +78,7 @@ def merge_k_lists_1(lists):
 # Solution 2 #
 ##############
 
+
 def merge_k_lists_2(lists):
     n = len(lists)
     if n == 0:
@@ -97,6 +100,7 @@ def merge_k_lists_2(lists):
         step *= 2
 
     return lists[0]
+
 
 def merge_2_lists(l1, l2):
     result = ListNode(-1)

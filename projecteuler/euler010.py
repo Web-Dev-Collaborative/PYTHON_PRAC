@@ -31,6 +31,6 @@ def run():
     print(sum_primes(2 * 10 ** 6))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

@@ -44,7 +44,7 @@ STRIANGLE = """
 NOTE: As there are only 16384 routes, it is possible to solve this problem by trying every route. However, Problem 67, is the same challenge with a triangle containing one-hundred rows; it cannot be solved by brute force, and requires a clever method! ;o)
 """
 
-LINES = [s.split() for s in STRIANGLE.strip().split('\n')]
+LINES = [s.split() for s in STRIANGLE.strip().split("\n")]
 TRIANGLE = [[int(s) for s in line] for line in LINES]
 
 
@@ -57,11 +57,7 @@ def max_path_value_sweep(triangle):
 
 
 def test():
-    T = [[3],
-        [7, 4],
-        [2, 4, 6, ],
-        [8, 5, 9, 3]
-    ]
+    T = [[3], [7, 4], [2, 4, 6], [8, 5, 9, 3]]
     assert 23 == max_path_value_sweep(T)
 
 
@@ -70,6 +66,6 @@ def run():
     print(max_path_value_sweep(TRIANGLE), find_max_path(graph, start, stop)[0])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

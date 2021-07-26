@@ -1,4 +1,4 @@
-'''
+"""
 Remove Element
 
 Given a linked list nums and a value val, remove all instances of that value in-place and return the new linked list.
@@ -14,7 +14,7 @@ Output: 0 -> 1 -> 3 -> 0 -> 4
 Iterate the linked list and jump the values that needs to be deleted (change the next pointer).
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
@@ -23,6 +23,7 @@ Iterate the linked list and jump the values that needs to be deleted (change the
 
 # import ListNode class from ll_helpers.py
 from ll_helpers import ListNode
+
 
 def remove_element(nums, val):
     res = ListNode(0)

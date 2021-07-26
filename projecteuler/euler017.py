@@ -22,24 +22,21 @@ from numberwords import num2words
 
 
 def num2only_letters(n):
-    return ''.join(c for c in num2words(n) if c.isalpha())
+    return "".join(c for c in num2words(n) if c.isalpha())
 
 
 def sum_word_len(n):
-    return sum(
-        len(num2only_letters(i))
-        for i in range(1, n + 1)
-    )
+    return sum(len(num2only_letters(i)) for i in range(1, n + 1))
 
 
 def test():
-    assert 'five' == num2words(5)
+    assert "five" == num2words(5)
     assert 19 == sum_word_len(5)
 
-    assert 'one hundred and fifteen' == num2words(115)
+    assert "one hundred and fifteen" == num2words(115)
     assert 20 == len(num2only_letters(115)), len(num2only_letters(115))
 
-    assert 'three hundred and forty-two' == num2words(342)
+    assert "three hundred and forty-two" == num2words(342)
     assert 23 == len(num2only_letters(342)), len(num2only_letters(342))
 
 
@@ -47,6 +44,6 @@ def run():
     print(sum_word_len(1000))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

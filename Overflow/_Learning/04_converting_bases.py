@@ -22,7 +22,7 @@
 # print(convert_to_binary(6))  # <-- 110
 
 
-DIGITS = '0123456789abcdef'
+DIGITS = "0123456789abcdef"
 
 
 def convert_to_base(decimal_number, base):
@@ -37,7 +37,7 @@ def convert_to_base(decimal_number, base):
     while remainder_stack:
         new_digits.append(DIGITS[remainder_stack.pop()])
 
-    return ''.join(new_digits)
+    return "".join(new_digits)
 
 
 print(convert_to_base(25, 2))

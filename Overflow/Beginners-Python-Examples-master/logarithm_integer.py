@@ -1,4 +1,3 @@
-
 # Exhaustive numeration (iteration)
 # Simple implementation of logarithmic function
 # I love math!
@@ -9,13 +8,14 @@
 # Don't use it for decimal numbers
 # log(1000) or log(e, x) is not automatically avaliable
 def logarithm_integer(b, x):
-	if (b > 0 and b != 1) and x > 0:
-		for i in range(x):
-			if b ** i == x:
-				return i 
-		return -1
-	else:
-		return "Invalid input for logarithm"
+    if (b > 0 and b != 1) and x > 0:
+        for i in range(x):
+            if b ** i == x:
+                return i
+        return -1
+    else:
+        return "Invalid input for logarithm"
+
 
 # Test
 print("log(6, 216) -> " + str(logarithm_integer(6, 216)))

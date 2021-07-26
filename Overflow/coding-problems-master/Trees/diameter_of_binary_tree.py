@@ -1,4 +1,4 @@
-'''
+"""
 Diameter of Binary Tree
 
 Given a binary tree, you need to compute the length of the diameter of the tree.
@@ -30,7 +30,7 @@ Output Explanation: [1, 2, 3, 4, 8] is the diameter of the binary tree.
 Traverse the tree and keep/return information about the longest/max branch and longest/max diameter.
     Time Complexity:    O(N)
     Space Complexity:   O(N)        , because of the recursion stack (but this is if the tree is one branch), O(LogN) if the tree is balanced.
-'''
+"""
 
 
 ############
@@ -40,11 +40,13 @@ Traverse the tree and keep/return information about the longest/max branch and l
 # import TreeNode class from tree_helpers.py
 from tree_helpers import TreeNode
 
+
 def diameter(root):
-  	return find_diameter(root)[1]
+    return find_diameter(root)[1]
+
 
 def find_diameter(root):
-    ''' returns (max branch length, max diameter) '''
+    """ returns (max branch length, max diameter) """
     if not root:
         return 0, 0
 
@@ -62,10 +64,16 @@ def find_diameter(root):
 
 # Test 1
 # Correct result => 6
-tree = TreeNode(3, TreeNode(1, None, TreeNode(2, TreeNode(7))), TreeNode(4, None, TreeNode(5)))
+tree = TreeNode(
+    3, TreeNode(1, None, TreeNode(2, TreeNode(7))), TreeNode(4, None, TreeNode(5))
+)
 print(diameter(tree))
 
 # Test 2
 # Correct result => 5
-tree = TreeNode(5, TreeNode(3, TreeNode(2, TreeNode(1)), TreeNode(4, None, TreeNode(8))), TreeNode(6))
+tree = TreeNode(
+    5,
+    TreeNode(3, TreeNode(2, TreeNode(1)), TreeNode(4, None, TreeNode(8))),
+    TreeNode(6),
+)
 print(diameter(tree))

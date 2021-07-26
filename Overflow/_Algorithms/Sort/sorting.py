@@ -47,7 +47,9 @@ def module_key(
         or (config.length_sort_straight and straight_import)
         or str(section_name).lower() in config.length_sort_sections
     )
-    _length_sort_maybe = length_sort and (str(len(module_name)) + ":" + module_name) or module_name
+    _length_sort_maybe = (
+        length_sort and (str(len(module_name)) + ":" + module_name) or module_name
+    )
     return f"{module_name in config.force_to_top and 'A' or 'B'}{prefix}{_length_sort_maybe}"
 
 
@@ -64,13 +66,17 @@ def section_key(
 
     if reverse_relative and line.startswith("from ."):
         match = re.match(r"^from (\.+)\s*(.*)", line)
-        if match:  # pragma: no cover - regex always matches if line starts with "from ."
+        if (
+            match
+        ):  # pragma: no cover - regex always matches if line starts with "from ."
             line = f"from {' '.join(match.groups())}"
     if group_by_package and line.strip().startswith("from"):
         line = line.split(" import", 1)[0]
 
     if lexicographical:
-        line = _import_line_intro_re.sub("", _import_line_midline_import_re.sub(".", line))
+        line = _import_line_intro_re.sub(
+            "", _import_line_midline_import_re.sub(".", line)
+        )
     else:
         line = re.sub("^from ", "", line)
         line = re.sub("^import ", "", line)
@@ -82,7 +88,9 @@ def section_key(
     return f"{section}{len(line) if length_sort else ''}{line}"
 
 
-def naturally(to_sort: Iterable[str], key: Optional[Callable[[str], Any]] = None) -> List[str]:
+def naturally(
+    to_sort: Iterable[str], key: Optional[Callable[[str], Any]] = None
+) -> List[str]:
     """Returns a naturally sorted list"""
     if key is None:
         key_callback = _natural_keys

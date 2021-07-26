@@ -1,4 +1,4 @@
-'''
+"""
 Jump Game
 
 Given an array of non-negative integers, you are initially positioned at the first index of the array.
@@ -16,12 +16,13 @@ Just iterate the array and in each step save the farthest reachable position.
 If the current position is smaller than the farthest position, then the end isn't reachable.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def can_jump(nums):
     n = len(nums)

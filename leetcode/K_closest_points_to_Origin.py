@@ -24,7 +24,6 @@ import heapq
 
 
 class Solution:
-
     def kclosest(self, points, k):
         heap = []
 

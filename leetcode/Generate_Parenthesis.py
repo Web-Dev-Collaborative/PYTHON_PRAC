@@ -23,9 +23,9 @@ class Solution:
                 return
 
             if left < n:
-                backtrack(S + '(', left + 1, right)
+                backtrack(S + "(", left + 1, right)
             if right < left:
-                backtrack(S + ')', left, right + 1)
+                backtrack(S + ")", left, right + 1)
 
-        backtrack('', 0, 0)
+        backtrack("", 0, 0)
         return res

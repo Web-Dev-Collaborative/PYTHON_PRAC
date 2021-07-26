@@ -19,7 +19,6 @@
 
 
 class MaxStack:
-
     def __init__(self):
         """
         initialize your data structure here.
@@ -53,6 +52,7 @@ class MaxStack:
         for num in reversed(b):
             self.push(num)
         return m
+
 
 # Your MaxStack object will be instantiated and called as such:
 # obj = MaxStack()

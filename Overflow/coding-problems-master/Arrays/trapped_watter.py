@@ -1,4 +1,4 @@
-'''
+"""
 Trapped Water
 
 You are given an array of non-negative integers that represents a two-dimensional elevation map where each element is unit-width wall and the integer is the height.
@@ -18,12 +18,13 @@ The goal is to find the max wall and make 2 iterations starting from front and f
 First search for the max wall from front, after that correct the left water starting from the back side
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def trapped_water(elevation_map):
     n = len(elevation_map)
@@ -39,7 +40,7 @@ def trapped_water(elevation_map):
 
     for i in range(1, n):
         if elevation_map[i] >= max_height:
-            max_idx = i # save the highest wall index for later
+            max_idx = i  # save the highest wall index for later
             max_height = elevation_map[i]
 
         water += max_height - elevation_map[i]

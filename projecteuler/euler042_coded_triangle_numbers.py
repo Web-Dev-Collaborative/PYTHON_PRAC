@@ -14,18 +14,15 @@ from words import alphabetical_value
 from series import is_triangle
 
 
-FILENAME = Path(__file__).parent / '../data/words.txt'
+FILENAME = Path(__file__).parent / "../data/words.txt"
 
 
 def count_triangle_words(names):
-    return sum(
-        1
-        for w in names if is_triangle(alphabetical_value(w))
-    )
+    return sum(1 for w in names if is_triangle(alphabetical_value(w)))
 
 
 def test():
-    assert 55 == alphabetical_value('SKY')
+    assert 55 == alphabetical_value("SKY")
     assert is_triangle(55)
 
 
@@ -34,6 +31,6 @@ def run():
     print(count_triangle_words(names))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

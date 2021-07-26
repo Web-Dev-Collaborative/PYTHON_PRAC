@@ -1,4 +1,4 @@
-'''
+"""
 Find the element before which all the elements are smaller than it, and after which all are greater
 
 Given an array, find an element before which all elements are smaller than it, and after which all are greater than it.
@@ -13,7 +13,7 @@ Also traverse the array starting from right and find all min elements till that 
 In the end only compare mins and maxs with the curent element.
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
@@ -21,6 +21,7 @@ In the end only compare mins and maxs with the curent element.
 ############
 
 import math
+
 
 def find_element_smaller_left_bigger_right(arr):
     n = len(arr)

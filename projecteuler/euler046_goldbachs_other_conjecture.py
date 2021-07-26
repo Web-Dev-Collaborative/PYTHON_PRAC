@@ -59,6 +59,6 @@ def run():
     print(first_non_prime_plus_2square())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

@@ -31,8 +31,8 @@ from primality import all_primes
 
 
 def ibit_patterns_sized(n):
-    for i in range(1, 2**n - 1):
-        yield ('0' * n + bin(i)[2:])[-n:]
+    for i in range(1, 2 ** n - 1):
+        yield ("0" * n + bin(i)[2:])[-n:]
 
 
 @memoize
@@ -43,7 +43,8 @@ def bit_patterns_sized(n):
 @memoize
 def bool_patterns_sized(n):
     def bit2bool(pat):
-        return tuple(i == '1' for i in pat)
+        return tuple(i == "1" for i in pat)
+
     return tuple(bit2bool(pat) for pat in ibit_patterns_sized(n))
 
 
@@ -92,6 +93,6 @@ def run():
     assert 121313 == longest_family_sized(8)[0]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

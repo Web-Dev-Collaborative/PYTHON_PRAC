@@ -1,4 +1,4 @@
-'''
+"""
 Search in Rotated Sorted Array
 
 Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
@@ -17,12 +17,13 @@ Use binary search twice, first time to find the pivot (index where the array is 
 and the second time to find the target.
     Time Complexity:    O(LogN)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def search_rotated_sorted_array(nums, target):
     n = len(nums)
@@ -34,6 +35,7 @@ def search_rotated_sorted_array(nums, target):
         return find_element(nums, 0, pivot - 1, target)
     return find_element(nums, pivot, n - 1, target)
 
+
 def find_pivot(nums, left, right):
     while left < right - 1:
         mid = left + (right - left) // 2
@@ -44,6 +46,7 @@ def find_pivot(nums, left, right):
             right = mid
 
     return left
+
 
 def find_element(nums, left, right, target):
     while left <= right:

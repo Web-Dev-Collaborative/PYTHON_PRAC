@@ -60,7 +60,7 @@ def first_triangle_with_divisors(n):
 
 
 def test():
-    assert ((1, 3, 6, 10, 15, 21, 28, 36, 45, 55) == tuple(triangles(10)))
+    assert (1, 3, 6, 10, 15, 21, 28, 36, 45, 55) == tuple(triangles(10))
     assert 28 == first_triangle_with_divisors(5)
 
 
@@ -68,6 +68,6 @@ def run():
     print(first_triangle_with_divisors(500))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

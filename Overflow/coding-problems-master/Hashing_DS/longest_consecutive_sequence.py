@@ -1,4 +1,4 @@
-'''
+"""
 Longest Consecutive Sequence (Largest Range)
 
 Short explanation: Given an unsorted array of integers, find first and last element
@@ -22,12 +22,13 @@ But this solution is faster, it uses a dictionary (HashMap).
 For each number tries to find the smaller and the bigger consequence numbers, and marks them as visited.
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def largest_range(array):
     visited = {}
@@ -70,12 +71,118 @@ def largest_range(array):
 
 # Test 1
 # Correct result => [-1, 19]
-print(largest_range([0, 9, 19, -1, 18, 17, 2, 10, 3, 12, 5, 16, 4, 11, 8, 7, 6, 15, 12, 12, 2, 1, 6, 13, 14]))
+print(
+    largest_range(
+        [
+            0,
+            9,
+            19,
+            -1,
+            18,
+            17,
+            2,
+            10,
+            3,
+            12,
+            5,
+            16,
+            4,
+            11,
+            8,
+            7,
+            6,
+            15,
+            12,
+            12,
+            2,
+            1,
+            6,
+            13,
+            14,
+        ]
+    )
+)
 
 # Test 2
 # Correct result => [-7, 7]
-print(largest_range([0, -5, 9, 19, -1, 18, 17, 2, -4, -3, 10, 3, 12, 5, 16, 4, 11, 7, -6, -7, 6, 15, 12, 12, 2, 1, 6, 13, 14, -2]))
+print(
+    largest_range(
+        [
+            0,
+            -5,
+            9,
+            19,
+            -1,
+            18,
+            17,
+            2,
+            -4,
+            -3,
+            10,
+            3,
+            12,
+            5,
+            16,
+            4,
+            11,
+            7,
+            -6,
+            -7,
+            6,
+            15,
+            12,
+            12,
+            2,
+            1,
+            6,
+            13,
+            14,
+            -2,
+        ]
+    )
+)
 
 # Test 3
 # Correct result => [-8, 19]
-print(largest_range([-7, -7, -7, -7, 8, -8, 0, 9, 19, -1, -3, 18, 17, 2, 10, 3, 12, 5, 16, 4, 11, -6, 8, 7, 6, 15, 12, 12, -5, 2, 1, 6, 13, 14, -4, -2]))
+print(
+    largest_range(
+        [
+            -7,
+            -7,
+            -7,
+            -7,
+            8,
+            -8,
+            0,
+            9,
+            19,
+            -1,
+            -3,
+            18,
+            17,
+            2,
+            10,
+            3,
+            12,
+            5,
+            16,
+            4,
+            11,
+            -6,
+            8,
+            7,
+            6,
+            15,
+            12,
+            12,
+            -5,
+            2,
+            1,
+            6,
+            13,
+            14,
+            -4,
+            -2,
+        ]
+    )
+)

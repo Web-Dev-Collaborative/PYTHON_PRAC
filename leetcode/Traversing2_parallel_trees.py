@@ -7,8 +7,8 @@
 # /\
 # 4 5
 
-class Node:
 
+class Node:
     def __init__(self, data=None, children=[]):
 
         self.data = data

@@ -23,6 +23,7 @@
 # Could you solve it in linear time?
 import collections
 
+
 class Solution:
     def maxSlidingWindow(self, nums, k):
         # if len(nums) == 0:

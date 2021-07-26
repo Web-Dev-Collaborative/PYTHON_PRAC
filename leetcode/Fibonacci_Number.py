@@ -21,5 +21,5 @@ def fib(n):
     return value
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("The fibonacci number at 6th place is : " + str(fib(8)))

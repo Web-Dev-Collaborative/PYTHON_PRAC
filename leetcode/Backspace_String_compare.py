@@ -41,7 +41,7 @@ class Solution:
         while p1 >= 0 or p2 >= 0:
 
             while p1 >= 0:
-                if S[p1] == '#':
+                if S[p1] == "#":
                     skip1 += 1
                     p1 -= 1
                 elif skip1 > 0:
@@ -50,7 +50,7 @@ class Solution:
                 else:
                     break
             while p2 >= 0:
-                if T[p2] == '#':
+                if T[p2] == "#":
                     skip2 += 1
                     p2 -= 1
                 elif skip2 > 0:

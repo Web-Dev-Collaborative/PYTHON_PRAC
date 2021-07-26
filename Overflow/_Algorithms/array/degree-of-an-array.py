@@ -4,6 +4,7 @@
 
 import sys
 
+
 class Solution:
     def findShortestSubArray(self, nums):
         """
@@ -17,19 +18,19 @@ class Solution:
             if not item in dic:
                 dic[item] = {}
             obj = dic[item]
-            if not 'start' in obj:
-                obj['start'] = index
-            obj['end'] = index 
-            if not 'count' in obj:
-                obj['count'] = 1
+            if not "start" in obj:
+                obj["start"] = index
+            obj["end"] = index
+            if not "count" in obj:
+                obj["count"] = 1
             else:
-                obj['count'] += 1
-            degreeLen = max(degreeLen, obj['count'])
+                obj["count"] += 1
+            degreeLen = max(degreeLen, obj["count"])
 
         ans = sys.maxsize
         for value in dic.values():
-            if value['count'] != degreeLen:
+            if value["count"] != degreeLen:
                 continue
-            ans = min(ans, value['end'] - value['start'] + 1)
-        
+            ans = min(ans, value["end"] - value["start"] + 1)
+
         return ans

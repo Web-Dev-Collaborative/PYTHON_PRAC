@@ -1,4 +1,4 @@
-'''
+"""
 Find first missing positive integer (>0)
 
 Given an array of integers, find the first missing positive integer in linear time and constant space.
@@ -21,12 +21,13 @@ Play with indicies and mark them (make it negative),
 a marked index means that the number equals to that index exist in the array.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ##############
 # Solution 1 #
 ##############
+
 
 def find_first_missing_1(a):
     n = len(a)
@@ -51,13 +52,14 @@ def find_first_missing_1(a):
 # Solution 2 #
 ##############
 
+
 def find_first_missing_2(a):
     n = len(a)
 
     # eliminate all zeros and all negative numbers
     for i in range(n):
         if a[i] <= 0:
-            a[i] = n + 1 # those values won't be used later
+            a[i] = n + 1  # those values won't be used later
 
     # find all numbers in the range and mark all numbers at those positions as negative numbers
     for i in range(n):
@@ -83,7 +85,9 @@ def find_first_missing_2(a):
 # Test 1
 # Correct result => 1
 test = [-1, 2, 3]
-print(find_first_missing_1(list(test))) # make a copy, the list will be changed inside the function
+print(
+    find_first_missing_1(list(test))
+)  # make a copy, the list will be changed inside the function
 print(find_first_missing_2(list(test)))
 
 # Test 2

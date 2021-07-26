@@ -11,16 +11,18 @@ print("Derivation 2: V(vertices) = E(edges)+2 - F(Faces)")
 print("Derivation 3: F(faces) = E(edges)+2 - V(vertices)")
 
 
-# By order of operations, parenthesis can be added 
+# By order of operations, parenthesis can be added
 # for ensuring, but not needed
 def E(f, v):
-	return f+v - 2
+    return f + v - 2
+
 
 def V(e, f):
-	return e+2 - f 
+    return e + 2 - f
+
 
 def F(e, v):
-	return e+2 - v
+    return e + 2 - v
 
 
 # function to evaluate
@@ -31,14 +33,14 @@ print(" ")
 
 # evaluating function asked by user
 if user == "E":
-	print("\nEdges: " + str(E(input("Faces: "), input("Vertices: "))))
+    print("\nEdges: " + str(E(input("Faces: "), input("Vertices: "))))
 elif user == "V":
-	print("\nVertices: " + str(V(input("Edges: "), input("Faces: "))))
+    print("\nVertices: " + str(V(input("Edges: "), input("Faces: "))))
 elif user == "F":
-	print("\nFaces: " + str(F(input("Edges: "), input("Vertices: "))))
+    print("\nFaces: " + str(F(input("Edges: "), input("Vertices: "))))
 else:
-	print("Invalid Input, Try again!")
+    print("Invalid Input, Try again!")
 
 
-# A while loop can be added 
+# A while loop can be added
 # to perform multiple calculations

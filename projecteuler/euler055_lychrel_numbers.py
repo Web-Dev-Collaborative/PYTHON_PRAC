@@ -66,6 +66,6 @@ def run():
     assert 249 == count_likely_lychrels(upto=10000)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

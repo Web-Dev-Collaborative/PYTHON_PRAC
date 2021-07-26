@@ -19,7 +19,7 @@ from primality import primes_upto, is_prime
 
 
 def pandigital_primes(digits=7):
-    for p in primes_upto(int('9' * digits)):
+    for p in primes_upto(int("9" * digits)):
         if is_pandigital(p):
             yield p
 
@@ -40,6 +40,6 @@ def run():
     print(list(pandigital_primes())[-1])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

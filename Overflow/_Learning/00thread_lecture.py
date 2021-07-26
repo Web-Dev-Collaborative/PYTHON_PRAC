@@ -22,12 +22,14 @@ for _ in range(50):
 # from random import randint
 # from time import sleep
 
+
 def sleepy(s):
     print(f"Hello, {s}!")
     sleep_time = randint(0, 3)
     print(f"{s} is sleeping for {sleep_time} seconds")
     sleep(sleep_time)  # enters the thread wait state
     print(f"Good-bye, {s}!")
+
 
 # thread1 = threading.Thread(target=sleepy, args=("Judy",))
 # thread2 = threading.Thread(target=sleepy, args=("Petra",))

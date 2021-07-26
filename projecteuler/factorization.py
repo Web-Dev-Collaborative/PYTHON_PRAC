@@ -48,10 +48,7 @@ def prime_factors(n):
 
 
 def factors(n):
-    return (
-        (k, len(list(g)))
-        for k, g in itertools.groupby(prime_factors(n))
-    )
+    return ((k, len(list(g))) for k, g in itertools.groupby(prime_factors(n)))
 
 
 def first_factor(n):
@@ -81,6 +78,7 @@ def lcm(*numbers):
 
     return functools.reduce(_lcm, numbers, 1)
 
+
 def multiples(factor_list):
     if not factor_list:
         yield 1
@@ -99,9 +97,11 @@ def divisors(t):
                 yield m
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
+
     def list_factors(n):
         print(n, list(factors(n)))
+
     list_factors(4)
     list_factors(7)
     list_factors(27)

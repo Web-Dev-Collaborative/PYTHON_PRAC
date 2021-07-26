@@ -35,5 +35,4 @@ def hot_potato(names, num):
     return queue.pop()
 
 
-print(hot_potato(('Beau', 'Mike', 'Aaron', 'Cephandrius', 'Cole',
-                  'Warren', 'Ryan'), 4))
+print(hot_potato(("Beau", "Mike", "Aaron", "Cephandrius", "Cole", "Warren", "Ryan"), 4))

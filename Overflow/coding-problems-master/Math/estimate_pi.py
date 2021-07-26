@@ -1,4 +1,4 @@
-'''
+"""
 Estimation of Pi
 
 Write a program to compute the value of PI using a random number generator/method.
@@ -17,7 +17,7 @@ Simple equation: PI / 4 = circle_points / total_points
 Final form: PI = 4 * circle_points / total_points
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
@@ -25,6 +25,7 @@ Final form: PI = 4 * circle_points / total_points
 ############
 
 from random import random
+
 
 def estimate_pi(n):
     total_points = 0
@@ -34,7 +35,7 @@ def estimate_pi(n):
         # generate N random points in the first quadrant
         x, y = random(), random()
 
-        if x*x + y*y <= 1:
+        if x * x + y * y <= 1:
             # using squared euclidean distance find the distance from (0, 0) to (x, y)
             circle_points += 1
         total_points += 1

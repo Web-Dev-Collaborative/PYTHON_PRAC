@@ -47,6 +47,6 @@ def run():
     print(sum(numbers_that_sum_power_of_digits(5)))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

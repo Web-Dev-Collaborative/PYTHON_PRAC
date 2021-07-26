@@ -49,6 +49,6 @@ def run():
     print(reduce(mul, (c for c in select_digits(sel)), 1))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

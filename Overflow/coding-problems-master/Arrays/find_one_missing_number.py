@@ -1,4 +1,4 @@
-'''
+"""
 Find the missing number in a sequence
 
 Find the only missing integer in a sequence,
@@ -14,11 +14,12 @@ After that sum all elements from the array, and when you subtract those 2 number
 Sum formula = N*(N+1)/2
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 ############
 # Solution #
 ############
+
 
 def missing_number(nums):
     s = sum(nums)

@@ -3,13 +3,30 @@
 import struct, threading
 
 from pybricks import ev3brick as brick
-from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor, InfraredSensor, UltrasonicSensor, GyroSensor)
-from pybricks.parameters import (Port, Stop, Direction, Button, Color, SoundFile, ImageFile, Align)
+from pybricks.ev3devices import (
+    Motor,
+    TouchSensor,
+    ColorSensor,
+    InfraredSensor,
+    UltrasonicSensor,
+    GyroSensor,
+)
+from pybricks.parameters import (
+    Port,
+    Stop,
+    Direction,
+    Button,
+    Color,
+    SoundFile,
+    ImageFile,
+    Align,
+)
 from pybricks.tools import print, wait, StopWatch
 from pybricks.robotics import DriveBase
 from devices import detectJoystick
 
-class Robot():
+
+class Robot:
     def __init__(self):
         self.motor = Motor(Port.B)
         self.ultrasonic = UltrasonicSensor(Port.S4)
@@ -35,16 +52,18 @@ class Robot():
         self.setSpeed(0)
         brick.sound.beep()
 
+
 def autoStopLoop(robot):
     while robot.active:
         if robot.speed > 0 and robot.ultrasonic.distance() < 200:
             robot.setSpeed(0)
         wait(100)
 
+
 def joystickLoop(robot, eventFile):
-    FORMAT = 'llHHI'
+    FORMAT = "llHHI"
     EVENT_SIZE = struct.calcsize(FORMAT)
-    with open(eventFile, 'rb') as infile:
+    with open(eventFile, "rb") as infile:
         while True:
             event = infile.read(EVENT_SIZE)
             _, _, t, c, v = struct.unpack(FORMAT, event)
@@ -71,6 +90,7 @@ def joystickLoop(robot, eventFile):
                         speed = -1
                     robot.setSpeed(speed)
 
+
 def buttonLoop(robot):
     while True:
         if not any(brick.buttons()):
@@ -86,9 +106,10 @@ def buttonLoop(robot):
                 return robot.inactive()
             wait(500)
 
+
 def main():
     brick.sound.beep()
-    joystickEvent = detectJoystick(['Controller'])
+    joystickEvent = detectJoystick(["Controller"])
     robot = Robot()
     t = threading.Thread(target=autoStopLoop, args=(robot,))
     t.start()
@@ -96,5 +117,6 @@ def main():
         joystickLoop(robot, joystickEvent)
     else:
         buttonLoop(robot)
+
 
 main()

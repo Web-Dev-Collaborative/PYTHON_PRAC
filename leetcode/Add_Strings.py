@@ -17,7 +17,18 @@ class Solution:
             return self.sumNums(num2, num1)
 
     def sumNums(self, low, high):
-        dict = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}
+        dict = {
+            "0": 0,
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4,
+            "5": 5,
+            "6": 6,
+            "7": 7,
+            "8": 8,
+            "9": 9,
+        }
 
         i = len(low) - 1
         j = len(high) - 1

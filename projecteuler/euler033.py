@@ -27,7 +27,7 @@ from fractions import Fraction
 
 def unortodox_denom(lower, d):
     ds = str(d)
-    if ds[-1] == '0':
+    if ds[-1] == "0":
         digits = ds[:-1]
     else:
         digits = ds
@@ -36,15 +36,15 @@ def unortodox_denom(lower, d):
         ns = str(n)
         for x in digits:
             if x in ns:
-                nr = int(ns.replace(x, '', 1))
-                dr = int(ds.replace(x, '', 1))
+                nr = int(ns.replace(x, "", 1))
+                dr = int(ds.replace(x, "", 1))
                 if nr and dr and f == Fraction(nr, dr):
                     return f
 
 
 def unortodox_fractions(k):
     lower = 10 ** (k - 1)
-    upper = int(k * '9')
+    upper = int(k * "9")
     for d in range(lower, upper + 1):
         f = unortodox_denom(lower, d)
         if f:
@@ -60,6 +60,6 @@ def run():
     print(reduce(operator.mul, numbers, 1).denominator)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

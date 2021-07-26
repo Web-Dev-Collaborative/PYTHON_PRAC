@@ -77,9 +77,9 @@ How many hands does Player 1 win?
 from pathlib import Path
 from itertools import groupby
 
-GAMES_FNAME = Path(__file__).parent / '../data/poker.txt'
+GAMES_FNAME = Path(__file__).parent / "../data/poker.txt"
 
-FACE_VALUES = list('23456789TJQKA')
+FACE_VALUES = list("23456789TJQKA")
 VALUES = {f: i for i, f in enumerate(FACE_VALUES, start=2)}
 
 
@@ -107,12 +107,13 @@ def parse_hand(cards):
 
 def load_games():
     def load():
-        with open(GAMES_FNAME, 'r') as f:
+        with open(GAMES_FNAME, "r") as f:
             for line in f:
                 cards = parse_hand(line.split())
                 hand_1 = cards[:5]
                 hand_2 = cards[-5:]
                 yield hand_1, hand_2
+
     return list(load())
 
 
@@ -122,6 +123,7 @@ def rank_hand(hand):
     cards to be of the same suit they must all be of different value,
     and all flushes rank above combinations of cards of the same value.
     """
+
     def groupcounts(it, key=None):
         return [(len(list(g)), k) for k, g in groupby(it, key)]
 
@@ -144,7 +146,7 @@ def rank_hand(hand):
         counts,
         bycount,
         values,
-        hand
+        hand,
     )
 
 
@@ -154,20 +156,20 @@ def play_games(games):
 
 
 def test():
-    h1 = parse_hand(['5H', '5C', '6S', '7S', 'KD'])
-    h2 = parse_hand(['2C', '3S', '8S', '8D', 'TD'])
+    h1 = parse_hand(["5H", "5C", "6S", "7S", "KD"])
+    h2 = parse_hand(["2C", "3S", "8S", "8D", "TD"])
     assert rank_hand(h1) < rank_hand(h2)
-    h1 = parse_hand(['5D', '8C', '9S', 'JS', 'AC'])
-    h2 = parse_hand(['2C', '5C', '7D', '8S', 'QH'])
+    h1 = parse_hand(["5D", "8C", "9S", "JS", "AC"])
+    h2 = parse_hand(["2C", "5C", "7D", "8S", "QH"])
     assert rank_hand(h1) > rank_hand(h2)
-    h1 = parse_hand(['2D', '9C', 'AS', 'AH', 'AC'])
-    h2 = parse_hand(['3D', '6D', '7D', 'TD', 'QD'])
+    h1 = parse_hand(["2D", "9C", "AS", "AH", "AC"])
+    h2 = parse_hand(["3D", "6D", "7D", "TD", "QD"])
     assert rank_hand(h1) < rank_hand(h2)
-    h1 = parse_hand(['4D', '6S', '9H', 'QH', 'QC'])
-    h2 = parse_hand(['3D', '6D', '7H', 'QD', 'QS'])
+    h1 = parse_hand(["4D", "6S", "9H", "QH", "QC"])
+    h2 = parse_hand(["3D", "6D", "7H", "QD", "QS"])
     assert rank_hand(h1) > rank_hand(h2)
-    h1 = parse_hand(['2H', '2D', '4C', '4D', '4S'])
-    h2 = parse_hand(['3C', '3D', '3S', '9S', '9S'])
+    h1 = parse_hand(["2H", "2D", "4C", "4D", "4S"])
+    h2 = parse_hand(["3C", "3D", "3S", "9S", "9S"])
     assert rank_hand(h1) > rank_hand(h2)
 
 
@@ -175,6 +177,6 @@ def run():
     assert 376 == play_games(load_games())[0]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

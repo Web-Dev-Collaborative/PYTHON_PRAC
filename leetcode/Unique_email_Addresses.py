@@ -28,15 +28,15 @@ class Solution:
     def numUniqueEmails(self, emails):
         seen = set()
         for email in emails:
-            local, domain = email.split('@')
+            local, domain = email.split("@")
 
-            if '+' in local:
-                local = local[:local.index('+')]
-                local = local.replace('.', '')
-                seen.add(local + '@' + domain)
+            if "+" in local:
+                local = local[: local.index("+")]
+                local = local.replace(".", "")
+                seen.add(local + "@" + domain)
             else:
-                local = local.replace('.', '')
-                seen.add(local + '@' + domain)
+                local = local.replace(".", "")
+                seen.add(local + "@" + domain)
         return len(seen)
 
 

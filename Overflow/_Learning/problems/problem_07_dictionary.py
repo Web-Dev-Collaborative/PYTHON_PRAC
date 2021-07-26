@@ -11,6 +11,6 @@
 
 
 # TEST DATA
-print(my_filter({1: ".", 2: "..", 5: "....."}))   # > {1: ".", 2: ".."}
-print(my_filter({}))                              # > {}
+print(my_filter({1: ".", 2: "..", 5: "....."}))  # > {1: ".", 2: ".."}
+print(my_filter({}))  # > {}
 print(my_filter({1: ".....", 2: "....", 5: ""}))  # > {5: ""}

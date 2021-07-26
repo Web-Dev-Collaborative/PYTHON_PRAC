@@ -1,4 +1,4 @@
-'''
+"""
 Encoding string
 
 Run-length encoding is a fast and simple method of encoding strings.
@@ -13,21 +13,22 @@ Output: '4A3B2C1D2A'
 Simple solution, just iterate the string and count.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
 
+
 def encoding(word):
     n = len(word)
     if n == 0:
-        return ''
+        return ""
 
     letter = word[0]
     length = 1
-    res = ''
+    res = ""
 
     for i in range(1, n):
         if word[i] == letter:
@@ -47,4 +48,4 @@ def encoding(word):
 ###########
 
 # Correct result => '4A3B2C1D2A'
-print(encoding('AAAABBBCCDAA'))
+print(encoding("AAAABBBCCDAA"))

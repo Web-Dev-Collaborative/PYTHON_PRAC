@@ -1,4 +1,4 @@
-'''
+"""
 Reverse Every Ascending Sublist
 
 Create and return a new list that contains the same elements as the argument list items, but
@@ -12,12 +12,13 @@ Output explanation: 5, 7, 10 => 10, 7, 5 ; 4 => 4; 2, 7, 8 => 8, 7, 2; 1, 3 => 3
 Find the start and end of each sublist and reverse it in-place.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def reverse_ascending_sublists(arr):
     n = len(arr)
@@ -36,6 +37,7 @@ def reverse_ascending_sublists(arr):
     reverse_arr(arr, start, n - 1)
 
     return arr
+
 
 def reverse_arr(arr, start, end):
     while start < end:

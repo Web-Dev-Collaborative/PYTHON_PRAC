@@ -34,16 +34,8 @@ def is_abundant(x):
 
 
 def not_sum_of_abundants(m):
-    abundant = [
-        x
-        for x in range(2, m + 1)
-        if is_abundant(x)
-    ]
-    sum_of_abundant = {
-        a + b
-        for i, a in enumerate(abundant)
-        for b in abundant[i:]
-    }
+    abundant = [x for x in range(2, m + 1) if is_abundant(x)]
+    sum_of_abundant = {a + b for i, a in enumerate(abundant) for b in abundant[i:]}
     return (x for x in range(1, m + 1) if x not in sum_of_abundant)
 
 
@@ -55,6 +47,6 @@ def run():
     print(sum(not_sum_of_abundants(28123)))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

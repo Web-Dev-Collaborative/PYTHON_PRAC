@@ -1,4 +1,4 @@
-'''
+"""
 Find max branch sum
 
 Wrie a function that takes a binary tree and returns its max branch (branch is "root to leaf path") sum.
@@ -16,7 +16,7 @@ Output explanation: 1 -> 3 -> 7
 Traverse the tree and in each node compare the left and right subbranch sum, and take the bigger one.
     Time Complexity:    O(N)
     Space Complexity:   O(N)        , because of the recursion stack (but this is the tree is one branch), O(LogN) if the tree is balanced.
-'''
+"""
 
 
 ############
@@ -25,6 +25,7 @@ Traverse the tree and in each node compare the left and right subbranch sum, and
 
 # import TreeNode class from tree_helpers.py
 from tree_helpers import TreeNode
+
 
 def max_branch_sum(node):
     if node is None:
@@ -45,5 +46,7 @@ def max_branch_sum(node):
 
 # Test 1
 # Correct result => 11
-tree = TreeNode(1, TreeNode(2, TreeNode(4), TreeNode(5)), TreeNode(3, TreeNode(6), TreeNode(7)))
+tree = TreeNode(
+    1, TreeNode(2, TreeNode(4), TreeNode(5)), TreeNode(3, TreeNode(6), TreeNode(7))
+)
 print(max_branch_sum(tree))

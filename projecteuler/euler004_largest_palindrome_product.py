@@ -16,8 +16,8 @@ from palindromes import is_palindrome
 
 
 def largest_palindromic_for_digits(digits, limit=None):
-    top = int('9' * digits)
-    bot = int('9' * (digits - 1))
+    top = int("9" * digits)
+    bot = int("9" * (digits - 1))
     best = 0
     for a in range(top, bot, -1):
         for b in range(top, bot, -1):
@@ -39,6 +39,6 @@ def run():
     print(largest_palindromic_for_digits(3))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

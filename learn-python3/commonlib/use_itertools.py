@@ -9,7 +9,7 @@ for n in natuals:
     if n >= 100:
         break
 
-cs = itertools.cycle('ABC')
+cs = itertools.cycle("ABC")
 t = 10
 for c in cs:
     print(c)

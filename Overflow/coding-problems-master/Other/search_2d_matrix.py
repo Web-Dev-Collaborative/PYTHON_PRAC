@@ -1,4 +1,4 @@
-'''
+"""
 Search a 2D Matrix
 
 Write an efficient algorithm that searches for a value in an m x n matrix.
@@ -20,12 +20,13 @@ Output: True
 Start from bottom left corner and search in top right direction.
     Time Complexity:    O(N + M)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def search_2d_matrix(matrix, target):
     n = len(matrix)
@@ -51,8 +52,30 @@ def search_2d_matrix(matrix, target):
 
 # Test 1
 # Correct result => True
-print(search_2d_matrix([[1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30]], 21))
+print(
+    search_2d_matrix(
+        [
+            [1, 4, 7, 11, 15],
+            [2, 5, 8, 12, 19],
+            [3, 6, 9, 16, 22],
+            [10, 13, 14, 17, 24],
+            [18, 21, 23, 26, 30],
+        ],
+        21,
+    )
+)
 
 # Test 2
 # Correct result => False
-print(search_2d_matrix([[1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30]], 20))
+print(
+    search_2d_matrix(
+        [
+            [1, 4, 7, 11, 15],
+            [2, 5, 8, 12, 19],
+            [3, 6, 9, 16, 22],
+            [10, 13, 14, 17, 24],
+            [18, 21, 23, 26, 30],
+        ],
+        20,
+    )
+)

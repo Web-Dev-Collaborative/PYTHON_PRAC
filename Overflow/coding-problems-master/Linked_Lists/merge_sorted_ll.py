@@ -1,4 +1,4 @@
-'''
+"""
 Merge Sorted Linked Lists
 
 Input: 1 -> 2 -> 4, 1 -> 3 -> 4
@@ -8,7 +8,7 @@ Output: 1 -> 1 -> 2 -> 3 -> 4 -> 4
 Simple solution with pointers manipulation (just change the pointers of the old nodes, if there is smaller node than the old one).
     Time Complexity:    O(N + M)
     Space Complexity:   O(1)        - working with the same old nodes (no extra space)
-'''
+"""
 
 
 ############
@@ -17,6 +17,7 @@ Simple solution with pointers manipulation (just change the pointers of the old 
 
 # import ListNode class from ll_helpers.py
 from ll_helpers import ListNode
+
 
 def merge_two_sorted_ll(l1, l2):
     result = ListNode(-1)

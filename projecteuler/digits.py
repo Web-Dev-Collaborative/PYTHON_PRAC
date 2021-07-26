@@ -13,7 +13,7 @@ from memoization import memoize
 
 
 def seq2str(q):
-    return ''.join(str(c) for c in q)
+    return "".join(str(c) for c in q)
 
 
 def sdigits(n):
@@ -47,7 +47,7 @@ def sorted_digits_str(n):
 
 def is_semi_pandigital(n):
     s = str(n)
-    return '0' not in s and len(s) == len(set(s))
+    return "0" not in s and len(s) == len(set(s))
 
 
 def is_pandigital(n):

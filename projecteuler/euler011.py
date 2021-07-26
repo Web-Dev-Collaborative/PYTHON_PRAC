@@ -44,7 +44,7 @@ What is the greatest product of four adjacent numbers in any
 direction (up, down, left, right, or diagonally) in the 20×20 grid?
 """
 
-GRID = [line.split() for line in SGRID.split('\n')[1:-1]]
+GRID = [line.split() for line in SGRID.split("\n")[1:-1]]
 GRID = [[int(s) for s in line] for line in GRID]
 
 
@@ -53,7 +53,7 @@ def prod(a):
 
 
 def row(g, i, j, n):
-    return g[i][j:j + n]
+    return g[i][j : j + n]
 
 
 def column(g, i, j, n):
@@ -62,16 +62,12 @@ def column(g, i, j, n):
 
 def diagonal(g, i, j, n):
     return [
-        g[i + o][j + o] for o in range(n)
-        if i + o < len(g) and j + o < len(g[i + o])
+        g[i + o][j + o] for o in range(n) if i + o < len(g) and j + o < len(g[i + o])
     ]
 
 
 def diagonal2(g, i, j, n):
-    return [
-        g[i + o][j - o] for o in range(n)
-        if i + o < len(g) and j - o >= 0
-    ]
+    return [g[i + o][j - o] for o in range(n) if i + o < len(g) and j - o >= 0]
 
 
 def maxprod(g, n):
@@ -80,7 +76,7 @@ def maxprod(g, n):
             prod(row(g, i, j, n)),
             prod(column(g, i, j, n)),
             prod(diagonal(g, i, j, n)),
-            prod(diagonal2(g, i, j, n))
+            prod(diagonal2(g, i, j, n)),
         )
         for i in range(len(g))
         for j in range(len(g[i]))
@@ -95,6 +91,6 @@ def run():
     print(maxprod(GRID, 4))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

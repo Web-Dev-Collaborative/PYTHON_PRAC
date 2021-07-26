@@ -3,7 +3,7 @@
 # lists are capable of containing any type of data
 
 # a list can contain datas of different datatypes
-numsAndAlphas = ['a',1,'hello',3.14159265359,'are you okay',True,'good',False]
+numsAndAlphas = ["a", 1, "hello", 3.14159265359, "are you okay", True, "good", False]
 # this is going to work
 print(numsAndAlphas)
 
@@ -19,5 +19,5 @@ print(numsAndAlphas[2:7:2])
 print(numsAndAlphas[::3])
 
 # you can add lists too...
-list2 = [2,9,16,25,36,49,64,81,100,144]
+list2 = [2, 9, 16, 25, 36, 49, 64, 81, 100, 144]
 newList = numsAndAlphas + list2

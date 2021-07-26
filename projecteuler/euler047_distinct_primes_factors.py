@@ -44,7 +44,7 @@ def first_k_consecutive_with_k_factors(k):
 def test():
     assert 2 == n_factors(14)
     assert 2 == n_factors(15)
-    assert 3 == n_factors(644), str(n_factors(644)) + ' - ' + str(factors(644))
+    assert 3 == n_factors(644), str(n_factors(644)) + " - " + str(factors(644))
     assert 3 == n_factors(645)
     assert 3 == n_factors(646)
     assert 14 == first_k_consecutive_with_k_factors(2)
@@ -55,6 +55,6 @@ def run():
     print(first_k_consecutive_with_k_factors(4))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

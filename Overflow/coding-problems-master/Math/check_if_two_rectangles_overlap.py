@@ -1,4 +1,4 @@
-'''
+"""
 Check if Two Rectangles Overlap
 
 Given two rectangles, find if the given two rectangles overlap or not.
@@ -18,12 +18,13 @@ First check if rectangles are overlapping on X axis and
 after that if they are overlapping on Y axis.
     Time Complexity:    O(1)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def check_if_two_rectangles_overlap(l1, r1, l2, r2):
     # first check by X coordinates, if rectangles can overlap on X axis

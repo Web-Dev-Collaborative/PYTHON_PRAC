@@ -1,4 +1,4 @@
-'''
+"""
 Count Triplets with Sum K
 
 Given an array (sorted in ascending order) and a value, count how many triplets
@@ -19,12 +19,13 @@ If the current sum is smaller than K then increase the left pointer, otherwise d
 them and after that use this algorithm, the time complexity will be same O(NLogN + N^2) = O(N^2).
     Time Complexity:    O(N^2)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ##############
 # Solution 1 #
 ##############
+
 
 def count_triplets_1(arr, k):
     count = 0
@@ -45,6 +46,7 @@ def count_triplets_1(arr, k):
 ##############
 # Solution 2 #
 ##############
+
 
 def count_triplets_2(arr, k):
     count = 0

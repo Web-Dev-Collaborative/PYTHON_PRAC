@@ -12,6 +12,7 @@
 # two pointer method fast and slow
 # Time Complexity is O(n) and Space
 
+
 class ListNode:
     def __init__(self, val):
         self.val = val

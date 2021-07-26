@@ -1,4 +1,4 @@
-'''
+"""
 Same Tree
 
 Given two binary trees, write a function to check if they are the same or not.
@@ -18,7 +18,7 @@ Output: False
 Traverse both trees in same time and if something isn't equal, return False.
     Time Complexity:    O(N)
     Space Complexity:   O(N)    , because of the recursion stack (but this is if the tree is one branch), O(LogN) if the tree is balanced.
-'''
+"""
 
 
 ############
@@ -27,6 +27,7 @@ Traverse both trees in same time and if something isn't equal, return False.
 
 # import TreeNode class from tree_helpers.py
 from tree_helpers import TreeNode
+
 
 def is_same_tree(p, q):
     if (p is None) and (p == q):

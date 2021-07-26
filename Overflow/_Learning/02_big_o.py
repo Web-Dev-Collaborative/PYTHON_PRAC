@@ -11,4 +11,6 @@ def do_something(n):
         w = a * k + 45
         v = b * b
     d = 33
+
+
 # f(n) = 3 + 3n^2 + 2n + 1 = 3n^2 + 2n + 4 = O(n^2)

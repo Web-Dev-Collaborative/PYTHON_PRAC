@@ -1,4 +1,4 @@
-'''
+"""
 ZigZag Conversion
 
 The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
@@ -16,19 +16,20 @@ Go row by row and using the steps logic build the new string by jumping chars.
 Middle rows have 2 times more elements than the first and last row.
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
 # Solution #
 ############
 
+
 def convert(s, num_rows):
     if num_rows == 1:
         return s
 
     n = len(s)
-    res = ''
+    res = ""
     cycle = 2 * (num_rows - 1)
 
     for i in range(0, num_rows):
@@ -54,8 +55,8 @@ def convert(s, num_rows):
 
 # Test 1
 # Correct result => 'PAHNAPLSIIGYIR'
-print(convert('PAYPALISHIRING', 3))
+print(convert("PAYPALISHIRING", 3))
 
 # Test 2
 # Correct result => 'PINALSIGYAHRPI'
-print(convert('PAYPALISHIRING', 4))
+print(convert("PAYPALISHIRING", 4))

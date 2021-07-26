@@ -1,6 +1,7 @@
 import threading
 from time import sleep
 
+
 class ValueHolder:
     def __init__(self):
         self._value = 0
@@ -20,12 +21,12 @@ class ValueHolder:
     # Using the context manager
     def increment(self):
         with self._lock:
-          # BEGIN CRITICAL SECTION
-          v = self._value
-          v = v + 1
-          sleep(0.1)
-          self._value = v
-          # END CRITICAL SECTION
+            # BEGIN CRITICAL SECTION
+            v = self._value
+            v = v + 1
+            sleep(0.1)
+            self._value = v
+            # END CRITICAL SECTION
 
     @property
     def value(self):

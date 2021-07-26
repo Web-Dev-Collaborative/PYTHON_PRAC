@@ -1,4 +1,4 @@
-'''
+"""
 Find min path
 
 You are given an M by N matrix consisting of booleans that represents a board.
@@ -24,7 +24,7 @@ since we would need to go through (1, 2) because there is a wall everywhere else
 BFS solution using queue.
     Time Complexity:    O(N * M)
     Space Complexity:   O(N * M)
-'''
+"""
 
 
 ############
@@ -32,6 +32,7 @@ BFS solution using queue.
 ############
 
 from collections import deque
+
 
 def find_min_path(board, start, end):
     n = len(board)
@@ -42,7 +43,7 @@ def find_min_path(board, start, end):
 
     queue = deque()
     queue.append((start, 0))
-    directions = [(1, 0), (0, 1), (-1, 0), (0, -1)] # up, right, down, left
+    directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]  # up, right, down, left
 
     # simple bfs
     while queue:
@@ -57,7 +58,7 @@ def find_min_path(board, start, end):
         visited[position[0]][position[1]] = True
 
         # check if this position is walkable
-        if board[position[0]][position[1]] == 't':
+        if board[position[0]][position[1]] == "t":
             continue
 
         # if the end was reached return steps
@@ -84,6 +85,10 @@ def find_min_path(board, start, end):
 
 # Test 1
 # Correct result => 7
-f = 'f'
-t = 't'
-print(find_min_path([[f, f, f, f], [t, t, f, t], [f, f, f, f], [f, f, f, f]], (3, 0), (0, 0)))
+f = "f"
+t = "t"
+print(
+    find_min_path(
+        [[f, f, f, f], [t, t, f, t], [f, f, f, f], [f, f, f, f]], (3, 0), (0, 0)
+    )
+)

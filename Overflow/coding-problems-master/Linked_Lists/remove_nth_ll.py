@@ -1,4 +1,4 @@
-'''
+"""
 Remove Nth Node From End of List
 
 Given a linked list, remove the n-th node from the end of list and return its head.
@@ -13,7 +13,7 @@ Playing with the pointers.
 Recursive solution.
     Time Complexity:    O(N)
     Space Complexity:   O(N)  , because of the recursive calls stack
-'''
+"""
 
 
 ##############
@@ -22,6 +22,7 @@ Recursive solution.
 
 # import ListNode class from ll_helpers.py
 from ll_helpers import ListNode
+
 
 def remove_nth_from_end_1(head, n):
     helper = ListNode(0)
@@ -50,11 +51,13 @@ def remove_nth_from_end_1(head, n):
 # Solution 2 #
 ##############
 
+
 def remove_nth_from_end_2(head, n):
     result = remove_recursively(head, n)
     if result[0] == n:
         return head.next
     return head
+
 
 def remove_recursively(pointer, n):
     if pointer is None:

@@ -1,4 +1,4 @@
-'''
+"""
 Count Divisibles in Range
 
 Let us take a breather and tackle a problem so simple that its solution needs only a couple of
@@ -16,12 +16,13 @@ Find the close divisible to start (the smallest divisible in the range), calcula
 that number and the end of the range, and in the end divide the difference by N.
     Time Complexity:    O(1)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def count_divisibles_in_range(start, end, n):
     # find the next start number divisable by n
@@ -52,12 +53,12 @@ print(count_divisibles_in_range(-19, -13, 10))
 
 # Test 4
 # Correct result => 199999999999
-print(count_divisibles_in_range(1, 10**12 - 1, 5))
+print(count_divisibles_in_range(1, 10 ** 12 - 1, 5))
 
 # Test 5
 # Correct result => 200000000000
-print(count_divisibles_in_range(0, 10**12 - 1, 5))
+print(count_divisibles_in_range(0, 10 ** 12 - 1, 5))
 
 # Test 6
 # Correct result => 200000000001
-print(count_divisibles_in_range(0, 10**12, 5))
+print(count_divisibles_in_range(0, 10 ** 12, 5))

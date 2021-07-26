@@ -1,4 +1,4 @@
-'''
+"""
 Find the Busiest Interval
 
 Given a list of arriving time and leaving time for each celebrity.
@@ -13,12 +13,13 @@ Just sort the lists, don't care about pairs ordering.
 And use a counter, when arriving counter++, when leaving counter--.
     Time Complexity:    O(N LogN)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def bussiest_interval(arriving, leaving):
     # sort both arrays (don't care about pairs)

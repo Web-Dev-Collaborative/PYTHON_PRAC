@@ -1,4 +1,4 @@
-'''
+"""
 Count Positives
 
 Given several numbers, count how many different results bigger or equal than 0 can you produce by only
@@ -20,12 +20,13 @@ Output explanation:
 Use hashset and make all combinations.
     Time Complexity:    O(2^N)  , I'm not sure how to compute the real complexity, but it's TOO MUCH faster than 2^N
     Space Complexity:   O(2^N)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def count_positives(numbers):
     results = set()
@@ -33,7 +34,7 @@ def count_positives(numbers):
 
     # make all combinations
     for num in numbers:
-        temp = set()    # use a temporary hashset for the newest results
+        temp = set()  # use a temporary hashset for the newest results
         for res in results:
             temp.add(res + num)
             temp.add(res - num)

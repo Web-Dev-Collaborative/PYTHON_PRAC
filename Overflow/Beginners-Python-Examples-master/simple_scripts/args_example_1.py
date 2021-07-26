@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-# *params is just a placeholder(try putting other name) 
+# *params is just a placeholder(try putting other name)
 # for n number of arguments
 # so that n can be any number, instead of params
 # any name can be used, but the * asterisk is important
@@ -12,7 +12,8 @@
 # every time it encounters argument
 def squared(*params):
     for arg in params:
-        yield((arg, arg % 2 == 0))
+        yield ((arg, arg % 2 == 0))
+
 
 # Quick Test
 print("Divisibility Test(by 2): ")

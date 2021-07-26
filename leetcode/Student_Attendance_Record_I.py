@@ -23,9 +23,9 @@ class Solution:
         countA = 0
 
         for i in range(len(s)):
-            if s[i] == 'A':
+            if s[i] == "A":
                 countA += 1
-            if (i < len(s) - 2) and s[i] == 'L' and s[i + 1] == 'L' and s[i + 2] == 'L':
+            if (i < len(s) - 2) and s[i] == "L" and s[i + 1] == "L" and s[i + 2] == "L":
                 return False
 
         if countA > 1:

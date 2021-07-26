@@ -34,4 +34,4 @@ class Solution:
             longest = max(odd, even, key=lambda x: x[1] - x[0])
             currentLongest = max(currentLongest, longest, key=lambda x: x[1] - x[0])
 
-        return s[currentLongest[0]: currentLongest[1]]
+        return s[currentLongest[0] : currentLongest[1]]

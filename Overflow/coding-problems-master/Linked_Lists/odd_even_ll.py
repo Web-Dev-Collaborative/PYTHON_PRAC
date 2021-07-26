@@ -1,4 +1,4 @@
-'''
+"""
 Odd Even Linked List
 
 Given a singly linked list, group all odd nodes together followed by the even nodes.
@@ -15,7 +15,7 @@ Output: 2 -> 3 -> 6 -> 7 -> 1 -> 5 -> 4
 Count the index of the node and add it to the odd or even linked list (without creating new nodes).
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
@@ -24,6 +24,7 @@ Count the index of the node and add it to the odd or even linked list (without c
 
 # import ListNode class from ll_helpers.py
 from ll_helpers import ListNode
+
 
 def odd_even_ll(head):
     odd = ListNode(None)

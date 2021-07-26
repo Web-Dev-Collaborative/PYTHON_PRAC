@@ -1,4 +1,4 @@
-'''
+"""
 Reverse words in sentence
 
 Reverse words in a given string, in linear time complexity.
@@ -17,22 +17,23 @@ In Python, the string manipulation operations are too slow (string is immutable)
 In C/C++, the Space complexity will be O(1) (because the strings are just arrays with chars).
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
 # Solution #
 ############
 
+
 def reverse_words_in_sentence(sentence):
-    arr = [c for c in sentence] # or just arr = list(sentence)
+    arr = [c for c in sentence]  # or just arr = list(sentence)
     n = len(arr)
     last_idx = n - 1
     start = 0
 
     # reverse all words
     for i in range(n):
-        if arr[i] == ' ':
+        if arr[i] == " ":
             # in this moment we're sure that the word is complete
             reverse_array(arr, start, i - 1)
             start = i + 1
@@ -41,12 +42,13 @@ def reverse_words_in_sentence(sentence):
     # reverse the whole sentence
     reverse_array(arr, 0, last_idx)
 
-    return ''.join(arr)
+    return "".join(arr)
+
 
 def reverse_array(arr, start, end):
     # reverse the array from the start index to the end index
     while start < end:
-        arr[start], arr[end] = arr[end], arr[start] # swap
+        arr[start], arr[end] = arr[end], arr[start]  # swap
         start += 1
         end -= 1
 
@@ -57,8 +59,8 @@ def reverse_array(arr, start, end):
 
 # Test 1
 # Correct result => 'much very program this like i'
-print(reverse_words_in_sentence('i like this program very much'))
+print(reverse_words_in_sentence("i like this program very much"))
 
 # Test 2
 # Correct result => 'you are how'
-print(reverse_words_in_sentence('how are you'))
+print(reverse_words_in_sentence("how are you"))

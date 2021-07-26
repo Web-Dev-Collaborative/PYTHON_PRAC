@@ -1,4 +1,4 @@
-'''
+"""
 K-th Smallest Number
 
 Find the K-th smallest number in an unordered list.
@@ -20,12 +20,13 @@ More precisly in-place quick sort. Recursive solution.
 Completely the same algorithm as the previous one, but without recursion. This solution is cleaner.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ##############
 # Solution 1 #
 ##############
+
 
 def find_kth_smallest_recursive(arr, k):
     n = len(arr)
@@ -34,6 +35,7 @@ def find_kth_smallest_recursive(arr, k):
     if k < 1:
         return None
     return kth_smallest(arr, k - 1, 0, n - 1)
+
 
 def kth_smallest(arr, k, left, right):
     pivot = pivoting(arr, left, right)
@@ -44,6 +46,7 @@ def kth_smallest(arr, k, left, right):
         return kth_smallest(arr, k, pivot + 1, right)
 
     return arr[pivot]
+
 
 def pivoting(arr, left, right):
     # Linear time complexity pivoting
@@ -65,6 +68,7 @@ def pivoting(arr, left, right):
     # return the new pivot
     return new_pivot
 
+
 def swap(arr, i, j):
     # swaps two elements in an array
     arr[i], arr[j] = arr[j], arr[i]
@@ -73,6 +77,7 @@ def swap(arr, i, j):
 ##############
 # Solution 2 #
 ##############
+
 
 def find_kth_smallest(arr, k):
     n = len(arr)
@@ -86,7 +91,7 @@ def find_kth_smallest(arr, k):
     right = n - 1
 
     while True:
-        pivot = pivoting(arr, left, right) # the same method from the previous solution
+        pivot = pivoting(arr, left, right)  # the same method from the previous solution
 
         if pivot > k:
             right = pivot - 1

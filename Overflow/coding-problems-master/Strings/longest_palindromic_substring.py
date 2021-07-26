@@ -1,4 +1,4 @@
-'''
+"""
 Longest Palindromic Substring
 
 Find the length of the longest palindromic substring.
@@ -11,12 +11,13 @@ Simple algorithm, for each position compare left and right side and count the le
     Time Complexity:    O(N^2)
     Space Complexity:   O(1)
 * For this problem exists a faster algorithm, called Manchester's Algorithm. Time Complexity O(N) and Space Complexity O(N).
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def longest_palindromic_substring(s):
     n = len(s)
@@ -33,6 +34,7 @@ def longest_palindromic_substring(s):
         longest = max(longest, count_odd, count_even)
 
     return longest
+
 
 def compare_both_sides(s, count, left, right):
     # helper method to avoid duplicate code
@@ -52,24 +54,24 @@ def compare_both_sides(s, count, left, right):
 
 # Test 1
 # Correct result => 4
-print(longest_palindromic_substring('google'))
+print(longest_palindromic_substring("google"))
 
 # Test 2
 # Correct result => 11
-print(longest_palindromic_substring('sgoaberebaogle'))
+print(longest_palindromic_substring("sgoaberebaogle"))
 
 # Test 3
 # Correct result => 2
-print(longest_palindromic_substring('abcdeef'))
+print(longest_palindromic_substring("abcdeef"))
 
 # Test 4
 # Correct result => 7
-print(longest_palindromic_substring('racecar'))
+print(longest_palindromic_substring("racecar"))
 
 # Test 5
 # Correct result => 5
-print(longest_palindromic_substring('abbabbc'))
+print(longest_palindromic_substring("abbabbc"))
 
 # Test 6
 # Correct result => 10
-print(longest_palindromic_substring('forgeeksskeegfor'))
+print(longest_palindromic_substring("forgeeksskeegfor"))

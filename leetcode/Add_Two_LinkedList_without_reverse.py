@@ -22,9 +22,7 @@ class ListNode:
 
 
 class Solution:
-
     def addTwoNumbers(self, l1, l2):
-
         def ll_to_l(l):
             num = ""
             while l:

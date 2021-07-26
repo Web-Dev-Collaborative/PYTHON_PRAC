@@ -1,4 +1,4 @@
-'''
+"""
 Queens Problem
 
 You have an N by N board. Write a function that, given N, returns the number of possible arrangements
@@ -10,18 +10,20 @@ Backtracking solution.
     Time Complexity:    O(N!) (but I think it's much faster!)
     Space Complexity:   O(N)
 * There are much faster solutions, like O(N^2)
-'''
+"""
 
 
 ############
 # Solution #
 ############
 
+
 def place_n_queens(n):
     columns = [False for i in range(n)]
     order = []
 
     return backtracking(columns, order)
+
 
 def backtracking(columns, order):
     # columns and order are references, no extra memory for those arrays (they are just pointers)
@@ -42,6 +44,7 @@ def backtracking(columns, order):
             del order[-1]
 
     return total
+
 
 def check_diagonals(order, pos):
     current_row = len(order)

@@ -11,8 +11,8 @@ def open_website(link):
         web_open(link)
     except Exception as e:
         print("Error Occurred:\n {}".format(e))
-    
-    
+
+
 # Just for test
 get_link = raw_input("Link to open: ")
 open_website(get_link)

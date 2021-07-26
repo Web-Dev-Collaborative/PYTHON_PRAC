@@ -28,7 +28,7 @@ class Solution:
         first_part = S[:first]
         licence_key = ""
         for i in range(first, len(strs), K):
-            licence_key = licence_key + strs[i: i + K] + "-"
+            licence_key = licence_key + strs[i : i + K] + "-"
         if len(first_part) > 0:
             licence_key = first_part + "-" + licence_key[:-1]
 

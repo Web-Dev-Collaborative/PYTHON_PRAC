@@ -9,10 +9,11 @@
 #  reference to the next node.
 # -----------------------------------------------------------------------------------------
 
-class Node():
+
+class Node:
     def __init__(self, value):
         self._value = value
-        self._next = None                 # Sometimes called 'grounding the node'
+        self._next = None  # Sometimes called 'grounding the node'
 
     @property
     def value(self):
@@ -31,7 +32,7 @@ class Node():
         self._next = value
 
 
-class LinkedList():
+class LinkedList:
     def __init__(self):
         self._head = None
 

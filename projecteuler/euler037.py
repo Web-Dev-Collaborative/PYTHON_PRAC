@@ -47,7 +47,7 @@ def truncatable_primes(m):
         if p < 11 or p in TRUNCATABLE_PRIMES:
             continue
         if is_left_prime(p) and is_right_prime(p):
-                TRUNCATABLE_PRIMES.add(p)
+            TRUNCATABLE_PRIMES.add(p)
     return TRUNCATABLE_PRIMES
 
 
@@ -57,13 +57,15 @@ def test():
     assert is_prime(3797)
     assert is_left_prime(3797)
     assert is_right_prime(3797)
-    assert {3137, 37, 73, 797, 3797, 53, 23, 313, 317, 373} == truncatable_primes(10 ** 4)
+    assert {3137, 37, 73, 797, 3797, 53, 23, 313, 317, 373} == truncatable_primes(
+        10 ** 4
+    )
 
 
 def run():
     print(sum(truncatable_primes(10 ** 6)))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

@@ -1,4 +1,4 @@
-'''
+"""
 Number of Islands
 
 Given a 2d grid map of '1's (land) and '0's (water), count the number of islands.
@@ -25,7 +25,7 @@ Output: 3
 This problem can be solved in several ways (using DFS recursion or using the stack data structure) i'll solve it with BFS using Queue data structure.
     Time Complexity:    O(M * N)
     Space Complexity:   O(M * N)
-'''
+"""
 
 
 ############
@@ -33,6 +33,7 @@ This problem can be solved in several ways (using DFS recursion or using the sta
 ############
 
 from collections import deque
+
 
 def num_of_islands(grid):
     n = len(grid)
@@ -47,7 +48,7 @@ def num_of_islands(grid):
     for i in range(n):
         for j in range(m):
             # search for an island
-            if grid[i][j] == '1':
+            if grid[i][j] == "1":
                 islands += 1
                 queue.append((i, j))
 
@@ -55,11 +56,11 @@ def num_of_islands(grid):
                 while queue:
                     coord = queue.popleft()
                     x, y = coord
-                    
-                    if grid[x][y] != '1':
+
+                    if grid[x][y] != "1":
                         continue
                     # delete the island
-                    grid[x][y] = '0'
+                    grid[x][y] = "0"
 
                     for direction in directions:
                         # calculate the next position
@@ -81,4 +82,13 @@ def num_of_islands(grid):
 
 # Test 1
 # Correct result => 3
-print(num_of_islands([['1','1','0','0','0'], ['1','1','0','0','0'], ['0','0','1','0','0'], ['0','0','0','1', '1']]))
+print(
+    num_of_islands(
+        [
+            ["1", "1", "0", "0", "0"],
+            ["1", "1", "0", "0", "0"],
+            ["0", "0", "1", "0", "0"],
+            ["0", "0", "0", "1", "1"],
+        ]
+    )
+)

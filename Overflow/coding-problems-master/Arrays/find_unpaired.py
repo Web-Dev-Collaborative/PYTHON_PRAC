@@ -1,4 +1,4 @@
-'''
+"""
 Find unpaired element
 
 Given an array with odd number of elements, where (N - 1)/2 elements have duplicates and ONLY 1 is unique.
@@ -11,12 +11,13 @@ Using XOR find the unique element.
 * Example: 13 XOR 13 = 1101 XOR 1101 = 0.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def find_unpaired_element(arr):
     unique = 0

@@ -30,24 +30,24 @@ def is_palindrome(x):
 
     while second_half < x:
 
-        second_half = (second_half * 10 + (x % 10))
+        second_half = second_half * 10 + (x % 10)
         x = x // 10
 
         if second_half == 0:
             break
 
-    return x == second_half or x == second_half // 10;
+    return x == second_half or x == second_half // 10
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     num1 = 121
     num2 = 1221
     num3 = 1
     num4 = 10
     num5 = 1234231
 
-    print (str(num1) + " is palindrome? => " + str(is_palindrome(num1)))
-    print (str(num2) + " is palindrome? => " + str(is_palindrome(num2)))
-    print (str(num3) + " is palindrome? => " + str(is_palindrome(num3)))
-    print (str(num4) + " is palindrome? => " + str(is_palindrome(num4)))
-    print (str(num5) + " is palindrome? => " + str(is_palindrome(num5)))
+    print(str(num1) + " is palindrome? => " + str(is_palindrome(num1)))
+    print(str(num2) + " is palindrome? => " + str(is_palindrome(num2)))
+    print(str(num3) + " is palindrome? => " + str(is_palindrome(num3)))
+    print(str(num4) + " is palindrome? => " + str(is_palindrome(num4)))
+    print(str(num5) + " is palindrome? => " + str(is_palindrome(num5)))

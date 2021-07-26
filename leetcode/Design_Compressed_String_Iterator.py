@@ -31,7 +31,6 @@
 
 
 class StringIterator:
-
     def __init__(self, compressedString):
         self.s = compressedString
         self.ptr = 0
@@ -41,7 +40,7 @@ class StringIterator:
 
     def next(self):
         if not self.hasNext():
-            return ' '
+            return " "
         if self.num == 0:
             self.char = self.s[self.ptr]
             self.ptr = self.ptr + 1
@@ -60,6 +59,7 @@ class StringIterator:
         if self.ptr >= self.len and self.num == 0:
             return False
         return True
+
 
 # Your StringIterator object will be instantiated and called as such:
 # obj = StringIterator(compressedString)

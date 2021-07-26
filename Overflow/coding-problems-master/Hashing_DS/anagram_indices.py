@@ -1,4 +1,4 @@
-'''
+"""
 Anagram Indices
 
 Given a word and a string S, find all starting indices in S which are anagrams of word.
@@ -17,35 +17,36 @@ and remove from the back of sliding window.
 
 Solution 2: this can be solved using Rabin–Karp algorithm (small modification of this algorithm).
 But both solutions have same time & space complexity.
-'''
+"""
 
 
 ############
 # Solution #
 ############
 
+
 class LettersCounter:
     def __init__(self):
         self.__letters = {}
 
     def __create_if_not_exist(self, letter):
-        ''' helper method for creating a new field for the letter '''
+        """ helper method for creating a new field for the letter """
         if letter not in self.__letters:
             self.__letters[letter] = 0
 
     def __delete_if_zero_letters(self, letter):
-        ''' helper deleting a letter from dictionary '''
+        """ helper deleting a letter from dictionary """
         if self.__letters[letter] == 0:
             del self.__letters[letter]
 
     def add_letter(self, letter):
-        ''' increment the number of letters '''
+        """ increment the number of letters """
         self.__create_if_not_exist(letter)
         self.__letters[letter] += 1
         self.__delete_if_zero_letters(letter)
 
     def remove_letter(self, letter):
-        ''' decrement the number of letters '''
+        """ decrement the number of letters """
         self.__create_if_not_exist(letter)
         self.__letters[letter] -= 1
         self.__delete_if_zero_letters(letter)
@@ -92,4 +93,4 @@ def anagram_indices(s, word):
 ###########
 
 # Correct result => [0, 3, 4]
-print(anagram_indices('abxaba', 'ab'))
+print(anagram_indices("abxaba", "ab"))

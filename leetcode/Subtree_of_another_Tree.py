@@ -16,7 +16,7 @@
 #  1   2
 # Return true, because t has the same structure and node values with a subtree of s.
 # Example 2:
-# Given tree s: 
+# Given tree s:
 #
 #      3
 #     / \
@@ -45,6 +45,14 @@ class Solution:
             if not node:
                 return "null"
 
-            return '-' + str(node.val) + "-" + preOrder(node.left) + "-" + preOrder(node.right) + '-'
+            return (
+                "-"
+                + str(node.val)
+                + "-"
+                + preOrder(node.left)
+                + "-"
+                + preOrder(node.right)
+                + "-"
+            )
 
         return preOrder(t) in preOrder(s)

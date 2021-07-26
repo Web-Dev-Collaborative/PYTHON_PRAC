@@ -19,7 +19,7 @@ from palindromes import is_palindrome
 
 
 def to_binary(n):
-    return '{:b}'.format(n)
+    return "{:b}".format(n)
 
 
 def dec_and_bin_palindromes(m):
@@ -40,6 +40,6 @@ def run():
     print(sum_dec_and_bin_palindromes(10 ** 6))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

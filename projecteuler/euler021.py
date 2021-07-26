@@ -41,9 +41,7 @@ def amicables(n):
 
 
 def test():
-    assert (
-        [1, 2, 4, 5, 11, 10, 20, 22, 44, 55, 110, 220] == list(divisors(220))
-    )
+    assert [1, 2, 4, 5, 11, 10, 20, 22, 44, 55, 110, 220] == list(divisors(220))
     assert d(220) == 284 and d(284) == 220
 
 
@@ -51,6 +49,6 @@ def run():
     print(sum(amicables(10 ** 4)))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

@@ -11,9 +11,10 @@ BUTTON_Y = 306
 BUTTON_PLUS = 313
 BUTTON_MINUS = 312
 BUTTON_START = 317
-BUTTON_HOME = 316 
+BUTTON_HOME = 316
 
-class JoyStick():
+
+class JoyStick:
     def __init__(self, eventFile):
         self.eventFile = eventFile
         self.buttonHandler = None
@@ -30,9 +31,9 @@ class JoyStick():
         self.joyRightHandler = joyRightHandler
 
     def startLoop(self):
-        FORMAT = 'llHHI'
+        FORMAT = "llHHI"
         EVENT_SIZE = struct.calcsize(FORMAT)
-        with open(self.eventFile, 'rb') as infile:
+        with open(self.eventFile, "rb") as infile:
             lx, ly, rx, ry = 0, 0, 0, 0
             while True:
                 event = infile.read(EVENT_SIZE)

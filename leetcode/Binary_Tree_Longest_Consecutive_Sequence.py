@@ -46,7 +46,6 @@ class TreeNode:
 
 class Solution:
     def longestConsecutive(self, root):
-
         def helper(node, parent, length):
             if not node:
                 return length
@@ -56,7 +55,10 @@ class Solution:
             else:
                 length = 1
 
-            return max(length, max(helper(node.left, node, length), helper(node.right, node, length)))
+            return max(
+                length,
+                max(helper(node.left, node, length), helper(node.right, node, length)),
+            )
 
         return helper(root, None, 0)
 

@@ -35,7 +35,6 @@ from collections import deque
 
 
 class PhoneDirectory:
-
     def __init__(self, maxNumbers: int):
 
         self.num = maxNumbers

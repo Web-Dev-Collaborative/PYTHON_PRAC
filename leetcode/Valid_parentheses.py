@@ -33,38 +33,38 @@ def isValid(s):
 
     for c in s:
 
-        if c == '(':
-            stack.append('(')
+        if c == "(":
+            stack.append("(")
 
-        if c == ')':
+        if c == ")":
 
             if len(stack) == 0:
                 return False
-            if stack[-1] != '(':
+            if stack[-1] != "(":
                 return False
             else:
                 stack.pop()
 
-        if c == '[':
-            stack.append('[')
+        if c == "[":
+            stack.append("[")
 
-        if c == ']':
+        if c == "]":
 
             if len(stack) == 0:
                 return False
-            if stack[-1] != '[':
+            if stack[-1] != "[":
                 return False
             else:
                 stack.pop()
 
-        if c == '{':
-            stack.append('{')
+        if c == "{":
+            stack.append("{")
 
-        if c == '}':
+        if c == "}":
 
             if len(stack) == 0:
                 return False
-            if stack[-1] != '{':
+            if stack[-1] != "{":
                 return False
             else:
                 stack.pop()

@@ -1,4 +1,4 @@
-'''
+"""
 Merge Intervals
 
 You are given an array of intervals.
@@ -21,12 +21,13 @@ Sort the intervals (using the start), accessing order. After that just iterate t
 and check if the current interval belongs to the last created interval.
     Time Complexity:    O(N LogN)
     Space Complexity:   O(N)    , for the result
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def merge_intervals(intervals):
     n = len(intervals)
@@ -42,7 +43,10 @@ def merge_intervals(intervals):
         # check if this interval belongs to the last created interval
         if intervals[i][0] <= mergedIntervals[-1][1] + 1:
             # only the end can be changed (just copy start it's min, because the array is sorted)
-            mergedIntervals[-1] = (mergedIntervals[-1][0], max(mergedIntervals[-1][1], intervals[i][1]))
+            mergedIntervals[-1] = (
+                mergedIntervals[-1][0],
+                max(mergedIntervals[-1][1], intervals[i][1]),
+            )
         else:
             # create a new interval
             mergedIntervals.append(intervals[i])

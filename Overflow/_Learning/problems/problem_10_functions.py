@@ -27,15 +27,15 @@
 # WRITE YOUR CODE HERE
 
 
-
 # Example calls
 def hello(name):
     return f"Hello, {name}"
 
+
 hello_check = none_check(hello)
 print(hello_check("Poppy"))  # > "Hello, Poppy"
-print(hello_check(None))     # > None
+print(hello_check(None))  # > None
 
 mult_check = none_check(lambda n: n * 100)
-print(mult_check(2))     # > 200
+print(mult_check(2))  # > 200
 print(mult_check(None))  # > None

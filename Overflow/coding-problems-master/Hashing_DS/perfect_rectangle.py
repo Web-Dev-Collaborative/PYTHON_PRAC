@@ -1,4 +1,4 @@
-'''
+"""
 Perfect Rectangle
 
 Given N axis-aligned rectangles where N > 0, determine if they all together form an exact cover of a rectangular region.
@@ -47,7 +47,7 @@ Check if 4 unique points exist. If 4 unique points exist, then
 check if the sum of all rectangles is equal to the final rectangle.
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
@@ -55,6 +55,7 @@ check if the sum of all rectangles is equal to the final rectangle.
 ############
 
 import math
+
 
 def is_perfect_rectangle(rectangles):
     areas_sum = 0
@@ -66,10 +67,10 @@ def is_perfect_rectangle(rectangles):
 
         # find all points of the rectangle and check if they already exist
         rect_points = [
-            (rect[0], rect[1]),   # left bottom
-            (rect[0], rect[3]),   # left top
-            (rect[2], rect[3]),   # right top
-            (rect[2], rect[1])    # right bottom
+            (rect[0], rect[1]),  # left bottom
+            (rect[0], rect[3]),  # left top
+            (rect[2], rect[3]),  # right top
+            (rect[2], rect[1]),  # right bottom
         ]
 
         for point in rect_points:
@@ -89,11 +90,13 @@ def is_perfect_rectangle(rectangles):
             min(bounding_rectangle[0], point[0]),
             min(bounding_rectangle[1], point[1]),
             max(bounding_rectangle[2], point[0]),
-            max(bounding_rectangle[3], point[1])
+            max(bounding_rectangle[3], point[1]),
         ]
 
     # calculate the area of bounding rectangle
-    bounding_rectangle_area = (bounding_rectangle[2] - bounding_rectangle[0]) * (bounding_rectangle[3] - bounding_rectangle[1])
+    bounding_rectangle_area = (bounding_rectangle[2] - bounding_rectangle[0]) * (
+        bounding_rectangle[3] - bounding_rectangle[1]
+    )
 
     # to see if there are overlapping, compare the sum of areas with the final rectangle area
     return areas_sum == bounding_rectangle_area

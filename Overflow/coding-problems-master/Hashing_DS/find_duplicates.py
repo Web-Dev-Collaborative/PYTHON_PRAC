@@ -1,4 +1,4 @@
-'''
+"""
 Find duplicates
 
 Find all duplicates in an array where all elements are positive (>0)
@@ -16,12 +16,13 @@ the other has same functionality as the hashset in the first solution.
 (not as the previous solution, only for positive numbers or smaller elements than the length of array).
     Time Complexity:    O(N)
     Space Complexity:   O(D)
-'''
+"""
 
 
 ##############
 # Solution 1 #
 ##############
+
 
 def find_duplicates(arr):
     n = len(arr)
@@ -44,6 +45,7 @@ def find_duplicates(arr):
 ##############
 # Solution 2 #
 ##############
+
 
 def find_duplicates_2(arr):
     n = len(arr)

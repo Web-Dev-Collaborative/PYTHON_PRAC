@@ -1,4 +1,4 @@
-'''
+"""
 Reverse a linked list
 
 Reverse a linked list in one iteration without using additional space.
@@ -13,7 +13,7 @@ Iterate LL and change the pointer of the current nodes to point to the previous 
 Solution 2: Same approach using recursion.
     Time Complexity:    O(N)
     Space Complexity:   O(N)        , because of the recursion stack (the stack will be with N depth till the last node of the linked list is reached)
-'''
+"""
 
 
 ##############
@@ -22,6 +22,7 @@ Solution 2: Same approach using recursion.
 
 # import ListNode class from ll_helpers.py
 from ll_helpers import ListNode
+
 
 def reverse_ll(ll):
     prev_node = None
@@ -44,8 +45,10 @@ def reverse_ll(ll):
 # Solution 2 #
 ##############
 
+
 def reverse_ll_2(ll):
     return reverse(ll, None)
+
 
 def reverse(node, prev_node):
     if node is None:

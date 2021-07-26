@@ -22,7 +22,7 @@ from digits import digit_rotations
 
 
 def is_circular_prime(n):
-    return '0' not in str(n) and all(is_prime(r) for r in digit_rotations(n))
+    return "0" not in str(n) and all(is_prime(r) for r in digit_rotations(n))
 
 
 def count_circular_primes(m):
@@ -39,6 +39,6 @@ def run():
     print(count_circular_primes(10 ** 6))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

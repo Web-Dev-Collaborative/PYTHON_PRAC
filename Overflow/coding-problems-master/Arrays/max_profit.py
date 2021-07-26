@@ -1,4 +1,4 @@
-'''
+"""
 Max Profit (Best Time to Buy and Sell Stock)
 
 Say you have an array for which the ith element is the price of a given stock on day i.
@@ -23,12 +23,13 @@ Output explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), prof
 Sum only the positive differences between neighbouring elements.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def max_profit(prices):
     total = 0

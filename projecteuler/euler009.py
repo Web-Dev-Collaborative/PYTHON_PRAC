@@ -39,7 +39,7 @@ def pythagorean_triplet_that_sums(s):
             continue
         c = int(c)
 
-#        print a, b, c, a + b + c
+        #        print a, b, c, a + b + c
         if a + b + c == s:
             return (a, b, c)
 
@@ -60,6 +60,6 @@ def run():
     print(prod_of_pythagorean_triplet_that_sums(1000))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

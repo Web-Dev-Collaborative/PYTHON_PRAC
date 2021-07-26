@@ -7,7 +7,11 @@ from _pydevd_bundle.pydevd_comm import get_global_debugger
 from _pydevd_bundle.pydevd_constants import call_only_once
 from _pydev_imps._pydev_saved_modules import threading
 from _pydevd_bundle.pydevd_constants import dict_items
-from _pydevd_bundle.pydevd_custom_frames import update_custom_frame, remove_custom_frame, add_custom_frame
+from _pydevd_bundle.pydevd_custom_frames import (
+    update_custom_frame,
+    remove_custom_frame,
+    add_custom_frame,
+)
 import stackless  # @UnresolvedImport
 from _pydev_bundle import pydev_log
 
@@ -15,11 +19,11 @@ from _pydev_bundle import pydev_log
 # Used so that we don't loose the id (because we'll remove when it's not alive and would generate a new id for the
 # same tasklet).
 class TaskletToLastId:
-    '''
+    """
     So, why not a WeakKeyDictionary?
     The problem is that removals from the WeakKeyDictionary will create a new tasklet (as it adds a callback to
     remove the key when it's garbage-collected), so, we can get into a recursion.
-    '''
+    """
 
     def __init__(self):
         self.tasklet_ref_to_last_id = {}
@@ -31,7 +35,9 @@ class TaskletToLastId:
     def __setitem__(self, tasklet, last_id):
         self.tasklet_ref_to_last_id[weakref.ref(tasklet)] = last_id
         self._i += 1
-        if self._i % 100 == 0:  # Collect at each 100 additions to the dict (no need to rush).
+        if (
+            self._i % 100 == 0
+        ):  # Collect at each 100 additions to the dict (no need to rush).
             for tasklet_ref in list(self.tasklet_ref_to_last_id.keys()):
                 if tasklet_ref() is None:
                     del self.tasklet_ref_to_last_id[tasklet_ref]
@@ -40,9 +46,9 @@ class TaskletToLastId:
 _tasklet_to_last_id = TaskletToLastId()
 
 
-#=======================================================================================================================
+# =======================================================================================================================
 # _TaskletInfo
-#=======================================================================================================================
+# =======================================================================================================================
 class _TaskletInfo:
 
     _last_id = 0
@@ -65,21 +71,21 @@ class _TaskletInfo:
         tasklet = self.tasklet_weakref()
         if tasklet:
             if tasklet.blocked:
-                state = 'blocked'
+                state = "blocked"
             elif tasklet.paused:
-                state = 'paused'
+                state = "paused"
             elif tasklet.scheduled:
-                state = 'scheduled'
+                state = "scheduled"
             else:
-                state = '<UNEXPECTED>'
+                state = "<UNEXPECTED>"
 
             try:
                 name = tasklet.name
             except AttributeError:
                 if tasklet.is_main:
-                    name = 'MainTasklet'
+                    name = "MainTasklet"
                 else:
-                    name = 'Tasklet-%s' % (self._tasklet_id,)
+                    name = "Tasklet-%s" % (self._tasklet_id,)
 
             thread_id = tasklet.thread_id
             if thread_id != -1:
@@ -88,7 +94,9 @@ class _TaskletInfo:
                         if thread.name:
                             thread_name = "of %s" % (thread.name,)
                         else:
-                            thread_name = "of Thread-%s" % (thread.name or str(thread_id),)
+                            thread_name = "of Thread-%s" % (
+                                thread.name or str(thread_id),
+                            )
                         break
                 else:
                     # should not happen.
@@ -101,11 +109,11 @@ class _TaskletInfo:
             tid = id(tasklet)
             tasklet = None
         else:
-            state = 'dead'
-            name = 'Tasklet-%s' % (self._tasklet_id,)
+            state = "dead"
+            name = "Tasklet-%s" % (self._tasklet_id,)
             thread_name = ""
-            tid = '-'
-        self.tasklet_name = '%s %s %s (%s)' % (state, name, thread_name, tid)
+            tid = "-"
+        self.tasklet_name = "%s %s %s (%s)" % (state, name, thread_name, tid)
 
     if not hasattr(stackless.tasklet, "trace_function"):
 
@@ -118,9 +126,9 @@ class _TaskletInfo:
                     name = tasklet.name
                 except AttributeError:
                     if tasklet.is_main:
-                        name = 'MainTasklet'
+                        name = "MainTasklet"
                     else:
-                        name = 'Tasklet-%s' % (self._tasklet_id,)
+                        name = "Tasklet-%s" % (self._tasklet_id,)
 
                 thread_id = tasklet.thread_id
                 for thread in threading.enumerate():
@@ -128,7 +136,9 @@ class _TaskletInfo:
                         if thread.name:
                             thread_name = "of %s" % (thread.name,)
                         else:
-                            thread_name = "of Thread-%s" % (thread.name or str(thread_id),)
+                            thread_name = "of Thread-%s" % (
+                                thread.name or str(thread_id),
+                            )
                         break
                 else:
                     # should not happen.
@@ -138,25 +148,25 @@ class _TaskletInfo:
                 tid = id(tasklet)
                 tasklet = None
             else:
-                name = 'Tasklet-%s' % (self._tasklet_id,)
+                name = "Tasklet-%s" % (self._tasklet_id,)
                 thread_name = ""
-                tid = '-'
-            self.tasklet_name = '%s %s (%s)' % (name, thread_name, tid)
+                tid = "-"
+            self.tasklet_name = "%s %s (%s)" % (name, thread_name, tid)
 
 
 _weak_tasklet_registered_to_info = {}
 
 
-#=======================================================================================================================
+# =======================================================================================================================
 # get_tasklet_info
-#=======================================================================================================================
+# =======================================================================================================================
 def get_tasklet_info(tasklet):
     return register_tasklet_info(tasklet)
 
 
-#=======================================================================================================================
+# =======================================================================================================================
 # register_tasklet_info
-#=======================================================================================================================
+# =======================================================================================================================
 def register_tasklet_info(tasklet):
     r = weakref.ref(tasklet)
     info = _weak_tasklet_registered_to_info.get(r)
@@ -169,13 +179,13 @@ def register_tasklet_info(tasklet):
 _application_set_schedule_callback = None
 
 
-#=======================================================================================================================
+# =======================================================================================================================
 # _schedule_callback
-#=======================================================================================================================
+# =======================================================================================================================
 def _schedule_callback(prev, next):
-    '''
+    """
     Called when a context is stopped or a new context is made runnable.
-    '''
+    """
     try:
         if not prev and not next:
             return
@@ -192,7 +202,9 @@ def _schedule_callback(prev, next):
                 frame = next.frame
                 if frame is current_frame:
                     frame = frame.f_back
-                if hasattr(frame, 'f_trace'):  # Note: can be None (but hasattr should cover for that too).
+                if hasattr(
+                    frame, "f_trace"
+                ):  # Note: can be None (but hasattr should cover for that too).
                     frame.f_trace = debugger.get_thread_local_trace_func()
 
             debugger = None
@@ -201,7 +213,9 @@ def _schedule_callback(prev, next):
             register_tasklet_info(prev)
 
         try:
-            for tasklet_ref, tasklet_info in dict_items(_weak_tasklet_registered_to_info):  # Make sure it's a copy!
+            for tasklet_ref, tasklet_info in dict_items(
+                _weak_tasklet_registered_to_info
+            ):  # Make sure it's a copy!
                 tasklet = tasklet_ref()
                 if tasklet is None or not tasklet.alive:
                     # Garbage-collected already!
@@ -212,7 +226,9 @@ def _schedule_callback(prev, next):
                     if tasklet_info.frame_id is not None:
                         remove_custom_frame(tasklet_info.frame_id)
                 else:
-                    is_running = stackless.get_thread_info(tasklet.thread_id)[1] is tasklet
+                    is_running = (
+                        stackless.get_thread_info(tasklet.thread_id)[1] is tasklet
+                    )
                     if tasklet is prev or (tasklet is not next and not is_running):
                         # the tasklet won't run after this scheduler action:
                         # - the tasklet is the previous tasklet
@@ -225,9 +241,18 @@ def _schedule_callback(prev, next):
                             if debugger.get_file_type(frame) is None:
                                 tasklet_info.update_name()
                                 if tasklet_info.frame_id is None:
-                                    tasklet_info.frame_id = add_custom_frame(frame, tasklet_info.tasklet_name, tasklet.thread_id)
+                                    tasklet_info.frame_id = add_custom_frame(
+                                        frame,
+                                        tasklet_info.tasklet_name,
+                                        tasklet.thread_id,
+                                    )
                                 else:
-                                    update_custom_frame(tasklet_info.frame_id, frame, tasklet.thread_id, name=tasklet_info.tasklet_name)
+                                    update_custom_frame(
+                                        tasklet_info.frame_id,
+                                        frame,
+                                        tasklet.thread_id,
+                                        name=tasklet_info.tasklet_name,
+                                    )
 
                     elif tasklet is next or is_running:
                         if tasklet_info.frame_id is not None:
@@ -253,9 +278,9 @@ if not hasattr(stackless.tasklet, "trace_function"):
     # This code does not work reliable! It is affected by several
     # stackless bugs: Stackless issues #44, #42, #40
     def _schedule_callback(prev, next):
-        '''
+        """
         Called when a context is stopped or a new context is made runnable.
-        '''
+        """
         try:
             if not prev and not next:
                 return
@@ -266,7 +291,7 @@ if not hasattr(stackless.tasklet, "trace_function"):
                 # Ok, making next runnable: set the tracing facility in it.
                 debugger = get_global_debugger()
                 if debugger is not None and next.frame:
-                    if hasattr(next.frame, 'f_trace'):
+                    if hasattr(next.frame, "f_trace"):
                         next.frame.f_trace = debugger.get_thread_local_trace_func()
                 debugger = None
 
@@ -274,7 +299,9 @@ if not hasattr(stackless.tasklet, "trace_function"):
                 register_tasklet_info(prev)
 
             try:
-                for tasklet_ref, tasklet_info in dict_items(_weak_tasklet_registered_to_info):  # Make sure it's a copy!
+                for tasklet_ref, tasklet_info in dict_items(
+                    _weak_tasklet_registered_to_info
+                ):  # Make sure it's a copy!
                     tasklet = tasklet_ref()
                     if tasklet is None or not tasklet.alive:
                         # Garbage-collected already!
@@ -290,9 +317,17 @@ if not hasattr(stackless.tasklet, "trace_function"):
                                 f_back = tasklet.frame.f_back
                                 if debugger.get_file_type(f_back) is None:
                                     if tasklet_info.frame_id is None:
-                                        tasklet_info.frame_id = add_custom_frame(f_back, tasklet_info.tasklet_name, tasklet.thread_id)
+                                        tasklet_info.frame_id = add_custom_frame(
+                                            f_back,
+                                            tasklet_info.tasklet_name,
+                                            tasklet.thread_id,
+                                        )
                                     else:
-                                        update_custom_frame(tasklet_info.frame_id, f_back, tasklet.thread_id)
+                                        update_custom_frame(
+                                            tasklet_info.frame_id,
+                                            f_back,
+                                            tasklet.thread_id,
+                                        )
 
                         elif tasklet.is_current:
                             if tasklet_info.frame_id is not None:
@@ -313,13 +348,13 @@ if not hasattr(stackless.tasklet, "trace_function"):
 
     _original_setup = stackless.tasklet.setup
 
-    #=======================================================================================================================
+    # =======================================================================================================================
     # setup
-    #=======================================================================================================================
+    # =======================================================================================================================
     def setup(self, *args, **kwargs):
-        '''
+        """
         Called to run a new tasklet: rebind the creation so that we can trace it.
-        '''
+        """
 
         f = self.tempval
 
@@ -347,21 +382,21 @@ if not hasattr(stackless.tasklet, "trace_function"):
 
         return _original_setup(self, f, args, kwargs)
 
-    #=======================================================================================================================
+    # =======================================================================================================================
     # __call__
-    #=======================================================================================================================
+    # =======================================================================================================================
     def __call__(self, *args, **kwargs):
-        '''
+        """
         Called to run a new tasklet: rebind the creation so that we can trace it.
-        '''
+        """
 
         return setup(self, *args, **kwargs)
 
     _original_run = stackless.run
 
-    #=======================================================================================================================
+    # =======================================================================================================================
     # run
-    #=======================================================================================================================
+    # =======================================================================================================================
     def run(*args, **kwargs):
         debugger = get_global_debugger()
         if debugger is not None:
@@ -371,16 +406,18 @@ if not hasattr(stackless.tasklet, "trace_function"):
         return _original_run(*args, **kwargs)
 
 
-#=======================================================================================================================
+# =======================================================================================================================
 # patch_stackless
-#=======================================================================================================================
+# =======================================================================================================================
 def patch_stackless():
-    '''
+    """
     This function should be called to patch the stackless module so that new tasklets are properly tracked in the
     debugger.
-    '''
+    """
     global _application_set_schedule_callback
-    _application_set_schedule_callback = stackless.set_schedule_callback(_schedule_callback)
+    _application_set_schedule_callback = stackless.set_schedule_callback(
+        _schedule_callback
+    )
 
     def set_schedule_callback(callable):
         global _application_set_schedule_callback

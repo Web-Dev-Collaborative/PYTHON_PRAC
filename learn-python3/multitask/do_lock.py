@@ -7,11 +7,13 @@ import time, threading
 balance = 0
 lock = threading.Lock()
 
+
 def change_it(n):
     # 先存后取，结果应该为0:
     global balance
     balance = balance + n
     balance = balance - n
+
 
 def run_thread(n):
     for i in range(100000):
@@ -23,6 +25,7 @@ def run_thread(n):
         finally:
             # 改完了一定要释放锁:
             lock.release()
+
 
 t1 = threading.Thread(target=run_thread, args=(5,))
 t2 = threading.Thread(target=run_thread, args=(8,))

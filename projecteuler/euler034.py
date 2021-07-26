@@ -41,6 +41,6 @@ def run():
     print(sum(list_sum_fact_digits()))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

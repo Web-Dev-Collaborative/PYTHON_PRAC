@@ -37,7 +37,6 @@ class TreeNode(object):
 
 
 class Codec:
-
     def serialize(self, root):
         """Encodes a tree to a single string.
 
@@ -47,10 +46,15 @@ class Codec:
         if not root:
             return "#"
 
-        return str(root.val) + " " + self.serialize(root.left) + " " + self.serialize(root.right)
+        return (
+            str(root.val)
+            + " "
+            + self.serialize(root.left)
+            + " "
+            + self.serialize(root.right)
+        )
 
     def deserialize(self, data):
-
         def helper(values):
             value = next(values)
             if value == "#":

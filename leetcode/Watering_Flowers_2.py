@@ -35,7 +35,7 @@ class Solution:
                 count += 1
 
             if pointer1 == pointer2:
-                if ((can1 + can2) >= plants[pointer1]):
+                if (can1 + can2) >= plants[pointer1]:
                     return count
                 else:
                     return count + 1

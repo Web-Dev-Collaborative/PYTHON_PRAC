@@ -1,4 +1,4 @@
-'''
+"""
 Reverse array
 
 Reverse an array, in constant space and linear time complexity.
@@ -14,12 +14,13 @@ Exist 2 more "Pythonic" ways of reversing arrays/strings (but not in-place, they
 But I wanted to show how to implement a reverse algorithm step by step so someone will know how to implement it in other languages.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def reverse_arr(arr):
     start = 0
@@ -34,14 +35,15 @@ def reverse_arr(arr):
 
     return arr
 
+
 def swap(arr, i, j):
     # swapping two elements from a same array
     arr[i], arr[j] = arr[j], arr[i]
-    '''same as
+    """same as
     temp = arr[i]
     arr[i] = arr[j]
     arr[j] = temp
-    '''
+    """
 
 
 ###########

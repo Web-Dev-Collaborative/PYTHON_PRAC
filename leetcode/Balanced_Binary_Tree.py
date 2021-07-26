@@ -45,7 +45,10 @@ class Solution:
             leftB, leftH = helper(root.left)
             rightB, rightH = helper(root.right)
 
-            return (leftB and rightB and abs(leftH - rightH) <= 1, max(leftH, rightH) + 1)
+            return (
+                leftB and rightB and abs(leftH - rightH) <= 1,
+                max(leftH, rightH) + 1,
+            )
 
         return helper(root)[0]
 

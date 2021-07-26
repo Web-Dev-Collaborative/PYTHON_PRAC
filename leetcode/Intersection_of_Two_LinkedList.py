@@ -2,6 +2,7 @@
 
 # intersection of two Linked list
 
+
 class ListNode:
     def __init__(self, val):
         self.val = val

@@ -45,6 +45,6 @@ def run():
     print(spiral_diagonal_sum(1001))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

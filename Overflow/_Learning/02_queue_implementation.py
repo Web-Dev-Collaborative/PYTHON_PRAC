@@ -5,6 +5,7 @@
 # many Python programmers will use the standard library’s collections.deque class
 # to achieve O(1)O(1) enqueues and dequeues.
 
+
 class Queue(object):
     def __init__(self):
         self._items = []

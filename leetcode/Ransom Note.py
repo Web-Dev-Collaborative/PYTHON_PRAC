@@ -27,5 +27,6 @@ def ransom(ransomnote, magazine):
 
     return True
 
+
 if __name__ == "__main__":
     print(ransom("aa", "aab"))

@@ -5,7 +5,7 @@
 # - integer division & modulo teaming up
 # - warning: watch for rounding errors
 
-x = 25    # integer
+x = 25  # integer
 y = 17.0  # float
 
 # print(x)

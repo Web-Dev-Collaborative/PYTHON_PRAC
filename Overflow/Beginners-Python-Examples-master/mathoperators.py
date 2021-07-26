@@ -10,7 +10,7 @@ subtract = 546 - 132
 # * multiplies numbers
 multiply = 90 * 4
 # / divides numbers
-divide = 36/6
+divide = 36 / 6
 # returns the remainder of the division
 modulo = 17 % 3
 

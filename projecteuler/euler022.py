@@ -24,20 +24,17 @@ import csv
 from pathlib import Path
 from words import alphabetical_value
 
-FILENAME = Path(__file__).parent / '../data/names.txt'
+FILENAME = Path(__file__).parent / "../data/names.txt"
 NAMES = sorted(next(csv.reader(open(FILENAME))))
 
 
 def sum_alphabetical_values(names):
-    return sum(
-        i * alphabetical_value(s)
-        for i, s in enumerate(names, start=1)
-    )
+    return sum(i * alphabetical_value(s) for i, s in enumerate(names, start=1))
 
 
 def test():
     name = NAMES[938 - 1]
-    assert 'COLIN' == name
+    assert "COLIN" == name
     assert 53 == alphabetical_value(name)
 
 
@@ -45,6 +42,6 @@ def run():
     print(sum_alphabetical_values(NAMES))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

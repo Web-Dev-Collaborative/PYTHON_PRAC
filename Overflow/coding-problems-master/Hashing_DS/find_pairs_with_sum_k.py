@@ -1,4 +1,4 @@
-'''
+"""
 Find pairs with sum K
 
 Given an array, find all pairs which sum is equal to K.
@@ -10,12 +10,13 @@ Output: [(1, 9), (2, 8), (3, 7), (4, 6), (5, 5)]
 Save numbers as complements in a hashset and for each number search for the pair complement (K-number).
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def find_pairs(arr, K):
     # set to save all complements

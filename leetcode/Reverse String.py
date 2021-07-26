@@ -11,7 +11,6 @@
 
 
 class Solution:
-
     def reversefun(self, arr):
         left, right = 0, len(arr) - 1
 

@@ -27,13 +27,10 @@ from copy import deepcopy
 import csv
 
 
-FILENAME = Path(__file__).parent / '../data/matrix.txt'
+FILENAME = Path(__file__).parent / "../data/matrix.txt"
 
 
-MATRIX = [
-    [int(c) for c in line]
-    for line in csv.reader(open(FILENAME))
-]
+MATRIX = [[int(c) for c in line] for line in csv.reader(open(FILENAME))]
 
 
 TEST_DATA = [
@@ -41,7 +38,7 @@ TEST_DATA = [
     [201, 96, 342, 965, 150],
     [630, 803, 746, 422, 111],
     [537, 699, 497, 121, 956],
-    [805, 732, 524, 37, 331]
+    [805, 732, 524, 37, 331],
 ]
 
 
@@ -72,6 +69,6 @@ def run():
     assert 427337 == reduce_min_path(MATRIX)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

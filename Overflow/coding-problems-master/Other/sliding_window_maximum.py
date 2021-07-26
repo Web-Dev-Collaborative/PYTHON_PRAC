@@ -1,4 +1,4 @@
-'''
+"""
 Maximum of All Subarrays of Size K
 
 Given an array and an integer k, find the maximum for each and every contiguous subarray of size k.
@@ -15,7 +15,7 @@ Sliding window solution using deque or linked lists
 (only need to be able to remove from both sides and to add on both sides in constant time).
     Time Complexity:    O(N)
     Space Complexity:   O(K)
-'''
+"""
 
 
 ############
@@ -23,6 +23,7 @@ Sliding window solution using deque or linked lists
 ############
 
 from collections import deque
+
 
 def max_el_subarrays(arr, k):
     n = len(arr)

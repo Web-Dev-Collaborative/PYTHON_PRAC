@@ -24,7 +24,10 @@ class TreeNode:
         self.left = None
         self.right = None
 
+
 import collections
+
+
 class Solution:
     def invertTree(self, root):
         def helper(node):

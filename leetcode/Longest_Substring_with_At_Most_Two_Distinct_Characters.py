@@ -14,8 +14,8 @@
 
 class Solution:
     def lengthOfLongestSubstringTwoDistinct(self, s):
-        last_char = ''
-        second_last_char = ''
+        last_char = ""
+        second_last_char = ""
         last_char_count = 0
         maximum = 0
         currentMax = 0

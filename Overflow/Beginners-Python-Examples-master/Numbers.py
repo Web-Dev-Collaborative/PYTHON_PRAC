@@ -1,5 +1,5 @@
 # Prime number Determiner
-# replace input() with raw_input() in Python version 2.7 input() works with version 3 
+# replace input() with raw_input() in Python version 2.7 input() works with version 3
 import math as Math
 
 POSITIVE_MESSAGE = " is a prime number"
@@ -34,9 +34,9 @@ def is_number_prime(number):
 
 
 while True:
-    startOrEnd = str(input('Start or End : '))
-    if startOrEnd == 'Start':
-        number = int(input('Number to Check : '))
+    startOrEnd = str(input("Start or End : "))
+    if startOrEnd == "Start":
+        number = int(input("Number to Check : "))
         result = str(number)
         prime_status = is_number_prime(number)
 
@@ -46,5 +46,5 @@ while True:
             result += NEGATIVE_MESSAGE
         print(result)
     else:
-        print('Program Ended...')
+        print("Program Ended...")
         break

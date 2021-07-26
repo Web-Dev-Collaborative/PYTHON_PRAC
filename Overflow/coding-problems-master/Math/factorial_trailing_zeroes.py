@@ -1,4 +1,4 @@
-'''
+"""
 Factorial Trailing Zeroes
 
 Given an integer n, return the number of trailing zeroes in n!.
@@ -17,12 +17,13 @@ Output explanation: 5! = 120, one trailing zero.
 Find how many 5s are in range 0-N (more explanation in the solution).
     Time Complexity:    O(logN)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def trailing_zeroes(n):
     # 0s are produced when 2 and 5 are multiplied

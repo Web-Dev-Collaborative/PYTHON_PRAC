@@ -1,4 +1,4 @@
-'''
+"""
 Spiral Matrix
 
 Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
@@ -23,12 +23,13 @@ Output: [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]
 Simulate spiral moving, start from (0,0) and when a border is reached change the X or Y direction.
     Time Complexity:    O(N*M)
     Space Complexity:   O(N*M)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def spiral_matrix(matrix):
     n = len(matrix)
@@ -50,14 +51,14 @@ def spiral_matrix(matrix):
         for i in range(m):
             y += yDir
             res.append(matrix[x][y])
-        m -= 1 # decrease horizontal moving steps
-        yDir *= -1 # change the Y direction
+        m -= 1  # decrease horizontal moving steps
+        yDir *= -1  # change the Y direction
 
         for i in range(n):
             x += xDir
             res.append(matrix[x][y])
-        n -= 1 # decrease vertical moving steps
-        xDir *= -1 # change the Y direction
+        n -= 1  # decrease vertical moving steps
+        xDir *= -1  # change the Y direction
 
     return res
 
@@ -68,7 +69,7 @@ def spiral_matrix(matrix):
 
 # Test 1
 # Correct result => [1, 2, 3, 6, 9, 8, 7, 4, 5]
-print(spiral_matrix([[ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ]]))
+print(spiral_matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
 
 # Test 2
 # Correct result => [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-class Fib(object):
 
+class Fib(object):
     def __getitem__(self, n):
         if isinstance(n, int):
             a, b = 1, 1
@@ -21,6 +21,7 @@ class Fib(object):
                     L.append(a)
                 a, b = b, a + b
             return L
+
 
 f = Fib()
 print(f[0])

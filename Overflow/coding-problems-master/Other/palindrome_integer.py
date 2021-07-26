@@ -1,4 +1,4 @@
-'''
+"""
 Palindrome Integer
 
 Determine whether an integer is a palindrome.
@@ -23,12 +23,13 @@ If you care about integer overflow (in Python you shouldn't care about this), th
 and compare it with the other half. Also this solution is faster than the previous one because iterates only a half of the number.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ##############
 # Solution 1 #
 ##############
+
 
 def palindrome_integer_1(x):
     if x < 0:
@@ -46,6 +47,7 @@ def palindrome_integer_1(x):
 ##############
 # Solution 2 #
 ##############
+
 
 def palindrome_integer_2(x):
     # check if negative or ends with zero

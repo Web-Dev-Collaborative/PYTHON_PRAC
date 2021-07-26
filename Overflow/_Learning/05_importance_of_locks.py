@@ -1,6 +1,7 @@
 import threading
 from time import sleep
 
+
 class ValueHolder:
     def __init__(self):
         self._value = 0

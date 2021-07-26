@@ -1,5 +1,6 @@
 import requests
 import re
+
 try:
     from urllib.parse import urljoin
 except ImportError:
@@ -14,7 +15,7 @@ def crawl(url):
     req = requests.get(url)
 
     # Check if successful
-    if(req.status_code != 200):
+    if req.status_code != 200:
         return []
 
     # Find links
@@ -30,13 +31,14 @@ def crawl(url):
 
         print(link)
 
-if __name__ == '__main__':
-    crawl('https://lambda-static-server.netlify.app/')
+
+if __name__ == "__main__":
+    crawl("https://lambda-static-server.netlify.app/")
 
 
-# 
+#
 # python3 09_basic_link_web_crawler.py
-# 
+#
 # Found 11 links
 # https://lambda-static-server.netlify.app/assets/prism.css
 # https://lambda-static-server.netlify.app/assets/style.css

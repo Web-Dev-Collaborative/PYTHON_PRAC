@@ -1,4 +1,4 @@
-'''
+"""
 Find Peak Element
 
 A peak element is an element that is greater than its neighbors.
@@ -18,12 +18,13 @@ Output explanation: Your function can return either index number 1 where the pea
 Binary search (more description in the code).
     Time Complexity:    O(LogN)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def find_peak_element(nums):
     l = 0

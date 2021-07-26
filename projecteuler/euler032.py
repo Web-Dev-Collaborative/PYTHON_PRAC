@@ -29,7 +29,7 @@ def is_pandigital_product(a, b, n, k=9):
 
 
 def find_pandigital_products(k):
-    upper = int(digits_downfrom(k, 1)[:-k // 2])
+    upper = int(digits_downfrom(k, 1)[: -k // 2])
     for a in range(2, upper):
         if not is_semi_pandigital(a):
             continue
@@ -52,6 +52,6 @@ def run():
     print(sum(set(n for _a, _b, n in find_pandigital_products(9))))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

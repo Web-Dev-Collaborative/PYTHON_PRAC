@@ -25,6 +25,6 @@ def run():
     print(sum(even_fibs(4 * 10 ** 6)))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

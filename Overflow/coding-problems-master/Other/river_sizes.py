@@ -1,4 +1,4 @@
-'''
+"""
 River Sizes
 
 You are given a two-dimensional array (matrix) of potentially unequal height and width containing only 0s and 1s.
@@ -22,12 +22,13 @@ This problem can be solved using DFS or BFS.
 If 1 is found, find all horizontal or vertical neighbours (1s), and mark them as 0.
     Time Complexity:    O(N*M)
     Space Complexity:   O(N*M)     , because of recursion calls stack
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def river_sizes(matrix):
     n = len(matrix)
@@ -45,6 +46,7 @@ def river_sizes(matrix):
                 results.append(size)
 
     return results
+
 
 def dfs(coord, matrix):
     (i, j) = coord
@@ -85,10 +87,5 @@ def dfs(coord, matrix):
 
 # Test 1
 # Correct result => [2, 1, 3, 1]
-matrix = [
-    [1, 0, 0, 1],
-    [1, 0, 1, 0],
-    [0, 0, 1, 0],
-    [1, 0, 1, 0]
-    ]
+matrix = [[1, 0, 0, 1], [1, 0, 1, 0], [0, 0, 1, 0], [1, 0, 1, 0]]
 print(river_sizes(matrix))

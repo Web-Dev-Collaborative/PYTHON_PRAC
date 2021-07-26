@@ -18,12 +18,7 @@ It can be verified that T285 = P165 = H143 = 40755.
 
 Find the next triangle number that is also pentagonal and hexagonal.
 """
-from series import (
-    exagonals,
-    is_exagonal,
-    is_pentagonal,
-    is_triangle
-)
+from series import exagonals, is_exagonal, is_pentagonal, is_triangle
 
 
 def next_multiagonal(upfrom):
@@ -43,6 +38,6 @@ def run():
     print(next_multiagonal(40755))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

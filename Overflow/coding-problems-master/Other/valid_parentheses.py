@@ -1,4 +1,4 @@
-'''
+"""
 Valid Parentheses
 
 Given a string of round, curly, and square open and closing brackets, return whether the brackets are balanced (well-formed).
@@ -12,7 +12,7 @@ Output: True
 Use stack. Add open brackets in the stack, remove the last bracket from the stack if there is a closing brackets.
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
@@ -21,12 +21,9 @@ Use stack. Add open brackets in the stack, remove the last bracket from the stac
 
 from collections import deque
 
+
 def is_valid(string):
-    closing = {
-        '}': '{',
-        ']': '[',
-        ')': '('
-    }
+    closing = {"}": "{", "]": "[", ")": "("}
     stack = deque()
 
     for char in string:
@@ -49,12 +46,12 @@ def is_valid(string):
 
 # Test 1
 # Correct result => True
-print(is_valid('()[{([]{})}]'))
+print(is_valid("()[{([]{})}]"))
 
 # Test 2
 # Correct result => False
-print(is_valid('()[{([]{]})}]'))
+print(is_valid("()[{([]{]})}]"))
 
 # Test 3
 # Correct result => False
-print(is_valid('(]]])'))
+print(is_valid("(]]])"))

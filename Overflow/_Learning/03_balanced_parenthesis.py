@@ -67,11 +67,7 @@
 #    1. When closing symbol appears, make sure it correctly matches opening
 #       symbol on the top of the stack
 
-PAIRINGS = {
-    '(': ')',
-    '{': '}',
-    '[': ']',
-}
+PAIRINGS = {"(": ")", "{": "}", "[": "]"}
 
 
 def is_balanced(symbols):
@@ -108,8 +104,8 @@ def get_input():
     """
 
     get_help(is_balanced)
-    symbols = input('Enter symbols string to check for balance: ')
-    print(f'{symbols}: {is_balanced(symbols)}')
+    symbols = input("Enter symbols string to check for balance: ")
+    print(f"{symbols}: {is_balanced(symbols)}")
 
 
 def get_help(topic):
@@ -121,8 +117,9 @@ def get_help(topic):
     Press 'Q' to exit...
     """
     print_help = input(
-        f"Need info on what function '{topic.__name__} 'does? (Y/N)\n").lower()
-    if print_help.startswith('y'):
+        f"Need info on what function '{topic.__name__} 'does? (Y/N)\n"
+    ).lower()
+    if print_help.startswith("y"):
         help(topic)
 
 

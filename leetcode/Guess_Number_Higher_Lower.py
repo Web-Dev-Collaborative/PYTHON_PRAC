@@ -14,6 +14,7 @@
 # Input: n = 10, pick = 6
 # Output: 6
 
+
 class Solution:
     def guessNumber(self, n: int) -> int:
 

@@ -35,11 +35,12 @@
 #        be removed and appended to the end of the output list
 
 import operator
-PRECEDENCE = {'*': 3, '/': 3, '+': 2, '-': 2, '(': 1}
-CHARACTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-DIGITS = set('0123456789')
-LEFT_PAREN = '('
-RIGHT_PAREN = ')'
+
+PRECEDENCE = {"*": 3, "/": 3, "+": 2, "-": 2, "(": 1}
+CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+DIGITS = set("0123456789")
+LEFT_PAREN = "("
+RIGHT_PAREN = ")"
 
 
 def infix_to_postfix(infix_expression):
@@ -60,22 +61,23 @@ def infix_to_postfix(infix_expression):
         else:
             # backslash allows us to continue on next line in same statement
             # append higher precedence first
-            while operation_stack and \
-                    (PRECEDENCE[operation_stack[-1]] >= PRECEDENCE[token]):
+            while operation_stack and (
+                PRECEDENCE[operation_stack[-1]] >= PRECEDENCE[token]
+            ):
                 postfix.append(operation_stack.pop())
             operation_stack.append(token)
     while operation_stack:
         postfix.append(operation_stack.pop())
-    print(' '.join(postfix))
-    return ' '.join(postfix)
+    print(" ".join(postfix))
+    return " ".join(postfix)
 
 
-print(infix_to_postfix('A * B + C * D'))  # => 'A B * C D * +'
-print(infix_to_postfix('( A + B ) * C - ( D - E ) * ( F + G )'))
+print(infix_to_postfix("A * B + C * D"))  # => 'A B * C D * +'
+print(infix_to_postfix("( A + B ) * C - ( D - E ) * ( F + G )"))
 # => 'A B + C * D E - F G + * -'
-print(infix_to_postfix('( A + B ) * ( C + D )'))  # => 'A B + C D + *'
-print(infix_to_postfix('( A + B ) * C'))  # => 'A B + C *'
-print(infix_to_postfix('A + B * C'))  # => 'A B C * +'
+print(infix_to_postfix("( A + B ) * ( C + D )"))  # => 'A B + C D + *'
+print(infix_to_postfix("( A + B ) * C"))  # => 'A B + C *'
+print(infix_to_postfix("A + B * C"))  # => 'A B C * +'
 
 # Evaluate Postfix
 #  Whenever an operator is seen on the input, the two most recent operands will
@@ -109,10 +111,10 @@ print(infix_to_postfix('A + B * C'))  # => 'A B C * +'
 
 
 OPERATION = {
-    '*': operator.mul,
-    '/': operator.truediv,
-    '-': operator.sub,
-    '+': operator.add,
+    "*": operator.mul,
+    "/": operator.truediv,
+    "-": operator.sub,
+    "+": operator.add,
 }
 
 
@@ -130,5 +132,5 @@ def evaluate_postfix(postfix_expression):
     return operand_stack.pop()
 
 
-print(evaluate_postfix('7 8 + 3 2 + /'))  # => 3.0
-print(evaluate_postfix(infix_to_postfix('2 + ( 1 * 4 ) - 1 ')))
+print(evaluate_postfix("7 8 + 3 2 + /"))  # => 3.0
+print(evaluate_postfix(infix_to_postfix("2 + ( 1 * 4 ) - 1 ")))

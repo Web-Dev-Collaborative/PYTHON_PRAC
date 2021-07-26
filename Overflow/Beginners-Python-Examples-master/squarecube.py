@@ -1,5 +1,6 @@
 # pre code
 
+
 def square():
     print(" ")
     makeUse = raw_input("Square or Cube : ")
@@ -16,6 +17,7 @@ def square():
         print(" ")
         print("Cube of the number " + str(userAgain) + " is " + str(cube))
 
+
 # main code
 
 while True:
@@ -30,11 +32,11 @@ while True:
         print(" ")
         print("Program Ended......")
         break
-    else :
+    else:
         print(" ")
         print("Try Again")
         continue
-    startagain = ("Start again or End : ")
+    startagain = "Start again or End : "
     print(" ")
     if startagain.strip() == "Start again":
         print(" ")
@@ -44,7 +46,7 @@ while True:
         print(" ")
         print(" ")
         break
-    else :
+    else:
         print(" ")
         print("Try Again")
         continue

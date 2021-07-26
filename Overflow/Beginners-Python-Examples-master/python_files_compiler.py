@@ -14,10 +14,10 @@ filename = input("File to Compile(Add .py to file): ")
 # This setup in minimialistic
 
 setup(
-    name = nameOfExec,
-    version = versionNumber,
-    description = descript, 
-    author = auth,
-    author_email = auth_email,
-    executables = [Executable(filename)]
-    )
+    name=nameOfExec,
+    version=versionNumber,
+    description=descript,
+    author=auth,
+    author_email=auth_email,
+    executables=[Executable(filename)],
+)

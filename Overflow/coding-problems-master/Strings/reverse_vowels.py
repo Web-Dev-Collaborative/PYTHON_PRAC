@@ -1,4 +1,4 @@
-'''
+"""
 Reverse Vowels
 
 Given a text string, create and return a new string constructed by finding all its vowels (for
@@ -14,22 +14,28 @@ In Python, the string manipulation operations are too slow (string is immutable)
 In C/C++, the Space complexity will be O(1) (because the strings are just arrays with chars).
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
 # Solution #
 ############
 
+
 def reverse_vowels(sentence):
-    arr = [c for c in sentence] # or just arr = list(sentence)
+    arr = [c for c in sentence]  # or just arr = list(sentence)
 
     vowels = {
-        'a': True, 'A': True,
-        'e': True, 'E': True,
-        'i': True, 'I': True,
-        'o': True, 'O': True,
-        'u': True, 'U': True
+        "a": True,
+        "A": True,
+        "e": True,
+        "E": True,
+        "i": True,
+        "I": True,
+        "o": True,
+        "O": True,
+        "u": True,
+        "U": True,
     }
 
     left = 0
@@ -59,7 +65,7 @@ def reverse_vowels(sentence):
         left += 1
         right -= 1
 
-    return ''.join(arr)
+    return "".join(arr)
 
 
 ###########
@@ -68,8 +74,8 @@ def reverse_vowels(sentence):
 
 # Test 1
 # Correct result => 'ubcdofghijklmnepqrstavwxyz'
-print(reverse_vowels('abcdefghijklmnopqrstuvwxyz'))
+print(reverse_vowels("abcdefghijklmnopqrstuvwxyz"))
 
 # Test 2
 # Correct result => 'Hollo werld'
-print(reverse_vowels('Hello world'))
+print(reverse_vowels("Hello world"))

@@ -16,5 +16,5 @@ def is_palindrome(characters):
     return True
 
 
-print(is_palindrome('lsdkjfskf'))   # => False
-print(is_palindrome('radar'))  # => True
+print(is_palindrome("lsdkjfskf"))  # => False
+print(is_palindrome("radar"))  # => True

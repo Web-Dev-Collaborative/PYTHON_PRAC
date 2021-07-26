@@ -16,7 +16,6 @@
 
 
 class MinStack:
-
     def __init__(self):
         """
         initialize your data structure here.
@@ -37,6 +36,7 @@ class MinStack:
 
     def getMin(self):
         return self.stack[-1][1]
+
 
 # Your MinStack object will be instantiated and called as such:
 # obj = MinStack()

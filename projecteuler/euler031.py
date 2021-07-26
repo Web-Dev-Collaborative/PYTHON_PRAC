@@ -51,6 +51,7 @@ def test():
     assert 4 == count_ways_to_change(5, DENOMINATIONS)
     d = DENOMINATIONS[:]
     from random import shuffle
+
     shuffle(d)
     assert 4 == count_ways_to_change(5, d)
 
@@ -59,6 +60,6 @@ def run():
     print(count_ways_to_change(200, DENOMINATIONS))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

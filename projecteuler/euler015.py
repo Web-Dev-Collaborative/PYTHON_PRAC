@@ -26,10 +26,7 @@ def count_routes(n, m):
     if n == m:
         result = 2 * count_routes(n, m - 1)
     else:
-        result = (
-            count_routes(n - 1, m) +
-            count_routes(n, m - 1)
-        )
+        result = count_routes(n - 1, m) + count_routes(n, m - 1)
     __seen[(n, m)] = result
     __seen[(m, n)] = result
     return result
@@ -43,6 +40,6 @@ def run():
     print(count_routes(20, 20))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

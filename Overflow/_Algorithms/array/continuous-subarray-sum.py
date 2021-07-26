@@ -2,6 +2,7 @@
 # Author : Han Zichi
 # Date   : 2017-03-01
 
+
 class Solution(object):
     def checkSubarraySum(self, nums, k):
         """
@@ -13,10 +14,10 @@ class Solution(object):
 
         for item in nums:
             sum += item
-            if (k):
+            if k:
                 sum %= k
 
-            if (sum in s):
+            if sum in s:
                 return True
 
             s.add(pre)

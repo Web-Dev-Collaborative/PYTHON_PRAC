@@ -1,4 +1,4 @@
-'''
+"""
 Secret Santa
 
 Secret Santa is a game in which a group of friends or colleagues exchange Christmas presents anonymously,
@@ -15,7 +15,7 @@ Shuffle the array (this algorithm is explained in shuffle_array.py) and pair the
 with the next element (neighbouring).
     Time Complexity:    O(N)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
@@ -24,13 +24,14 @@ with the next element (neighbouring).
 
 from random import randint
 
+
 def secret_santa(names):
     # or use shuffle method from random module (from random import shuffle)
     shuffle_array(names)
     pairs = []
 
     n = len(names)
-    prev = names[-1] # or names[n - 1]
+    prev = names[-1]  # or names[n - 1]
 
     for curr in names:
         pairs.append((prev, curr))
@@ -38,12 +39,13 @@ def secret_santa(names):
 
     return pairs
 
+
 def shuffle_array(arr):
     n = len(arr)
 
     for i in range(n):
-        rand = randint(i, n - 1) # or randint(0, i) it's same
-        arr[i], arr[rand] = arr[rand], arr[i] # swap elements
+        rand = randint(i, n - 1)  # or randint(0, i) it's same
+        arr[i], arr[rand] = arr[rand], arr[i]  # swap elements
 
     # the original arr is already changed
     return arr
@@ -55,4 +57,4 @@ def shuffle_array(arr):
 
 # Test 1
 # Correct result => nondeterministic algorithm, many solutions exist
-print(secret_santa(['a', 'b', 'c']))
+print(secret_santa(["a", "b", "c"]))

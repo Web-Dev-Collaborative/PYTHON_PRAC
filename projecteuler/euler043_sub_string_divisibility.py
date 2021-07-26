@@ -30,7 +30,7 @@ from itertools import permutations
 def is_subdivisible(n):
     sn = str(n)
     for i in range(1, 8):
-        if int(sn[i:i + 3]) % nth_prime(i):
+        if int(sn[i : i + 3]) % nth_prime(i):
             break
     else:
         return True
@@ -39,7 +39,7 @@ def is_subdivisible(n):
 def subdivisible_pandigitals(k, i=0):
     digits = digits_upto(k, i)
     for p in permutations(digits):
-        n = int(''.join(p))
+        n = int("".join(p))
         if len(str(n)) != len(digits):
             continue
         if is_subdivisible(n):
@@ -54,6 +54,6 @@ def run():
     print(sum(subdivisible_pandigitals(9)))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

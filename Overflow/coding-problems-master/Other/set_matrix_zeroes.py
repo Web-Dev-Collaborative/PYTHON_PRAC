@@ -1,4 +1,4 @@
-'''
+"""
 Set Matrix Zeroes
 
 Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in-place.
@@ -20,12 +20,13 @@ Output:
 Use first column and first row for marking when 0 is found.
     Time Complexity:    O(N*M)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def set_matrix_zeroes(matrix):
     n = len(matrix)

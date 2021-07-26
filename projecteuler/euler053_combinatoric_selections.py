@@ -46,6 +46,6 @@ def run():
     assert 4075 == len(combinations_greater(100, 10 ** 6))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test()
     run()

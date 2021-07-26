@@ -1,4 +1,4 @@
-'''
+"""
 Find an Element Which is Smaller or Equal to Exactly K Numbers
 
 You have to find some number X greater than 0 where exactly K elements in that list are greater than or equal to the number X.
@@ -13,12 +13,13 @@ Output explanation: Only 20 and 24 are greater or smaller from 11 (11 is the sma
 Sort the array and check the Kth element from the end.
     Time Complexity:    O(NLogN)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def get_minimum_X(arr, k):
     n = len(arr)

@@ -1,4 +1,4 @@
-'''
+"""
 Running Median
 
 Compute the running median of a sequence of numbers.
@@ -19,7 +19,7 @@ Output:
 Using 2 heaps (max and min Priority Queues) balance the left and right side of the stream.
     Time Complexity:    O(N LogN)
     Space Complexity:   O(N)
-'''
+"""
 
 
 ############
@@ -27,6 +27,7 @@ Using 2 heaps (max and min Priority Queues) balance the left and right side of t
 ############
 
 import heapq
+
 
 class PriorityQueue:
     def __init__(self, is_min=True):
@@ -53,9 +54,10 @@ class PriorityQueue:
     def count(self):
         return len(self.data)
 
+
 def running_median(stream):
-    left_heap = PriorityQueue(False) # Max Priority Queue
-    right_heap = PriorityQueue() # Min Priority Queue
+    left_heap = PriorityQueue(False)  # Max Priority Queue
+    right_heap = PriorityQueue()  # Min Priority Queue
 
     # left_heap will have always same number of elements or 1 element more than right_heap
     for number in stream:
@@ -86,7 +88,7 @@ def running_median(stream):
             print(left_heap.peek())
         else:
             # both heaps have same length, so the count from the elements is even (n + n = 2n)
-            print((left_heap.peek() + right_heap.peek())/2)
+            print((left_heap.peek() + right_heap.peek()) / 2)
 
 
 ###########

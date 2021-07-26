@@ -17,7 +17,6 @@ class ListNode:
 
 
 class MyLinkedList:
-
     def __init__(self):
         """
         Initialize your data structure here.
@@ -109,6 +108,7 @@ class MyLinkedList:
 
                     node = node.next
                     counter += 1
+
 
 # Your MyLinkedList object will be instantiated and called as such:
 # obj = MyLinkedList()

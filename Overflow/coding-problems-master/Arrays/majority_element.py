@@ -1,4 +1,4 @@
-'''
+"""
 Majority Element
 
 Given an array of size n, find the majority element.
@@ -24,12 +24,13 @@ if the current element isn't same substract -1.
 When the counter is 0, the next element becomes the new potential majority element.
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ##############
 # Solution 1 #
 ##############
+
 
 def majority_element_1(nums):
     nums.sort()
@@ -39,6 +40,7 @@ def majority_element_1(nums):
 ##############
 # Solution 2 #
 ##############
+
 
 def majority_element_2(nums):
     counter = {}
@@ -58,6 +60,7 @@ def majority_element_2(nums):
 ##############
 # Solution 3 #
 ##############
+
 
 def majority_element_3(nums):
     majority = 0

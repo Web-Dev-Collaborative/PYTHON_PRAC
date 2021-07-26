@@ -1,4 +1,4 @@
-'''
+"""
 Find Nth Fibonacci Number
 
 The Fibonacci numbers are the numbers in the following integer sequence.
@@ -67,12 +67,13 @@ Using the golden ratio (Binet's formula) = (1+sqrt(5))/2 ~ 1.6183...
 More info about this solution: https://demonstrations.wolfram.com/GeneralizedFibonacciSequenceAndTheGoldenRatio/
     Time Complexity:    O(1)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ##############
 # Solution 1 #
 ##############
+
 
 def nth_fibonacci_1(n):
     if n == 0 or n == 1:
@@ -87,6 +88,7 @@ def nth_fibonacci_1(n):
 
 # all found fibonacci numbers and positions
 fib = {0: 0, 1: 1}
+
 
 def nth_fibonacci_2(n):
     # check if the value is already found
@@ -103,8 +105,9 @@ def nth_fibonacci_2(n):
 # Solution 3 #
 ##############
 
+
 def nth_fibonacci_3(n):
-    dp = [0] * max(2, n+1)
+    dp = [0] * max(2, n + 1)
     dp[1] = 1
 
     for i in range(2, n + 1):
@@ -117,11 +120,12 @@ def nth_fibonacci_3(n):
 # Solution 4 #
 ##############
 
+
 def nth_fibonacci_4(n):
     dp0, dp1 = 0, 1
 
     for i in range(n):
-        dp0, dp1 = dp1, dp0 + dp1 # "Pythonic way"
+        dp0, dp1 = dp1, dp0 + dp1  # "Pythonic way"
         # or dp1 += dp0; dp0 = dp1 - dp0; in other languages
 
     return dp0
@@ -131,8 +135,9 @@ def nth_fibonacci_4(n):
 # Helper for the next solutions #
 #################################
 
+
 def matrix_mult(a, b):
-    ''' a = a * b
+    """ a = a * b
     Matrices (2x2 matrix) Multiplication method used for the next solutions.
     The result of multiplication is saved in 'a' (because of that, the reference
     shouldn't be changed, only change the values after all computations are completed
@@ -140,7 +145,7 @@ def matrix_mult(a, b):
     a[0] is the first row of a, which contains a[0][0], a[0][1]
     Python "unrolls" a00, a01 = a[0], which effectively makes it:
     a00 = a[0][0] and a01 = a[0][1]
-    '''
+    """
     a00, a01 = a[0]
     a10, a11 = a[1]
     b00, b01 = b[0]
@@ -155,6 +160,7 @@ def matrix_mult(a, b):
 # Solution 5 #
 ##############
 
+
 def nth_fibonacci_5(n):
     fib = [[1, 1], [1, 0]]
     res = [[1, 1], [1, 0]]
@@ -162,12 +168,15 @@ def nth_fibonacci_5(n):
     for i in range(n):
         matrix_mult(res, fib)
 
-    return res[1][1] # Fn-1 (or change the range(n-1) and use Fn => res[0][1] or res[1][0])
+    return res[1][
+        1
+    ]  # Fn-1 (or change the range(n-1) and use Fn => res[0][1] or res[1][0])
 
 
 ##############
 # Solution 6 #
 ##############
+
 
 def nth_fibonacci_6(n):
     res = [[1, 1], [1, 0]]
@@ -175,6 +184,7 @@ def nth_fibonacci_6(n):
     matrix_pow(res, n + 1)
 
     return res[1][1]
+
 
 def matrix_pow(mat, n):
     if n == 0 or n == 1:
@@ -195,6 +205,7 @@ def matrix_pow(mat, n):
 # Solution 7 #
 ##############
 
+
 def nth_fibonacci_7(n):
     fib = [[1, 1], [1, 0]]
     res = [[1, 1], [1, 0]]
@@ -214,6 +225,7 @@ def nth_fibonacci_7(n):
 ##############
 
 import math
+
 
 def nth_fibonacci_8(n):
     golden_ratio = (1 + math.sqrt(5)) / 2

@@ -1,4 +1,4 @@
-'''
+"""
 Odd Sum
 
 For a given range [а,b], find the sum of all odd numbers between a and b.
@@ -19,12 +19,13 @@ Min_Odd * Num_Odds + 2 * Num_Odds * (Num_Odds - 1) / 2 =
 Num_Odds * (Min_Odd + Num_Odds - 1)
     Time Complexity:    O(1)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def odd_sum(a, b):
     # find first odd number

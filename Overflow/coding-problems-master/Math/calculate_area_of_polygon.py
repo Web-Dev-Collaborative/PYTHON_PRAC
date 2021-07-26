@@ -1,4 +1,4 @@
-'''
+"""
 Calculate Area of Polygon
 
 Given ordered coordinates of a polygon with n vertices. Find area of the polygon.
@@ -13,12 +13,13 @@ Use Shoelace formula (https://en.wikipedia.org/wiki/Shoelace_formula).
 abs( 1/2 ((X1Y2 + X2Y3 + ... + Xn-1Yn + XnY1) - (X2Y1 + X3Y2 + ... + XnYn-1 + X1Yn)) )
     Time Complexity:    O(N)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def calculate_area_of_polygon(polygon):
     n = len(polygon)
@@ -29,7 +30,7 @@ def calculate_area_of_polygon(polygon):
         area += (prev[0] + curr[0]) * (prev[1] - curr[1])
         prev = curr
 
-    return abs(area / 2) # return absolute value
+    return abs(area / 2)  # return absolute value
 
 
 ###########

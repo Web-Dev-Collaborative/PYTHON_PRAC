@@ -1,4 +1,4 @@
-'''
+"""
 Find First and Last Position of Element in Sorted Array
 
 Given an array of integers nums sorted in ascending order,
@@ -15,12 +15,13 @@ Output: [-1, -1]
 Use binary search twice to find the range.
     Time Complexity:    O(LogN)
     Space Complexity:   O(1)
-'''
+"""
 
 
 ############
 # Solution #
 ############
+
 
 def search_range(nums, target):
     left_idx = binary_search(nums, target, True)
@@ -29,6 +30,7 @@ def search_range(nums, target):
 
     right_idx = binary_search(nums, target, False) - 1
     return [left_idx, right_idx]
+
 
 def binary_search(nums, target, equal=True):
     left = 0
